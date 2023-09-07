@@ -2,39 +2,12 @@
 title: "Go API client"
 slug: "go-api-client"
 hidden: false
-metadata: 
-  description: "The official Go client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
+metadata:
+description: "The official Go client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
 ---
 
 Go API Client
 ==============
-[api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
-
-# Table of contents
-
-- [Project description](#project-description)
-- [Getting started](#getting-started)
-  - [Installation](#installation)
-  - [Code sample](#code-sample)
-- [Documentation](#documentation)
-  - [API Endpoints](#api-endpoints)
-    - [Analytics](#analytics)
-    - [Captions](#captions)
-    - [Chapters](#chapters)
-    - [LiveStreams](#livestreams)
-    - [PlayerThemes](#playerthemes)
-    - [RawStatistics](#rawstatistics)
-    - [UploadTokens](#uploadtokens)
-    - [Videos](#videos)
-    - [Watermarks](#watermarks)
-    - [Webhooks](#webhooks)
-  - [Models](#models)
-- [Have you gotten use from this API client?](#have-you-gotten-use-from-this-api-client-)
-- [Contribution](#contribution)
-
-# Project description
-
-api.video's Java Go client streamlines the coding process. Chunking files is handled for you, as is pagination and refreshing your tokens.
 
 # Getting started
 
@@ -46,7 +19,7 @@ go get github.com/apivideo/api.video-go-client
 
 ## Code sample
 
-For a more advanced usage you can checkout the rest of the documentation in the [docs directory](https://github.com/apivideo/api.video-go-client/blob/main/docs/)
+For a more advanced usage you can checkout the rest of the documentation in the [docs directory](https://github.com/apivideo/api.video-go-client/tree/main/docs/)
 
 ```golang
 package main

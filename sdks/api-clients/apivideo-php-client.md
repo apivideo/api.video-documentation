@@ -2,50 +2,12 @@
 title: "PHP API client"
 slug: "php-api-client"
 hidden: false
-metadata: 
-  description: "The official PHP client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
+metadata:
+description: "The official PHP client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
 ---
 
 PHP API Client
 ==============
-
-
-[api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
-
-
-# Table of contents
-
-- [Project description](#project-description)
-- [Getting started](#getting-started)
-  - [Installation](#installation)
-  - [Initialization](#initialization)
-    - [Symfony HTTP client example](#symfony-http-client-example)
-  - [Code sample](#code-sample)
-    - [Client initialization](#client-initialization)
-    - [Create a video](#create-a-video)
-    - [Upload a video](#upload-a-video)
-- [Documentation](#documentation)
-  - [API Endpoints](#api-endpoints)
-    - [AnalyticsApi](#analyticsapi)
-    - [CaptionsApi](#captionsapi)
-    - [ChaptersApi](#chaptersapi)
-    - [LiveStreamsApi](#livestreamsapi)
-    - [PlayerThemesApi](#playerthemesapi)
-    - [RawStatisticsApi](#rawstatisticsapi)
-    - [UploadTokensApi](#uploadtokensapi)
-    - [VideosApi](#videosapi)
-    - [WatermarksApi](#watermarksapi)
-    - [WebhooksApi](#webhooksapi)
-  - [Models](#models)
-  - [Authentication](#authentication)
-  - [Chunks](#chunks)
-  - [Tests](#tests)
-- [Have you gotten use from this API client?](#have-you-gotten-use-from-this-api-client-)
-- [Contribution](#contribution)
-
-# Project description
-
-api.video's PHP API client streamlines the coding process. Chunking files is handled for you, as is pagination and refreshing your tokens.
 
 # Getting started
 

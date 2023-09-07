@@ -2,49 +2,12 @@
 title: "C# API client"
 slug: "csharp-api-client"
 hidden: false
-metadata: 
-  description: "The official C# client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
+metadata:
+description: "The official C# client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
 ---
 
 C# API Client
 ==============
-
-[api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
-
-# Table of contents
-
-- [Project description](#project-description)
-- [Getting started](#getting-started)
-  - [Requirements](#requirements)
-    - [Frameworks supported](#frameworks-supported)
-    - [Dependencies](#dependencies)
-  - [Installation](#installation)
-    - [Using Nuget](#using-nuget)
-    - [Generating the DLL yourself](#generating-the-dll-yourself)
-  - [Code sample](#code-sample)
-- [Documentation](#documentation)
-  - [API Endpoints](#api-endpoints)
-    - [AnalyticsApi](#analyticsapi)
-    - [CaptionsApi](#captionsapi)
-    - [ChaptersApi](#chaptersapi)
-    - [LiveStreamsApi](#livestreamsapi)
-    - [PlayerThemesApi](#playerthemesapi)
-    - [RawStatisticsApi](#rawstatisticsapi)
-    - [UploadTokensApi](#uploadtokensapi)
-    - [VideosApi](#videosapi)
-    - [WatermarksApi](#watermarksapi)
-    - [WebhooksApi](#webhooksapi)
-  - [Models](#models)
-  - [Authorization](#authorization)
-    - [API key](#api-key)
-    - [Public endpoints](#public-endpoints)
-  - [Recommendation](#recommendation)
-- [Have you gotten use from this API client?](#have-you-gotten-use-from-this-api-client-)
-- [Contribution](#contribution)
-
-# Project description
-
-api.video's C# API client streamlines the coding process. Chunking files is handled for you, as is pagination and refreshing your tokens.
 
 # Getting started
 
