@@ -2,47 +2,12 @@
 title: "Python API client"
 slug: "python-api-client"
 hidden: false
-metadata: 
-  description: "The official Python client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
+metadata:
+description: "The official Python client for api.video. [api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app."
 ---
 
 Python API Client
 ==============
-
-
-[api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
-
-# Table of contents
-
-- [Table of contents](#table-of-contents)
-- [Project description](#project-description)
-- [Getting started](#getting-started)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-  - [Code samples](#code-samples)
-    - [Automatic authentication](#automatic-authentication)
-    - [Manual authentication](#manual-authentication)
-- [Documentation](#documentation)
-  - [API Endpoints](#api-endpoints)
-    - [AnalyticsApi](#)
-    - [CaptionsApi](#)
-    - [ChaptersApi](#)
-    - [LiveStreamsApi](#)
-    - [PlayerThemesApi](#)
-    - [RawStatisticsApi](#)
-    - [UploadTokensApi](#)
-    - [VideosApi](#)
-    - [WatermarksApi](#)
-    - [WebhooksApi](#)
-  - [Models](#models)
-- [Have you gotten use from this API client?](#have-you-gotten-use-from-this-api-client-)
-- [Contribution](#contribution)
-
-
-
-# Project description
-
-api.video's Python API client streamlines the coding process. Chunking files is handled for you, as is pagination and refreshing your tokens.
 
 # Getting started
 
