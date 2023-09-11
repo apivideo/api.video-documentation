@@ -115,15 +115,6 @@ Method | Description | HTTP request
 [**deleteLogo()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#deleteLogo) | Delete logo | **DELETE** /players/{playerId}/logo
 
 
-### RawStatisticsApi
-
-Method | Description | HTTP request
-------------- | ------------- | -------------
-[**listLiveStreamSessions()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/RawStatisticsApi.md#listLiveStreamSessions) | List live stream player sessions | **GET** /analytics/live-streams/{liveStreamId}
-[**listSessionEvents()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/RawStatisticsApi.md#listSessionEvents) | List player session events | **GET** /analytics/sessions/{sessionId}/events
-[**listVideoSessions()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/RawStatisticsApi.md#listVideoSessions) | List video player sessions | **GET** /analytics/videos/{videoId}
-
-
 ### UploadTokensApi
 
 Method | Description | HTTP request
@@ -209,9 +200,6 @@ Method | Description | HTTP request
  - [PlayerThemeUpdatePayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/PlayerThemeUpdatePayload.md)
  - [PlayerThemesListResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/PlayerThemesListResponse.md)
  - [Quality](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/Quality.md)
- - [RawStatisticsListLiveStreamAnalyticsResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RawStatisticsListLiveStreamAnalyticsResponse.md)
- - [RawStatisticsListPlayerSessionEventsResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RawStatisticsListPlayerSessionEventsResponse.md)
- - [RawStatisticsListSessionsResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RawStatisticsListSessionsResponse.md)
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RefreshTokenPayload.md)
  - [RestreamsRequestObject](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RestreamsRequestObject.md)
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RestreamsResponseObject.md)
