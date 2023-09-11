@@ -165,23 +165,6 @@ Method | HTTP request | Description
 [**deleteLogo**](https://github.com/apivideo/api.video-ios-client/blob/main/docs/PlayerThemesAPI.md#deleteLogo) | **DELETE** /players/{playerId}/logo | Delete logo
 
 
-### RawStatisticsAPI
-
-#### Retrieve an instance of RawStatisticsAPI:
-
-```swift
-RawStatisticsAPI
-```
-
-#### Endpoints
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**listLiveStreamSessions**](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RawStatisticsAPI.md#listLiveStreamSessions) | **GET** /analytics/live-streams/{liveStreamId} | List live stream player sessions
-[**listSessionEvents**](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RawStatisticsAPI.md#listSessionEvents) | **GET** /analytics/sessions/{sessionId}/events | List player session events
-[**listVideoSessions**](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RawStatisticsAPI.md#listVideoSessions) | **GET** /analytics/videos/{videoId} | List video player sessions
-
-
 ### UploadTokensAPI
 
 #### Retrieve an instance of UploadTokensAPI:
@@ -299,9 +282,6 @@ Method | HTTP request | Description
  - [PlayerThemeUpdatePayload](https://github.com/apivideo/api.video-ios-client/blob/main/docs/PlayerThemeUpdatePayload.md)
  - [PlayerThemesListResponse](https://github.com/apivideo/api.video-ios-client/blob/main/docs/PlayerThemesListResponse.md)
  - [Quality](https://github.com/apivideo/api.video-ios-client/blob/main/docs/Quality.md)
- - [RawStatisticsListLiveStreamAnalyticsResponse](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RawStatisticsListLiveStreamAnalyticsResponse.md)
- - [RawStatisticsListPlayerSessionEventsResponse](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RawStatisticsListPlayerSessionEventsResponse.md)
- - [RawStatisticsListSessionsResponse](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RawStatisticsListSessionsResponse.md)
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RefreshTokenPayload.md)
  - [RestreamsRequestObject](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RestreamsRequestObject.md)
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-ios-client/blob/main/docs/RestreamsResponseObject.md)

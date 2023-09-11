@@ -195,24 +195,6 @@ Method | HTTP request | Description
 [**DeleteLogo**](https://github.com/apivideo/api.video-go-client/blob/main/docs/PlayerThemes.md#DeleteLogo) | **Delete** /players/{playerId}/logo | Delete logo
 
 
-### RawStatistics
-
-
-#### Retrieve an instance of the RawStatistics API:
-```golang
-client := apivideosdk.ClientBuilder("API_VIDEO_KEY").Build()
-rawStatisticsApi := client.RawStatistics
-```
-
-#### Endpoints
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ListLiveStreamSessions**](https://github.com/apivideo/api.video-go-client/blob/main/docs/RawStatistics.md#ListLiveStreamSessions) | **Get** /analytics/live-streams/{liveStreamId} | List live stream player sessions
-[**ListSessionEvents**](https://github.com/apivideo/api.video-go-client/blob/main/docs/RawStatistics.md#ListSessionEvents) | **Get** /analytics/sessions/{sessionId}/events | List player session events
-[**ListVideoSessions**](https://github.com/apivideo/api.video-go-client/blob/main/docs/RawStatistics.md#ListVideoSessions) | **Get** /analytics/videos/{videoId} | List video player sessions
-
-
 ### UploadTokens
 
 
@@ -335,9 +317,6 @@ Method | HTTP request | Description
  - [PlayerThemeUpdatePayload](https://github.com/apivideo/api.video-go-client/blob/main/docs/PlayerThemeUpdatePayload.md)
  - [PlayerThemesListResponse](https://github.com/apivideo/api.video-go-client/blob/main/docs/PlayerThemesListResponse.md)
  - [Quality](https://github.com/apivideo/api.video-go-client/blob/main/docs/Quality.md)
- - [RawStatisticsListLiveStreamAnalyticsResponse](https://github.com/apivideo/api.video-go-client/blob/main/docs/RawStatisticsListLiveStreamAnalyticsResponse.md)
- - [RawStatisticsListPlayerSessionEventsResponse](https://github.com/apivideo/api.video-go-client/blob/main/docs/RawStatisticsListPlayerSessionEventsResponse.md)
- - [RawStatisticsListSessionsResponse](https://github.com/apivideo/api.video-go-client/blob/main/docs/RawStatisticsListSessionsResponse.md)
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-go-client/blob/main/docs/RefreshTokenPayload.md)
  - [RestreamsRequestObject](https://github.com/apivideo/api.video-go-client/blob/main/docs/RestreamsRequestObject.md)
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-go-client/blob/main/docs/RestreamsResponseObject.md)

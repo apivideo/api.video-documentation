@@ -141,15 +141,6 @@ Method | Description | HTTP request
 [**deleteLogo()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#deleteLogo) | Delete logo | **DELETE** `/players/{playerId}/logo`
 
 
-### RawStatisticsApi
-
-Method | Description | HTTP request
-------------- | ------------- | -------------
-[**listLiveStreamSessions()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/RawStatisticsApi.md#listLiveStreamSessions) | List live stream player sessions | **GET** `/analytics/live-streams/{liveStreamId}`
-[**listSessionEvents()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/RawStatisticsApi.md#listSessionEvents) | List player session events | **GET** `/analytics/sessions/{sessionId}/events`
-[**listVideoSessions()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/RawStatisticsApi.md#listVideoSessions) | List video player sessions | **GET** `/analytics/videos/{videoId}`
-
-
 ### UploadTokensApi
 
 Method | Description | HTTP request
@@ -235,9 +226,6 @@ Method | Description | HTTP request
  - [PlayerThemeUpdatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/PlayerThemeUpdatePayload.md)
  - [PlayerThemesListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/PlayerThemesListResponse.md)
  - [Quality](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Quality.md)
- - [RawStatisticsListLiveStreamAnalyticsResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RawStatisticsListLiveStreamAnalyticsResponse.md)
- - [RawStatisticsListPlayerSessionEventsResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RawStatisticsListPlayerSessionEventsResponse.md)
- - [RawStatisticsListSessionsResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RawStatisticsListSessionsResponse.md)
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RefreshTokenPayload.md)
  - [RestreamsRequestObject](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RestreamsRequestObject.md)
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RestreamsResponseObject.md)
