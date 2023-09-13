@@ -9,8 +9,7 @@ meta:
 Start building with api.video
 =============
 
-These pages serve as your foundational guide to integrating api.video's solutions seamlessly into your applications.
-Within this section, you can find essential insights into building with api.video, an overview of api.video's key concepts and features, quickstart guides to speed up your development process, and information on how to securely authenticate your interactions with the API.
+This documentation serves as your foundational guide to integrating api.video's solutions seamlessly into your applications. You can find essential insights into building with api.video, an overview of api.video's key concepts and features, quickstart guides to speed up your development process, and information on how to securely authenticate your interactions with the API.
 
 ## What is api.video?
 
@@ -29,4 +28,5 @@ api.video is a cloud-based video hosting and live streaming platform that provid
 <div class="content-cards">
 {% include "_partials/content-card.md" label: "VOD quickstart", icon: "/_assets/icons/vod-quickstart.svg", description: "Get up to speed about the concept of VOD through building a video uploader and a video listing service in this quickstart guide.", link: "/vod/get-started-in-5-minutes" %}
 {% include "_partials/content-card.md" label: "Live streaming quickstart", icon: "/_assets/icons/livestream-quickstart.svg", description: "api.video enables you to embed live streaming into your application or project seamlessly. Start building now!", link: "/live-streaming/create-a-live-stream" %}
+{% include "_partials/content-card.md" label: "Delivery & analytics quickstart", icon: "/_assets/icons/player-customization.svg", description: "Learn how to make the most of your content delivery through branding, customization, and gathering analytics.", link: "/delivery-analytics/delivery-analytics-quickstart" %}
 </div>
