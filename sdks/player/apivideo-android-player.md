@@ -44,7 +44,7 @@ dependencies {
 ### Retrieve your video Id
 
 At this point, you must have uploaded a least one video to your account. If you haven't
-see [how to upload a video](https://docs.api.video/docs/upload-a-video-regular-upload). You'll need
+see [how to upload a video](https://docs.api.video/vod/upload-a-video-regular-upload). You'll need
 a video Id to use this component and play a video from api.video. To get yours, follow these steps:
 
 1. [Log into your account](https://dashboard.api.video/login) or create
