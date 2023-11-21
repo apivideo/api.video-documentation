@@ -13,7 +13,9 @@ To fulfill this commitment, we've meticulously crafted a robust infrastructure t
 
 ## How it works?
 
-When creating a new account or adding a project, you will be prompted to choose the region from which your videos will be hosted and delivered. You will encounter two primary options:
+{% include "_partials/dark-light-image.md" dark: "/_assets/get-started/infra/infra_dark.png", light: "/_assets/get-started/infra/infra_light.png", alt: "A diagram that shows the hosting location flow" %}
+
+When creating a new account or adding a project after you have switched to production, you will be prompted to choose the region from which your videos will be hosted and delivered. You will encounter two primary options:
 
 * United States
 * European Union
@@ -27,7 +29,7 @@ api.video utilizes a robust CDN service with a vast network of [multiple Points 
 
 ## FAQ
 
-### How do I change a region
+### How do I change a region?
 
 At present, to modify the region you have previously selected, kindly reach out to our dedicated support team.
 
