@@ -30,8 +30,8 @@ We are following the [OpenAPI](https://www.openapis.org/) specs. You can find ou
 
 | Environment | URL                                                      |
 | ----------- | -------------------------------------------------------- |
-| Production  | [https://ws.api.video/](https://ws.api.video/)           |
-| Sandbox     | [https://sandbox.api.video/](https://sandbox.api.video/) |
+| Production  | [https://ws.api.video/](https://ws.api.video)           |
+| Sandbox     | [https://sandbox.api.video/](https://sandbox.api.video) |
 
 There are two environments that you can utilize right now. Before you upgrade your account to paid account, you are working in Sandbox mode.
 
