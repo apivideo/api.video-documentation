@@ -15,7 +15,7 @@ The captions are uploaded per language. You can upload different captions for ea
 | Field    | Type   |                                                                                            |
 | :------- | :----- | :----------------------------------------------------------------------------------------- |
 | videoId  | String | The unique identifier for the video you want to add a caption to.                          |
-| language | String | A valid [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) language representation. |
+| language | String | A valid language identifier using IETF language tags. You can use primary subtags like `en` (English), extended subtags like `fr-CA` (French, Canada), or region subtags like `zh-Hans-CN` (Simplified Chinese used in the PRC).<br>- This parameter **only accepts dashes for separators**, for example `fr-CA`. If you use a different separator in your request, the API returns an error.<br>- When the value in your request does not match any covered language, the API returns an error.<br>- This endpoint uses [Symfony](https://symfony.com) to reference the list of supported language tags. You can find the list of supported tags [here](https://github.com/symfony/symfony/blob/6.3/src/Symfony/Component/Intl/Resources/data/locales/meta.php). |
 | file     | File   | The video text track in VTT format only.                                                   |
 
 ## Supported caption file formats
