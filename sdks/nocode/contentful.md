@@ -10,7 +10,11 @@ Contentful empowers creative teams to visually craft captivating content experie
 
 ## Getting started with Contentful
 
-If you need help with getting started with Contentful, you can follow the [Contentful getting started guide](https://www.contentful.com/help/contentful-101/).
+Check out this short video to get started with your api.video integration using Contentful:
+
+<iframe src="https://embed.api.video/vod/vi6Veh495WeILYjLFbLMrUWp" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+
+If you need more help with getting started with Contentful, you can follow the [Contentful getting started guide](https://www.contentful.com/help/contentful-101/).
 
 ## api.video Contentful plugin features
 

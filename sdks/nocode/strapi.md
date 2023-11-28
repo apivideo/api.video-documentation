@@ -6,7 +6,9 @@ meta:
 
 # Strapi
 
-With the api.video Strapi plugin you can upload and embed your videos into your Strapi website effortlessly.
+With the api.video Strapi plugin you can upload and embed your videos into your Strapi website effortlessly. Check out this short video to get started with your api.video integration using Strapi:
+
+<iframe src="https://embed.api.video/vod/vi6se2ENaM5FJFeK2yspZukC" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 
 ## Features
 
