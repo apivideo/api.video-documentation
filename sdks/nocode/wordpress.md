@@ -6,9 +6,11 @@ meta:
 
 # Wordpress
 
-With the api.video Wordpress plugin you can upload and embed your videos into your Wordpress website effortlessly.
+With the api.video Wordpress plugin you can upload and embed your videos into your Wordpress website effortlessly. Check out this short video to get started with your api.video integration using Wordpress:
 
-The plugin allows you to:
+<iframe src="https://embed.api.video/vod/vi7W4PZhqejbfYKxAb067toG" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+
+The plugin enables you to:
 
 - list all of your uploaded videos
 - upload new videos
@@ -41,7 +43,7 @@ Once the plugin is installed, you'll need to configure it.
 After you've configured the api.video plugin, you can now start using it. You will noticed several button that are up for you disposal:
 
 - **Library:** Will automatically populate all of the videos in your account (if there are any existing).
-- **Add new:** will allow you to upload and add new videos to your library.
+- **Add new:** Enables you to upload and add new videos to your library.
 
 ### Uploading a video
 
