@@ -6,9 +6,13 @@ meta:
 
 # Get started with live stream in 5 minutes
 
-Creating a live stream is simple with api.video. After you create it, you have a variety of options for connecting live video and beginning broadcasting. This guide will cover how to set up your live stream with api.video and then use OBS to broadcast. 
+Creating a live stream is simple with api.video. After you create it, you have a variety of options for connecting live video and to begin broadcasting. Check out this short video to get started!
 
-## Associated API reference documentation
+<iframe src="https://embed.api.video/vod/vi6mgcrUqQuLyQNRW0qbl6gt" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+
+This guide helps you follow along with the video and learn how to set up your live stream with api.video, and then use OBS to broadcast. 
+
+## API reference
 
 - [Create live stream](/reference/api/Live-Streams#create-live-stream)
 
@@ -25,7 +29,7 @@ The clients offered by api.video include:
 - [Swift](../sdks/api-clients/apivideo-swift5-client.md)
 - [Android](../sdks/api-clients/apivideo-android-client.md)
 
-## Installation
+## Install
 
 To install your selected client, do the following: 
 
@@ -195,9 +199,9 @@ You'll want to grab your live stream's streamKey from the response. It's require
 
 If you can't find **api.video** in the list of services, you can choose **custom** and **rtmp://broadcast.api.video/s** for the server.
 
-## Live stream immediately from your dashboard
+## Live stream directly from your dashboard
 
-If you don't want to set up your live stream programmatically, api.video allows you to demo live streaming from the dashboard with the click of a button. Do the following: 
+If you don't want to set up your live stream programmatically, api.video enables you to demo live streaming from the dashboard with the click of a button. Do the following: 
 
 1. Log in to your dashboard 
 
