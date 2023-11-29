@@ -1,0 +1,34 @@
+name: Update Algolia index
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update-algolia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+      - name: Set up Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+    
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+        with:
+          json: true
+          output_renamed_files_as_deleted_and_added: true
+
+      - name: Set environment variables from action inputs
+        shell: bash
+        run: |
+          echo "ADDED_FILES=${{ steps.changed-files.outputs.added_files }}" >> $GITHUB_ENV
+          echo "DELETED_FILES=${{ steps.changed-files.outputs.deleted_files }}" >> $GITHUB_ENV
+          echo "MODIFIED_FILES=${{ steps.changed-files.outputs.modified_files }}" >> $GITHUB_ENV
+
+      - name: Update Algolia index
+        shell: bash
+        run: node .github/actions/update-algolia/dist/index.js
