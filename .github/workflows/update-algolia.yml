@@ -28,6 +28,9 @@ jobs:
           echo "ADDED_FILES=${{ steps.changed-files.outputs.added_files }}" >> $GITHUB_ENV
           echo "DELETED_FILES=${{ steps.changed-files.outputs.deleted_files }}" >> $GITHUB_ENV
           echo "MODIFIED_FILES=${{ steps.changed-files.outputs.modified_files }}" >> $GITHUB_ENV
+          echo "ALGOLIA_INDEX=${{ secrets.ALGOLIA_INDEX }}" >> $GITHUB_ENV
+          echo "ALGOLIA_APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" >> $GITHUB_ENV
+          echo "ALGOLIA_API_KEY=${{ secrets.ALGOLIA_API_KEY }}" >> $GITHUB_ENV
 
       - name: Update Algolia index
         shell: bash
