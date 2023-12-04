@@ -22,10 +22,6 @@ function generateObjectID(file) {
 }
 
 try {
-    process.env.ALGOLIA_INDEX = "production_website";
-    process.env.ALGOLIA_APPLICATION_ID = "QDRPG7YL60";
-    process.env.ALGOLIA_API_KEY = "fd45b48e56c34f96813ff2580ee67d88";
-
     const addedFiles = JSON.parse(process.env.ADDED_FILES);
     const deletedFiles = JSON.parse(process.env.DELETED_FILES);
     const modifiedFiles = JSON.parse(process.env.MODIFIED_FILES);
