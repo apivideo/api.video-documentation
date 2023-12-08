@@ -6,7 +6,15 @@ meta:
 
 # Using Custom Domains
 
-api.video enables you to deliver video content and provide live streams using your own custom domains. You can decide what custom URL or subdomain you use in your implementation, for example `live.mycustomdomain.com`.
+<iframe src="https://embed.api.video/vod/vi7dnViyFRqlu3NYER5NowAT#hide-title" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+
+api.video enables you to deliver video content and provide live streams using your own custom domains. You can decide what custom URL or subdomain you use in your implementation, for example `live.mycustomdomain.com`. 
+
+When you request custom domains, api.video only has 3 simple requirements:
+
+- Update your DNS records
+- Provide the domains you want to use
+- Provide the TLS certificates for those domanins
 
 {% include "_partials/dark-light-image.md" dark: "/_assets/delivery-analytics/custom-domains/custom-domains-dark.svg", light: "/_assets/delivery-analytics/custom-domains/custom-domains-light.svg", alt: "A diagram that shows the steps of requesting and using custom domains" %}
 
