@@ -27,25 +27,6 @@ Run the following command at the root of your project.
 flutter pub add apivideo_player
 ```
 
-#### Web usage
-
-If you want to use your application as a web app, you need to add the [api.video player SDK](https://github.com/apivideo/api.video-player-sdk) script in `web/index.html` from the root of your project.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    ...
-    <!-- Add the following line inside of the head tag -->
-    <script src="https://unpkg.com/@api.video/player-sdk" defer></script>
-  </head>
-
-  <body>
-  ...
-  </body>
-</html>
-```
-
 ## Documentation
 
 ### Instantiation
