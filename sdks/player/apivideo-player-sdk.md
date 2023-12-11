@@ -369,28 +369,32 @@ Define a callback function that will be called when the given event is triggered
 
 Available events are the following:
 
-Event name            | Description | Parameter
----:                  | ---         | ---
-controlsdisabled      | Controls are now disabled | -
-controlsenabled       | Controls are now enabled | -
-ended                 | The playback as reached the ended of the video | -
-error                 | An error occured | -
-firstplay             | The video started to play for the first time | -
-fullscreenchange      | The player goes to (or goes back from) full screen | -
-mouseenter            | The user's mouse entered the player area | -
-mouseleave            | The user's mouse leaved the player area | -
-pause                 | The video has been paused | -
-play                  | The video started to play (for the first time or after having been paused) | -
-playerresize          | The player size has changed | -
-qualitychange         | The video quality has changed  | `{ resolution: { height: number, width: number } }`
-ratechange            | The playback rate has changed | -
-ready                 | The player is ready to play | -
-resize                | The video size has changed
-seeking               | The player is seeking | -
-timeupdate            | The playback time has changed  | `{ currentTime: number }`
-useractive            | The user is active | -
-userinactive          | The user is inactive | -
-volumechange          | The volume has changed  | `{ volume: number }`
+Event name             | Description | Parameter
+---:                   | ---         | ---
+airplayConnected       | Started to play on an airplay device | -
+airplayDisconnected    | Stopped to play on an airplay device | -
+chromecastConnected    | Started to play on a chromecast device | -
+chromecastDisconnected | Stopped to play on a chromecast device | -
+controlsdisabled       | Controls are now disabled | -
+controlsenabled        | Controls are now enabled | -
+ended                  | The playback as reached the ended of the video | -
+error                  | An error occured | -
+firstplay              | The video started to play for the first time | -
+fullscreenchange       | The player goes to (or goes back from) full screen | -
+mouseenter             | The user's mouse entered the player area | -
+mouseleave             | The user's mouse leaved the player area | -
+pause                  | The video has been paused | -
+play                   | The video started to play (for the first time or after having been paused) | -
+playerresize           | The player size has changed | -
+qualitychange          | The video quality has changed  | `{ resolution: { height: number, width: number } }`
+ratechange             | The playback rate has changed | -
+ready                  | The player is ready to play | -
+resize                 | The video size has changed
+seeking                | The player is seeking | -
+timeupdate             | The playback time has changed  | `{ currentTime: number }`
+useractive             | The user is active | -
+userinactive           | The user is inactive | -
+volumechange           | The volume has changed  | `{ volume: number }`
 
 Examples:
 ```javascript
@@ -498,4 +502,4 @@ Here is how the page will look like with these changes :
         };
     </script>
 </html>
-``` 
+```
