@@ -707,6 +707,9 @@ Currently only **VTT** file format is supported.
 
 ## WebVTT file formatting
 
+WebVTT is a format for displaying timed text tracks for captions or chapters. It is a text based format, which must be encoded using UTF-8. Check out the [Mozilla developer guide](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) for more information about WebVTT.
+
+To ensure that you use the correct formatting in your VTT file, api.video recommends using a parser to check for errors before you upload the file. [Click here](https://w3c.github.io/webvtt.js/parser.html) for a free online VTT parser.
 
 {% capture content %}
 Incorrect VTT file formatting
@@ -727,10 +730,6 @@ WEBVTT
 - You only need a single API request.
 - And a properly formatted VTT file.
 ```
-
-For more information on VTT formatting: <https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API>
-
-You can check the formatting of the VTT with a free online tool here: <https://w3c.github.io/webvtt.js/parser.html>
 
 ## Tutorials & Resources
 
