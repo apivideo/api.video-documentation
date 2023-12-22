@@ -22,7 +22,7 @@ A more visual representation can be found below:
 {% capture content %}
 **Important things to know**
 * **All qualities encoding:** The video object will include up to 6 responsive video streams from 240p to 4K
-* **Video size:** The video file size is limited to 20 GiB. The files will be compressed to fit delivery needs (4k max def with H.264 at 60fps max + AAC)
+* **Video size:** The video file size is limited to 30 GiB. The files will be compressed to fit delivery needs (4k max def with H.264 at 60fps max + AAC)
 * **Highest quality encoding by default:** Mp4 encoded versions are created at the highest quality (max 4K) by default.
 * **360° videos support:** Panoramic videos are videos recorded in 360°. You can toggle this after your 360° video upload.
 * **Video Access Management:** When creating a video object, it can be either private or public. The feature allows you to change it later by updating the video object.
@@ -54,7 +54,7 @@ For optimal ingestion, the video should use:
    * a video uploaded in several chunks must use at most **10 000 chunks each between 5MiB and 200MiB except the last chunk which must be between 0 and 200MiB**
 * a video **must be uploaded/downloaded/copied in at most 7 days (168 hours)**
 * an **uploaded/downloaded/copied video** must be:
-    - **at most 20 GiB**
+    - **at most 30 GiB**
     - **of at most 24h**
 * **ProRes RAW** video codec is currently not supported.
 {% endcapture %}
