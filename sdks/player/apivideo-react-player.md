@@ -36,7 +36,7 @@ import ApiVideoPlayer from '@api.video/react-player'
 
 // ...
 
-<ApiVideoPlayer video={{id: "vi5fv44Hol1jFrCovyktAJS9"}} />
+<ApiVideoPlayer video={{id: "vi5fv44Hol1jFrCovyktAJS9"}} style={{ height: '480px' }} />
 ```
 {% endraw %}
 
@@ -80,16 +80,18 @@ Examples
 ```tsx
 {/* default: all controls are displayed */}
 <ApiVideoPlayer 
- video={{id: "vi5fv44Hol1jFrCovyktAJS9"}} />
+ video={{id: "vi5fv44Hol1jFrCovyktAJS9"}} style={{ height: '480px' }} />
 
 {/* all controls hidden (equivalent to chromeless=true) */}
 <ApiVideoPlayer 
   video={{id: "vi5fv44Hol1jFrCovyktAJS9"}}
+  style={{ height: '480px' }}
   controls={[]} />
 
 { /* only the play button & the unmute one are displayed */}
 <ApiVideoPlayer 
   video={{id: "vi5fv44Hol1jFrCovyktAJS9"}}
+  style={{ height: '480px' }}
   controls={["play", "unmute"]}/>
 ```
 {% endraw %}
@@ -106,6 +108,7 @@ Example
 { /* display the text in blue and the progress bar in red */}
 <ApiVideoPlayer
   video={{id: "vi5fv44Hol1jFrCovyktAJS9"}}
+  style={{ height: '480px' }}
   theme={{
     trackPlayed: "#FF0000",
     text: "blue"
@@ -186,7 +189,8 @@ To play a [private video](https://api.video/blog/tutorials/tutorial-private-vide
 // ...
 <ApiVideoPlayer video={{
     id: "vi5fv44Hol1jFrCovyktAJS9",
-  token: "e1bdf9a8-da40-421e-87f3-75b15232c531"}} />
+  token: "e1bdf9a8-da40-421e-87f3-75b15232c531"}}
+  style={{ height: '480px' }} />
 ```
 {% endraw %}
 
@@ -198,6 +202,7 @@ To play a [private video](https://api.video/blog/tutorials/tutorial-private-vide
 // ...
 <ApiVideoPlayer
   video={{ id: "vi5fv44Hol1jFrCovyktAJS9" }}
+  style={{ height: '480px' }}
   metadata={{"userName": "Alfred"}} />
 ```
 {% endraw %}
@@ -212,6 +217,7 @@ const playerRef = useRef<ApiVideoPlayer>(null);
 return
 <ApiVideoPlayer
   video={{ id: "vi5jC9kQs2I3PdmVBjgcIg45" }}
+  style={{ height: '480px' }}
   chromeless={true}
   ref={playerRef}>
   <button onClick={() => playerRef.current?.play()}>play</button>
@@ -219,4 +225,3 @@ return
 </ApiVideoPlayer>
 ```
 {% endraw %}
- 
