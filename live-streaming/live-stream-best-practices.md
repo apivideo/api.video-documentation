@@ -13,6 +13,12 @@ meta:
 - In order to prevent the live stream from getting stuck (buffering indefinitely), please ensure that you are following the recommended [settings](#recommended-setting-for-ingestion).
 - Make sure to verify that the connection speed is adequate and stable before the stream is starting.
 
+## DVR - reading history in live streams
+
+When a live stream is ongoing, viewers can replay earlier content with the DVR feature. The available buffer is 1 hour, and is only available in live streams that are actively broadcasting.
+
+When the stream ends, api.video stores the stream for another 4 to 5 minutes, subsequently ending the stream and disposing of the cached video.
+
 ## Ending the live stream
 
 Make sure to use an outro (static picture, music and etc.) at the end of the stream for 30 seconds. This is a good way for users to indicate that the stream has ended.
@@ -23,11 +29,6 @@ When reaching the end of the playback, the player buffers until the live stream 
 
 Reconnection is handled by api.video, however, an edge case might occur (very slim chance), which will result in the inability to reconnect to the stream with good quality. In this case, we recommend creating a manual stream reconnection, where the streamer will create a new streaming key while the consumers will have to refresh their player instance.
 
-## Reading stream history
-
-While the stream is live, the user can watch the stream for up to 6 hours in the past.
-
-As soon as the stream ends, we will store the stream for another 4-5 minutes subsequently ending the stream and disposing of the cached video.
 
 ## Recommended setting for ingestion
 
@@ -54,7 +55,7 @@ Keyframe Interval: 2 second
 * When using the sandbox environment, live streaming is limited to 24 hours.
 * The **video codec must be H.264**
 * The **audio codec must be AAC or MP3**
-* DVR is exactly 6 hours
+* DVR is exactly 1 hour
 * During a disconnection on ingest side, re-connection must occur within 10 seconds
 * When creating a new live event using the same `streamID` without keeping the DVR of a previous live, you must wait at least 5 minutes before re-using it
 {% endcapture %}
