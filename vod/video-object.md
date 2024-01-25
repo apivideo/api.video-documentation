@@ -64,26 +64,7 @@ In order to sort your videos, you can leverage the tags parameter. The video obj
 
 ### Metadata: Pass Data with the Video to The Front-end
 
-A powerful feature that allows you to pass in data with the video object. It is a list of key-value pairs that you use to provide metadata for your video. These pairs can be made dynamic, allowing you to segment your audience.  
-Metadata values can be `key:value` where the values are predefined, but Dynamic metadata allows you to enter any value for a defined key. To define a dynamic metadata pair use:
-
-```json
-    "metadata":[{"dynamicKey": "__dynamicKey__"}]
-```
-
-The double underscore on both sides of the value allows any variable to be added for a given video session. Added the URL you might have:
-
-```html
-    <iframe
-            type="text/html"
-            src="https://embed.api.video/vod/{videoId}?metadata[classUserName]=ExampleData" 
-            width="960" height="320" frameborder="0"
-            scrollling="no">
-</iframe>
-```
-
-This video session will be tagged as watched by `ExampleData` - allowing for an in-depth analysis of how each viewer interacts with the videos.  
-Get more details about the usage of the metadata feature [here](https://api.video/blog/endpoints/dynamic-metadata/)
+A powerful feature that allows you to pass in data with the video object. It is a list of key-value pairs that you use to provide metadata for your video. Metadata values can be `key:value` where the values are predefined. Check out the [Metadata guide](/vod/tags-metadata#metadata) for more details.
 
 ### Clip: Trim the Video
 
