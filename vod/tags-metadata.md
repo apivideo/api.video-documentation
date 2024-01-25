@@ -1,7 +1,7 @@
 ---
 title: Video tags and metadata
 meta: 
-  description: TBA
+  description: This guide explains the concept of tags and metadata connected to a video object, and different ways you can use them through the api.video dashboard and the API.
 ---
 
 # Video tags and metadata
