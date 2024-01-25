@@ -142,13 +142,13 @@ You can add, update, or delete metadata to create an additional layer of data an
 
 1. You can add and remove both tags and metadata by opening the **Video Details** of any video listed on the [Your Videos](https://dashboard.api.video/videos) page.
     
-    ![Video list in api.video dashboard](/_assets/vod/tags-metadata/documentation_tagsandmeta_videolist.png)
+    ![Video list in api.video dashboard](/_assets/vod/tags-metadata/documentation-tag-meta-video-list.png)
     
 2. Once there, click on **Update video**. 
 3. Add or remove the tags and the key-value pairs for metadata that you want, then click on **Update video** again. That’s it!
 4. To filter videos based on these tags or key-value pairs, open the [Your Videos](https://dashboard.api.video/videos) page and select the Filter dropdown:
     
-    ![Video list filtering by tags or metadata in the api.video dashboard](/_assets/vod/tags-metadata/documentation_tagsandmeta_filtering.png)
+    ![Video list filtering by tags or metadata in the api.video dashboard](/_assets/vod/tags-metadata/documentation-tag-meta-filtering.png)
     
 5. Add the tag or metadata you want to filter for and click on **Apply**. The videos list will be filtered to only show videos that you are looking for.
 
