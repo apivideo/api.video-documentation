@@ -90,22 +90,6 @@ $ curl https://ws.api.video/videos \
 
 In this case, the service will respond `202 Accepted` and ingest the video asynchronously.
 
-## Track users with Dynamic Metadata
-
-Metadata values can be a key:value where the values are predefined, but Dynamic metadata allows you to enter _any_ value for a defined key. To defined a dynamic metadata pair use:
-
-```
-"metadata":[{"dynamicKey": "__dynamicKey__"}]
-```
-
-The double underscore on both sides of the value allows any variable to be added for a given video session. Added the the url you might have:
-
-```html
-<iframe type="text/html" src="https://embed.api.video/vod/vi6QvU9dhYCzW3BpPvPsZUa8?metadata[classUserName]=Doug" width="960" height="320" frameborder="0" scrolling="no"></iframe>
-```
-
-This video session will be tagged as watched by Doug - allowing for in-depth analysis on how each viewer interacts with the videos.
-
 ## Resources
 
 Check out api.video's blog content and tutorials about:
