@@ -24,7 +24,7 @@ api.video API is built with the [REST API](https://en.wikipedia.org/wiki/Represe
 
 ## OpenAPI & Swagger
 
-We are following the [OpenAPI](https://www.openapis.org/) specs. You can find our API specs [here](https://github.com/apivideo/api.video-api-specification).
+We are following the [OpenAPI](https://www.openapis.org/) specs. You can find our API specs [here](https://github.com/apivideo/api.video-documentation/blob/main/openapi.yaml).
 
 ## Environments
 
