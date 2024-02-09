@@ -56,7 +56,7 @@ Once you have all the pre-requisites you can proceed with the migration.
 
 2. Select Azure Blob Service from the list
 
-3. Autherize with api.video with your account. This process will link your api.video workspace to the Import tool.
+3. Authorize with api.video with your account. This process will link your api.video workspace to the Import tool.
 
 4. Select the project that you would like to import the video.
 
