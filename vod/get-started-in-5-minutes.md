@@ -22,7 +22,7 @@ Navigate to the [Dashboard](https://dashboard.api.video/register) and register w
 
 ## Get the API key from the dashboard
 
-All you need now is to get your API key from the dashboard. Navigate to the [API keys page](https://dashboard.api.video/apikeys) and grab your API key from there.
+All you need now is to get your API key from the dashboard. Navigate to the [API keys page](https://dashboard.api.video/project-settings/api-keys) and grab your API key from there.
 
 {% capture content %}
 **API Key Security**
@@ -290,7 +290,7 @@ func main() {
 
 ### api.video client initialization
 
-The client library takes your api key, which you can [find here](https://dashboard.api.video/apikeys). Let's pass it the api key and initialize the client. 
+The client library takes your api key, which you can [find here](https://dashboard.api.video/project-settings/api-keys). Let's pass it the api key and initialize the client. 
 
 Learn more about [Basic Authentication](/reference/basic-authentication) and [Bearer Token Authentication](/reference/disposable-bearer-token-authentication). 
 

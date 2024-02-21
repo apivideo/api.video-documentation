@@ -96,7 +96,7 @@ class MyFragment : Fragment() {
    or [create or get an upload token](https://github.com/apivideo/api.video-android-client#uploadtokensapi)
    from [api.video](https://api.video/)
    Alternatively, you can create or get an upload token in
-   the [dashboard](https://dashboard.api.video/upload-tokens).
+   the [dashboard](https://dashboard.api.video/project-settings/upload-tokens).
 
 5. Start your record
 
