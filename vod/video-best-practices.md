@@ -49,6 +49,11 @@ For optimal ingestion, the video should use:
 ## Limitations
 
 {% capture content %}
+* When using the [sandbox environment](/reference#environments), the API:
+   * limits the videos you upload to 30 seconds
+   * adds a watermark to your videos that you cannot remove
+   * deletes uploaded videos after 24 hours
+* The API deletes empty video containers after 7 days.
 * When using [progressive upload](/vod/progressive-upload):
    * a video uploaded in a single chunk **must be between 0 and 200MiB**
    * a video uploaded in several chunks must use at most **10 000 chunks each between 5MiB and 200MiB except the last chunk which must be between 0 and 200MiB**
