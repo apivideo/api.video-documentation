@@ -93,7 +93,7 @@ Install-Package ApiVideo
 
 ### Create the video object
 
-The first step to uploading a video is to create a video object. Once you create the object, you can use it to upload a video. Here is the basic minimal code to create the object:
+The first step to uploading a video is to create a video object. Once you create the object, you can use it to upload a video. Check out this simple code that creates a video object. Make sure that you replace `your_api_key` with your own API key from the [dashboard](https://dashboard.api.video/).
 
 {% capture samples %}
 ```curl
@@ -234,9 +234,9 @@ catch (ApiException e)
 {% include "_partials/code-tabs.md" samples: samples %}
 
 {% capture content %}
-Replace `your_api_key` by the key you have already copied from dashboard.api.video
+The API deletes empty video containers after 7 days.
 {% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+{% include "_partials/callout.html" kind: "warning", content: content %}
 
 The response to your API request will return the following, along with other params: 
 
