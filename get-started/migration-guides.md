@@ -34,19 +34,19 @@ to discuss the details. You can help us prepare by collecting information about 
 </details>
 
 <details>
-<summary><b>What do I need to change in our implementation after the migration?</b></summary>
+<summary><b>What do I need to change in my implementation after the migration?</b></summary>
 <p>
-Once you migrate. api.video will host your assets and will provide the infrastructure for you. You only need to take care about updating your product to use the new assets.
+Once you migrate, api.video will host your assets and will provide the infrastructure for you. You only need to take care about updating your product to use the new assets.
 </details>
 
 <details>
-<summary><b>Can we keep the original IDs / titles / URLs?</b></summary>
+<summary><b>Can I keep the original IDs / URLs of my assets?</b></summary>
 <p>
 Technically speaking no. When you migrate your assets, api.video generates new unique IDs for each of your videos. Even though you will need to update your product to use the new asset URLs and IDs, we will help you ease the workload by providing an exact mapping of your old assets to the new ones hosted by api.video.
 </details>
 
 <details>
-<summary><b>Will api.video help you create a mapping from old assets to new assets?</b></summary>
+<summary><b>Will api.video help me create a mapping from old assets to new assets?</b></summary>
 <p>
 Yes! api.video can provide a mapping in <code>csv</code> format.
 </details>
