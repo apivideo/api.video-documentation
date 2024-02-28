@@ -177,9 +177,9 @@ If you don't want to retrieve details about a live stream programmatically, you 
 
 3. If you have a lot of live stream containers, you can filter them by title using the search bar at the top of the Live streams page. Otherwise, click on the live stream container you want information about. 
 
-4. When you click on a container title, you'll get a pop-up with some quick details about the live stream container. If you want full details, click **See details**. This will bring up all information about the live stream container you wanted to review.
+4. When you click on a container title, you'll get a pop-up with some quick details about the live stream container. If you want full details, click **Live Stream Details**. This will bring up all information about the live stream container you wanted to review.
 
-   ![Showing the live stream details](/_assets/show-livestream.png)
+   ![Showing the live stream details](/_assets/live-streaming/live-stream-details.png)
 
 ## Update a live stream
 
@@ -299,9 +299,9 @@ You can update live stream details from your dashboard if you don't want to retr
 
 3. Choose the live stream container you want to update by clicking on it. A pop-up appears displaying key details about your live stream. 
 
-4. Click **See details** to open a display of complete information about your live stream. 
+4. Click **Live Stream Details** to open a display of complete information about your live stream. 
 
-   ![Showing the live stream details](/_assets/show-livestream.png)
+   ![Showing the live stream details](/_assets/live-streaming/live-stream-details.png)
 
 5. You can change the title of your live stream, upload a thumbnail, and associate a player ID on this screen. When you're done, click **Save**.
 

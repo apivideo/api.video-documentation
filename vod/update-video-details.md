@@ -16,14 +16,14 @@ You can update details for a video after you've uploaded it. The only things you
 
 When you update details about your video, you can choose from a wide variety of settings. Choices include: 
 
-- playerId - Add a player you want to associate with your video.
-- title - Update or add a title to your video.
-- description - Update or add a description of the contents of your video.
-- public - Whether your video is public or private.
-- panoramic - Whether the video is 360 degree / immersive.
-- mp4Support - Whether the player supports the mp4 format.
-- tags - A comma-separated list of words you want to use to tag the video.
-- metadata - An array of dictionaries where each dictionary contains a key:value pair that describes the video. 
+- `playerId` - Add a player you want to associate with your video.
+- `title` - Update or add a title to your video.
+- `description` - Update or add a description of the contents of your video.
+- `public` - Whether your video is public or private.
+- `panoramic` - Whether the video is 360 degree / immersive.
+- `mp4Support` - Whether the player supports the mp4 format.
+- `tags` - A comma-separated list of words you want to use to tag the video.
+- `metadata` - An array of objects where each object contains a key:value pair that describes the video. 
 
 To update details about a video, use this code sample: 
 
@@ -164,12 +164,16 @@ print("Uploaded Video", video_response)
 
 ## Update video details with your dashboard
 
-If you don't want to send an API request with code, you can update video details from your dashboard. Do the following: 
+You can update your video assets directly from the dashboard as well.
 
-1. Open your dashboard.
+1. Open the api.video [dashboard](https://dashboard.api.video/).
 
-2. From the menu on the left, choose **Videos**. A pop-up containing information about how to embed your video appears. The video ID is included in the embed link at the end (you'll need to strip the rest of the URL to use it, though). You can also continue to the details screen for the video. 
+2. From the menu on the left, choose **Videos** to see the list of all the videos you have uploaded in your project. 
 
-3. From the upper right of the pop-up, click **See details**. You'll land on the details screen for your video, and the video ID appears at the top, above the video. 
+3. Locate the video that you want to update. You can use the filtering options to help you find the one you want. 
 
-   ![Showing the video details screen in the Dashboard](/_assets/update-video-details.png)
+   ![Showing the list of videos on the dashboard](/_assets/vod/video-list-mockup.png)
+
+4. Click **Video Details** to review and edit information about the video. 
+
+   ![Showing video details on the dashboard](/_assets/vod/video-details.png)

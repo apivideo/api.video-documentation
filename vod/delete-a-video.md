@@ -132,10 +132,12 @@ You can delete a video using your dashboard by doing the following:
 
 2. From the menu on the left, choose **Videos**.
 
-3. On the Video screen, use the filtering and scrolling features to locate the video you want to delete. Place a checkmark next to one or more videos you want to delete.
+3. On the Video screen, use the filtering and scrolling features to locate the video you want to delete. Place a checkmark next to one or more videos you want to delete, and push **Delete**.
 
-   ![Showing the list of videos in the Dashboard](/_assets/delete-video.png)
+   ![Showing the list of videos in the Dashboard](/_assets/vod/delete-video.png)
 
-4. In the center of the screen at the bottom, you'll see a trash can icon. Click the **trash can**. A popup appears asking if you're sure you want to delete the video(s) you selected.
+4. Deleting videos is a permanent action and there is no way to recover them. Keep this in mind when you confirm deleting the videos.
 
-5. Click **Confirm** to permanently delete your videos. There is no way to retrieve your content after you confirm, so be sure of your decision!
+5. You can also select the breadcrumbs icon next to each video to open an actions panel where you can select **Delete**.
+
+   ![Showing the action panel on the videos list in the Dashboard](/_assets/vod/delete-video-2.png)

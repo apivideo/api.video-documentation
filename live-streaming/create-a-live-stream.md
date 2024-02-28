@@ -205,17 +205,13 @@ If you don't want to set up your live stream programmatically, api.video enables
 
 1. Log in to your dashboard 
 
-2. Navigate to Livestreams
+2. Navigate to Live streams
 
-3. Click **Create a live stream**
+3. Click **Create a Live Stream**
 
-   ![api.video dashboard](/_assets/create-a-live-stream.png)
+   ![api.video dashboard](/_assets/live-streaming/create-live-stream.png)
 
-4. Enter the title and choose the remaining configuration items. Click on **Create** to create the live stream object.
-
-   ![Create a live stream dialog](/_assets/image.png)
-
-5. Once the live stream object is created you can either click on the **Start livestream** button and test it out from the dashboard.
+4. Once the live stream object is created you can click on the **Live Stream Details** button to view more information about the live stream. You can even start your stream directly from the dashboard.
 
 The live stream object contains all the information you'll need if you choose to broadcast using something else like OBS. You can pause the live stream at any time by clicking pause on the video. If you don't see your live stream start right away, give it a few minutes to get ready.
 
