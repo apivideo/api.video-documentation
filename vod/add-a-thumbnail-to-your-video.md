@@ -253,19 +253,21 @@ print(response)
 
 ## Add a thumbnail from the dashboard
 
-api.video also makes it possible for you to add a thumbnail from the dashboard. Both choices discussed in this guide are available here too - Timestamp and Upload image. 
+api.video enables you to add a thumbnail from the dashboard. Both choices discussed in this guide are available here too - Timestamp and Upload image. 
 
-![Adding a timestamp or uploading an image as a thumbnail](/_assets/add-thumbnail.png)
+1. Visit the [Videos page](https://dashboard.api.video/videos) in the dashboard to get started.
 
-To get to the area to add a thumbnail in the dashboard: 
+2. Locate the video that you want to add a thumbnail to, and click on **Video Details**.
 
-1. Choose a video by clicking on its title from your list of videos. 
+3. On the video details page, scroll down to the section where you see Thumbnail as an option. Click on **Update thumbnail**.
 
-2. Click **See details.**
+![Tumbnail details on the video information page](/_assets/vod/video-thumbnail.png)
 
-3. To add a frame from the video, click **Timestamp**. Enter the timestamp for the frame you want as the thumbnail in the field. Represent it as HH:MM:SS (hours, minutes, seconds). Click **Set**.
+3. To select a frame as a thumbnail from your video, click **Timestamp**. Enter the timestamp of the frame in HH:MM:SS (hours, minutes, seconds). Click **Set Tumbnail**.
 
-4. If you're adding an image, the same constraints apply as they do when you use the API. Click **Upload image**. Then click on the display for the video under **Upload image**. You'll be able to browse and upload. Alternatively, you can drag and drop a photo onto the video, and that will trigger an upload as well.
+![Updating a thumbnail](/_assets/vod/video-thumbnail-2.png)
+
+4. If you're adding an image, the same file constraints apply as they do when you use the API. Click **Upload image** to select this method and either drag & drop, or upload a file by browsing your device. Push **Upload Tumbnail** to finalize.
 
 ## Conclusion
 

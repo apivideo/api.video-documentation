@@ -120,13 +120,13 @@ If you don't want to retrieve video details programmatically, you can also view 
 
 2. From the menu on the left, choose **Videos**. 
 
-   ![Showing the list of videos on the dashboard](/_assets/video-selection.png)
+3. Locate the video for which you want to view details. You can use the filtering options to help you find the one you want. 
 
-3. Click on the video for which you want to view details. You can use the filtering options to help you find the one you want. 
+   ![Showing the list of videos on the dashboard](/_assets/vod/video-list-mockup.png)
 
-4. When the pop-up for the individual video you chose appears, click **See details** to review all the information about the video. 
+4. Click **Video Details** to review all the information about the video. 
 
-   ![Showing video details on the dashboard](/_assets/video-details.png)
+   ![Showing video details on the dashboard](/_assets/vod/video-details.png)
 
 ## Conclusion
 

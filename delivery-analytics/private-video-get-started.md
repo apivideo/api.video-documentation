@@ -46,16 +46,23 @@ It’s that simple! (if you want the advanced stuff, scroll down to “Time to r
 
 Let’s try to deliver one video in HTML with our own (amazing!) [api.video](https://api.video/) player. 
 
-Suppose you already have a cool video uploaded. Go to the dashboard and get make the video private (if it’s not already private)
+Suppose you already have a cool video uploaded. Go to the dashboard and get make the video private (if it’s not already private):
 
+1. Visit the [Videos page](https://dashboard.api.video/videos) in the dashboard.
 
-<iframe src="https://embed.api.video/vod/vi4kk18yNkfxYL6KQYmz4SaC" width="100%" height="500px"></iframe>
+2. Locate the video that you want to set to private, and click on **Video Details**.
 
-Now that the video is private, we can deliver it to users. Here’s a quick snippet in HTML that you can use to play your video in the browser. Just copy the code snippet and replace the URL with your private video URL. You can find the video URLs in the Assets section of the Video Details:
+3. On the video details page, scroll down to the Video Settings section. You'll see the **Public** property here.
 
-![Showing the link assets in the Video details screen on the Dashboard](/_assets/link-to-video.png)
+![Public property of a Video in the Video Details page](/_assets/vod/video-public-setting.png)
 
+4. Click on **Update video object**, and set the `public` property to `true`. Then click **Update Video**.
 
+Now that the video is private, we can deliver it to users. You can find the video URLs in the Assets section of the Video Details:
+
+![Showing the link assets in the Video details screen on the Dashboard](/_assets/vod/video-embed-link.png)
+
+Here’s a quick snippet in HTML that you can use to embed your video in the browser. Just copy the code snippet and replace the URL with your private video URL.
 
 ```html
 <html>
@@ -68,8 +75,6 @@ Now that the video is private, we can deliver it to users. Here’s a quick snip
   </body>
 </html>
 ```
-
-
 
 We played the video once with a browser. Now, open another browser tab in incognito mode and play the same video. You can see that it’s gone! no more video! don’t worry; even though the video still exists, the token changes once you consume it. If you refresh the video details page, you’ll notice that the private token has changed. If you paste the URL with the new private token in the `src` you will be able to play the video again in a new tab, but already with a different private token. Cool right?
 
