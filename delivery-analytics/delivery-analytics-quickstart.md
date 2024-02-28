@@ -18,7 +18,7 @@ The api.video player is provided in various SDKs that you can find in the [SDK c
 
 ### Branding your player
 
-You can bring the player closer to your brand by adding logos and your brand colour scheme to the player. The process is possible from the dashboard and the API. You can navigate to the [api.video dashboard](https://dashboard.api.video/players) and play around with it, however, in this tutorial, we will focus on setting it up through the API. 
+You can bring the player closer to your brand by adding logos and your brand colour scheme to the player. The process is possible from the dashboard and the API. You can navigate to the [api.video dashboard](https://dashboard.api.video/project-settings/players) and play around with it, however, in this tutorial, we will focus on setting it up through the API. 
 
 Let's set the player controls color to purple (#800080) and add our branded logo. 
 
@@ -34,7 +34,7 @@ In this example, we will be using the [api.video client libraries](/sdks/api-cli
 
 Let's add the api.video client library to our code.
 
-The client library takes your API key, which you can [find here](https://dashboard.api.video/apikeys). Let's pass it the API key and initialize the client. 
+The client library takes your API key, which you can [find here](https://dashboard.api.video/project-settings/api-keys). Let's pass it the API key and initialize the client. 
 
 If wish to learn more about api.video authentication and how it works, jump over to this [page](/reference/authentication-guide).
 
@@ -570,7 +570,7 @@ Make sure to install the modules / libraries on your environment beforehand.
 {% endcapture %}
 {% include "_partials/callout.html" kind: "info", content: content %}
 
-The client library takes your API key, which you can [find here](https://dashboard.api.video/apikeys). Let's pass it the API key and initialize the client. 
+The client library takes your API key, which you can [find here](https://dashboard.api.video/project-settings/api-keys). Let's pass it the API key and initialize the client. 
 
 You can learn more about authentication [here](/reference/authentication-guide).
 

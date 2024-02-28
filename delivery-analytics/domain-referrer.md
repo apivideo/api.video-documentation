@@ -56,7 +56,7 @@ Our team will configure the feature on the backend and let you know as soon as i
 
 ### Request Access
 
-Visit the [Dashboard](https://dashboard.api.video/domains) to get started with setting your allowed domains, or get in touch directly at [hello@api.video](mailto:hello@api.video).
+Visit the [Dashboard](https://dashboard.api.video/project-settings/domains) to get started with setting your allowed domains, or get in touch directly at [hello@api.video](mailto:hello@api.video).
 
 ## Implementation
 

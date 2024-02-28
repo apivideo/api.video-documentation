@@ -25,4 +25,4 @@ You can maintain your company branding by utilizing custom domains in any of the
 - use your own custom player to provide video on demand
 - embed or share [private videos](/delivery-analytics/video-privacy-access-management.md) through your own custom domain
 
-Visit the [Dashboard](https://dashboard.api.video/domains) to get started with setting up your custom domain!
+Visit the [Dashboard](https://dashboard.api.video/project-settings/domains) to get started with setting up your custom domain!

@@ -20,7 +20,7 @@ The three major aspects and importance of video player customization are:
 
 There are two options to customize your player:
 
-- Use the [customizer](https://dashboard.api.video/players) available in the dashboard
+- Use the [customizer](https://dashboard.api.video/project-settings/players) available in the dashboard
 
 - Use the API to [create and customize a player](/reference/api/Player-Themes#create-a-player)
 

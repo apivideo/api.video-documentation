@@ -15,7 +15,7 @@ The official Postman collection for api.video (coming soon!)
 ## Forking the collection to your Postman workspace 🍴
 
 1. Click the button above
-2. Add your [API key](https://dashboard.api.video/apikeys) to the Variables
+2. Add your [API key](https://dashboard.api.video/project-settings/api-keys) to the Variables
 
    ![Adding api.video API keys as Postman variables](/_assets/postman-1.png)
 
