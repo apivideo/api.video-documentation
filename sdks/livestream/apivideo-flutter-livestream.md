@@ -54,9 +54,10 @@ The library will require android.permission.CAMERA and android.permission.RECORD
 
 ```xml
 
-<key>NSCameraUsageDescription</key><string>Your own description of the purpose</string>
-
-<key>NSMicrophoneUsageDescription</key><string>Your own description of the purpose</string>
+<key>NSCameraUsageDescription</key>
+<string>Your own description of the purpose</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Your own description of the purpose</string>
 ```
 
 ### Code sample
@@ -166,3 +167,4 @@ use [issues](https://github.com/apivideo/api.video-flutter-live-stream/issues).
 [StreamPack]: <https://github.com/ThibaultBee/StreamPack>
 
 [HaishinKit]: <https://github.com/shogo4405/HaishinKit.swift>
+
