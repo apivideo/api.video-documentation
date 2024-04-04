@@ -30,17 +30,9 @@ or
 yarn add @api.video/react-native-video-uploader
 ```
 
-_Note: if you are on iOS, you will need two extra steps:_
-
-1. Don't forget to install the native dependencies with Cocoapods
-
-```sh
-cd ios && pod install
-```
-
-2. This project contains Swift code, and if it's your first dependency with Swift code, you need to create an empty Swift file in your project (with the bridging header) from XCode. [Find how to do that](https://github.com/apivideo/api.video-reactnative-uploader/blob/main/docss/install_swift_dependency.md)
-
 ### Code sample
+
+#### Regular upload
 
 ```js
 import ApiVideoUploader from '@api.video/react-native-video-uploader';
@@ -54,11 +46,32 @@ ApiVideoUploader.uploadWithUploadToken('YOUR_UPLOAD_TOKEN', 'path/to/my-video.mp
   });
 ```
 
+#### Progressive upload
+
+For more details about progressive uploads, see the [progressive upload documentation](https://docs.api.video/vod/progressive-upload).
+
+```js
+import ApiVideoUploader from '@api.video/react-native-video-uploader';
+
+(async () => {
+  const uploadSession = ApiVideoUploader.createProgressiveUploadSession({token: 'YOUR_UPLOAD_TOKEN'});
+  try {
+    await session.uploadPart("path/to/video.mp4.part1");
+    await session.uploadPart("path/to/video.mp4.part2");
+    // ...
+    const video = await session.uploadLastPart("path/to/video.mp4.partn");
+    // ...
+  } catch(e: any) {
+    // Manages error here
+  }
+})();
+```
+
 ### Android
 
 #### Permissions
 
-Permissions `android.permission.READ_MEDIA_VIDEO` (for API 33+) or `android.permission.READ_EXTERNAL_STORAGE` (for API < 33) will be requested by this library at runtime.
+Permissions `android.permission.READ_MEDIA_VIDEO` (for API 33+) or `android.permission.READ_EXTERNAL_STORAGE` (for API < 33) are in the library manifest and will be requested by this library at runtime. You don't have to request them in your application.
 
 On Android 33+, the upload comes with a notification to show the progress. So if your application targets Android 33+, you might request `android.permission.POST_NOTIFICATIONS` permission at runtime.
 
@@ -67,9 +80,9 @@ In your `AndroidManifest.xml` file, add the following lines in the `<application
 
 ```xml
     <service
-        android:name="androidx.work.impl.foreground.SystemForegroundService"
-        android:foregroundServiceType="location|dataSync"
-        tools:node="merge" />
+      android:name="androidx.work.impl.foreground.SystemForegroundService"
+      android:exported="false"
+      android:foregroundServiceType="dataSync" />
 ```
 
 #### Notifications
