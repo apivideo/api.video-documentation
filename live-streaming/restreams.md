@@ -15,7 +15,7 @@ If you are experiencing an issue, please do not hesitate to contact our support 
 {% endcapture %}
 {% include "_partials/callout.html" kind: "warning", content: content %}
 
-api.video gives you the ability to broadcast a live stream to multiple platforms simultaneously. You'll be able to stream to Youtube, Facebook, Twitch, and any other platform that supports [RTMP](https://api.video/blog/video-trends/what-is-rtmp-and-why-do-we-use-it-for-live-streaming/) from one source.
+api.video gives you the ability to broadcast a live stream to multiple platforms simultaneously. You'll be able to stream to Youtube, Twitch, and any other platform that supports [RTMP](https://api.video/blog/video-trends/what-is-rtmp-and-why-do-we-use-it-for-live-streaming/) from one source.
 
 ## How it works
 
@@ -64,7 +64,6 @@ api.video currently supports RTMP restreaming destinations. Providers that you c
 
 - YouTube
 - Twitch
-- Facebook
 - LinkedIn
 - Instagram (through [YellowDuck](https://yellowduck.tv/))
 
