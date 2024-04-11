@@ -24,14 +24,14 @@ api.video's Swift API client for iOS, macOS and tvOS streamlines the coding proc
 Specify it in your `Cartfile`:
 
 ```
-github "apivideo/api.video-swift-client" ~> 1.2.1
+github "apivideo/api.video-swift-client" ~> 1.2.2
 ```
 
 Run `carthage update`
 
 #### CocoaPods
 
-Add `pod 'ApiVideoClient', '1.2.1'` in your `Podfile`
+Add `pod 'ApiVideoClient', '1.2.2'` in your `Podfile`
 
 Run `pod install`
 
@@ -278,6 +278,7 @@ Method | HTTP request | Description
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-swift-client/blob/main/docs/RestreamsResponseObject.md)
  - [TokenCreationPayload](https://github.com/apivideo/api.video-swift-client/blob/main/docs/TokenCreationPayload.md)
  - [TokenListResponse](https://github.com/apivideo/api.video-swift-client/blob/main/docs/TokenListResponse.md)
+ - [TooManyRequests](https://github.com/apivideo/api.video-swift-client/blob/main/docs/TooManyRequests.md)
  - [UploadToken](https://github.com/apivideo/api.video-swift-client/blob/main/docs/UploadToken.md)
  - [Video](https://github.com/apivideo/api.video-swift-client/blob/main/docs/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-swift-client/blob/main/docs/VideoAssets.md)
