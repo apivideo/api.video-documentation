@@ -26,9 +26,9 @@ With api.video, you can use our in-house import tool to migrate all of your vide
 
 <iframe src="https://embed.api.video/vod/vi78psoxNn8M3T3hFC6Ym3NQ#hide-title" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 
-The simple tool will require you to input several parameters from the provider you are leaving and from api.video.
+The tool only requires you to authenticate with the provider you are migrating from.
 
-Check out the [Import Tool](https://import.api.video/) now.
+Check out the [Import Tool](https://dashboard.api.video/import) now. 
 
 ### Obtaining the SAS URL
 
@@ -36,15 +36,15 @@ To enable the Video Import Tool access to the videos in your Azure Blob Storage 
 
 1. Navigate to your storage account and click on "Shared Access Signature":
 
-![Generating a Shared Access Signature](/_assets/get-started/azure-migration/azure-4.png)
+   ![Generating a Shared Access Signature](/_assets/get-started/azure-migration/azure-4.png)
 
 2. Enable the required parameters:
 
-![Enabling required parameters](/_assets/get-started/azure-migration/azure-storage-doc-11.png)
+   ![Enabling required parameters](/_assets/get-started/azure-migration/azure-storage-doc-11.png)
 
 3. Ensure that you generate the Shared Access Signature. Once you have the links, copy the Blob Service SAS URL.
 
-![Copying the Blob service SAS URL](/_assets/get-started/azure-migration/azure-6.png)
+   ![Copying the Blob service SAS URL](/_assets/get-started/azure-migration/azure-6.png)
 
 4. Finally, paste the URL into the "SAS URL" field of the Import Tool.
 
@@ -52,21 +52,17 @@ To enable the Video Import Tool access to the videos in your Azure Blob Storage 
 
 Once you have all the pre-requisites you can proceed with the migration.
 
-1. Navigate to the api.video [Import Tool](https://import.api.video/).
+1. Navigate to the api.video [Import Tool](https://dashboard.api.video/import).
 
 2. Select Azure Blob Service from the list
 
-3. Authorize with api.video with your account. This process will link your api.video workspace to the Import tool.
+3. Next, click on Sign In to Azure.
 
-4. Select the project that you would like to import the video.
+4. Pass in the SAS URL that you've obtained in the previous step
 
-5. Next, click on Sign In to Azure.
+5. Mention the container you would like to import or leave it blank to import all containers.
 
-6. Pass in the SAS URL that you've obtained in the previous step
-
-7. Mention the container you would like to import or leave it blank to import all containers.
-
-8. Now you can proceed with the import.
+6. Now you can proceed with the import.
 
 The process will show you the status of each video and the encoding status.
 
@@ -105,65 +101,63 @@ Make sure that you have Node.js installed, if it doesn't exist on your machine, 
 Now that you have Node.js installed, we will have to create the path of the script and install the dependencies.
 
 1. Clone the script from Github, by running the following in your command line:
-```shell
-$ git clone https://github.com/apivideo/azure-media-services-api-video-migration
-```
+      ```shell
+      $ git clone https://github.com/apivideo/azure-media-services-api-video-migration
+      ```
 
 2. Navigate to the folder you've just cloned
-```shell
-$ cd azure-media-services-api-video-migration
-```
+      ```shell
+      $ cd azure-media-services-api-video-migration
+      ```
 
 3. Import the modules that you need to run the script:
-```shell
-$ npm install @api.video/nodejs-client // api.video node.js client, in order to create the video object, upload and encode the video
-$ npm install @azure/identity // access Azure services
-$ npm install @azure/arm-mediaservices // client to access Azure media services
-```
+      ```shell
+      $ npm install @api.video/nodejs-client // api.video node.js client, in order to create the video object, upload and encode      the video
+      $ npm install @azure/identity // access Azure services
+      $ npm install @azure/arm-mediaservices // client to access Azure media services
+      ```
 
 4. You'll need to make sure that you replace all the credentials in the `.env` file, which are represented below, with the credentials you'll get from Azure in the steps following this one, and replace the API key you got from api.video:
+      ```javascript
+      let mediaServicesClient: AzureMediaServices;
 
-```javascript
+          const subscriptionId: string = process.env.AZURE_SUBSCRIPTION_ID as string;
+          const resourceGroup: string = process.env.AZURE_RESOURCE_GROUP as string;
+          const accountName: string = process.env.AZURE_MEDIA_SERVICES_ACCOUNT_NAME as string;
 
-let mediaServicesClient: AzureMediaServices;
-    
-    const subscriptionId: string = process.env.AZURE_SUBSCRIPTION_ID as string;
-    const resourceGroup: string = process.env.AZURE_RESOURCE_GROUP as string;
-    const accountName: string = process.env.AZURE_MEDIA_SERVICES_ACCOUNT_NAME as string;
-    
-    const credential = new DefaultAzureCredential();
-    const apivideoClient = new ApiVideoClient({ apiKey: process.env.APIVIDEO_API_KEY });
-    
-    let remoteSasUrl: string = process.env.REMOTESTORAGEACCOUNTSAS as string;
-```
-![Selecting the api.video media service on Azure](/_assets/get-started/azure-migration/azure-1.png)
-{% capture content %}
-Note that in the previous step, you will also need to update the .env file and grab the parameters from Azure. In order to do that, navigate to your Azure Media Service, and select the directory that you would like to migrate.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+          const credential = new DefaultAzureCredential();
+          const apivideoClient = new ApiVideoClient({ apiKey: process.env.APIVIDEO_API_KEY });
 
+          let remoteSasUrl: string = process.env.REMOTESTORAGEACCOUNTSAS as string;
+      ```
+
+      ![Selecting the api.video media service on Azure](/_assets/get-started/azure-migration/azure-1.png)
+      {% capture content %}
+      Note that in the previous step, you will also need to update the .env file and grab the parameters from Azure. In order to      do that, navigate to your Azure Media Service, and select the directory that you would like to migrate.
+      {% endcapture %}
+      {% include "_partials/callout.html" kind: "info", content: content %}
 
 5. Select API keys and copy over the parameters presented in the `.ENV` pane (you can select either User Authentication or Service principal authentication)
 
-![Selecting API Access for media services](/_assets/get-started/azure-migration/azure-2.png)
+   ![Selecting API Access for media services](/_assets/get-started/azure-migration/azure-2.png)
 
-![Selecting the .ENV credentials pane](/_assets/get-started/azure-migration/azure-3.png)
+   ![Selecting the .ENV credentials pane](/_assets/get-started/azure-migration/azure-3.png)
 
 6. To get access to the storage, navigate to the Azure Storage Account → Shared access signature:
 
-![Generating Shared Access Signature](/_assets/get-started/azure-migration/azure-4.png)
+   ![Generating Shared Access Signature](/_assets/get-started/azure-migration/azure-4.png)
 
 7. Allow the following:
 
-![Enabling required parameters](/_assets/get-started/azure-migration/azure-5.png)
+   ![Enabling required parameters](/_assets/get-started/azure-migration/azure-5.png)
 
-![Copying the Blob service SAS URL](/_assets/get-started/azure-migration/azure-6.png)
+   ![Copying the Blob service SAS URL](/_assets/get-started/azure-migration/azure-6.png)
 
-Make sure that you generate the Shared access signature and once you have the links, copy the Blob service SAS URL link to the `.env` file. The parameter you are looking for is `REMOTESTORAGEACCOUNTSAS`
+   Make sure that you generate the Shared access signature and once you have the links, copy the Blob service SAS URL link to the `.env` file. The parameter you are looking for is `REMOTESTORAGEACCOUNTSAS`
 
 8. Add the api.video API key to the .env file by navigating to the [api.video dashboard](https://dashboard.api.video/overview) and copy the API key value
 
-![Copying the api.video API key](/_assets/get-started/azure-migration/azure-7.png)
+   ![Copying the api.video API key](/_assets/get-started/azure-migration/azure-7.png)
 
 9. Now, `run npm install` in the terminal in order to install all of the node modules
 10. Run `npm run build`

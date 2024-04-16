@@ -24,9 +24,9 @@ api.video gives you the ability to **migrate for free** and avoid paying anythin
 
 With api.video, you can use our in-house import tool to migrate all of your videos in a short time from the popular hosting and video provider.
 
-The simple tool will require you to input several parameters from the provider you are leaving and from api.video.
+The tool only requires you to authenticate with the provider you are migrating from.
 
-Check out the [Import Tool](https://import.api.video/) now.
+Check out the [Import Tool](https://dashboard.api.video/import) now.
 
 ### How to get the AWS Access Key and Account Secret
 
@@ -75,19 +75,15 @@ You can retrieve the secret access key only when you initially create the key pa
 
 Once you have all the credentials, you can proceed with the migration.
 
-1. Navigate to the api.video [Import Tool](https://import.api.video/).
+1. Navigate to the api.video [Import Tool](https://dashboard.api.video/import).
 
 2. Select Amazon S3 from the list.
 
-3. Authorize with api.video with your account. This process will link your api.video workspace to the Import tool.
+3. Next, click on Sign in to Amazon S3 and fill in the AWS Access Key and AWS Secret Key you got from Amazon S3.
 
-4. Select the project that you would like to import the video.
+4. Select the S3 bucket you would like to import.
 
-5. Next, click on Sign in to Amazon S3 and fill in the AWS Access Key and AWS Secret Key you got from Amazon S3.
-
-6. Select the S3 bucket you would like to import.
-
-7. Now you can proceed with the import.
+5. Now you can proceed with the import.
 
 The process will show you the status of each video and the encoding status.
 
@@ -122,92 +118,92 @@ Make sure that you have Node.js installed, if it doesn't exist on your machine, 
 Now that you have Node.js installed, we will have to create the path of the script and install the dependencies.
 
 1. Create the folder for the script: 
-```shell
-$ mkdir s3-apivideo-migration
-```
+    ```shell
+    $ mkdir s3-apivideo-migration
+    ```
 
 2. Navigate to the folder
-```shell
-$ cd s3-apivideo-migration
-```
+    ```shell
+    $ cd s3-apivideo-migration
+    ```
 
 3. Initialize `npm` in order to create the package.json file for the module dependacies
-```shell
-$ npm init
-```
+    ```shell
+    $ npm init
+    ```
 
 4. Install the modules that we will need to run
-```shell
-$ npm install @aws-sdk/client-s3 --save
-$ npm install @aws-sdk/s3-request-presigner --save
-$ npm install @api.video/nodejs-client --save
-```
+    ```shell
+    $ npm install @aws-sdk/client-s3 --save
+    $ npm install @aws-sdk/s3-request-presigner --save
+    $ npm install @api.video/nodejs-client --save
+    ```
 
 5. Now create an index file that you would like the script to exist in:
-```shell
-$ touch index.js
-```
+    ```shell
+    $ touch index.js
+    ```
 
 6. Copy over the below script and replace the following parameters with your own: `videBucket`, `region`, `accessKeyId`, `secrectAccessKey`, `apivideoCreds`
 
-```javascript
-import { S3Client, ListObjectsV2Command, GetObjectCommand, S3 } from "@aws-sdk/client-s3";
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import  ApiVideoClient from '@api.video/nodejs-client';
+    ```javascript
+    import { S3Client, ListObjectsV2Command, GetObjectCommand, S3 } from "@aws-sdk/client-s3";
+    import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+    import  ApiVideoClient from '@api.video/nodejs-client';
 
-// your S3 bucket name
-const videoBucket = "videos-cold-storage-api-video";
-// your S3 bucket region
-const region = 'eu-north-1';
-// your S3 credentails
-const s3creds = {
-    accessKeyId: 'XXXXXX', 
-    secretAccessKey: 'XXXXXXX',
-    }
-// api.video api key
-const apivideoCreds = 'XXXXXXX';
+    // your S3 bucket name
+    const videoBucket = "videos-cold-storage-api-video";
+    // your S3 bucket region
+    const region = 'eu-north-1';
+    // your S3 credentails
+    const s3creds = {
+        accessKeyId: 'XXXXXX', 
+        secretAccessKey: 'XXXXXXX',
+        }
+    // api.video api key
+    const apivideoCreds = 'XXXXXXX';
 
 
-const apivideoClient = new ApiVideoClient({ apiKey: apivideoCreds });
+    const apivideoClient = new ApiVideoClient({ apiKey: apivideoCreds });
 
-const client = new S3Client({ region, 
-credentials: s3creds
-});
-
-new S3({ region, 
+    const client = new S3Client({ region, 
     credentials: s3creds
-});
+    });
 
-const bucketName = { 
-    Bucket: videoBucket, 
-  };
-const listBucketObjectsCommand = new ListObjectsV2Command(bucketName);
+    new S3({ region, 
+        credentials: s3creds
+    });
 
-try { 
-    const listObjects = await client.send(listBucketObjectsCommand);
-    if (listObjects?.$metadata?.httpStatusCode === 200 && listObjects?.Contents.length > 0) {
-        for (let i in listObjects.Contents) {
-            const objectKey = listObjects.Contents[i].Key;
-            bucketName.Key = objectKey;
-            const objectDetailsCommand = new GetObjectCommand(bucketName);
-            const objectDetails = await client.send(objectDetailsCommand);
-            if(/video/.test(objectDetails.ContentType)) {
-                const signedUrl = await getSignedUrl(client, objectDetailsCommand, { expiresIn: 3600 });
-                const videoCreationPayload = {
-                    title: objectKey,
-                    source: signedUrl
-                };
-                await apivideoClient.videos.create(videoCreationPayload);
-                console.log("upload complete")
-            }
-        } 
+    const bucketName = { 
+        Bucket: videoBucket, 
+      };
+    const listBucketObjectsCommand = new ListObjectsV2Command(bucketName);
+
+    try { 
+        const listObjects = await client.send(listBucketObjectsCommand);
+        if (listObjects?.$metadata?.httpStatusCode === 200 && listObjects?.Contents.length > 0) {
+            for (let i in listObjects.Contents) {
+                const objectKey = listObjects.Contents[i].Key;
+                bucketName.Key = objectKey;
+                const objectDetailsCommand = new GetObjectCommand(bucketName);
+                const objectDetails = await client.send(objectDetailsCommand);
+                if(/video/.test(objectDetails.ContentType)) {
+                    const signedUrl = await getSignedUrl(client, objectDetailsCommand, { expiresIn: 3600 });
+                    const videoCreationPayload = {
+                        title: objectKey,
+                        source: signedUrl
+                    };
+                    await apivideoClient.videos.create(videoCreationPayload);
+                    console.log("upload complete")
+                }
+            } 
+        }
+    } catch (e) {
+        console.error(e);
     }
-} catch (e) {
-    console.error(e);
-}
-```
+    ```
 
 7. Save the file and run the script by:
-```shell
-$ node index.js
-```
+    ```shell
+    $ node index.js
+    ```

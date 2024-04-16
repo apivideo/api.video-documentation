@@ -27,13 +27,6 @@ Moving to a different provider takes time, effort, and development resources. ap
 ## FAQs
 
 <details>
-<summary><b>Will api.video help me if I have too many videos to upload through the Import Tool?</b></summary>
-<p>
-Yes! Get in touch with the team <a href="https://meetings.hubspot.com/apivideo/talk-to-us">here</a>
-to discuss the details. You can help us prepare by collecting information about the size and amount of content you have in advance.
-</details>
-
-<details>
 <summary><b>What do I need to change in my implementation after the migration?</b></summary>
 <p>
 Once you migrate, api.video will host your assets and will provide the infrastructure for you. You only need to take care about updating your product to use the new assets.
@@ -48,5 +41,5 @@ Technically speaking no. When you migrate your assets, api.video generates new u
 <details>
 <summary><b>Will api.video help me create a mapping from old assets to new assets?</b></summary>
 <p>
-Yes! api.video can provide a mapping in <code>csv</code> format.
+Yes! The Import tool automatically creates a mapping in <code>csv</code> and in <code>JSON</code> formats.
 </details>

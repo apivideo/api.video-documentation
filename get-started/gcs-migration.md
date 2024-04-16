@@ -9,9 +9,9 @@ meta:
 
 Planning to migrate api.video from Google Cloud Storage? We got you covered!
 
-Using the api.video Import tool, it only takes a couple of clicks to migrate all of your video content from Google Cloud Storage to api.video. This simple tool only requires read access to your Google Cloud Storage bucket, and that you authenticate yourself with your api.video account.
+Using the api.video Import tool, it only takes a couple of clicks to migrate all of your video content from Google Cloud Storage to api.video. The tool only requires read access to your Google Cloud Storage bucket.
 
-Check out the [Import Tool](https://import.api.video/) to get started.
+Check out the [Import Tool](https://dashboard.api.video/import) now.
 
 ## What's the cost? 
 
@@ -59,18 +59,14 @@ The Import Tool's service account now has read access to the Google Cloud Storag
 
 Once you have granted all necessary access, you can start the migration.
 
-1. Navigate to the api.video [Import Tool](https://import.api.video/).
+1. Navigate to the api.video [Import Tool](https://dashboard.api.video/import).
 
 2. Select **Google Cloud Storage** from the list.
 
-3. Log into your api.video account. This process links your api.video workspace to the Import tool.
+3. Next, enter the name of the Google Cloud Storage bucket that you want to migrate.
 
-4. If you have multiple api.video projects in your workspace, select the project where you want to migrate your content to.
+4. Next, the tool retrieves the available videos from Google Cloud Storage. Select the videos you would like to import.
 
-5. Next, enter the name of the Google Cloud Storage bucket that you want to migrate.
-
-6. Next, the tool retrieves the available videos from Google Cloud Storage. Select the videos you would like to import.
-
-7. Select the videos you want to migrate, and start the import process.
+5. Select the videos you want to migrate, and start the import process.
 
 The process displays the upload status and encoding status for each video.
