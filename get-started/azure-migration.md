@@ -69,7 +69,7 @@ The Import tool requires a Shared Access Signature (SAS) URL to access the video
 
 2. Enable the required parameters:
 
-   ![Enabling required parameters](/_assets/get-started/azure-migration/azure-5.png)
+   ![Enabling required parameters](/_assets/get-started/azure-migration/azure-storage-doc-11.png)
 
 3. Ensure that you generate the Shared Access Signature. Once you have the links, save the URL. You will need to paste it into the "SAS URL" field of the Import tool.
 
