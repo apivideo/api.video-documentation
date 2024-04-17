@@ -11,7 +11,7 @@ Planning to migrate api.video from Wistia? We got you covered!
 
 Using the api.video Import tool, it only takes a couple of clicks to migrate all of your video content from Wistia to api.video. The tool only requires a Wistia access token, and that you authenticate yourself with your api.video account.
 
-Check out the [Import Tool](https://dashboard.api.video/import) to get started.
+Check out the [Import tool](https://dashboard.api.video/import) to get started.
 
 ## What's the cost? 
 
@@ -38,7 +38,7 @@ You can create a Wistia access token in just a few clicks:
 
 3. **Copy the token**
 
-      The access token that you generate appears on the page. You can use the Password value in the api.video [Import Tool](https://dashboard.api.video/import) to authenticate your Wistia account for the import process:
+      The access token that you generate appears on the page. You can use the Password value in the api.video [Import tool](https://dashboard.api.video/import) to authenticate your Wistia account for the import process:
 
       ![](/_assets/get-started/migration-guide/wistia-3.png)
 
@@ -46,7 +46,7 @@ You can create a Wistia access token in just a few clicks:
 
 Once you have all the credentials, you can start the migration.
 
-1. Navigate to the api.video [Import Tool](https://dashboard.api.video/import).
+1. Navigate to the api.video [Import tool](https://dashboard.api.video/import).
 
 2. Select **Wistia** from the list.
 

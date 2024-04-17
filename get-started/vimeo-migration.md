@@ -11,7 +11,7 @@ Planning to migrate api.video from Vimeo? We got you covered!
 
 Using the api.video Import tool, it only takes a couple of clicks to migrate all of your video content from Vimeo to api.video. The tool only requires a Vimeo access token.
 
-Check out the [Import Tool](https://dashboard.api.video/import) to get started.
+Check out the [Import tool](https://dashboard.api.video/import) to get started.
 
 {% capture content %}
 
@@ -53,7 +53,7 @@ In the **Authentication** section:
 
 ![](/_assets/get-started/migration-guide/vimeo-migration-2.png)
 
-The access token that you generate appears on the page. You can use the Token value in the api.video [Import Tool](https://dashboard.api.video/import) to authenticate your Vimeo account for the import process:
+The access token that you generate appears on the page. You can use the Token value in the api.video [Import tool](https://dashboard.api.video/import) to authenticate your Vimeo account for the import process:
 
 ![](/_assets/get-started/migration-guide/vimeo-migration-3.png)
 
@@ -61,7 +61,7 @@ The access token that you generate appears on the page. You can use the Token va
 
 Once you have all the credentials, you can start the migration.
 
-1. Navigate to the api.video [Import Tool](https://dashboard.api.video/import).
+1. Navigate to the api.video [Import tool](https://dashboard.api.video/import).
 
 2. Select **Vimeo** from the list.
 

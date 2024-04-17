@@ -20,13 +20,13 @@ We understand that when you want to move to a different provider, it takes effor
 
 api.video gives you the ability to **migrate for free** and avoid paying anything for encoding!
 
-## api.video Import Tool
+## api.video Import tool
 
 With api.video, you can use our in-house import tool to migrate all of your videos in a short time from the popular hosting and video provider.
 
 The tool only requires you to authenticate with the provider you are migrating from.
 
-Check out the [Import Tool](https://dashboard.api.video/import) now.
+Check out the [Import tool](https://dashboard.api.video/import) now.
 
 ### How to get the AWS Access Key and Account Secret
 
@@ -75,7 +75,7 @@ You can retrieve the secret access key only when you initially create the key pa
 
 Once you have all the credentials, you can proceed with the migration.
 
-1. Navigate to the api.video [Import Tool](https://dashboard.api.video/import).
+1. Navigate to the api.video [Import tool](https://dashboard.api.video/import).
 
 2. Select Amazon S3 from the list.
 
