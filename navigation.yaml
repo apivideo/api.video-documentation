@@ -11,7 +11,7 @@
     collapsed: true
     items:
     - label: api.video import tool
-      external: https://import.api.video/
+      external: https://dashboard.api.video/import
     - label: Azure Media Services
       href: /get-started/azure-migration.md
     - label: Amazon S3
