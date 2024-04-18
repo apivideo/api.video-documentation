@@ -16,4 +16,5 @@ meta:
 | `The requested resource could not be found.`       | `404`  | You requested a resource (video, live stream, etc.) that doesn't exist at all or that doesn't belong to your project. |         |
 | `Unrecognized request URL.`                        | `404`  | You send a request to an endpoint that doesn't exist at all, for example GET /foobar.                                 |         |
 | `Method is not allowed for this route.`            | `405`  | The endpoint exists but not for this HTTP method, for example you DELETE /webhooks instead of GET.                    |         |
+| `Too many requests.`                               | `429`  | You sent too many requests and exceeded the API rate limit.                                                           |         |
 | `Server error`                                     | `500`  | An error occurred on our server, we are working to fix it.                                                            |         |

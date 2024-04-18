@@ -60,6 +60,30 @@ Follow these best practices to secure your API keys:
 
 ## Limitation
 
+api.video limits the number of accepted API requests **per minute**. The limitation that the API applies to your calls depends on these factors:
+
+* the [API environment](https://docs.api.video/reference#environments) you send your calls in
+* your [pricing plan](https://api.video/pricing)
+* the request method that your calls use
+
+|         | Sandbox | Production |
+| ------- | ------- | ---------- |
+| Uploads | 40      | 100        |
+| Writes  | 40      | 200        |
+| Reads   | 100     | 500        |
+
+The API returns information about the applied rate limits in the header of every response. Check these header elements:
+
+- `X-RateLimit-Limit` shows the applied request limit per minute.
+- `X-RateLimit-Remaining` shows the number of available requests you have left for the current time window.
+- `X-RateLimit-Retry-After` shows the number of seconds left until the current rate limit window resets.
+
+api.video recommends that you implement a retry method in your app that responds to the `429 - Too many requests` error. You can scale down your request volume and return the failed, rate limited requests to your queue to wait according to the value of `X-RateLimit-Retry-After`.
+
+If you want to increase the limits that apply to your calls get in touch with the support team via the chat box.
+
+### Video upload
+
 Video upload (VOD) is limited in size and minutes. We support upload for videos that are:
 
 - at most 30 GiB in size.
