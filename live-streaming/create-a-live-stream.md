@@ -10,7 +10,14 @@ Creating a live stream is simple with api.video. After you create it, you have a
 
 <iframe src="https://embed.api.video/vod/vi6mgcrUqQuLyQNRW0qbl6gt" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 
-This guide helps you follow along with the video and learn how to set up your live stream with api.video, and then use OBS to broadcast. 
+This guide helps you follow along with the video and learn how to set up your live stream with api.video, and then use OBS to broadcast.
+
+{% capture content %}
+api.video supports both `RTMP` and `SRT` protocols for live streaming.
+
+Accepting live streams through `SRT` **is currently in beta** - reach out if you have any questions or encounter any issues!
+{% endcapture %}
+{% include "_partials/callout.html" kind: "info", content: content %}
 
 ## API reference
 
@@ -179,25 +186,38 @@ curl --request POST \
 {% endcapture %}
 {% include "_partials/code-tabs.md" samples: samples %}
 
-## Connect live video to your live stream container
+## Connect to your live stream container
 
-You'll want to grab your live stream's streamKey from the response. It's required for use with OBS. To get started: 
+In this example, we will use [OBS Studio](https://obsproject.com), which is an open-source broadcasting application, to manually set up a live stream broadcast.
 
-1. Install OBS. You can grab the software here: [OBS Studio](https://obsproject.com/)
+### Set up the streaming service
 
-2. Establish a source. In the sources section, choose a video feed to share. You could choose to share your screen or to share your camera (on a Mac: Video Capture Device, and then in the "Device" dropdown, select the camera). You should now see the video source in the main OBS window. 
+1. Open OBS and go to File and then Settings. In the Settings menu, go to **Stream**.
 
-3. Connect OBS to api.video. Under Settings, choose **Stream**. You'll see a choice for service - select **api.video**.
+2. Next, you have to set up the streaming service provider. With api.video, you have the option to choose between `RTMP` and `SRT` protocols for live streaming.
 
-4. The server should be **Default**, and the streamKey is the value you received in the JSON response when you created the stream container. 
+   - For `RTMP`, open the dropdown menu for Service, and select **Show all**. In the resulting list, find api.video. This will set up streaming through api.video's default `RTMP` server: `rtmp://broadcast.api.video/s`. You can find the **Stream key** in the API response you received when you created the live stream container.
+   
+   - For `SRT`, open the dropdown menu for Service, and select **Custom**. Use this server URL: `srt://broadcast.api.video:6200?streamid={stream_key}` and replace `{stream_key}` with the **Stream key** in the API response that you received when you created the live stream container.
+   
+   You can configure your `SRT` stream through **SRT options**, which you can define using this syntax: `srt://IP:port?option1=value1&option2=value2`. For OBS Studio, the full list of options are those supported by [FFmpeg](https://ffmpeg.org//ffmpeg-protocols.html#srt).
+   
+   The most important option is `latency`, which is defined in microseconds. The minimum value is 120 ms (`latency=120000`), lower values will be ignored. Check out [OBS Studio's documentation](https://obsproject.com/wiki/Streaming-With-SRT-Or-RIST-Protocols) on the topic.
+   
+   Once you've set up the streaming service, apply the changes.
 
-5. Click **OK** to accept the changes.
+### Set a streaming source
 
-6. Press **Start Streaming**.
+3. Establish a source. In the Sources section for OBS, choose the source that you want to stream. This can be a video capture device, your desktop, or even another application.
 
-7. Share the embed, iFrame, so that others can watch your stream!
+4. Press **Start Streaming**!
 
-If you can't find **api.video** in the list of services, you can choose **custom** and **rtmp://broadcast.api.video/s** for the server.
+To share your stream, grab the embed URL or the `iframe` that you received in the API response when you created the live stream container.
+
+{% capture content %}
+All live stream details like your Stream key, the embed URL, and the `iframe` are also available through the api.video dashboard. Go to the [Live streams](https://dashboard.api.video/livestreams) page, and open the Details of the live stream that you want to share.
+{% endcapture %}
+{% include "_partials/callout.html" kind: "info", content: content %}
 
 ## Live stream directly from your dashboard
 
@@ -214,7 +234,3 @@ If you don't want to set up your live stream programmatically, api.video enables
 4. Once the live stream object is created you can click on the **Live Stream Details** button to view more information about the live stream. You can even start your stream directly from the dashboard.
 
 The live stream object contains all the information you'll need if you choose to broadcast using something else like OBS. You can pause the live stream at any time by clicking pause on the video. If you don't see your live stream start right away, give it a few minutes to get ready.
-
-## Conclusion
-
-There are many ways to set up a live stream. OBS is one of the most popular ways to get started.
