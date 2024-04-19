@@ -13,6 +13,21 @@ meta:
 - In order to prevent the live stream from getting stuck (buffering indefinitely), please ensure that you are following the recommended [settings](#recommended-setting-for-ingestion).
 - Make sure to verify that the connection speed is adequate and stable before the stream is starting.
 
+## Streaming protocols
+
+api.video supports both `RTMP` and `SRT` protocols for live streaming. Accepting live streams through `SRT` **is currently in beta** - reach out if you have any questions or encounter any issues!
+
+### SRT details
+
+* The minimum accepted value for `latency` is 120 ms, lower values will be ignored.
+* The required SRT protocol version should be **1.3 or higher** - check your broadcasting application to make sure it supports the correct version.
+
+### Which protocol to use
+
+Take network connection into consideration - if you or your users stream in stable conditions with a low risk of congestion, `RTMP` will probably achieve a better latency than `SRT`. If you or your users experience lots of buffering, or the network you use is known to be unstable, or network conditions may change like when using a mobile network, then `SRT` may be a good fit. 
+
+Rembember that both protocols have their pros and cons - with bad network conditions, viewers might encounter buffering with `RTMP`, or they might encounter audio or visual glitches when using `SRT`.
+
 ## DVR - reading history in live streams
 
 When a live stream is ongoing, viewers can replay earlier content with the DVR feature. The available buffer is 1 hour, and is only available in live streams that are actively broadcasting.
@@ -29,6 +44,12 @@ When reaching the end of the playback, the player buffers until the live stream 
 
 Reconnection is handled by api.video, however, an edge case might occur (very slim chance), which will result in the inability to reconnect to the stream with good quality. In this case, we recommend creating a manual stream reconnection, where the streamer will create a new streaming key while the consumers will have to refresh their player instance.
 
+## Streaming servers
+
+| Protocol | Description                                | Server URL                                             |
+| -------- | ------------------------------------------ | ------------------------------------------------------ |
+| `RTMP`   | The default streaming server.              | `rtmp://broadcast.api.video/s`                         |
+| `SRT`    | The `SRT` server, currently **in beta**.   | `srt://broadcast.api.video:6200?streamid={stream_key}` |
 
 ## Recommended setting for ingestion
 
