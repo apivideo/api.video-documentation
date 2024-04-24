@@ -216,6 +216,7 @@ Method | Description | HTTP request
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/RestreamsResponseObject.md)
  - [TokenCreationPayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/TokenCreationPayload.md)
  - [TokenListResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/TokenListResponse.md)
+ - [TooManyRequests](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/TooManyRequests.md)
  - [UploadToken](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/UploadToken.md)
  - [Video](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoAssets.md)
@@ -246,6 +247,24 @@ Method | Description | HTTP request
  - [WebhooksCreationPayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/WebhooksCreationPayload.md)
  - [WebhooksListResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/WebhooksListResponse.md)
 
+
+### Rate Limiting
+
+api.video implements rate limiting to ensure fair usage and stability of the service. The API provides the rate limit values in the response headers for any API requests you make. The /auth endpoint is the only route without rate limitation.
+
+In this Node.js client, you can access these headers by using the `*WithResponseHeaders()` versions of the methods. These methods return both the response body and the headers, allowing you to check the `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Retry-After` headers to understand your current rate limit status.
+
+Read more about these response headers in the [API reference](https://docs.api.video/reference#limitation).
+
+Here is an example of how to use these methods:
+
+```js
+const client = new ApiVideoClient({ apiKey: "YOUR_API_KEY" });
+const { body: videos, headers } = await client.videos.listWithResponseHeaders();
+console.log('Rate Limit:', headers['x-ratelimit-limit']);
+console.log('Rate Limit Remaining:', headers['x-ratelimit-remaining']);
+console.log('Rate Limit Retry after:', headers['x-ratelimit-retry-after']);
+```
 
 ### Authorization
 
