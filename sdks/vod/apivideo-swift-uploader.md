@@ -29,14 +29,14 @@ It allows you to upload videos in two ways:
 Specify it in your `Cartfile`:
 
 ```
-github "apivideo/api.video-swift-uploader" ~> 1.2.2
+github "apivideo/api.video-swift-uploader" ~> 1.2.3
 ```
 
 Run `carthage update`
 
 #### CocoaPods
 
-Add `pod 'ApiVideoUploader', '1.2.2'` in your `Podfile`
+Add `pod 'ApiVideoUploader', '1.2.3'` in your `Podfile`
 
 Run `pod install`
 
@@ -49,7 +49,7 @@ import ApiVideoUploader
 // If you rather like to use the sandbox environment:
 // ApiVideoUploader.basePath = Environment.sandbox.rawValue
 
-try VideosAPI.uploadWithUploadToken(token: "MY_VIDEO_TOKEN", file: url) { video, error in
+try VideosAPI.uploadWithUploadToken(token: "MY_UPLOAD_TOKEN", file: url) { video, error in
     if let video = video {
         // Manage upload with upload token success here
     }
@@ -92,6 +92,7 @@ Method | HTTP request | Description
  - [Metadata](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/Metadata.md)
  - [NotFound](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/NotFound.md)
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/RefreshTokenPayload.md)
+ - [TooManyRequests](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/TooManyRequests.md)
  - [Video](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/VideoAssets.md)
  - [VideoSource](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/VideoSource.md)
@@ -99,7 +100,27 @@ Method | HTTP request | Description
  - [VideoSourceLiveStreamLink](https://github.com/apivideo/api.video-swift-uploader/blob/main/docs/VideoSourceLiveStreamLink.md)
 
 
-### Documentation for Authorization
+### Rate limiting
+
+api.video implements rate limiting to ensure fair usage and stability of the service. The API provides the rate limit values in the response headers for any API requests you make. The /auth endpoint is the only route without rate limitation.
+
+In this client, you can access these headers by using the methods with the `completion: @escaping (_ result: Swift.Result<Response<T>, ErrorResponse>) -> Void)` parameters. These methods return both the response body and the headers, allowing you to check the `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Retry-After` headers to understand your current rate limit status.
+Read more about these response headers in the [API reference](https://docs.api.video/reference#limitation).
+
+```swift
+try VideosAPI.uploadWithUploadToken(token: "MY_UPLOAD_TOKEN", file: url) { result in
+    switch result {
+    case .success(let response):
+        print("X-RateLimit-Limit:  \(String(describing: response.header["X-RateLimit-Limit"]))")
+        print("X-RateLimit-Remaining:  \(String(describing: response.header["X-RateLimit-Remaining"]))")
+        print("X-RateLimit-Retry-After:  \(String(describing: response.header["X-RateLimit-Retry-After"]))")
+    case .failure(_):
+        break
+    }
+}
+```
+
+### Authorization
 
 #### API key
 
