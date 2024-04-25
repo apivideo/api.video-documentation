@@ -34,7 +34,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>video.api</groupId>
   <artifactId>android-video-uploader</artifactId>
-  <version>1.3.5</version>
+  <version>1.3.6</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -44,7 +44,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-implementation "video.api:android-video-uploader:1.3.5"
+implementation "video.api:android-video-uploader:1.3.6"
 ```
 
 #### Others
@@ -57,7 +57,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/android-video-uploader-1.3.5.jar`
+* `target/android-video-uploader-1.3.6.jar`
 * `target/lib/*.jar`
 
 ### Code sample
@@ -181,6 +181,7 @@ Method | HTTP request | Description
  - [Metadata](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/Metadata.md)
  - [NotFound](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/NotFound.md)
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/RefreshTokenPayload.md)
+ - [TooManyRequests](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/TooManyRequests.md)
  - [Video](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/VideoAssets.md)
  - [VideoSource](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/VideoSource.md)
@@ -188,7 +189,24 @@ Method | HTTP request | Description
  - [VideoSourceLiveStreamLink](https://github.com/apivideo/api.video-android-uploader/blob/main/docs/VideoSourceLiveStreamLink.md)
 
 
-### Documentation for Authorization
+### Rate Limiting
+
+api.video implements rate limiting to ensure fair usage and stability of the service. The API provides the rate limit values in the response headers for any API requests you make. The /auth endpoint is the only route without rate limitation.
+
+In this client, you can access these headers by using the `*WithHttpInfo()` or `*Async` versions of the methods. These methods return the `ApiResponse` that contains the response body and the headers, allowing you to check the `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Retry-After` headers to understand your current rate limit status.
+Read more about these response headers in the [API reference](https://docs.api.video/reference#limitation).
+
+Here is an example of how to use these methods:
+
+When listening to the `WorkInfo` with the `WorkManager`, you can access the headers in the `OutputData` of the `WorkInfo`:
+```kotlin
+val headers = workInfo.outputData.toHeaders()
+Log.i(TAG, "X-RateLimit-Limit: ${headers["x-ratelimit-limit"]!![0]}")
+Log.i(TAG, "X-RateLimit-Remaining: ${headers["x-ratelimit-remaining"]!![0]}")
+Log.i(TAG, "X-RateLimit-Retry-After: ${headers["x-ratelimit-retry-after"]!![0]}")
+```
+
+### Authorization
 
 #### API key
 
