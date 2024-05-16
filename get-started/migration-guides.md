@@ -22,6 +22,8 @@ Moving to a different provider takes time, effort, and development resources. ap
 
 {% include "_partials/hagrid-item.md" title: "Wistia", image: "/_assets/get-started/migration-guide/wistia.png", subtitle: "", link: "./wistia-migration.md" %}
 
+{% include "_partials/hagrid-item.md" title: "Cloudinary", image: "/_assets/get-started/migration-guide/cloudinary-logo.png", subtitle: "", link: "./cloudinary-migration.md" %}
+
 </div>
 
 ## FAQs
@@ -42,4 +44,10 @@ Technically speaking no. When you migrate your assets, api.video generates new u
 <summary><b>Will api.video help me create a mapping from old assets to new assets?</b></summary>
 <p>
 Yes! The Import tool automatically creates a mapping in <code>csv</code> and in <code>JSON</code> formats.
+</details>
+
+<details>
+<summary><b>Can I import video captions with the Import tool?</b></summary>
+<p>
+Yes! However, note these limitations: importing captions is currently only supported from <a href="/get-started/azure-migration">Azure Media Services</a>, and only in <code>VTT</code> format.
 </details>
