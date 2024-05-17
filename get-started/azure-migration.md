@@ -11,6 +11,11 @@ Planning to migrate api.video from Azure Media Services? We got you covered!
 
 You can import all of your video content, both from Azure's Blob storage and Media storage using api.video's Import tool.
 
+{% capture content %}
+When you import videos from Azure Media Services, you have the option to enable importing video captions in `VTT` format. The imported captions will be automatically linked to the videos they belong to. Videos with multiple captions are also handled by the Import tool. 
+{% endcapture %}
+{% include "_partials/callout.html" kind: "info", content: content %}
+
 ## What's the cost? 
 
 We understand that when you want to move to a different provider, it takes effort and development resources. You also want to make sure that it is cost-efficient, especially if you are moving to api.video to save costs.
