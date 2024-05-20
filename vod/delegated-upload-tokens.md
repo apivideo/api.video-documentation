@@ -16,10 +16,9 @@ In this type of upload, you retrieve a token from the tokens endpoint. You can t
 * You can create as many tokens as you need.
 * If you do not include a TTL (time-to-live) value for a token, it lasts until you delete it. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 If you want to learn about regular or progressive uploads, check out the [regular](/vod/upload-a-video-regular-upload) and [progressive](/vod/progressive-upload) video upload guides.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API documentation
 
@@ -198,10 +197,9 @@ print(response)
 
 ## Upload a video with delegated tokens
 
-{% capture content %}
+<Callout pad="2" type="info">
 If you do a progressive upload with a delegated token, you have to include the video ID you are uploading to after it comes back from the first request. If the video you're uploading is under 200 MiB, you don't need to worry.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 You must first create a token and get the unique token ID to do a delegated upload. Then, you include it in your request as a query parameter. In the body, you place the path to the file you want to upload. If you are uploading a file that's 200 MiB or larger, to do a progressive upload, you will need to break the file into smaller pieces (no smaller than 5 MiB). Then send a request containing the first piece of your upload. Subsequent pieces must be sent with the video ID included in the body along with the file chunk. Retrieve the video ID from the response that comes back after your first request to upload. 
 

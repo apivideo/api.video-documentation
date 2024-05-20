@@ -24,11 +24,9 @@ Let's set the player controls color to purple (#800080) and add our branded logo
 
 ### Preparation
 
-{% capture content %}
+<Callout pad="2" type="info">
 In this example, we will be using the [api.video client libraries](/sdks/api-clients), however, if you prefer to use cURL or make the requests yourself, you are welcome to follow along with the [API reference documentation](/reference/api/Player-Themes).
-
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ### Adding the api.video client library & initializing
 
@@ -38,10 +36,9 @@ The client library takes your API key, which you can [find here](https://dashboa
 
 If wish to learn more about api.video authentication and how it works, jump over to this [page](/reference/authentication-guide).
 
-{% capture content %}
+<Callout pad="2" type="info">
 Make sure to install the [modules / libraries](/sdks/api-clients) on your environment beforehand.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 {% capture samples %}
 ```javascript
@@ -516,8 +513,6 @@ $ npm install --save @api.video/react-player
 
 Once we have the React project and the React Player SDK added to the project, we can dive into our code and add the video component:
 
-{% raw %}
-
 ```tsx
 import ApiVideoPlayer from '@api.video/react-player'
 
@@ -529,46 +524,36 @@ import ApiVideoPlayer from '@api.video/react-player'
           }} />
 ```
 
-{% endraw %}
-
-
 Now you can see your awesome branding in action! 
 
 ## Get started with analytics
 
 After we have a cool branded player, it would be great to get some data on your users. For that purpose, we have the api.video Analytics for your disposal. 
 
-{% capture content %}
 
+<Callout pad="2" type="info">
 Please note, that we will only collect analytics from videos that were played through the api.video player. If you are using a custom player, you can leverage the [analytics SDKs](/sdks/player#player-analytics-sdks) to pass on the analytics to api.video.
-
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 In this example, we will check what countries your video was watched the most. 
 
 ### Preparation
 
-{% capture content %}
+<Callout pad="2" type="info">
 In this example, we will be using the [api.video client libraries](/sdks/api-clients), however, is you prefer to use cURL or make the requests yourself, you are welcome to follow along with the [API reference documentation](/reference/api/Player-Themes).
-
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ### Add & initialize the api.video client library
 
-{% capture content %}
+<Callout pad="2" type="info">
 If you've followed through the whole tutorial, you can skip this step
-
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 Let's add the api.video client library to our code.
 
-{% capture content %}
+<Callout pad="2" type="info">
 Make sure to install the modules / libraries on your environment beforehand.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 The client library takes your API key, which you can [find here](https://dashboard.api.video/project-settings/api-keys). Let's pass it the API key and initialize the client. 
 

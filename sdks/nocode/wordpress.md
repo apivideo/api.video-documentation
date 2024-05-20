@@ -83,12 +83,9 @@ In order to embed the video into your page, you will have to copy the video shor
 - Once the block has been added in your article, you now have to paste the value you copied in the video editing page (it should look like `[api.video video_id=123456789]`).
 - Paste the shortcut value into the dedicated input
 
-{% capture content %}
-
+<Callout pad="2" type="warning">
 In most cases (but it depends on your WordPress theme), you will get better results if you transform the block to "Columns". To do that, click on the first icon above the block and select Columns.
-
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 And that's it! Once your article is saved, you will see the video appear where you inserted it.
 

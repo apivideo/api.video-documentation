@@ -161,10 +161,9 @@ catch (ApiException e)
 {% endcapture %}
 {% include "_partials/code-tabs.md" samples: samples %}
 
-{% capture content %}
+<Callout pad="2" type="info">
 Replace the link in the example above with your video container (for example, the `.mp4` file of your video). If you don’t have a video URL to test this, you can use [this one](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4) for example.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Clone an existing video
 

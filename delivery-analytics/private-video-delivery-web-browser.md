@@ -21,14 +21,12 @@ When delivering the embedded video, we will use our in-house player to playback 
 </html>
 ```
 
-
-{% capture content %}
+<Callout pad="2" type="info">
 **iframes in incognito mode**
 
 When playing an embedded private video in a browser that runs in incognito mode you'll have to leverage sessions.
 Check out the guide for retaining a private session [here](/delivery-analytics/private-videos-with-custom-players-session-retention).
-{% endcapture %}
-{% include "_partials/callout.html" kind: "error", content: content %}
+</Callout>
 
 In order to build a dynamically served private videos, you can leverage the [/videos](/reference/api/Videos#retrieve-a-video-object) endpoint in order to get the url of the video and private token. For example the following steps are possible:
 

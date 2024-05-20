@@ -13,10 +13,9 @@ With api.video, every call to the API requires authentication. In order to authe
 
 Each of these methods has its advantages. You can choose either of the authentication methods that suit your security needs. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 When using the [api.video client libraries](/sdks/api-clients), the Disposable Bearer token will be applied by default.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 * Basic authentication is great for quick testing (with Postman for example) and will be quicker to implement if you decide to write your own wrapper for the API.
 

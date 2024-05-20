@@ -19,7 +19,7 @@ A more visual representation can be found below:
 
 <Image src="/_assets/vod/video-best-practices/create-a-video-light.svg" src_dark="/_assets/vod/video-best-practices/create-a-video-dark.svg" alt="A diagram that shows the steps of creating a video object, and uploading a video" />
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Important things to know**
 * **All qualities encoding:** The video object will include up to 6 responsive video streams from 240p to 4K
 * **Video size:** The video file size is limited to 30 GiB. The files will be compressed to fit delivery needs (4k max def with H.264 at 60fps max + AAC)
@@ -27,12 +27,11 @@ A more visual representation can be found below:
 * **360° videos support:** Panoramic videos are videos recorded in 360°. You can toggle this after your 360° video upload.
 * **Video Access Management:** When creating a video object, it can be either private or public. The feature allows you to change it later by updating the video object.
 * **Progressive Upload:** Ability to upload videos in a progressive manner while they are being recorded.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Recommendations
 
-{% capture content %}
+<Callout pad="2" type="success">
 For optimal ingestion, the video should use:
 
 - Resolution ≤ 4k
@@ -42,13 +41,11 @@ For optimal ingestion, the video should use:
 - Standard Dynamic Range: **yuv420p**
 - Framerate ≤ **60fps**
 - Audio Codec: **aac**
-{% endcapture %}
-{% include "_partials/callout.html" kind: "success", content: content %}
-
+</Callout>
 
 ## Limitations
 
-{% capture content %}
+<Callout pad="2" type="warning">
 * When using the [sandbox environment](/reference#environments), the API:
    * limits the videos you upload to 30 seconds
    * adds a watermark to your videos that you cannot remove
@@ -62,8 +59,7 @@ For optimal ingestion, the video should use:
     - **at most 30 GiB**
     - **of at most 24h**
 * **ProRes RAW** video codec is currently not supported.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Progressive video upload & uploading large videos
 

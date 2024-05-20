@@ -11,10 +11,9 @@ api.video provides different ways to upload your videos. There are two ways to u
 - Progressive upload for a video that's 200MiB or more
 - Progressive upload for a video that's 200MiB or more using `byte` range in the `Content-Range` header
 
-{% capture content %}
+<Callout pad="2" type="info">
 Megabyte (MB) and Mebibyte (MiB) are both used to measure units of information on computer storage. 1 MB is 1000Kb (kilobytes), and 1 MiB is 1048.576Kb. api.video uses MiB.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API documentation
 
@@ -328,11 +327,9 @@ curl https://sandbox.api.video/videos/vitq4gOj8GyDT9kyxPQoyNJl/source \
 {% endcapture %}
 {% include "_partials/code-tabs.html" content: samples %}
 
-
-{% capture content %}
+<Callout pad="2" type="info">
 All api.video clients automatically use the `Content-Range: bytes` method to upload big videos for you. You don't have to set it up yourself if you use a client!
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Resources
 

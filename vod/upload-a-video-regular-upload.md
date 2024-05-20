@@ -10,10 +10,9 @@ api.video provides different ways to upload your videos. There are two ways to u
 
 Check out the guide on [Progressive upload](/vod/progressive-upload.md) to understand how to upload videos larger than 200MiB in size.
 
-{% capture content %}
+<Callout pad="2" type="info">
 Megabyte (MB) and Mebibyte (MiB) are both used to measure units of information on computer storage. 1 MB is 1000Kb (kilobytes), and 1 MiB is 1048.576Kb. api.video uses MiB.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API documentation
 
@@ -24,10 +23,9 @@ Megabyte (MB) and Mebibyte (MiB) are both used to measure units of information o
 
 This section gives you an overview of your upload options. This guide walks through regular uploads but describes all the available choices here. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 If you want to learn about delegated uploads, which are useful for creating private videos, or allowing your viewers to upload content themselves, or even just making it easier for you to do uploads, check out the [Delegated upload tokens](/vod/delegated-upload-tokens) guide.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 The two token-based upload methods are:
 
@@ -233,10 +231,9 @@ catch (ApiException e)
 {% endcapture %}
 {% include "_partials/code-tabs.md" samples: samples %}
 
-{% capture content %}
+<Callout pad="2" type="warning">
 The API deletes empty video containers after 7 days.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 The response to your API request will return the following, along with other params: 
 
@@ -253,10 +250,10 @@ The response to your API request will return the following, along with other par
 
 Remember the `videoId`: you will need it to upload your video, in the [next step](#upload-your-file-into-the-video-object). Also, save the value of `assets.player` for [video playback](#watch-and-share-your-video).
 
-{% capture content %}
+
+<Callout pad="2" type="info">
 If you are using one of our API clients, you will find the above information in the returned response's `Video` object.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ### Upload your file into the video object
 

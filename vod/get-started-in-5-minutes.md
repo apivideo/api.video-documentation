@@ -24,12 +24,11 @@ Navigate to the [Dashboard](https://dashboard.api.video/register) and register w
 
 All you need now is to get your API key from the dashboard. Navigate to the [API keys page](https://dashboard.api.video/project-settings/api-keys) and grab your API key from there.
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **API Key Security**
 
 Make sure to reach our security recommendation to avoid exposing your API key and causing a security breach on your account. You can find the security best practices [here](/reference/README.md#security)
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Clone the front-end repo
 
@@ -67,7 +66,7 @@ $ npm run dev
 
 The server will be running on `localhost:3000` by default
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Changing the default port**
 
 You can change the default port of 3000 to something of your liking by editing the `package.json` file and adding the custom port like so:
@@ -79,8 +78,7 @@ You can change the default port of 3000 to something of your liking by editing t
   "start": "next start -p 3002",
 },
 ```
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 When you navigate to `http://localhost:3000` with your browser, you should get this screen:
 
@@ -128,12 +126,11 @@ const ListVideoPage = (page: number) => {
 
 #### Server Hello World
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Building the backend with the language of your choice**
 
 This tutorial is designed to get you started with our client libraries, you can choose which client library you want to work with. For each example, please make sure to choose the language of your choice in the code snippet pane.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 Now we need to build a server that will accept the requests from our frontend. Let's build a small application sever that if taking requests on port 5500
 

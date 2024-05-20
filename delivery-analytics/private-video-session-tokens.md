@@ -16,12 +16,11 @@ Once the session token is acquired, it is reused in all other requests to the di
 
 <Image src="/_assets/delivery-analytics/private-videos/session-token-light.svg" src_dark="/_assets/delivery-analytics/private-videos/session-token-dark.svg" alt="A diagram that shows the session token flow" />
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Time to Live**
 
 The session token TTL is 24 hours. Once the session token has expired, you will have to get a new private token and create a new session.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Using the session token (getting thumbnail example)
   

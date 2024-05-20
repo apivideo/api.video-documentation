@@ -39,14 +39,13 @@ Once you've upgraded you can switch between sandbox and production by toggling t
 
 ![Switching to the sandbox environment in the Dashboard](/_assets/reference/sandbox-switch.png)
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **The sandbox mode has these limitations**
 
 - Limited to 30 seconds videos and live streams.
 - Will include an unremovable watermark
 - Videos or recorded live streams will be deleted after 24 hours, after upload or recording.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Security
 

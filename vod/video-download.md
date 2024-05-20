@@ -19,11 +19,10 @@ The video object can be created or updated with the `mp4Support` tag. The tag wi
 ![](/_assets/vod/video-download/download-video-1.png)
 ![](/_assets/vod/video-download/download-video-2.png)
 
-{% capture content %}
+<Callout pad="2" type="info">
 * By default, the `mp4Support` tag is set to `true`, hence the video is downloadable. If you want to disable the download ability from the [api.video](http://api.video) player, you have to set the `mp4Support` tag to `false`
 * If you don’t want the user to be able to download the video, do not serve the mp4 asset.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Disabling download
 
@@ -476,10 +475,9 @@ $ npm init
 
 Now edit the index.js file that you’ve created, and copy this code. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 Make sure that you copy your API key from the [api.video](http://api.video) dashboard and replace the port to the port you would like to run the server on.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 
 ```javascript

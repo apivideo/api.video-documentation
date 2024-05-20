@@ -12,10 +12,9 @@ When uploading user videos it's important to value the user's privacy, while we 
 
 We offer the ability to create a one-time video with a destructible private token. When the user opens the video once, it's playable in the same page for the next 24 hours and the session is retained with the ability to refresh the page. The same url is not accessible the second time when trying to access it from a different browser, page or tab.
 
-{% capture content %}
+<Callout pad="2" type="info">
 A **private token** is a string of unique numbers and letters. For example: `0092d5ef-5750-471d-9e7e-48d0a7580238` that is generated and passed with a private video in order to keep it secured and inaccessible to anyone that doesn't have that private token.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 <Image src="/_assets/delivery-analytics/private-videos/private-videos-light.svg" src_dark="/_assets/delivery-analytics/private-videos/private-videos-dark.svg" alt="A diagram that shows the process of using private tokens" />
 

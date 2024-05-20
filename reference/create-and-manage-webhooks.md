@@ -78,12 +78,11 @@ You can test your webhooks with tools like [Pipedream](https://pipedream.com/wor
 
 ### Retry policy
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Webhook retry policy**
 
 api.video’s webhook service makes 3 notification attempts, with 3 second intervals between each try.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ### Choose an api.video client
 
@@ -554,12 +553,11 @@ print(response)
 {% endcapture %}
 {% include "_partials/code-tabs.md" samples: samples %}
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **Warning**
 
 Deleting a webhook is a permanent action and deleted webhooks cannot be recovered.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Next steps
 

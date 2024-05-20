@@ -32,12 +32,11 @@ WebVTT is a format for displaying timed text tracks for captions or chapters. It
 
 To ensure that you use the correct formatting in your VTT file, api.video recommends using a parser to check for errors before you upload the file. [Click here](https://w3c.github.io/webvtt.js/parser.html) for a free online VTT parser.
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Incorrect VTT file formatting**
 
 The api.video API does not return an error for incorrectly formatted VTT files. The response from the API will be `200`, however, the captions will not be displayed.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API documentation
 
