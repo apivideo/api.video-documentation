@@ -22,5 +22,7 @@
       href: /get-started/vimeo-migration.md
     - label: Wistia
       href: /get-started/wistia-migration.md
+    - label: Cloudinary
+      href: /get-started/cloudinary-migration.md
   - label: SDK Catalog
     href: /sdks/README.md
