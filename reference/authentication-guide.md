@@ -44,13 +44,9 @@ This method will allow you to use a simple way of authentication. By sending you
 
 Here's an example of how to make a request with Basic Authentication to api.video:
 
-{% capture samples %}
 ```curl
 $ curl -u apikey: https://sandbox.api.video/
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
 
 ## Bearer Token Authentication
 
@@ -67,6 +63,7 @@ Bearer token authentication is simple to set up and use; however, we encourage y
 With the Bearer Token method, there are [two endpoints](/reference/api/Advanced-authentication) at your disposable in order to generate the access token.
 
 1. You have to make a request to the `/auth/api-key` endpoint in order to get the bearer token
+
 ```curl
 curl -X POST \
 https://sandbox.api.video/auth/api-key \
@@ -104,7 +101,8 @@ curl --request POST \
 
 The simplest way, of course, is using the [api.video client libraries](/sdks/api-clients). You can find an example of how to authenticate below:
 
-{% capture samples %}
+
+<CodeSelect title="Authenticating through the API clients">
 ```go
 package main
 
@@ -203,6 +201,4 @@ namespace Example
     }
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
+</CodeSelect>

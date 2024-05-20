@@ -8,7 +8,8 @@ meta:
 
 With the api.video Strapi plugin you can upload and embed your videos into your Strapi website effortlessly. Check out this short video to get started with your api.video integration using Strapi:
 
-<iframe src="https://embed.api.video/vod/vi6g8t2OSnByVwsr0vOVSLUI#hide-title" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+<iframe src="https://embed.api.video/vod/vi6g8t2OSnByVwsr0vOVSLUI#hide-title" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true">
+</iframe>
 
 ## Features
 
@@ -54,8 +55,8 @@ The api-video-uploader plugin should appear in the Plugins section of Strapi sid
 
 ### Minimum environment requirements
 
-- Node.js >=14.19.1 <=18.x.x
-- NPM >=6.x.x
+- `Node.js >=14.19.1 <=18.x.x`
+- `NPM >=6.x.x`
 - In our minimum support we're following official Node.js releases timelines.
 
 ### Supported Strapi versions:

@@ -57,8 +57,7 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
-
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -80,10 +79,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
-
+</CodeSelect>
 
 ## Upload a video file
 
@@ -93,7 +89,7 @@ Install-Package ApiVideo
 
 The first step to uploading a video is to create a video object. Once you create the object, you can use it to upload a video. Check out this simple code that creates a video object. Make sure that you replace `your_api_key` with your own API key from the [dashboard](https://dashboard.api.video/).
 
-{% capture samples %}
+<CodeSelect title="Creating a video object">
 ```curl
 curl --user *your_api_key*: \
 --request POST \
@@ -228,8 +224,7 @@ catch (ApiException e)
     // Manage error here
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 <Callout pad="2" type="warning">
 The API deletes empty video containers after 7 days.
@@ -259,7 +254,7 @@ If you are using one of our API clients, you will find the above information in 
 
 In the first step, you created the video object. Next, you need to upload the video file into the video object using this API request:
 
-{% capture samples %}
+<CodeSelect title="Uploading a video file">
 ```curl
 curl --user *your_api_key*:
 --url https://ws.api.video/videos/{videoId}/source
@@ -382,8 +377,7 @@ catch (ApiException e)
     // Manage error here
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### API response
 

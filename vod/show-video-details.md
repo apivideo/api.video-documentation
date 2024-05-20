@@ -16,7 +16,7 @@ You can retrieve details for a specific video if you have the video ID. In this 
 
 To retrieve information about any of your videos, use this code sample:
 
-{% capture samples %}
+<CodeSelect title="Retrieving video details">
 ```curl
 curl --request GET \
      --url https://ws.api.video/videos/viZxSTFgXZVjFnFCUo363Ie \
@@ -109,8 +109,7 @@ videos_api = VideosApi(client)
 response = videos_api.get(video_id)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Retrieve video info from your dashboard
 

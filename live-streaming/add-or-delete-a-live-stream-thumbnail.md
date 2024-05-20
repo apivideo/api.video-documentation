@@ -34,7 +34,8 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -56,8 +57,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Create an account
 
@@ -69,7 +69,8 @@ Once you are logged in to the Dashboard, select the environment of your choice (
 
 You can add a thumbnail image to your live stream by uploading the picture you want to use. You have the option to choose a photo that's in .jpg, .png, or .webp format. It must be 8MB or smaller. To send your file, add the path to where it's stored and open it in binary. Then you can upload it with the client of your choice or see how it works with cURL. 
 
-{% capture samples %}
+
+<CodeSelect title="Adding a live stream thumbnail">
 ```curl
 curl --request POST \
      --url https://ws.api.video/live-streams/vi4k0jvEUuaTdRAEjQ4Jfrgz/thumbnail \
@@ -174,14 +175,14 @@ file = open("image1.jpg", "rb")
 response = live_stream_api.upload_thumbnail(live_stream_id, file)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Delete a live stream thumbnail
 
 To delete a live stream thumbnail, get the live stream ID for the live stream with the thumbnail you want to remove. Then send in a request for deletion using the client of your choice. The thumbnail will be removed from your live stream! 
 
-{% capture samples %}
+
+<CodeSelect title="Deleting a live stream thumbnail">
 ```curl
 curl --request DELETE \
      --url https://ws.api.video/live-streams/li400mYKSgQ6xs7taUeSaEKr/thumbnail \
@@ -276,8 +277,7 @@ live_stream_api = LiveStreamsApi(client)
 response = live_stream_api.delete_thumbnail(live_stream)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Conclusion
 

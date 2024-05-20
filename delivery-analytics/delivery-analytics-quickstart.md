@@ -40,7 +40,8 @@ If wish to learn more about api.video authentication and how it works, jump over
 Make sure to install the [modules / libraries](/sdks/api-clients) on your environment beforehand.
 </Callout>
 
-{% capture samples %}
+
+<CodeSelect title="Install api.video client">
 ```javascript
 const ApiVideoClient = require('@api.video/nodejs-client')
 ```
@@ -86,15 +87,15 @@ require __DIR__ . '/vendor/autoload.php';
 
 $playerThemeCreationPayload = (new \ApiVideo\Client\Model\PlayerThemeCreationPayload())
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 
 ### Creating a player theme and adding a color
 
 We have the code for the client initialization now, and we can proceed with creating a new player theme while adding a different color to our player controls. 
 
-{% capture samples %}
+
+<CodeSelect title="Creating a new player theme">
 ```javascript
 const playerThemeCreationPayload = {
   link: "rgba(128, 0, 128, 1)", // RGBA color for all controls. Default: rgba(255, 
@@ -197,9 +198,7 @@ $playerThemeCreationPayload = (new \ApiVideo\Client\Model\PlayerThemeCreationPay
 
 $playerTheme = $client->playerThemes()->create($playerThemeCreationPayload); 
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 The following code will give us this effect:
 
@@ -232,11 +231,12 @@ The response that you should expect will contain the `playerId` that we will use
 
 ### Adding the logo
 
-After you've created the player theme, you'll get a player theme id in the response. Let's add our company logo, to that player theme. We will utilize the [/players/{player_id}/logo](/reference/api/Player-Themes#upload-a-logo) endpoint in order to do that.  
+After you've created the player theme, you'll get a player theme id in the response. Let's add our company logo, to that player theme. We will utilize the [`/players/{player_id}/logo`](/reference/api/Player-Themes#upload-a-logo) endpoint in order to do that.  
 
 First, find the image you would like to add to all of your videos. Make sure to find an image that doesn't exceed 200px x 100px, preferably in PNG format.
 
-{% capture samples %}
+
+<CodeSelect title="Uploading a player logo">
 ```javascript
 const playerId = 'pl45d5vFFGrfdsdsd156dGhh'; // The unique identifier for the player.
 const file = './company-logo.jpg'; // The name of the file you want to use for your logo.
@@ -365,8 +365,7 @@ func main() {
 ", res)
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 After you've added the image, it will look similar to this:
 
@@ -379,8 +378,8 @@ In order for the theme to apply by default when you play a video, you need to ma
 
 Let's assume that we are updating an existing video:
 
-{% capture samples %}
 
+<CodeSelect title="Adding a player theme to a video">
 ```javascript
 // First install the "@api.video/nodejs-client" npm package
 // Documentation: https://github.com/apivideo/api.video-nodejs-client/blob/main/doc/api/VideosApi.md#update
@@ -496,8 +495,7 @@ public class Example {
   }
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 Now we've applied our theme to this specific video, and we can implement the api.video player on our frontend.
 
@@ -559,7 +557,8 @@ The client library takes your API key, which you can [find here](https://dashboa
 
 You can learn more about authentication [here](/reference/authentication-guide).
 
-{% capture samples %}
+
+<CodeSelect title="Initializing the api.video client">
 ```javascript
 const ApiVideoClient = require('@api.video/nodejs-client')
 ```
@@ -605,8 +604,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $playerThemeCreationPayload = (new \ApiVideo\Client\Model\PlayerThemeCreationPayload())
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### Get the count of plays by country
 
@@ -619,8 +617,8 @@ Notice that we are passing few parameters:
 * dimension: This parameter will accept a few values, including `country`` in order to return the determine which dimension you would like to analyze.
 * from: is a required field. The date from which the data should start.
 
-{% capture samples %}
 
+<CodeSelect title="Getting analytics data">
 ```javascript
 const client = new ApiVideoClient({ apiKey: "YOUR_API_KEY" });
 const from = "2023-09-01";
@@ -768,9 +766,7 @@ namespace Example
 }
 
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 The result will be something like this:
 

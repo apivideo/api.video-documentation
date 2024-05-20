@@ -58,7 +58,7 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -80,8 +80,8 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
+
 
 ### Upload a watermark
 
@@ -95,7 +95,7 @@ api.video will only store the watermark id and the time and date it was uploaded
 
 More information can be found on the [API reference page](/reference/api/Watermarks)
 
-{% capture samples %}
+<CodeSelect title="Uploading a watermark">
 ```curl
 curl --request POST \
      --url https://ws.api.video/watermarks \
@@ -193,11 +193,13 @@ file = open("video_to_watermark.mp4", "rb")
 video_response = videos_api.upload(video_id, file)
 print("Uploaded Video", video_response)
 ```
+</CodeSelect>
 
 ### List all watermarks
 
 You can list all of the watermarks that you have uploaded, while also sorting by date or id.
 
+<CodeSelect title="Listing all watermarks">
 ```curl
 curl --request GET \
      --url https://ws.api.video/watermarks \
@@ -276,8 +278,7 @@ watermark_api = WatermarksApi(client)
 response = watermark_api.list()
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 More information about the endpoint can be found [here](/reference/api/Watermarks#list-all-watermarks)
 
@@ -298,7 +299,7 @@ The watermark property in the [video object creation payload](/reference/api/Wat
 | **height**  | _string_ | Height of the watermark-image relative to the video if expressed in %. Otherwise a fixed height. _NOTE: To keep the watermark aspect ratio use the initial image height_ |
 | **opacity** | _string_ | Opacity expressed in % only to specify the degree of the watermark-image transparency with the video.                                                                      |
 
-{% capture samples %}
+<CodeSelect title="Adding a watermark to a video">
 ```curl
 curl --request POST \
      --url https://ws.api.video/videos \
@@ -329,7 +330,8 @@ from apivideo.model.bad_request import BadRequest
 from apivideo.model.video import Video
 from pprint import pprint
 
-## Enter a context with an instance of the API client
+Enter a context with an instance of the API client
+
 with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
     # Create an instance of the API class
     api_instance = videos_api.VideosApi(api_client)
@@ -372,14 +374,13 @@ with apivideo.AuthenticatedApiClient(__API_KEY__) as api_client:
     except apivideo.ApiException as e:
         print("Exception when calling VideosApi->create: %s\n" % e)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### Delete a watermark
 
 To delete a watermark, send the unique watermark ID to the [watermarks endpoint](/reference/api/Watermarks#delete-a-watermark). Deletion is permanent, you will not be able to retrieve the watermark after completing this request.
 
-{% capture samples %}
+<CodeSelect title="Deleting a watermark">
 ```curl
 curl --request DELETE \
      --url https://ws.api.video/watermarks/watermark_1BhfLVwM8eEdaN9XFSnxCS \
@@ -425,8 +426,7 @@ watermarks_api = WatermarksApi(client)
 response = watermarks_api.delete(watermark)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## API documentation
 

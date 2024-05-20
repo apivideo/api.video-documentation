@@ -43,8 +43,7 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
-
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -66,9 +65,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## Progressive upload in file chunks
 
@@ -77,8 +74,7 @@ When the video file you want to upload is too large to send in one request, you 
 - When you do a progressive upload using one of the api.video clients, you must indicate when you send the last part.
 - If you implement this functionality without an api.video client, you do not need to indicate the last part of the progressive upload. api.video can track the chunk numbers based on your header which indicates `Content-Range`, for example : part 3/3, according to the number of chunks you sent. 
 
-{% capture samples %}
-
+<CodeSelect title="Uploading in file chunks">
 ```curl
 curl --request POST \
      --url https://ws.api.video/videos \
@@ -261,10 +257,7 @@ def upload(file):
 
 upload('VIDEO_FILE.mp4')
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
-
+</CodeSelect>
 
 ## Progressive upload with byte range in the content-range header
 
@@ -276,8 +269,7 @@ Content-Range: bytes 0-5242879
 
 And then continue from there. By default, the api.video clients handle uploads for you using this method. If you want to try it yourself without the client, the sample will look like this in cURL: 
 
-{% capture samples %}
-
+<CodeSelect title="Uploading with byte range in the content-range header">
 ```curl
 curl -X POST \
   https://sandbox.api.video/auth/api-key \
@@ -323,9 +315,7 @@ curl https://sandbox.api.video/videos/vitq4gOj8GyDT9kyxPQoyNJl/source \
   -F file=@/path/to/file_chunk_ac
 
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 <Callout pad="2" type="info">
 All api.video clients automatically use the `Content-Range: bytes` method to upload big videos for you. You don't have to set it up yourself if you use a client!

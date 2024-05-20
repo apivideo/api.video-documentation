@@ -34,7 +34,7 @@ You can also find more information on the `/videos` endpoints on the [API refere
 
 How to create a video object with disabled download
 
-{% capture samples %}
+<CodeSelect title="Disabling download for a video object">
 ```javascript
 // Documentation: https://github.com/apivideo/api.video-nodejs-client/blob/main/doc/api/VideosApi.md#create
 
@@ -157,12 +157,11 @@ public class Example {
   }
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 Once the object is created, all you have to do is just upload the video to the object:
 
-{% capture samples %}
+<CodeSelect title="Uploading a video">
 ```javascript
 const file = './my-video.mp4'; // The path to the video you would like to upload. The path must be local. If you want to use a video from an online source, you must use the "/videos" endpoint and add the "source" parameter when you create a new video.
 const videoId =  video.id    
@@ -206,14 +205,13 @@ file := os.NewFile(1234, "some_file")
 // *os.File | The path to the video you would like to upload. The path must be local. If you want to use a video from an online source, you must use the "/videos" endpoint and add the "source" parameter when you create a new video.
 res, err := client.Videos.UploadFile(videoId, file)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### Disable download for an existing video object
 
 It’s also possible to disable the download ability for the users, after the video was already uploaded and transcoded. For that, you just need to update the video object.
 
-{% capture samples %}
+<CodeSelect title="Disabling download for an existing video object">
 ```javascript
 // First install the "@api.video/nodejs-client" npm package
 // Documentation: https://github.com/apivideo/api.video-nodejs-client/blob/main/doc/api/VideosApi.md#update
@@ -343,8 +341,7 @@ func main() {
 ", res)
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Creating a custom download button
 

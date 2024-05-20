@@ -1,5 +1,9 @@
 ---
 title: Live stream overview
+experimental:
+  v2_templates: false
+toc: true
+breadcrumbs: false
 hide_side_table_of_contents: true
 meta:
   description: This page serves as a foundational guide to integrating api.video's solutions for live streaming.

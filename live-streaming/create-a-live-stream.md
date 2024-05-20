@@ -39,7 +39,8 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -61,8 +62,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Create an account
 
@@ -74,7 +74,8 @@ Once you are logged in to the Dashboard, select the environment of your choice (
 
 The first part of setting up your live stream to broadcast is to create a live stream container. Once you create the container, you can use it for live streaming. Here is the code to create the container: 
 
-{% capture samples %}
+
+<CodeSelect title="Creating a live stream container">
 ```go
 package main
 
@@ -182,8 +183,7 @@ curl --request POST \
      "playerId": "pt240hxAaDBLCYxUIPh0Fb2"
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Connect to your live stream container
 

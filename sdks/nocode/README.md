@@ -1,5 +1,9 @@
 ---
 title: No-code solutions
+experimental:
+  v2_templates: false
+toc: true
+breadcrumbs: false
 hide_side_table_of_contents: true
 meta: 
     description: api.video no-code solutions for Bubble.io, Contentful, Wordpress, Strapi, and Zapier.

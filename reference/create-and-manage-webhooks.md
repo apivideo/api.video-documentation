@@ -17,7 +17,7 @@ api.video provides you the possibility to get a `POST` request to your server th
 | `video.source.recorded`            | Triggers to indicate that a live stream has been completed and the recording of the live stream (if you set it to record) is ready to be transcoded. NOTE: This means the video has been enqueued for transcoding. |
 | `video.encoding.quality.completed` | Triggers when you upload a video, every time api.video finishes encoding a video in a set quality (up to the same level of quality that you uploaded), you get an announcement about it.                           |
 
-<hr>
+---
 
 Here’s how the `video.encoding` webhook’s flow looks like:
 
@@ -99,7 +99,8 @@ The clients offered by api.video include:
 
 To install your selected client, do the following:
 
-{% capture samples %}
+
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -121,8 +122,7 @@ Using Nuget
 
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Create an account
 
@@ -134,7 +134,8 @@ Once you are logged in to the Dashboard, select the environment of your choice (
 
 To create a webhook, all you have to do is set up your server and provide api.video with the URL you want events sent to and the list of events you wish to be sent to that URL.
 
-{% capture samples %}
+
+<CodeSelect title="Creating a webhook">
 ```curl
 curl --request POST \
      --url https://ws.api.video/webhooks \
@@ -243,14 +244,14 @@ webhooks_creation_payload = {
 response = webhooks_api.create(webhooks_creation_payload)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### List all webhooks
 
 After you create webhooks, you can retrieve a complete list of the URLs and associated events going to them with this code sample:
 
-{% capture samples %}
+
+<CodeSelect title="Listing all webhooks">
 ```curl
 curl --request GET \
      --url 'https://ws.api.video/webhooks?events=video.encoding.quality.completed&currentPage=1&pageSize=25' \
@@ -352,14 +353,13 @@ webhooks_api = WebhooksApi(client)
 response = webhooks_api.list()
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### Show a webhook
 
 You can retrieve details about a specific webhook, including the URL and associated events, by sending a request with the unique webhook ID using this code sample:
 
-{% capture samples %}
+<CodeSelect title="Showing a webhook">
 ```curl
 curl --request GET \
      --url https://ws.api.video/webhooks/webhook_XXXXXXXXXXXXXXX \
@@ -452,14 +452,13 @@ webhooks_api = WebhooksApi(client)
 response = webhooks_api.get("your webhook ID here")
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### Delete a webhook
 
 You can delete a webhook using its unique ID with this code sample:
 
-{% capture samples %}
+<CodeSelect title="Deleting a webhook">
 ```curl
 curl --request DELETE \
      --url https://ws.api.video/webhooks/webhook_XXXXXXXXXXXXXXX \
@@ -550,8 +549,7 @@ webhooks_api = WebhooksApi(client)
 response = webhooks_api.delete("your webhook ID here")
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 <Callout pad="2" type="warning">
 **Warning**
@@ -561,6 +559,6 @@ Deleting a webhook is a permanent action and deleted webhooks cannot be recovere
 
 ## Next steps
 
-You can also use the **[Get video status](/reference/api/Videos#retrieve-video-status-and-details)** endpoint operation to check whether a video is uploaded and ready for playback.
+You can also use the [Get video status](/reference/api/Videos#retrieve-video-status-and-details) endpoint operation to check whether a video is uploaded and ready for playback.
 
-Visit the API reference for a complete list of **[webhook](/reference/api/Webhooks)** endpoint operations.
+Visit the API reference for a complete list of [webhook](/reference/api/Webhooks) endpoint operations.

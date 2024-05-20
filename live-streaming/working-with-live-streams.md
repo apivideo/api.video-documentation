@@ -31,7 +31,8 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+
+<CodeSelect title="Installing the api.video client">
 
 ```go
 go get github.com/apivideo/api.video-go-client
@@ -54,9 +55,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## Create an account
 
@@ -68,8 +67,8 @@ Once you are logged in to the Dashboard, select the environment of your choice (
 
 You can retrieve details about any live stream by sending a request containing the live stream ID. The response will show you the current state of the live stream and provide all the details you need if you want to broadcast using a particular live stream container. 
 
-{% capture samples %}
 
+<CodeSelect title="Retrieve a live stream">
 ```curl
 curl --request GET \
      --url https://ws.api.video/live-streams/li400mYKSgQ6xs7taUeSaEKr \
@@ -164,8 +163,7 @@ live_stream_api = LiveStreamsApi(client)
 response = live_stream_api.get(live_stream_id)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## Show live stream (retrieve details for watching) with your dashboard
 
@@ -185,14 +183,14 @@ If you don't want to retrieve details about a live stream programmatically, you 
 
 If you want to update details for your live stream, you need the unique ID for your live stream and then the changes you want to make. You're able to update: 
 
-- name - A string representing the name of your live stream.
-- public - A boolean representing whether your video is public or not (true for public, false for private).
-- playerId - You can associate an api.video player with your live stream by providing the player's ID.
+- `name` - A string representing the name of your live stream.
+- `public` - A boolean representing whether your video is public or not (true for public, false for private).
+- `playerId` - You can associate an api.video player with your live stream by providing the player's ID.
 
 The code sample to update is: 
 
-{% capture samples %}
 
+<CodeSelect title="Updating a live stream">
 ```curl
 curl --request PATCH \
      --url https://ws.api.video/live-streams/li400mYKSgQ6xs7taUeSaEKr \
@@ -285,9 +283,7 @@ live_stream_update_payload = {
 response = live_stream_api.update(live_stream_id, live_stream_update_payload)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## Update a live stream using the dashboard
 
@@ -309,8 +305,8 @@ You can update live stream details from your dashboard if you don't want to retr
 
 You can delete a live stream by sending in a DELETE request using the unique ID for the live stream. The code sample looks like this:
 
-{% capture samples %}
 
+<CodeSelect title="Deleting a live stream">
 ```curl
 curl --request DELETE \
      --url https://ws.api.video/live-streams/li400mYKSgQ6xs7taUeSaEKr \
@@ -380,9 +376,7 @@ live_stream_api = LiveStreamsApi(client)
 response = live_stream_api.delete(live_stream)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## Delete a live stream from your dashboard
 

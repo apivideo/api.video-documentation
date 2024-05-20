@@ -1,5 +1,9 @@
 ---
 title: API reference
+experimental:
+  v2_templates: false
+toc: true
+breadcrumbs: false
 hide_side_table_of_contents: true
 meta:
   description: The API reference serves as a practical developers' documentation about api.video's solutions for video on demand, live streaming, and delivery.

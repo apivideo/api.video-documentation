@@ -1,5 +1,10 @@
 ---
 title: api.video backup and cold storage
+experimental:
+  v2_templates: false
+toc: true
+breadcrumbs: false
+hide_side_table_of_contents: true
 meta:
   description: Backup your uploaded videos to your preferred provider.
 ---

@@ -1,5 +1,9 @@
 ---
 title: VOD SDKs
+experimental:
+  v2_templates: false
+toc: true
+breadcrumbs: false
 hide_side_table_of_contents: true
 meta: 
     description: api.video uploader and upstream SDKs for TypeScript, Flutter, iOS Swift, and Android Kotlin.
