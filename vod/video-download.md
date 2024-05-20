@@ -10,7 +10,7 @@ After videos have been transcoded on [api.video](http://api.video), it’s natur
 
 [api.video](http://api.video) allows you and your users to download videos directly from the player or programmatically through the API.
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/vod/video-download/video-download-diagram-dark.svg", light: "/_assets/vod/video-download/video-download-diagram-light.svg", alt: "A diagram that shows the process of video download" %}
+<Image src="/_assets/vod/video-download/video-download-diagram-light.svg" src_dark="/_assets/vod/video-download/video-download-diagram-dark.svg" alt="A diagram that shows the process of video download" />
 
 ## Download a video from [api.video](http://api.video) player
 

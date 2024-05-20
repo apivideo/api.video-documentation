@@ -13,7 +13,7 @@ To fulfill this commitment, we've meticulously crafted a robust infrastructure t
 
 ## How it works?
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/get-started/infra/infra_flow_dark.png", light: "/_assets/get-started/infra/infra_flow_light.png", alt: "A diagram that shows the hosting location flow" %}
+<Image src="/_assets/get-started/infra/infra_flow_light.png" src_dark="/_assets/get-started/infra/infra_flow_dark.png" alt="A diagram that shows the hosting location flow" />
 
 When creating a new account or adding a project after you have switched to production, you will be prompted to choose the region from which your videos will be hosted and delivered. You will encounter two primary options:
 

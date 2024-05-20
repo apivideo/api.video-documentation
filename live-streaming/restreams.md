@@ -19,7 +19,7 @@ api.video gives you the ability to broadcast a live stream to multiple platforms
 
 ## How it works
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/live-streaming/restreams/restreams-dark.svg", light: "/_assets/live-streaming/restreams/restreams-light.svg", alt: "A diagram that shows RTMP restreaming on different platforms" %}
+<Image src="/_assets/live-streaming/restreams/restreams-light.svg" src_dark="/_assets/live-streaming/restreams/restreams-dark.svg" alt="A diagram that shows RTMP restreaming on different platforms" />
 
 You can add restreams to an existing live stream or you can create a live stream that already includes the restream list.   
 
