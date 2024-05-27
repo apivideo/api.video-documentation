@@ -1,7 +1,5 @@
 ---
 title: No-code solutions
-experimental:
-  v2_templates: false
 toc: true
 breadcrumbs: false
 hide_side_table_of_contents: true
@@ -13,16 +11,59 @@ meta:
 
 Sometimes you need a quick solution without getting into coding. api.video provides you with a variety of plugins and solutions that will enable you to use api.video's various features without the need to write a single line of code.
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././bubbleio-plugin.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Bubble.io](/_assets/icons/bubbleio_new.png)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Bubble.io", image: "/_assets/icons/bubbleio_new.png", subtitle: "No-code plugin",  link: "././bubbleio-plugin.md" %}
+        <Box>
+            Bubble.io\
+            <small>No-code plugin</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Contentful", image: "/_assets/icons/contentful_new.png", subtitle: "No-code plugin",  link: "././contentful.md" %}
+<Card href="././contentful.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Contentful](/_assets/icons/contentful_new.png)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Zapier", image: "/_assets/icons/zapier_new.png", subtitle: "No-code plugin",  link: "././zapier.md" %}
+        <Box>
+            Contentful\
+            <small>No-code plugin</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Wordpress", image: "/_assets/icons/wordpress_new.png", subtitle: "No-code plugin",  link: "././wordpress.md" %}
+<Card href="././zapier.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Zapier](/_assets/icons/zapier_new.png)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Strapi", image: "/_assets/icons/strapi_new.png", subtitle: "No-code plugin",  link: "././strapi.md" %}
+        <Box>
+            Zapier\
+            <small>No-code plugin</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="././wordpress.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Wordpress](/_assets/icons/wordpress_new.png)</Box>
+
+        <Box>
+            Wordpress\
+            <small>No-code plugin</small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="././strapi.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Strapi](/_assets/icons/strapi_new.png)</Box>
+
+        <Box>
+            Strapi\
+            <small>No-code plugin</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>

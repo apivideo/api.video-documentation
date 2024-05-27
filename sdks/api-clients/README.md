@@ -89,7 +89,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
         <Box>
-            NodeJS\
+            Swift\
             <small>API Client</small>
         </Box>
     </Flex>
@@ -100,7 +100,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            NodeJS\
+            Android\
             <small>API Client</small>
         </Box>
     </Flex>

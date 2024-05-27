@@ -1,7 +1,5 @@
 ---
 title: Player & analytics SDKs
-experimental:
-  v2_templates: false
 toc: true
 breadcrumbs: false
 hide_side_table_of_contents: true
@@ -17,29 +15,88 @@ Enable video playback from your app.
 
 ### Web
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././apivideo-player-sdk.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![api.video Player SDK](/_assets/icons/sdk_icons/js.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "api.video Player SDK", image: "/_assets/icons/sdk_icons/js.svg", subtitle: "Player",  link: "././apivideo-player-sdk.md" %}
+        <Box>
+            api.video Player SDK\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Flutter", image: "/_assets/icons/sdk_icons/flutter.svg", subtitle: "Player",  link: "././apivideo-flutter-player.md" %}
+<Card href="././apivideo-flutter-player.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "React.js", image: "/_assets/icons/sdk_icons/react_native.svg", subtitle: "Player",  link: "././apivideo-react-player.md" %}
+        <Box>
+            Flutter\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="././apivideo-react-player.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![React.js](/_assets/icons/sdk_icons/react_native.svg)</Box>
+
+        <Box>
+            React.js\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
 ### Mobile
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././apivideo-react-native-player.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![React Native](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "React Native", image: "/_assets/icons/sdk_icons/react_native.svg", subtitle: "Player",  link: "././apivideo-react-native-player.md" %}
+        <Box>
+            React Native\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Flutter", image: "/_assets/icons/sdk_icons/flutter.svg", subtitle: "Player",  link: "././apivideo-flutter-player.md" %}
+<Card href="././apivideo-flutter-player.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Swift", image: "/_assets/icons/sdk_icons/Swift.svg", subtitle: "Player",  link: "././apivideo-swift-player.md" %}
+        <Box>
+            Flutter\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Android", image: "/_assets/icons/sdk_icons/Android.svg", subtitle: "Player",  link: "././apivideo-android-player.md" %}
+<Card href="././apivideo-swift-player.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
-</div>
+        <Box>
+            Swift\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="././apivideo-android-player.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
+
+        <Box>
+            Android\
+            <small>Player</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
 ## Player analytics SDKs
 
@@ -47,22 +104,64 @@ Collect data and insights from custom players.
 
 ### Web
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././apivideo-videojs-analytics.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![video.js](/_assets/icons/sdk_icons/js.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "video.js", image: "/_assets/icons/sdk_icons/js.svg", subtitle: "Analytics plugin",  link: "././apivideo-videojs-analytics.md" %}
+        <Box>
+            video.js\
+            <small>Analytics plugin</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "hls.js", image: "/_assets/icons/sdk_icons/js.svg", subtitle: "Analytics plugin",  link: "././apivideo-hlsjs-analytics.md" %}
+<Card href="././apivideo-hlsjs-analytics.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![hls.js](/_assets/icons/sdk_icons/js.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "api.video Player analytics", image: "/_assets/icons/sdk_icons/js.svg", subtitle: "Analytics plugin",  link: "././apivideo-player-analytics.md" %}
+        <Box>
+            hls.js\
+            <small>Analytics plugin</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="././apivideo-player-analytics.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![api.video Player analytics](/_assets/icons/sdk_icons/js.svg)</Box>
+
+        <Box>
+            api.video Player analytics\
+            <small>Analytics plugin</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
 ### Mobile
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
 
-{% include "_partials/hagrid-item.md" title: "Swift", image: "/_assets/icons/sdk_icons/Swift.svg", subtitle: "Analytics plugin",  link: "././apivideo-swift-player-analytics.md" %}
+<Card href="././apivideo-swift-player-analytics.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Android", image: "/_assets/icons/sdk_icons/Android.svg", subtitle: "Analytics plugin",  link: "././apivideo-android-player-analytics.md" %}
+        <Box>
+            Swift\
+            <small>Analytics plugin</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="././apivideo-android-player-analytics.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
+
+        <Box>
+            Android\
+            <small>Analytics plugin</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
