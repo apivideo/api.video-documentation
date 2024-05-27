@@ -1,7 +1,5 @@
 ---
 title: API client libraries
-experimental:
-  v2_templates: false
 toc: true
 breadcrumbs: false
 hide_side_table_of_contents: true
@@ -9,35 +7,102 @@ meta:
     description: api.video client libraries for NodeJS, Python, PHP, Go, C#, Java, iOS Swift, and Android.
 ---
 
-API client libraries
-==================
+# API client libraries
 
 Seamlessly integrate video on demand or live streaming into your current tech stack.
 
-### Server-side
+## Server-side
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././apivideo-nodejs-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![NodeJS](/_assets/icons/sdk_icons/NodeJs.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "NodeJS", image: "/_assets/icons/sdk_icons/NodeJs.svg", subtitle: "API client",  link: "././apivideo-nodejs-client.md" %}
+        <Box>
+            NodeJS\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Python", image: "/_assets/icons/sdk_icons/Python.svg", subtitle: "API client",  link: "././apivideo-python-client.md" %}
+<Card href="././apivideo-python-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Python](/_assets/icons/sdk_icons/Python.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "PHP", image: "/_assets/icons/sdk_icons/Php.svg", subtitle: "API client",  link: "././apivideo-php-client.md" %}
+        <Box>
+            Python\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Go", image: "/_assets/icons/sdk_icons/Go.svg", subtitle: "API client",  link: "././apivideo-go-client.md" %}
+<Card href="././apivideo-php-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![PHP](/_assets/icons/sdk_icons/Php.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "C#", image: "/_assets/icons/sdk_icons/Csharp.svg", subtitle: "API client",  link: "././apivideo-csharp-client.md" %}
+        <Box>
+            PHP\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Java", image: "/_assets/icons/sdk_icons/Java.svg", subtitle: "API client",  link: "././apivideo-java-client.md" %}
+<Card href="././apivideo-go-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Go](/_assets/icons/sdk_icons/Go.svg)</Box>
 
-</div>
+        <Box>
+            Go\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
 
-### Mobile 
+<Card href="././apivideo-csharp-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![C#](/_assets/icons/sdk_icons/Csharp.svg)</Box>
 
-<div class="hagrid">
+        <Box>
+            C#\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Swift", image: "/_assets/icons/sdk_icons/Swift.svg", subtitle: "API client",  link: "././apivideo-swift5-client.md" %}
+<Card href="././apivideo-java-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Java](/_assets/icons/sdk_icons/java.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Android", image: "/_assets/icons/sdk_icons/Android.svg", subtitle: "API client",  link: "././apivideo-android-client.md" %}
+        <Box>
+            Java\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
-</div>
+## Mobile
+
+<Grid cols="2" gap="3">
+<Card href="././apivideo-swift5-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
+
+        <Box>
+            NodeJS\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="././apivideo-android-client.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
+
+        <Box>
+            NodeJS\
+            <small>API Client</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
