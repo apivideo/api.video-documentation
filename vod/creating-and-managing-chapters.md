@@ -65,7 +65,7 @@ The clients offered by api.video include:
 
 To install your selected client, do the following:
 
-{% capture content %}
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -87,8 +87,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.html" samples: content %}
+</CodeSelect>
 
 ## Upload a chapter
 
@@ -97,8 +96,8 @@ To upload chapters for your video, you'll need a .VTT file containing details ab
 - [Adding chapters to your videos](https://api.video/blog/tutorials/video-chapters/)
 - [Video chapters: Using external buttons for controls](https://api.video/blog/tutorials/video-chapters/) 
 
-{% capture content %}
 
+<CodeSelect title="Uploading a chapter">
 ```curl
 curl --request POST \
      --url https://ws.api.video/videos/vi4k0jvEUuaTdRAEjQ4Jfrgz/chapters/en \
@@ -203,9 +202,7 @@ file = open("chapters.vtt", "rb")
 response = chapter_api.upload(video_id, language, file)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" samples: content %}
+</CodeSelect>
 
 
 ## Upload a chapter using the dashboard

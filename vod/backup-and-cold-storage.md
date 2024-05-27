@@ -1,7 +1,5 @@
 ---
 title: api.video backup and cold storage
-experimental:
-  v2_templates: false
 toc: true
 breadcrumbs: false
 hide_side_table_of_contents: true
@@ -23,12 +21,39 @@ In this section, you'll be able to find guides on how to backup the videos hoste
 
 Below, you will find the scripts that are available for your disposale in order to backup your videos from api.video.
 
-## Available Scripts
+## Available scripts
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="./azure-cold-storage-backup.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box><img src="/_assets/get-started/migration-guide/Microsoft_Azure.svg" alt="Azure" width="56"/></Box>
 
-{% include "_partials/hagrid-item.md" title: "Amazon", image: "/_assets/get-started/migration-guide/Amazon-S3-Logo.svg", subtitle: "S3",  link: "./amazon-cold-storage-backup.md" %}
-{% include "_partials/hagrid-item.md" title: "Google", image: "/_assets/get-started/migration-guide/Google-Storage-Logo.png", subtitle: "Storage account",  link: "./google-cold-storage-backup.md" %}
-{% include "_partials/hagrid-item.md" title: "Azure", image: "/_assets/get-started/migration-guide/Microsoft_Azure.svg", subtitle: "Storage account",  link: "./azure-cold-storage-backup.md" %}
+        <Box>
+            Azure\
+            <small>Storage account</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="./amazon-cold-storage-backup.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box><img src="/_assets/get-started/migration-guide/Amazon-S3-Logo.svg" alt="Amazon" width="56"/></Box>
+
+        <Box>
+            Amazon\
+            <small>S3</small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="./google-cold-storage-backup.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box><img src="/_assets/get-started/migration-guide/Google-Storage-Logo.png" alt="Google Cloud Storage" width="56"/></Box>
+
+        <Box>
+            Google\
+            <small>Storage account</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
