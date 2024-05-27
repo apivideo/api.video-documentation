@@ -10,21 +10,74 @@ meta:
 
 Moving to a different provider takes time, effort, and development resources. api.video can help you migrate your existing content cost-efficiently, in only a few clicks. Read more about using our [Import tool](https://api.video/blog/tutorials/switch-to-api-video-in-minutes-latest-updates-on-our-import-tool/), or check out the migration guides if you plan to move from these providers:
 
-<div class="hagrid">
 
-{% include "_partials/hagrid-item.md" title: "Azure", image: "/_assets/get-started/migration-guide/Microsoft_Azure.svg", subtitle: "Media Services",  link: "./azure-migration.md" %}
+<Grid cols="2" gap="3">
+<Card href="./azure-migration.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Azure](/_assets/get-started/migration-guide/icons/Microsoft_Azure.jpg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Amazon", image: "/_assets/get-started/migration-guide/Amazon-S3-Logo.svg", subtitle: "S3",  link: "./aws-migration.md" %}
+        <Box>
+            Azure
+            <small>Media Services</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Google", image: "/_assets/get-started/migration-guide/Google-Storage-Logo.png", subtitle: "Cloud Storage",  link: "./gcs-migration.md" %}
+<Card href="./aws-migration.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Amazon](/_assets/get-started/migration-guide/icons/Amazon-S3-Logo.jpg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Vimeo", image: "/_assets/get-started/migration-guide/vimeo.png", subtitle: "", link: "./vimeo-migration.md" %}
+        <Box>
+            Amazon
+            <small>S3</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Wistia", image: "/_assets/get-started/migration-guide/wistia.png", subtitle: "", link: "./wistia-migration.md" %}
+<Card href="./gcs-migration.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Google Cloud Storage](/_assets/get-started/migration-guide/icons/Google-Storage-Logo.jpg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Cloudinary", image: "/_assets/get-started/migration-guide/cloudinary-logo.png", subtitle: "", link: "./cloudinary-migration.md" %}
+        <Box>
+            Google
+            <small>Cloud Storage</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="./vimeo-migration.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Vimeo](/_assets/get-started/migration-guide/icons/vimeo.jpg)</Box>
+
+        <Box>
+            Vimeo
+            <small>  </small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="./wistia-migration.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Wistia](/_assets/get-started/migration-guide/icons/wistia.jpg)</Box>
+
+        <Box>
+            Wistia
+            <small>  </small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="./cloudinary-migration.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Cloudinary](/_assets/get-started/migration-guide/icons/cloudinary-logo.jpg)</Box>
+
+        <Box>
+            Cloudinary
+            <small>  </small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
 ## FAQs
 
@@ -32,22 +85,26 @@ Moving to a different provider takes time, effort, and development resources. ap
 <summary><b>What do I need to change in my implementation after the migration?</b></summary>
 <p>
 Once you migrate, api.video will host your assets and will provide the infrastructure for you. You only need to take care about updating your product to use the new assets.
+</p>
 </details>
 
 <details>
 <summary><b>Can I keep the original IDs / URLs of my assets?</b></summary>
 <p>
 Technically speaking no. When you migrate your assets, api.video generates new unique IDs for each of your videos. Even though you will need to update your product to use the new asset URLs and IDs, we will help you ease the workload by providing an exact mapping of your old assets to the new ones hosted by api.video.
+</p>
 </details>
 
 <details>
 <summary><b>Will api.video help me create a mapping from old assets to new assets?</b></summary>
 <p>
 Yes! The Import tool automatically creates a mapping in <code>csv</code> and in <code>JSON</code> formats.
+</p>
 </details>
 
 <details>
 <summary><b>Can I import video captions with the Import tool?</b></summary>
 <p>
 Yes! However, note these limitations: importing captions is currently only supported from <a href="/get-started/azure-migration">Azure Media Services</a>, and only in <code>VTT</code> format.
+</p>
 </details>
