@@ -350,13 +350,13 @@
 
 @media (min-width: 768px) {
   .content-markdown {
-    margin-left: 80px !important;
+    padding-left: 80px !important;
   }
   
 }
 
 @media (min-width: 1024px) {
-  #page-content > div > div > div {
+  #page-content > div > div > div:has(.no-toc) {
     --max-width-sm: auto !important;
     padding-left: 40px !important;
   }
@@ -364,11 +364,11 @@
 
 
 @media (min-width: 1280px) {
-  #page-content > div > div > div {
+  #page-content > div > div > div:has(.no-toc) {
     padding-left: 80px !important;
   }
 
-  #page-content > div > div {
+  #page-content > div > div:has(.no-toc) {
     width: auto !important;
   }  
 }
