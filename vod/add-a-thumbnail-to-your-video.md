@@ -13,10 +13,9 @@ For videos or recorded live streams, api.video offers you two ways to add a thum
 
 This guide walks you through both methods for setting up a thumbnail for videos. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 If you want to add a thumbnail to a live stream, the only available method is to upload a picture you choose. You can read more about this in the [Add or delete a live stream thumbnail](/live-streaming/add-or-delete-a-live-stream-thumbnail) guide.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API documentation
 
@@ -27,7 +26,7 @@ If you want to add a thumbnail to a live stream, the only available method is to
 
 You have the option to choose a photo that's in `.jpg`, `.png`, or `.webp` format. It must be 8MB or smaller. To send your file, add the path to where it's stored and open it in binary. Then you can upload it with the client of your choice or see how it works with cURL. 
 
-{% capture samples %}
+<CodeSelect title="Uploading a thumbnail">
 ```curl
 curl --request POST \
      --url https://ws.api.video/videos/vi61tikT4GAAB29KehMKyqX3/thumbnail \
@@ -134,14 +133,13 @@ videos_api = VideosApi(client)
 response = videos_api.upload_thumbnail(video_id, file)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Pick a thumbnail
 
 If you don't want to create a custom thumbnail image for your video, you can select one from the video itself. All you need to do is choose the timecode to the frame you want to be the thumbnail. The format is ISO 8601, and represents - HH:MM:SS:mm - hours, minutes, seconds, milliseconds.
 
-{% capture samples %}
+<CodeSelect title="Picking a thumbnail">
 ```curl
 curl --request PATCH \
      --url https://ws.api.video/videos/viZxSTFgXZVjFnFCUo363Ie/thumbnail \
@@ -248,8 +246,7 @@ video_thumbnail_pick_payload = {
 response = videos_api.pick_thumbnail(video_id, video_thumbnail_pick_payload)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Add a thumbnail from the dashboard
 

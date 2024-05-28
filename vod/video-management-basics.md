@@ -28,7 +28,7 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+<CodeSelect title="Install api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -50,8 +50,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 Check out the [API clients library](/sdks/api-clients.md) for detailed instructions for all libraries & SDKs.
 

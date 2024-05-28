@@ -12,10 +12,10 @@ Watch this short video to get started with api.video integration using Zapier:
 
 <iframe src="https://embed.api.video/vod/vi19sDyBdzOFcmiS1ZuMPJkr" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 
-{% capture content %}
+
+<Callout pad="2" type="info">
 A trigger might be "When a new encoding has been created at api.video" and the action would be to "share the playback link on Twitter." So now, whenever a new encoding is created, the zap will fire and automatically tweet the link to your followers.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 The api.video integration features both triggers and actions. Check out the linked pages for more details about each action and trigger.
 

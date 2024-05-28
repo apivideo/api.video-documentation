@@ -24,12 +24,11 @@ Navigate to the [Dashboard](https://dashboard.api.video/register) and register w
 
 All you need now is to get your API key from the dashboard. Navigate to the [API keys page](https://dashboard.api.video/project-settings/api-keys) and grab your API key from there.
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **API Key Security**
 
 Make sure to reach our security recommendation to avoid exposing your API key and causing a security breach on your account. You can find the security best practices [here](/reference/README.md#security)
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Clone the front-end repo
 
@@ -67,7 +66,7 @@ $ npm run dev
 
 The server will be running on `localhost:3000` by default
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Changing the default port**
 
 You can change the default port of 3000 to something of your liking by editing the `package.json` file and adding the custom port like so:
@@ -79,8 +78,7 @@ You can change the default port of 3000 to something of your liking by editing t
   "start": "next start -p 3002",
 },
 ```
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 When you navigate to `http://localhost:3000` with your browser, you should get this screen:
 
@@ -128,16 +126,15 @@ const ListVideoPage = (page: number) => {
 
 #### Server Hello World
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Building the backend with the language of your choice**
 
 This tutorial is designed to get you started with our client libraries, you can choose which client library you want to work with. For each example, please make sure to choose the language of your choice in the code snippet pane.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
-Now we need to build a server that will accept the requests from our frontend. Let's build a small application sever that if taking requests on port 5500
+Now we need to build a server that will accept the requests from our frontend. Let's build a small application sever that is taking requests on port 5500
 
-{% capture samples %}
+<CodeSelect title="Building the initial app server">
 ```javascript
 $ mkdir apivideo-node-server
 $ cd apivideo-node-server
@@ -155,10 +152,9 @@ $ cd apivideo-go-server
 $ touch app.go
 $ go mod init apivideo-go-server
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
-{% capture samples %}
+<CodeSelect title="Setting up the port">
 ```javascript
 const express = require('express')
 const app = express()
@@ -201,10 +197,7 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
-
+</CodeSelect>
 
 Now we have a server that takes post requests on port `5500`.
 
@@ -214,7 +207,7 @@ The next step is to utilize the client library that api.video is offering in ord
 
 For the server, we will need to install all the dependent libraries including the api.video client library. Run the following command in the server app folder.
 
-{% capture samples %}
+<CodeSelect title="Installing dependencies">
 ```javascript
 //express server
 $ npm install express --save
@@ -239,15 +232,14 @@ $ pip3 install flask-cors
 $ go get github.com/apivideo/api.video-go-client
 $ go get github.com/rs/cors
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 
 ### Adding the api.video client library
 
 Let's add the api.video client library to our server code. You can find all the available client libraries [here](/sdks/README.md) 
 
-{% capture samples %}
+<CodeSelect title="Adding the api.video client">
 ```javascript
 const express = require('express');
 const ApiVideoClient = require('@api.video/nodejs-client')
@@ -284,9 +276,7 @@ func main() {
   http.ListenAndServe(":5500", handler)
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
+</CodeSelect>
 
 ### api.video client initialization
 
@@ -294,7 +284,7 @@ The client library takes your api key, which you can [find here](https://dashboa
 
 Learn more about [Basic Authentication](/reference/basic-authentication) and [Bearer Token Authentication](/reference/disposable-bearer-token-authentication). 
 
-{% capture samples %}
+<CodeSelect title="Initializing the api.video client">
 ```javascript
 const apivideoClient = new ApiVideoClient({ apiKey: "replace with your api key" });
 ```
@@ -319,15 +309,14 @@ func InitApiVideoClient() (*apivideosdk.Client) {
 	return client
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 
 ### File handler & CORS
 
 We will add a file handler library that will intake the file stream from the request form. If you are using localhost it's a good idea to add a CORS
 
-{% capture samples %}
+<CodeSelect title="Adding the file handler and CORS">
 ```javascript
 const express = require('express');
 const ApiVideoClient = require('@api.video/nodejs-client')
@@ -381,9 +370,7 @@ func InitApiVideoClient() (*apivideosdk.Client) {
 }
 
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
+</CodeSelect>
 
 ## api.video Uploader
 
@@ -393,7 +380,7 @@ In this step, we will need to create a handler for the incoming POST request fro
 
 In this instance we are referring to the Videos endpoint. First we create a video object. You can find more about the endpoint [here](/reference/api/Videos#create-a-video-object) 
 
-{% capture samples %}
+<CodeSelect title="Creating a video object">
 ```javascript
 app.post('/upload', upload.single('file'), async (req, res, next) => {
   	// Grab the file from the request
@@ -464,13 +451,12 @@ func UploadVideoToapivideo(videoId *apivideosdk.Video, videoFile *os.File) map[s
 	return resVideoId
 } 
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 
 Next up, after we created the video object, we can now upload the actual video file. So add these lines after the video creation. 
 
-{% capture samples %}
+<CodeSelect title="Uploading a video">
 ```javascript
 // create a video object first      	
 const video = await apivideoClient.videos.create(videoCreationPayload);
@@ -490,8 +476,7 @@ res.json(uploadVideoRes.videoId);
  # return the video id to the frontend
  return jsonify(uploaded_video_id)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 
 In this step we are leveraging the upload a video endpoint, this endpoint enables you not only to [upload a video](/reference/api/Videos#upload-a-video), but also to upload a video from a [url source](/vod/upload-from-source), or do a [progressive video upload](/vod/progressive-upload).
@@ -500,7 +485,7 @@ In this step we are leveraging the upload a video endpoint, this endpoint enable
 
 Let's add the upload status, so we will be able to indicate to the user that the video has been uploaded, or the upload is in progress. Add another POST request handler function that will intake the video id and return the video status
 
-{% capture samples %}
+<CodeSelect title="Getting video upload status">
 ```javascript
 app.post('/uploadStatus', async (req, res) => {
   	// Get the video id from the request 
@@ -523,8 +508,7 @@ def video_upload_status():
     # return the jsonified status payload to the frontend
     return video_upload_status_jsonified
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 
 We've leveraged the `/status` endpoint in this step, you can find more information about the endpoint [here](/reference/api/Videos#retrieve-video-status-and-details)
@@ -533,7 +517,7 @@ We've leveraged the `/status` endpoint in this step, you can find more informati
 
 The last thing we need to get the list of videos and assets. Just add another request handler that will return a list of 10 videos per page from the workspace
 
-{% capture samples %}
+<CodeSelect title="Listing videos">
 ```javascript
 app.post('/videos', async (req, res) => {
     const page = req.body.page
@@ -555,8 +539,7 @@ def get_video_list():
     # return the list to the frontend
     return json_video_list
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 This steps utilizes the List all videos endpoint. You can also use different filters to retrieve video lists, you can find more information about the endpoint [here](/reference/api/Videos#list-all-video-objects)
 
@@ -564,12 +547,11 @@ This steps utilizes the List all videos endpoint. You can also use different fil
 
 As we already have the React frontend running on localhost:3000, we will need to run the server on a different port. If you followed the instructions, we've set the server port to 5500 by default and the code you've copied is running the server on port 5500. The only thing left is to run our server. Go to the server app folder and run it
 
-{% capture samples %}
+<CodeSelect title="Running the server">
 ```javascript
 node index.js
 ```
 ```python
 python3 app.py
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>

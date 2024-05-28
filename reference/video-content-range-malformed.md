@@ -6,7 +6,7 @@ meta:
 
 # Video Content Range Malformed
 
-The value of the "Content-Range" header is malformed, the expected format is "bytes <from_byte>-<to_byte>/<total_bytes>" or "part <part>/<total_parts>".
+The value of the "Content-Range" header is malformed, the expected format is "bytes `from_byte`-`to_byte`/`total_bytes`" or "part `part`/`total_parts`".
 
 ## Solution
 

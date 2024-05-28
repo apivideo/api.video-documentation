@@ -72,12 +72,12 @@ Keyframe Interval: 2 second
 
 ## Limitations
 
-{% capture content %}
+<Callout pad="2" type="warning">
+
 * When using the sandbox environment, live streaming is limited to 24 hours.
 * The **video codec must be H.264**
 * The **audio codec must be AAC or MP3**
 * DVR is exactly 1 hour
 * During a disconnection on ingest side, re-connection must occur within 10 seconds
 * When creating a new live event using the same `streamID` without keeping the DVR of a previous live, you must wait at least 5 minutes before re-using it
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>

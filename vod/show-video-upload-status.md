@@ -8,7 +8,7 @@ meta:
 
 api.video gives you ways of checking the video upload status and video details.
 
-To check the video upload status or details of the encoding, you can either use webhooks or API polling by making a request to [/videos/{videoId}/status](/reference/api/Videos#retrieve-video-status-and-details) endpoint.
+To check the video upload status or details of the encoding, you can either use webhooks or API polling by making a request to [`/videos/{videoId}/status`](/reference/api/Videos#retrieve-video-status-and-details) endpoint.
 
 ## Listening to Webhooks for Video Status & Encoding
 
@@ -132,7 +132,7 @@ Provides data on the source video
 
 To install your selected client, do the following:
 
-{% capture samples %}
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -154,8 +154,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 #### Retrieve your API key
 
@@ -165,7 +164,7 @@ You'll need your API key to get started. You can sign up for one here: [Get your
 
 To retrieve the status of a video you uploaded, use this code sample:
 
-{% capture samples %}
+<CodeSelect title="Retrieving video upload status">
 ```curl
 curl --request GET \
      --url https://ws.api.video/videos/{video ID here}/status \
@@ -257,8 +256,7 @@ videos_api = VideosApi(client)
 response = videos_api.get_status(video_id)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## API documentation
 

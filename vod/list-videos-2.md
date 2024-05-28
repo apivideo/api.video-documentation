@@ -21,7 +21,7 @@ This guide walks through the different options for retrieving videos and covers 
 
 You can list all videos by not using any filters when sending your request. The code sample looks like this:
 
-{% capture samples %}
+<CodeSelect title="Listing all videos">
 ```curl
 curl --request GET \
      --url 'https://ws.api.video/videos?currentPage=1&pageSize=25' \
@@ -109,14 +109,13 @@ videos = videos_api.list()
 
 print(videos)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## List videos using query parameters
 
 If you want to retrieve a specific subset of videos, this code sample shows you how to filter:
 
-{% capture samples %}
+<CodeSelect title="Listing videos using query parameters">
 ```curl
 curl --request GET \
      --url 'https://ws.api.video/videos?title=videotitle.mp4&currentPage=1&pageSize=25' \
@@ -223,8 +222,7 @@ videos = videos_api.list(title='your title')
 
 print(videos)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
+</CodeSelect>
 
 ## See a list of videos in the dashboard
 

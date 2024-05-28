@@ -12,7 +12,7 @@ api.video enables you to upload a video container file [via a URL](#upload-a-fil
 
 Uploading a video from a video URL enables you go through the whole video upload process in only 1 step. Paste a URL that points to your video container (for example, the `.mp4` file of your video) into the `source` field in your request:
 
-{% capture samples %}
+<CodeSelect title="Uploading a file from URL">
 ```curl
 curl --user *your_api_key*: \
 --request POST \
@@ -158,19 +158,17 @@ catch (ApiException e)
     // Manage error here
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
-{% capture content %}
+<Callout pad="2" type="info">
 Replace the link in the example above with your video container (for example, the `.mp4` file of your video). If you don’t have a video URL to test this, you can use [this one](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4) for example.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Clone an existing video
 
 You can clone a video that already exists in your api.video project. Just paste your video's `videoId` into the `source` field in your request:
 
-{% capture samples %}
+<CodeSelect title="Cloning a video">
 ```curl
 curl --user *your_api_key*: \
 --request POST \
@@ -316,8 +314,7 @@ catch (ApiException e)
     // Manage error here
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## API response
 

@@ -14,15 +14,13 @@ If invalid credentials are provided, a `401 Unauthorized` response code is retur
 
 You must use different credentials depending on the [environment](/reference/README.md#environments) you are in. If credentials for the wrong environment are used, a `401 Unauthorized` response code is returned with the corresponding JSON body.
 
-
-{% capture content %}
+<Callout pad="2" type="info">
 **API Key protection**
 
 To protect your credentials from being revealed on the client-side, invoke the api.video calls from your own server-side applications only.
 
 Please make sure to read the security guidance [here](/reference/README.md#security).
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Retrieve API keys
 
@@ -50,7 +48,7 @@ Sample requests with authentication can be found below:
   curl -u api_key: https://sandbox.api.video/videos
   ```
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Notes**
 
 * Replace `api_key` with the key you have already copied from [https://dashboard.api.video](https://dashboard.api.video/)
@@ -59,5 +57,4 @@ Sample requests with authentication can be found below:
   ```bash
     curl --header 'Authorization: Basic your\_api\_key\_with\_trailing\_colon\_in\_base64' https://ws.api.video/videos
   ```
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>

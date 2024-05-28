@@ -10,8 +10,7 @@ In some cases, you just need to upload a smaller piece of a video, but you would
 
 [api.video](http://api.video) allows you to clip a video to upload only specific parts of the video. You will be able to specify the start and end time of the clip before you upload the source video to api.video.
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/vod/video-clip/video-clipping-dark.svg", light: "/_assets/vod/video-clip/video-clipping-light.svg", alt: "A diagram that shows the process of clipping a video" %}
-
+<Image src="/_assets/vod/video-clip/video-clipping-light.svg" src_dark="/_assets/vod/video-clip/video-clipping-dark.svg" alt="A diagram that shows the process of clipping a video" />
 
 ## How does video clipping work?
 
@@ -29,7 +28,8 @@ For this example, let’s assume that we have a video file that is `00:10:00` in
 
 Once you’ve determined what video you would like to clip and trim, you need to create a [video object](https://docs.api.video/vod/video-object) with the `clip` parameter.
 
-{% capture samples %}
+<CodeSelect title="Clipping a video">
+
 ```javascript
 // Documentation: https://github.com/apivideo/api.video-nodejs-client/blob/main/doc/api/VideosApi.md#create
 
@@ -163,13 +163,11 @@ public class Example {
   }
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 Once the object is created, all you have to do is just upload the video to the object:
 
-{% capture samples %}
-
+<CodeSelect title="Uploading a video">
 ```javascript
 const file = './my-video.mp4'; // The path to the video you would like to upload. The path must be local. If you want to use a video from an online source, you must use the "/videos" endpoint and add the "source" parameter when you create a new video.
 const videoId =  video.id    
@@ -213,7 +211,6 @@ File file = new File("/path/to/file"); // The path to the video you would like t
     }
   }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 Once the video is uploaded and trancoded it will only include the segment of the clip that you have configured.

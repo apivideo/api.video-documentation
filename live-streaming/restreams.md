@@ -6,20 +6,19 @@ meta:
 
 # Restreaming
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **Beta Feature**
 
 Please note that Restreaming is currently a beta feature. The api.video engineering team is continuously working on improving the feature, thus issues may occur.
 
 If you are experiencing an issue, please do not hesitate to contact our support team.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 api.video gives you the ability to broadcast a live stream to multiple platforms simultaneously. You'll be able to stream to Youtube, Twitch, and any other platform that supports [RTMP](https://api.video/blog/video-trends/what-is-rtmp-and-why-do-we-use-it-for-live-streaming/) from one source.
 
 ## How it works
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/live-streaming/restreams/restreams-dark.svg", light: "/_assets/live-streaming/restreams/restreams-light.svg", alt: "A diagram that shows RTMP restreaming on different platforms" %}
+<Image src="/_assets/live-streaming/restreams/restreams-light.svg" src_dark="/_assets/live-streaming/restreams/restreams-dark.svg" alt="A diagram that shows RTMP restreaming on different platforms" />
 
 You can add restreams to an existing live stream or you can create a live stream that already includes the restream list.   
 
@@ -47,7 +46,7 @@ The Live stream endpoint has an optional field called `restreams` which is an ar
 | `serverUrl` | `string` | The RTMP url of the streaming server.                                                             |
 | `streamKey` | `string` | Stream key provided by the streaming provider.                                                    |
 
-{% capture content %}
+<Callout pad="2" type="warning">
 Please note that:
 
 - Currently api.video supports up to 5 restreams
@@ -55,8 +54,7 @@ Please note that:
 - The names of the providers are arbitrary, you can provide any name you like
 - When updating the restreams object, it's important to make sure that you are passing the previous values if you would like to keep them
 - Modifying the restreams array while the live stream is already broadcasting will only take only effect after the stream has been restarted
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Supported Platforms
 
@@ -75,12 +73,11 @@ In order to get started with restream, you will need to create a live stream. Ch
 
 ## Usage
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **Limitations**
 
 Restreaming in Sandbox mode is limited to 2 minutes. The original live stream is not limited, only the restreams are limited.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ### Creating a live stream with restreams
 

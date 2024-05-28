@@ -27,7 +27,7 @@ When you update details about your video, you can choose from a wide variety of 
 
 To update details about a video, use this code sample: 
 
-{% capture samples %}
+<CodeSelect title="Updating video details">
 ```curl
 curl --request PATCH \
      --url https://ws.api.video/videos/viZxSTFgXZVjFnFCUo363Ie \
@@ -159,8 +159,7 @@ video_response = videos_api.upload(video_id, file)
 
 print("Uploaded Video", video_response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Update video details with your dashboard
 

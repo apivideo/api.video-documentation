@@ -20,7 +20,7 @@ To delete a video, you need to do the following:
 
 2. Send a delete request to api.video containing the ID for the video you want to delete. Be sure you want to delete the video - there is no way to retrieve the content you delete. 
 
-{% capture samples %}
+<CodeSelect title="Deleting a video">
 ```curl
 curl --request DELETE \
      --url https://ws.api.video/videos/viZxSTFgXZVjFnFCUo363Ie \
@@ -121,8 +121,7 @@ print(videos[0]['video_id'])
 response = videos_api.delete(videos[0]['video_id'])
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Delete a video in the dashboard
 

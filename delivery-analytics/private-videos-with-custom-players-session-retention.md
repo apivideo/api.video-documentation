@@ -18,7 +18,7 @@ In these cases, you will have to make multiple requests to api.video assets. As 
 
 In short a Session Token is api.video's way of retaining the session for every request you make to each asset. You can find the detailed article about session tokens [here](/delivery-analytics/private-video-session-tokens).
 
-{% capture content %}
+<Callout pad="2" type="error">
 **Example for incorrect usage of private videos**
 
 Let's take an example where you want to create a clickable thumbnail which will lead to the video. If we just write the following HTML **it will not work**, you will get a **404 error**:
@@ -33,8 +33,7 @@ Let's take an example where you want to create a clickable thumbnail which will 
   </body>
 </html>
 ```
-{% endcapture %}
-{% include "_partials/callout.html" kind: "error", content: content %}
+</Callout>
 
 ### How to play private video in a custom built player?
 
@@ -50,10 +49,9 @@ Let look at some cases where we can build an application that will use the Sessi
 
 #### Node.js example: Delivering the video with video.js and adding a thumbnail on the top
 
-{% capture content %}
+<Callout pad="2" type="info">
 You can find the source for the example below on [GitHub](https://github.com/apivideo/parivate_video_videojs_node_example).
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 Check out an example of consuming private videos and thumbnail with video.js (Node) below.
 

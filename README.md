@@ -1,53 +1,47 @@
 ---
 hide_navigation: false
-hide_side_table_of_contents: true
+toc: false
+breadcrumbs: false
 meta: 
     description: Cloud-based video hosting and live streaming platform with analytics. Mobile and web SDKs for VOD, live streaming, and player for NodeJS, Javascript, Typescript, Python, Go, PHP, C#, iOS Swift, Android Kotlin.
 ---
 
-<div class="section-header">
+<div class="section-header no-toc">
 
 ### New to api.video?
 
-## Get started [here](/get-started/start-building.md)!
-
-<hr>
+# Get started <span style="color: var(--accent-10)">[here](/get-started/start-building.md)</span>!
 
 </div>
 
-Welcome to the developer documentation of api.video! Our platform empowers developers and businesses to seamlessly integrate video functionality into their applications and services. Whether you're looking to offer video on demand, live streaming, or leverage our player and analytics features, the api.video API is designed to simplify the process.
+Welcome to the developer documentation of api.video! Our platform empowers developers and businesses to seamlessly integrate video functionality into their applications and services. Whether you're looking to offer video on demand, live streaming, or leverage our player and analytics features, the api.video API is designed to simplify the process. 
 
-Check out the products:
+Check out the products!
 
-<div class="product-cards">
+<Grid cols="3" gap="3">
+    <Component.LandingPageCard heading="Video" subheading="on demand">
+        <Flex dir="column" pad="0" justify="between" gap="2">
+            api.video's hosting service enables you to upload and store videos, and then deliver and share them easily across various devices and platforms.
 
-{% capture vod-description %}
+            <Button href="/vod">Learn More</Button>
+        </Flex>
+    </Component.LandingPageCard>
+    <Component.LandingPageCard heading="Live" subheading="streaming">
+        <Flex dir="column" pad="0" justify="between" gap="2">
+            api.video provides you with the possibility to embed low-latency live streaming into your application, website, or project seamlessly.
+           
+           <Button href="/live-streaming">Learn More</Button>
+        </Flex>
+    </Component.LandingPageCard>
+    <Component.LandingPageCard heading="Delivery" subheading="& analytics">
+        <Flex dir="column" pad="0" justify="between" gap="2">
+            api.video lets you customize a large part of the delivery, whether it's the player's branding or adding captions, chapters, and watermarks.
 
-api.video's hosting service enables users to upload and store videos, which can then be easily delivered and shared across various devices and platforms.
-
-
-{% endcapture %}
-
-{% capture live-stream-description %}
-
-api.video provides you with the possibility to embed live streaming into your application or project seamlessly.
-
-
-{% endcapture %}
-
-{% capture delivery-analytics-description %}
-
-api.video lets you customize a large part of the delivery, whether it's the player's branding or adding captions, chapters, and watermarks.
-
-<br>
-
-{% endcapture %}
-
-{% include "_partials/product-card.md" product: "Video", subheading: "on demand", description: vod-description, link: "/vod/README.md" %}
-{% include "_partials/product-card.md" product: "Live", subheading: "streaming", description: live-stream-description, link: "/live-streaming/README.md" %}
-{% include "_partials/product-card.md" product: "Delivery", subheading: "& analytics", description: delivery-analytics-description, link: "/delivery-analytics/README.md" %}
-
-</div>
+           
+           <Button href="/delivery-analytics">Learn More</Button>
+        </Flex>
+    </Component.LandingPageCard>
+</Grid>
 
 
 <div class="section-header">
@@ -58,36 +52,45 @@ api.video lets you customize a large part of the delivery, whether it's the play
 
 </div>
 
-<div class="quick-links">
-{% capture get-started-links %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/setup-checklist.svg", label: "Start building with api.video", link: "/get-started/start-building" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/vod-quickstart.svg", label: "VOD quickstart", link: "/vod/get-started-in-5-minutes" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/livestream-quickstart.svg", label: "Live streaming quickstart", link: "/live-streaming/create-a-live-stream" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/player-customization.svg", label: "Delivery & analytics quickstart", link: "/delivery-analytics/delivery-analytics-quickstart" %}
-{% endcapture %}
+<Grid cols="3" gap="3">
+    <Component.LandingPageList heading="Get Started">
+        <Flex pad="0" dir="column">
+            [Start building with api.video](/get-started/start-building)
 
-{% capture libraries-sdks %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/github.svg", label: "API clients", link: "/sdks/api-clients" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/videos-sdks.svg", label: "Video libraries & SDKs", link: "/sdks/vod" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/livestream-sdks.svg", label: "Live streaming libraries & SDKs", link: "/sdks/livestream" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/player-sdks.svg", label: "Delivery & analytics SDKs", link: "/sdks/player" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/no-code.svg", label: "No-code solutions", link: "/sdks/nocode" %}
-{% endcapture %}
+            [VOD quickstart](/vod/get-started-in-5-minutes)
 
-{% capture resources %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/helpcenter.png", label: "Help Center and FAQs", link: "https://help.api.video/en/" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/api_reference.png", label: "API reference", link: "/reference" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/blog.png", label: "Blog", link: "https://api.video/blog/" %}
-{% include "_partials/quick-link.md" icon: "/_assets/icons/changelog.png", label: "Changelog", link: "https://api.video/changelog/" %}
-{% endcapture %}
+            [Live streaming quickstart](/live-streaming/create-a-live-stream)
 
+            [Delivery & analytics quickstart](/delivery-analytics/delivery-analytics-quickstart)
+        </Flex>
+    </Component.LandingPageList>
 
-{% include "_partials/quick-links-container.md" name: "getting-started", title: "Get Started", content: get-started-links %}
-{% include "_partials/quick-links-container.md" name: "sdks", title: "Libraries & SDKs", content: libraries-sdks %}
-{% include "_partials/quick-links-container.md" name: "resources", title: "Resources", content: resources %}
+    <Component.LandingPageList heading="Libraries & SDKs">
+        <Flex pad="0" dir="column">
+            [API clients](/sdks/api-clients)
 
-</div>
+            [Video libraries & SDKs](/sdks/vod)
 
+            [Live streaming libraries & SDKs](/sdks/livestream)
+
+            [Delivery & analytics SDKs](/sdks/player)
+
+            [No-code solutions](/sdks/nocode)
+        </Flex>
+    </Component.LandingPageList>
+
+    <Component.LandingPageList heading="Resources">
+        <Flex pad="0" dir="column">
+            [Help Center and FAQs](https://help.api.video/en/)
+
+            [API reference](/reference)
+
+            [Blog](https://api.video/blog/)
+
+            [Changelog](https://api.video/changelog/)
+        </Flex>
+    </Component.LandingPageList>
+</Grid>
 
 <div class="section-header"> 
 
@@ -97,7 +100,19 @@ api.video lets you customize a large part of the delivery, whether it's the play
 
 </div>
 
-<div class="support-cards">
-{% include "_partials/support-card.md" label: "Browse Help Center", icon: "/_assets/icons/helpcenter.png", link: "https://help.api.video/en/" %}
-{% include "_partials/support-card.md" label: "Ask the Community", icon: "/_assets/icons/community.png", link: "https://community.api.video/" %}
-</div> 
+<Grid cols="1" gap="2">
+    <Card href="https://help.api.video/en/" pad="0">
+        <Flex pad="1" align="center" gap="2">
+            <Box>![Help center](/_assets/icons/helpcenter.png)</Box>
+
+            <Box>[Browse help center ›](https://help.api.video/en/)</Box>
+        </Flex>
+    </Card>
+    <Card href="https://community.api.video/" pad="0">
+        <Flex pad="1" align="center" gap="2">
+            <Box>![Community](/_assets/icons/community.png)</Box>
+
+            <Box>[Ask the community ›](https://community.api.video/)</Box>
+        </Flex>
+    </Card>
+</Grid>
