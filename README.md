@@ -18,7 +18,7 @@ Welcome to the developer documentation of api.video! Our platform empowers devel
 
 Check out the products!
 
-<Grid cols="2" gap="3">
+<Grid cols="3" gap="3">
     <Component.LandingPageCard heading="Video" subheading="on demand">
         <Flex dir="column" pad="0" justify="between" gap="2">
             api.video's hosting service enables you to upload and store videos, and then deliver and share them easily across various devices and platforms.
