@@ -13,7 +13,7 @@ Moving to a different provider takes time, effort, and development resources. ap
 <Grid cols="2" gap="3">
 <Card href="./azure-migration.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box><img src="/_assets/get-started/migration-guide/Microsoft_Azure.svg" alt="Azure" width="56"/></Box>
+        <Box><img src="/_assets/get-started/migration-guide/icons/Microsoft_Azure.png" alt="Azure"/></Box>
 
         <Box>
             Azure\
@@ -24,7 +24,7 @@ Moving to a different provider takes time, effort, and development resources. ap
 
 <Card href="./aws-migration.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box><img src="/_assets/get-started/migration-guide/Amazon-S3-Logo.svg" alt="Amazon" width="56"/></Box>
+        <Box><img src="/_assets/get-started/migration-guide/icons/Amazon-S3-Logo.png" alt="Amazon"/></Box>
 
         <Box>
             Amazon\
@@ -35,7 +35,7 @@ Moving to a different provider takes time, effort, and development resources. ap
 
 <Card href="./gcs-migration.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box><img src="/_assets/get-started/migration-guide/Google-Storage-Logo.png" alt="Google Cloud Storage" width="56"/></Box>
+        <Box><img src="/_assets/get-started/migration-guide/icons/Google-Storage-Logo.png" alt="Google Cloud Storage"/></Box>
 
         <Box>
             Google\
@@ -46,7 +46,7 @@ Moving to a different provider takes time, effort, and development resources. ap
 
 <Card href="./vimeo-migration.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box><img src="/_assets/get-started/migration-guide/vimeo.png" alt="Vimeo" width="56"/></Box>
+        <Box><img src="/_assets/get-started/migration-guide/icons/vimeo.png" alt="Vimeo"/></Box>
 
         <Box>
             Vimeo
@@ -56,7 +56,7 @@ Moving to a different provider takes time, effort, and development resources. ap
 
 <Card href="./wistia-migration.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box><img src="/_assets/get-started/migration-guide/wistia.png" alt="Wistia" width="56"/></Box>
+        <Box><img src="/_assets/get-started/migration-guide/icons/wistia.png" alt="Wistia"/></Box>
 
         <Box>
             Wistia
@@ -66,7 +66,7 @@ Moving to a different provider takes time, effort, and development resources. ap
 
 <Card href="./cloudinary-migration.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box><img src="/_assets/get-started/migration-guide/cloudinary-logo.png" alt="Cloudinary" width="56"/></Box>
+        <Box><img src="/_assets/get-started/migration-guide/icons/cloudinary-logo.png" alt="Cloudinary"/></Box>
 
         <Box>
             Cloudinary
