@@ -1,13 +1,12 @@
 ---
 title: VOD overview
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta:
   description: This page serves as a foundational guide to integrating api.video's solutions for video on demand (VOD).
 ---
 
-<div class="section-header">
+<div class="section-header no-toc">
 
 # What is <span style="color: var(--accent-10)">VOD</span>?
 

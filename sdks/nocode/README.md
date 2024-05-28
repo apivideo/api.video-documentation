@@ -1,13 +1,16 @@
 ---
 title: No-code solutions
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta: 
     description: api.video no-code solutions for Bubble.io, Contentful, Wordpress, Strapi, and Zapier.
 ---
 
+<div class="section-header no-toc">
+
 # No-code solutions
+
+</div>
 
 Sometimes you need a quick solution without getting into coding. api.video provides you with a variety of plugins and solutions that will enable you to use api.video's various features without the need to write a single line of code.
 

@@ -1,13 +1,16 @@
 ---
 title: api.video backup and cold storage
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta:
   description: Backup your uploaded videos to your preferred provider.
 ---
 
+<div class="section-header no-toc">
+
 # Backup & Cold Storage
+
+</div>
 
 It's important to feel safe and know that the content you've uploaded is backed up. While api.video got you covered by backing up the videos and having a disaster recovery plan, we understand that you might want to take an extra step and have your own backup.
 

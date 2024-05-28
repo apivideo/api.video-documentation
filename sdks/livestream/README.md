@@ -1,13 +1,16 @@
 ---
 title: Live stream SDKs
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta: 
     description: This page lists all api.video Live stream SDKs and client libraries for React Native, Flutter, Swift, and Android.
 ---
 
+<div class="section-header no-toc">
+
 # Live streaming SDK catalog
+
+</div>
 
 With api.video you can use live streaming mobile SDKs to create a streaming client for your users.
 

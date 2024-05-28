@@ -1,13 +1,12 @@
 ---
 hide_navigation: false
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta: 
     description: Cloud-based video hosting and live streaming platform with analytics. Mobile and web SDKs for VOD, live streaming, and player for NodeJS, Javascript, Typescript, Python, Go, PHP, C#, Swift, and Kotlin.
 ---
 
-<div class="section-header">
+<div class="section-header no-toc">
 
 # api.video <span style="color: var(--accent-10)">Libraries & SDKs</span>
 

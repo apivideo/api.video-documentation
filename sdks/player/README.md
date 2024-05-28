@@ -1,13 +1,16 @@
 ---
 title: Player & analytics SDKs
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta: 
     description: api.video player SDKs for Java, Typescript, React, React Native, Flutter, Swift, and Kotlin.
 ---
 
+<div class="section-header no-toc">
+
 # Delivery & analytics SDK catalog
+
+</div>
 
 ## Player SDKs
 

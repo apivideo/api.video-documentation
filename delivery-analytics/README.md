@@ -1,13 +1,12 @@
 ---
 title: "Delivery & analytics overview"
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta:
   description: This page serves as a foundational guide to integrating api.video's solutions for video delivery, player customization, and analytics.
 ---
 
-<div class="section-header">
+<div class="section-header no-toc">
 
 # How does <span style="color: var(--accent-10)">video delivery</span> work?
 

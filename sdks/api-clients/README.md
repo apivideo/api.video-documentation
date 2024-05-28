@@ -1,13 +1,16 @@
 ---
 title: API client libraries
-toc: true
+toc: false
 breadcrumbs: false
-hide_side_table_of_contents: true
 meta: 
     description: api.video client libraries for NodeJS, Python, PHP, Go, C#, Java, iOS Swift, and Android.
 ---
 
+<div class="section-header no-toc">
+
 # API client libraries
+
+</div>
 
 Seamlessly integrate video on demand or live streaming into your current tech stack.
 
