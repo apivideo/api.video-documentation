@@ -1,12 +1,16 @@
 ---
 title: "Start building with api.video"
 slug: "start-building"
-hide_side_table_of_contents: true
+toc: false
 meta:
   description: This page serves as a staring point to integrating api.video's solutions for video on demand, live streaming, and video delivery.
 ---
 
+<div class="section-header no-toc">
+
 # Start building with api.video
+
+</div>
 
 This documentation serves as your foundational guide to integrating api.video's solutions seamlessly into your applications. You can find essential insights into building with api.video, an overview of api.video's key concepts and features, quickstart guides to speed up your development process, and information on how to securely authenticate your interactions with the API.
 
