@@ -71,7 +71,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
 
 <Card href="././apivideo-java-client.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box>![Java](/_assets/icons/sdk_icons/java.svg)</Box>
+        <Box>![Java](/_assets/icons/sdk_icons/Java.svg)</Box>
 
         <Box>
             Java\

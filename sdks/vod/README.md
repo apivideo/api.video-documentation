@@ -29,7 +29,7 @@ Enable users to upload videos from your application.
 
 <Card href="././apivideo-flutter-uploader.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box>![Flutter](/_assets/icons/sdk_icons/Flutter.svg)</Box>
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
             Flutter\
@@ -55,7 +55,7 @@ Enable users to upload videos from your application.
 
 <Card href="././apivideo-flutter-uploader.md" pad="0">
     <Flex gap="2" pad="2" align="center">
-        <Box>![Flutter](/_assets/icons/sdk_icons/Flutter.svg)</Box>
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
             Flutter\
