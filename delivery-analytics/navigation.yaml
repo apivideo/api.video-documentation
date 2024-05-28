@@ -43,9 +43,7 @@
 
 - heading: Analytics
   items:
-  - label: Watch Data
-    href: /delivery-analytics/watch-data.md
-  - label: Light analytics [deprecated]
+  - label: Analytics v2.0 `beta`
     href: /delivery-analytics/analytics.md
   - label: Analytics SDKs
     href: /sdks/player/README.md#player-analytics-sdks
