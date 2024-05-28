@@ -48,9 +48,9 @@ The following information is needed to get you started:
 
 | Use case                              | Referrer                                        | Example                                                                                                                           |
 | ------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Browser player                        | strict domain referrer                          | - Domain: `mydomain.com` <br><br> \* Optional: <br>- subdomains: `yyy.mydomain.com`, `zzz.mydomain.com`                           |
-| Browser player + native mobile player | strict domain referrer + empty referrer allowed | - Domain: `mydomain.com` <br> - `Allow empty referrer` <br><br>\* Optional:<br>- subdomains: `yyy.mydomain.com`, `zzz.mydomain.com` |
-| Native mobile player                  | Not supported                                   | -                                                                                                                                 |
+| Browser player                        | strict domain referrer                          | - Domain: `mydomain.com` <br> **Optional**: </br>- subdomains: `yyy.mydomain.com`, `zzz.mydomain.com`                           |
+| Browser player + native mobile player | strict domain referrer + empty referrer allowed | - Domain: `mydomain.com` <br>- `Allow empty referrer` </br>**Optional**: <br></br>- subdomains: `yyy.mydomain.com`, `zzz.mydomain.com` |
+| Native mobile player                  | **Not supported**                                   | -                                                                                                                                 |
 
 Our team will configure the feature on the backend and let you know as soon as it is ready.
 

@@ -1,24 +1,18 @@
 ---
 title: API reference
-hide_side_table_of_contents: true
+toc: true
+breadcrumbs: false
 meta:
   description: The API reference serves as a practical developers' documentation about api.video's solutions for video on demand, live streaming, and delivery.
 ---
 
-<p style="font-size: 34px; font-weight: 600; text-align: left;">
-  <span style="font-size: 34px; font-weight: 600; text-align: left; ">
-    api.video </span>
-  <span style="font-size: 34px; font-weight: 600; text-align: left; color: #fa5b30; text-decoration: none;">
-    API reference</span>
-</p>
-</p>
+<div class="section-header">
 
-<p style="opacity: 0.8; font-size: 18px; text-align: left;">
-  <span style="opacity: 0.8; font-size: 18px; text-align: left;"
-    >This page describes how to authenticate, set up, and securely implement the api.video API solutions with your product.</span
-  >
-  <br />
-</p>
+# api.video <span style="color: var(--accent-10)">API reference</span>
+
+  This page describes how to authenticate, set up, and securely implement the api.video API solutions with your product.
+
+</div>
 
 api.video API is built with the [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) standard, the most common standard used today.
 
@@ -28,8 +22,8 @@ We are following the [OpenAPI](https://www.openapis.org/) specs. You can find ou
 
 ## Environments
 
-| Environment | URL                                                      |
-| ----------- | -------------------------------------------------------- |
+| Environment | URL                                                    |
+| ----------- | ------------------------------------------------------ |
 | Production  | [https://ws.api.video](https://ws.api.video)           |
 | Sandbox     | [https://sandbox.api.video](https://sandbox.api.video) |
 
@@ -39,14 +33,13 @@ Once you've upgraded you can switch between sandbox and production by toggling t
 
 ![Switching to the sandbox environment in the Dashboard](/_assets/reference/sandbox-switch.png)
 
-{% capture content %}
+<Callout pad="2" type="warning">
 **The sandbox mode has these limitations**
 
 - Limited to 30 seconds videos and live streams.
 - Will include an unremovable watermark
 - Videos or recorded live streams will be deleted after 24 hours, after upload or recording.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## Security
 

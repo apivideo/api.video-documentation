@@ -32,12 +32,11 @@ WebVTT is a format for displaying timed text tracks for captions or chapters. It
 
 To ensure that you use the correct formatting in your VTT file, api.video recommends using a parser to check for errors before you upload the file. [Click here](https://w3c.github.io/webvtt.js/parser.html) for a free online VTT parser.
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Incorrect VTT file formatting**
 
 The api.video API does not return an error for incorrectly formatted VTT files. The response from the API will be `200`, however, the captions will not be displayed.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API documentation
 
@@ -66,7 +65,7 @@ The clients offered by api.video include:
 
 To install your selected client, do the following:
 
-{% capture content %}
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -88,8 +87,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.html" samples: content %}
+</CodeSelect>
 
 ## Upload a chapter
 
@@ -98,8 +96,8 @@ To upload chapters for your video, you'll need a .VTT file containing details ab
 - [Adding chapters to your videos](https://api.video/blog/tutorials/video-chapters/)
 - [Video chapters: Using external buttons for controls](https://api.video/blog/tutorials/video-chapters/) 
 
-{% capture content %}
 
+<CodeSelect title="Uploading a chapter">
 ```curl
 curl --request POST \
      --url https://ws.api.video/videos/vi4k0jvEUuaTdRAEjQ4Jfrgz/chapters/en \
@@ -204,9 +202,7 @@ file = open("chapters.vtt", "rb")
 response = chapter_api.upload(video_id, language, file)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" samples: content %}
+</CodeSelect>
 
 
 ## Upload a chapter using the dashboard
@@ -227,8 +223,7 @@ To upload a chapter, do the following:
 
 If you just want to list all the chapters that are available to you, you can send a request with the video ID for the video you want this information for. All chapters will be returned in the response.
 
-{% capture samples %}
-
+<CodeSelect title="Listing chapters">
 ```curl
 curl --request GET \
      --url https://ws.api.video/videos/vi4k0jvEUuaTdRAEjQ4Jfrgz/chapters \
@@ -329,9 +324,7 @@ chapter_api = ChaptersApi(client)
 response = chapter_api.list(video_id)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" samples: content %}
+</CodeSelect>
 
 
 ## List chapters using the dashboard
@@ -351,8 +344,7 @@ To list all chapter files for a video, do the following:
 
 You can retrieve details about a specific chapters file by sending a request with the video ID for the video you want chapter information for, and the valid BCP 47 tag for the specific chapter file. 
 
-{% capture samples %}
-
+<CodeSelect title="Showing a chapter">
 ```curl
 curl --request GET \
      --url https://ws.api.video/videos/vi4k0jvEUuaTdRAEjQ4Jfrgz/chapters/en \
@@ -455,11 +447,7 @@ language = "en"
 response = chapter_api.get(video_id, language)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
-
-
+</CodeSelect>
 
 ## Show a chapter file using the dashboard
 
@@ -476,9 +464,7 @@ To show a chapter file using the dashboard, do the following:
 
 To delete a chapter, send the unique video ID with the chapters you want to delete. Include the appropriate BCP 47 language tag. You can only have one set of chapters per tag. Deletion is permanent, so be sure it's what you want to do.
 
-{% capture samples %}
-
-
+<CodeSelect title="Deleting a chapter">
 ```curl
 curl --request DELETE \
      --url https://ws.api.video/videos/vi4k0jvEUuaTdRAEjQ4Jfrgz/chapters/en \
@@ -575,10 +561,7 @@ chapter_api = ChaptersApi(client)
 response = chapter_api.delete(video_id, language)
 print(response)
 ```
-
-{% endcapture %}
-{% include "_partials/code-tabs.html" content: samples %}
-
+</CodeSelect>
 
 ## Delete a chapter using the dashboard
 

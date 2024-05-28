@@ -44,10 +44,9 @@ Delete unneeded API keys to minimize exposure to attacks.
 
 ## Securing the API keys on the application [Not recommended]
 
-{% capture content %}
-api.video highly recommend to avoid storing the API keys on the application side at all cost. Even if you take steps to obfuscate your API keys on the application, your application is still prone to security threats
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+<Callout pad="2" type="warning">
+api.video highly recommend to avoid storing the API keys on the application side at all cost. Even if you take steps to obfuscate your API keys on the application, your application is still prone to security threats.
+</Callout>
 
 Obfuscation transforms the key into a form that isn't immediately readable. However, it's crucial to understand that obfuscation is not foolproof. It merely makes the task of key retrieval more challenging, but not impossible. Determined malicious actors with advanced skills can still de-obfuscate the key. Think of obfuscation as an added layer of security, not a standalone solution.
 

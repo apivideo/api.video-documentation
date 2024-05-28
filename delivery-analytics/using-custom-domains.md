@@ -16,7 +16,7 @@ When you request custom domains, api.video only has 3 simple requirements:
 - Provide the domains you want to use
 - Provide the TLS certificates for those domanins
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/delivery-analytics/custom-domains/custom-domains-dark.svg", light: "/_assets/delivery-analytics/custom-domains/custom-domains-light.svg", alt: "A diagram that shows the steps of requesting and using custom domains" %}
+<Image src="/_assets/delivery-analytics/custom-domains/custom-domains-light.svg" src_dark="/_assets/delivery-analytics/custom-domains/custom-domains-dark.svg" alt="A diagram that shows the steps of requesting and using custom domains" />
 
 You can maintain your company branding by utilizing custom domains in any of these use cases, and more:
 

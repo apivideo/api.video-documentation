@@ -1,5 +1,6 @@
 ---
 title: api.video documentation
+version: 2
 header:
   links:
     - external: https://community.api.video/
@@ -14,17 +15,15 @@ header:
     external: https://dashboard.api.video/register
     text: Sign up for free
 
-colors:
-  main: "#FA5B30"
-  main_dark: "#FA5B30"
-  content_bg_secondary: "#F6F8FA"
-
-favicon:
-  src: _assets/favicon.ico
-
-logo:
-  src: _assets/logo.svg
-  src_dark: _assets/logo-dark.svg
+theme:
+  colors:
+    accent: "#FA5B30"
+    content_bg_secondary: "#F6F8FA"
+  favicon:
+    src: _assets/favicon.ico
+  logo:
+    src: _assets/logo.svg
+    src_dark: _assets/logo-dark.svg
 
 styles:
   - _assets/css/style.css
@@ -40,6 +39,50 @@ styles:
 open_api:
   - spec_file: openapi.yaml
     uri_prefix: /reference/api
+
+tabs:
+  - label: Get started
+    path: /
+  - label: VOD
+    path: /vod/
+  - label: Live streaming
+    path: /live-streaming/
+  - label: Delivery & analytics
+    path: /delivery-analytics/
+  - label: API Reference
+    path: /reference/
+  - label: Libraries & SDKs
+    path: /sdks/
+    subtabs:
+    - label: Overview
+      path: /sdks/
+    - label: Security best practices
+      path: /sdks/security/
+    - label: API clients
+      path: /sdks/api-clients/
+      icon:
+        set: lucide
+        name: square-code
+    - label: VOD
+      path: /sdks/vod/
+      icon:
+        set: lucide
+        name: video
+    - label: Live streaming
+      path: /sdks/livestream/
+      icon:
+        set: lucide
+        name: radio-tower
+    - label: Delivery & analytics
+      path: /sdks/player/
+      icon:
+        set: lucide
+        name: monitor-play
+    - label: No-code solutions
+      path: /sdks/nocode/
+      icon:
+        set: lucide
+        name: blocks
 
 redirects:
   - from: /docs

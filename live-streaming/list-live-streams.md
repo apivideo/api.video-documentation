@@ -29,7 +29,8 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -51,8 +52,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Create an account
 
@@ -64,7 +64,8 @@ Once you are logged in to the Dashboard, select the environment of your choice (
 
 You can list all live streams you have to see what's available or send a request that filters your live streams. This code sample shows you how to list all live streams:
 
-{% capture samples %}
+
+<CodeSelect title="Listing all live streams">
 ```curl
 curl --request GET \
      --url https://ws.api.video/live-streams \
@@ -152,8 +153,7 @@ live_stream_api = LiveStreamsApi(client)
 response = live_stream_api.list()
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## List a subset of live streams
 
@@ -166,7 +166,8 @@ You can send in a request to filter based on the different parameters for a live
 - `currentPage` - Choose the search results page to return—minimum value: 1.
 - `pageSize` - Choose the number of results per page. Allowed values: 1-100, default is 25.
 
-{% capture samples %}
+
+<CodeSelect title="Listing a subset of live streams">
 ```curl
 curl --request GET \
      --url 'https://ws.api.video/live-streams?name=My%20video&currentPage=1&pageSize=25' \
@@ -272,8 +273,7 @@ title = 'My Video Title'
 response = live_stream_api.list(title=title)
 print(response)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## List live streams using your dashboard
 

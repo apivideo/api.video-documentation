@@ -10,7 +10,7 @@ After videos have been transcoded on [api.video](http://api.video), it’s natur
 
 [api.video](http://api.video) allows you and your users to download videos directly from the player or programmatically through the API.
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/vod/video-download/video-download-diagram-dark.svg", light: "/_assets/vod/video-download/video-download-diagram-light.svg", alt: "A diagram that shows the process of video download" %}
+<Image src="/_assets/vod/video-download/video-download-diagram-light.svg" src_dark="/_assets/vod/video-download/video-download-diagram-dark.svg" alt="A diagram that shows the process of video download" />
 
 ## Download a video from [api.video](http://api.video) player
 
@@ -19,11 +19,10 @@ The video object can be created or updated with the `mp4Support` tag. The tag wi
 ![](/_assets/vod/video-download/download-video-1.png)
 ![](/_assets/vod/video-download/download-video-2.png)
 
-{% capture content %}
+<Callout pad="2" type="info">
 * By default, the `mp4Support` tag is set to `true`, hence the video is downloadable. If you want to disable the download ability from the [api.video](http://api.video) player, you have to set the `mp4Support` tag to `false`
 * If you don’t want the user to be able to download the video, do not serve the mp4 asset.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Disabling download
 
@@ -35,7 +34,7 @@ You can also find more information on the `/videos` endpoints on the [API refere
 
 How to create a video object with disabled download
 
-{% capture samples %}
+<CodeSelect title="Disabling download for a video object">
 ```javascript
 // Documentation: https://github.com/apivideo/api.video-nodejs-client/blob/main/doc/api/VideosApi.md#create
 
@@ -158,12 +157,11 @@ public class Example {
   }
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 Once the object is created, all you have to do is just upload the video to the object:
 
-{% capture samples %}
+<CodeSelect title="Uploading a video">
 ```javascript
 const file = './my-video.mp4'; // The path to the video you would like to upload. The path must be local. If you want to use a video from an online source, you must use the "/videos" endpoint and add the "source" parameter when you create a new video.
 const videoId =  video.id    
@@ -207,14 +205,13 @@ file := os.NewFile(1234, "some_file")
 // *os.File | The path to the video you would like to upload. The path must be local. If you want to use a video from an online source, you must use the "/videos" endpoint and add the "source" parameter when you create a new video.
 res, err := client.Videos.UploadFile(videoId, file)
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ### Disable download for an existing video object
 
 It’s also possible to disable the download ability for the users, after the video was already uploaded and transcoded. For that, you just need to update the video object.
 
-{% capture samples %}
+<CodeSelect title="Disabling download for an existing video object">
 ```javascript
 // First install the "@api.video/nodejs-client" npm package
 // Documentation: https://github.com/apivideo/api.video-nodejs-client/blob/main/doc/api/VideosApi.md#update
@@ -344,8 +341,7 @@ func main() {
 ", res)
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Creating a custom download button
 
@@ -476,10 +472,9 @@ $ npm init
 
 Now edit the index.js file that you’ve created, and copy this code. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 Make sure that you copy your API key from the [api.video](http://api.video) dashboard and replace the port to the port you would like to run the server on.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 
 ```javascript

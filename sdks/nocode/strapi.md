@@ -8,7 +8,8 @@ meta:
 
 With the api.video Strapi plugin you can upload and embed your videos into your Strapi website effortlessly. Check out this short video to get started with your api.video integration using Strapi:
 
-<iframe src="https://embed.api.video/vod/vi6g8t2OSnByVwsr0vOVSLUI#hide-title" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+<iframe src="https://embed.api.video/vod/vi6g8t2OSnByVwsr0vOVSLUI#hide-title" type="text/html" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen="true">
+</iframe>
 
 ## Features
 
@@ -54,8 +55,8 @@ The api-video-uploader plugin should appear in the Plugins section of Strapi sid
 
 ### Minimum environment requirements
 
-- Node.js >=14.19.1 <=18.x.x
-- NPM >=6.x.x
+- `Node.js >=14.19.1 <=18.x.x`
+- `NPM >=6.x.x`
 - In our minimum support we're following official Node.js releases timelines.
 
 ### Supported Strapi versions:
@@ -74,8 +75,7 @@ We recommend always using the latest version of Strapi to start your new project
 
 - Paste your Api Key and click Save.
 
-{% capture content %}
-
+<Callout pad="2" type="warning">
 To resolve `Content Security Policy` directive issue and to visualize the thumbnail and the video, we need to configure external ressource like embed.api.videoand cdn.api.video/vod/. Modify the middlewares.js file like below:
 
 ```
@@ -105,8 +105,7 @@ module.exports = ({ env }) => [
     'strapi::public',
 ]
 ```
-{% endcapture %}
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ### Permissions Configurations
 

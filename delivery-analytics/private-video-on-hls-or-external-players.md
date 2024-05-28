@@ -6,10 +6,9 @@ meta:
 
 # Private Video On Hls Or External Players
 
-{% capture content %}
+<Callout pad="2" type="info">
 api.video recommends that you read [Private Videos](/delivery-analytics/video-privacy-access-management) to ensure that you understand the concept of private videos before proceeding.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 There are cases where you would want to use built-in players that are not api.video. We support private video delivery via other players other than our in-house. In this article you can find how to deliver private videos with HLS built-in player
 
@@ -62,12 +61,11 @@ Example of loading the manifest with hls.js on Safari:
 
 Source: [GitHub](https://github.com/video-dev/hls.js/blob/master/docs/API.md#third-step-load-a-manifest)
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Test the manifest with hls.js demo**
 
 You can test and pass the manifest to this demo player that is provided by hls.js: https://hls-js.netlify.app/demo/
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ### Serving private videos dynamically
 

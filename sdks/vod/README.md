@@ -1,11 +1,16 @@
 ---
 title: VOD SDKs
-hide_side_table_of_contents: true
+toc: false
+breadcrumbs: false
 meta: 
     description: api.video uploader and upstream SDKs for TypeScript, Flutter, iOS Swift, and Android Kotlin.
 ---
 
+<div class="section-header no-toc">
+
 # VOD SDK catalog
+
+</div>
 
 ## Uploader SDKs
 
@@ -13,45 +18,119 @@ Enable users to upload videos from your application.
 
 ### Web
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././apivideo-typescript-uploader.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![TypeScript](/_assets/icons/sdk_icons/typescript.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "TypeScript", image: "/_assets/icons/sdk_icons/typescript.svg", subtitle: "Uploader",  link: "././apivideo-typescript-uploader.md" %}
+        <Box>
+            TypeScript\
+            <small>Uploader</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Flutter", image: "/_assets/icons/sdk_icons/flutter.svg", subtitle: "Uploader",  link: "././apivideo-flutter-uploader.md" %}
+<Card href="././apivideo-flutter-uploader.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
-</div>
+        <Box>
+            Flutter\
+            <small>Uploader</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
-## Mobile
+### Mobile
 
-<div class="hagrid">
+<Grid cols="2" gap="3">
+<Card href="././apivideo-react-native-uploader.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![React Native](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "React Native", image: "/_assets/icons/sdk_icons/react_native.svg", subtitle: "Uploader",  link: "././apivideo-react-native-uploader.md" %}
+        <Box>
+            React Native\
+            <small>Uploader</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Flutter", image: "/_assets/icons/sdk_icons/flutter.svg", subtitle: "Uploader",  link: "././apivideo-flutter-uploader.md" %}
+<Card href="././apivideo-flutter-uploader.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Swift", image: "/_assets/icons/sdk_icons/Swift.svg", subtitle: "Uploader",  link: "././apivideo-swift-uploader.md" %}
+        <Box>
+            Flutter\
+            <small>Uploader</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Android", image: "/_assets/icons/sdk_icons/Android.svg", subtitle: "Uploader",  link: "././apivideo-android-uploader.md" %}
+<Card href="././apivideo-swift-uploader.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
-</div>
+        <Box>
+            Swift\
+            <small>Uploader</small>
+        </Box>
+    </Flex>
+</Card>
 
+<Card href="././apivideo-android-uploader.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
+
+        <Box>
+            Android\
+            <small>Uploader</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
 ## Upstream web SDKs
 
 Enable your users to simultaneously create and upload video & audio using these SDKs.
 
 ### Web
-<div class="hagrid">
 
-{% include "_partials/hagrid-item.md" title: "TypeScript", image: "/_assets/icons/sdk_icons/typescript.svg", subtitle: "Media recorder",  link: "././apivideo-typescript-media-recorder.md" %}
+<Grid cols="2" gap="3">
+<Card href="././apivideo-typescript-media-recorder.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![TypeScript](/_assets/icons/sdk_icons/typescript.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "TypeScript", image: "/_assets/icons/sdk_icons/typescript.svg", subtitle: "Media stream composer",  link: "././apivideo-typescript-media-stream-composer.md" %}
+        <Box>
+            TypeScript\
+            <small>Media recorder</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="././apivideo-typescript-media-stream-composer.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![TypeScript](/_assets/icons/sdk_icons/typescript.svg)</Box>
+
+        <Box>
+            TypeScript\
+            <small>Media stream composer</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>
 
 ### Mobile
-<div class="hagrid">
 
-{% include "_partials/hagrid-item.md" title: "Android", image: "/_assets/icons/sdk_icons/Android.svg", subtitle: "Upstream",  link: "././apivideo-android-upstream.md" %}
+<Grid cols="2" gap="3">
+<Card href="././apivideo-android-upstream.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
-</div>
+        <Box>
+            Android\
+            <small>Upstream</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>

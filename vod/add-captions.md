@@ -15,7 +15,7 @@ The captions are uploaded per language. You can upload different captions for ea
 | Field    | Type   |                                                                                            |
 | :------- | :----- | :----------------------------------------------------------------------------------------- |
 | videoId  | String | The unique identifier for the video you want to add a caption to.                          |
-| language | String | A valid language identifier using IETF language tags. You can use primary subtags like `en` (English), extended subtags like `fr-CA` (French, Canada), or region subtags like `zh-Hans-CN` (Simplified Chinese used in the PRC).<br>- This parameter **only accepts dashes for separators**, for example `fr-CA`. If you use a different separator in your request, the API returns an error.<br>- When the value in your request does not match any covered language, the API returns an error.<br>- You can find the list of supported language tags [here](#supported-caption-language-tags). |
+| language | String | A valid language identifier using IETF language tags. You can use primary subtags like `en` (English), extended subtags like `fr-CA` (French, Canada), or region subtags like `zh-Hans-CN` (Simplified Chinese used in the PRC). <br></br>- This parameter **only accepts dashes for separators**, for example `fr-CA`. If you use a different separator in your request, the API returns an error. <br></br>- When the value in your request does not match any covered language, the API returns an error. <br></br>- You can find the list of supported language tags [here](#supported-caption-language-tags). |
 | file     | File   | The video text track in VTT format only.                                                   |
 
 ## Supported caption file formats
@@ -711,12 +711,11 @@ WebVTT is a format for displaying timed text tracks for captions or chapters. It
 
 To ensure that you use the correct formatting in your VTT file, api.video recommends using a parser to check for errors before you upload the file. [Click here](https://w3c.github.io/webvtt.js/parser.html) for a free online VTT parser.
 
-{% capture content %}
+<Callout pad="2" type="info">
 Incorrect VTT file formatting
 
 The api.video API does not return an error for incorrectly formatted VTT files. The response from the API will be `200`, however, the captions will not be displayed.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 The VTT file has an extension `.vtt` and the format is as in the example below:
 

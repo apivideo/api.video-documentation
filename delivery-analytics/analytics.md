@@ -33,13 +33,11 @@ After play events are collected, there is a short delay while the API processes 
 
 ### Requirements
 
-{% capture content %}
+<Callout pad="2" type="info">
 The Analytics feature is available using api.video's video player. Check out the [Video Player SDK](/sdks/player/apivideo-player-sdk) for details about the implementation.
 
 When using third-party players, you need to implement the [Video.js](/sdks/player/apivideo-videojs-analytics) or [Hls.js](/sdks/player/apivideo-hlsjs-analytics) analytics plugins, or the analytics modules for [Android](/sdks/player/apivideo-android-player-analytics) or [Swift](/sdks/player/apivideo-swift-player-analytics). These enable you to collect and report play event data to api.video, so you can retrieve analytics from the API.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
-
+</Callout>
 
 ## Usage
 
@@ -50,12 +48,11 @@ Api.video offers 2 dedicated API endpoints for analytics:
 | [`/analytics/videos/plays`](https://docs.api.video/reference/api/Analytics#get-play-events-for-video)             | Get play event count for VOD (Video on demand) |
 | [`/analytics/live-streams/plays`](https://docs.api.video/reference/api/Analytics#get-play-events-for-live-stream) | Get play event count for live streams          |
 
-{% capture content %}
+<Callout pad="2" type="info">
 **Testing**
 
 You can test the Analytics endpoints **in api.video's sandbox environment**. Check out [Environments](/reference/README.md#environments) for more details. The sandbox environment returns data within the last 1-day time period.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ### Request
 
@@ -70,17 +67,25 @@ curl --request GET \
      --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDI4MDUyNzEuOTEyODMsIm5iZiI6MTY0MjgwNTI3MS45MTI4MywiZXhwIjoxNjQyODA4ODcxLjkxMjgzLCJwcm9qZWN0SWQiOiJwclJ6SUpKQTdCTHNxSGpTNDVLVnBCMSJ9.jTiB29R_sg5dqCDBU8wrnz7GRJsCzfVeLVTX-XSctS024B9OmGsuY139s2ua1HzrT63sqkBB1QshrjZbkDLVxSrs0-gt-FaM2bgvCC0lqK1HzEUL4vN2OqPPuM8R2pruj0UdGVaifGqmyfehKcHxuNr0ijGmGIMwSXkabECbXCxm7LraRCgmlobHepuXcUPeUKzKxN5LwPSO1onD684S0FtUUYbVMq9Ik7V8UznbpOjmFaknIZowKKlCkTmgKcyLSq7IaPJd7UuDJVXJDiC49oImEInrjx1xuFbyoBz_wkZlwcgk9GjksTeSz4xzBLcyzVgCwGP2hs8_BtdslXXOrA' \
 ```
 
-{% capture content %}
+<Callout pad="2" type="info">
 api.video retains play event data for 30 days. If you select a time period that is outside the 30 day retention period, the API returns a `400` error.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 | Parameter  | Type  | Required  | Details  |
 |---|---|---|---|
-| `from`  | `date`  | `true`  | The start date for the time period of the analytics you would like to request.<br><br>- The API returns analytics data **including** the day you set in from.<br>- A valid date value is only **within the last 30 days**.<br>- The value you provide must follow the `YYYY-MM-DD` format.  |
+| `from`  | `date`  | `true`  | The start date for the time period of the analytics you would like to request.
+- The API returns analytics data **including** the day you set in from.
+- A valid date value is only **within the last 30 days**.
+- The value you provide must follow the `YYYY-MM-DD` format.  |
 | `dimension`  | `string`  | `true`  | This parameter enables you to define a single property that you want analytics for. You can select only one property in your request. See the [table below for all dimension options](#dimension) |
-| `to`  | `date`  | `false`  | Use this optional query parameter to set the end date for the time period that you want analytics for.<br>  <br>- The API returns analytics data **excluding** the day you set in `to`.<br>- If you do not specify a `to` date, the API returns analytics data starting from the `from` date up until today, and **excluding** today.<br>- A valid date value is only **within the last 30 days**.<br>- The value you provide must follow the `YYYY-MM-DD` format.  |
-| `filter`  | `key-value pair`  | `false`  | Use this parameter to filter your results to a specific video or live stream in a project that you want analytics for.<br><br>You must use the `videoId:` or `liveStreamId:` prefix when specifying an identifier for a video or a live stream.<br><br>Note that the **Get play events for videos** endpoint only accepts video `ID` as a filter, and the **Get play events for live streams** endpoint only accepts live stream `ID` as a filter.  |
+| `to`  | `date`  | `false`  | Use this optional query parameter to set the end date for the time period that you want analytics for.
+- The API returns analytics data **excluding** the day you set in `to`.
+- If you do not specify a `to` date, the API returns analytics data starting from the `from` date up until today, and **excluding** today.
+- A valid date value is only **within the last 30 days**.
+- The value you provide must follow the `YYYY-MM-DD` format.  |
+| `filter`  | `key-value pair`  | `false`  | Use this parameter to filter your results to a specific video or live stream in a project that you want analytics for.
+You must use the `videoId:` or `liveStreamId:` prefix when specifying an identifier for a video or a live stream.
+Note that the **Get play events for videos** endpoint only accepts video `ID` as a filter, and the **Get play events for live streams** endpoint only accepts live stream `ID` as a filter.  |
 
 #### Dimension
 
@@ -151,54 +156,54 @@ Based on your request the Analytics API returns paginated play event data in an 
 
 You can find sample responses for some common analytics parameters here:
 
-<details><summary><b>By <code>videoId</code></b></summary>
+<details>
+<summary><b>By <code>videoId</code></b></summary>
 
-This response gives you a detailed breakdown for the number of play events for each video from the date you specified until today. You can use this data to understand which videos are the most popular.
+    This response gives you a detailed breakdown for the number of play events for each video from the date you specified until today. You can use this data to understand which videos are the most popular.
 
-The query string used in this example is `https://sandbox.api.video/analytics/videos/plays?`**`from=2023-06-01`**`&`**`dimension=videoId`**
+    The query string used in this example is `https://sandbox.api.video/analytics/videos/plays?`**`from=2023-06-01`**`&`**`dimension=videoId`**
 
-This example uses the sandbox environment's `{base_URL}`. Check out the [**API environments**](/reference/README.md#environments) for more details.
+    This example uses the sandbox environment's `{base_URL}`. Check out the [**API environments**](/reference/README.md#environments) for more details.
 
-```json
-{
-    "data": [
-        {
-            "value": "vi3q7HxhApxRF1c8F8r6VeaI",
-            "plays": 100
-        },
-        {
-            "value": "vi3q7HxhApxRF1c8F8r6VeaF",
-            "plays": 10
-        },
-        {
-            "value": "vi3q7HxhApxRF1c8F8r6VeaH",
-            "plays": 1
-        }
-    ],
-    "pagination": {
-        "currentPage": 1,
-        "currentPageItems": 3,
-        "pageSize": 25,
-        "pagesTotal": 1,
-        "itemsTotal": 3,
-        "links": [
+    ```json
+    {
+        "data": [
             {
-                "rel": "self",
-                "uri": "/analytics/videos/plays?dimension=videoId&currentPage=1&pageSize=25"
+                "value": "vi3q7HxhApxRF1c8F8r6VeaI",
+                "plays": 100
             },
             {
-                "rel": "first",
-                "uri": "/analytics/videos/plays?dimension=videoId&currentPage=1&pageSize=25"
+                "value": "vi3q7HxhApxRF1c8F8r6VeaF",
+                "plays": 10
             },
             {
-                "rel": "last",
-                "uri": "/analytics/videos/plays?dimension=videoId&currentPage=1&pageSize=25"
+                "value": "vi3q7HxhApxRF1c8F8r6VeaH",
+                "plays": 1
             }
-        ]
+        ],
+        "pagination": {
+            "currentPage": 1,
+            "currentPageItems": 3,
+            "pageSize": 25,
+            "pagesTotal": 1,
+            "itemsTotal": 3,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "/analytics/videos/plays?dimension=videoId&currentPage=1&pageSize=25"
+                },
+                {
+                    "rel": "first",
+                    "uri": "/analytics/videos/plays?dimension=videoId&currentPage=1&pageSize=25"
+                },
+                {
+                    "rel": "last",
+                    "uri": "/analytics/videos/plays?dimension=videoId&currentPage=1&pageSize=25"
+                }
+            ]
+        }
     }
-}
-```
-
+    ```
 </details>
 
 <details>
@@ -255,8 +260,6 @@ This example uses the sandbox environment's `{base_URL}`. Check out the [API env
 ```
 
 </details>
-
-<br>
 
 ## Best practices
 

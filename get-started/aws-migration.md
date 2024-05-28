@@ -36,13 +36,9 @@ Access keys consist of an access key ID and secret access key, which are used to
 
 We recommend that you use IAM access keys instead of AWS root account access keys. IAM lets you securely control access to AWS services and resources in your AWS account.
 
-{% capture content %}
-
+<Callout pad="2" type="info">
 To create access keys, you must have permission to perform the required IAM actions. For more information, see Granting IAM User Permission to Manage Password Policy and Credentials in the IAM User Guide.
-
-{% endcapture %}
-
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 **To get your access key ID and secret access key:**
 - Open the [IAM console](https://console.aws.amazon.com/iam/).
@@ -52,22 +48,16 @@ To create access keys, you must have permission to perform the required IAM acti
 - To see the new access key, choose Show. Your credentials resemble the following:
 
 ```
-
 Access key ID: AKIAIOSFODNN7EXAMPLE
 
 Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-
 ```
 
 - To download the key pair, choose Download .csv file. Store the .csv file with keys in a secure location.
 
-{% capture content %}
-
+<Callout pad="2" type="warning">
 Keep the keys confidential to protect your AWS account, and never email them. Do not share them outside your organization, even if an inquiry appears to come from AWS or Amazon.com. No one who legitimately represents Amazon will ever ask you for your secret key.
-
-{% endcapture %}
-
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 You can retrieve the secret access key only when you initially create the key pair. Like a password, **you can't retrieve it later.** If you lose it, you must create a new key pair.
 

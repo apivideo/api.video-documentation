@@ -124,10 +124,9 @@ You can add, update, or delete metadata to create an additional layer of data an
     
     That’s it!
     
-    {% capture content %}
+    <Callout pad="2" type="info">
     The [Update a video object](/reference/api/Videos#create-a-video-object) endpoint is a `PATCH` operation that implements JSON Merge Patch. This means that tags and metadata you define in your `PATCH` request will replace the existing contents of the `tags` and `metadata` arrays. To avoid losing tags and metadata that you already defined and want to keep, make sure that you include them in your request.
-    {% endcapture %}
-    {% include "_partials/callout.html" kind: "info", content: content %}
+    </Callout>
     
 3. When **listing videos**, you can filter results with the `metadata` parameter. Simply add the key and value that you want to filter for to your request. You can add multiple key-value pairs to further narrow down search results. Check out the [List all video objects](/reference/api/Videos#list-all-video-objects) endpoint in the API reference for examples.
 

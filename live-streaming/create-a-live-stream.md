@@ -12,12 +12,11 @@ Creating a live stream is simple with api.video. After you create it, you have a
 
 This guide helps you follow along with the video and learn how to set up your live stream with api.video, and then use OBS to broadcast.
 
-{% capture content %}
+<Callout pad="2" type="info">
 api.video supports both `RTMP` and `SRT` protocols for live streaming.
 
 Accepting live streams through `SRT` **is currently in beta** - reach out if you have any questions or encounter any issues!
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## API reference
 
@@ -40,7 +39,8 @@ The clients offered by api.video include:
 
 To install your selected client, do the following: 
 
-{% capture samples %}
+
+<CodeSelect title="Installing the api.video client">
 ```go
 go get github.com/apivideo/api.video-go-client
 ```
@@ -62,8 +62,7 @@ Using Nuget
   
 Install-Package ApiVideo
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Create an account
 
@@ -75,7 +74,8 @@ Once you are logged in to the Dashboard, select the environment of your choice (
 
 The first part of setting up your live stream to broadcast is to create a live stream container. Once you create the container, you can use it for live streaming. Here is the code to create the container: 
 
-{% capture samples %}
+
+<CodeSelect title="Creating a live stream container">
 ```go
 package main
 
@@ -183,8 +183,7 @@ curl --request POST \
      "playerId": "pt240hxAaDBLCYxUIPh0Fb2"
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
+</CodeSelect>
 
 ## Connect to your live stream container
 
@@ -214,10 +213,9 @@ In this example, we will use [OBS Studio](https://obsproject.com), which is an o
 
 To share your stream, grab the embed URL or the `iframe` that you received in the API response when you created the live stream container.
 
-{% capture content %}
+<Callout pad="2" type="info">
 All live stream details like your Stream key, the embed URL, and the `iframe` are also available through the api.video dashboard. Go to the [Live streams](https://dashboard.api.video/livestreams) page, and open the Details of the live stream that you want to share.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 ## Live stream directly from your dashboard
 

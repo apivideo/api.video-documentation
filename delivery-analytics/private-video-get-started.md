@@ -9,7 +9,7 @@ This article explains how to secure and limit access to videos.
 
 ## Secure & manage access to your videos
 
-Maybe you are asking yourself: “ok, but how does _video privacy_ help me?”. There are quite a few use cases for private videos, and we’ve discussed the hassle of securing the videos yourself. 
+Maybe you are asking yourself: "ok, but how does _video privacy_ help me?". There are quite a few use cases for private videos, and we’ve discussed the hassle of securing the videos yourself. 
 
 - On-demand videos behind a paywall
 - Content Protection
@@ -38,11 +38,11 @@ After you learn how private video works and what it’s good for, we can now tal
 
 To reiterate the private video concept, here’s a visual representation of how the whole thing works:
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/delivery-analytics/private-videos/private-videos-dark.svg", light: "/_assets/delivery-analytics/private-videos/private-videos-light.svg", alt: "A diagram that shows the process of using private tokens" %}
+<Image src="/_assets/delivery-analytics/private-videos/private-videos-light.svg" src_dark="/_assets/delivery-analytics/private-videos/private-videos-dark.svg" alt="A diagram that shows the process of using private tokens" />
 
 Knowing that now we can finally start building stuff! 
 
-It’s that simple! (if you want the advanced stuff, scroll down to “Time to roll up our sleeves!”)
+It’s that simple! (if you want the advanced stuff, scroll down to "Time to roll up our sleeves!")
 
 Let’s try to deliver one video in HTML with our own (amazing!) [api.video](https://api.video/) player. 
 
@@ -150,7 +150,7 @@ There are two types of tokens for private videos:
 
 At a very high level, to request different assets for the same private video, more than having the private token is required; you also need to retain the session. For that, we have the session token. In the flowchart below, you can see that for each private video, we are using a session token + the private token:
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/delivery-analytics/private-videos/single-session-token-dark.svg", light: "/_assets/delivery-analytics/private-videos/single-session-token-light.svg", alt: "A diagram that shows the steps of using a session token" %}
+<Image src="/_assets/delivery-analytics/private-videos/private-videos-light.svg" src_dark="/_assets/delivery-analytics/private-videos/single-session-token-dark.svg" alt="A diagram that shows the steps of using a session token" />
 
 So let’s get a bit technical here. To start the session, you will need to request the `/session` endpoint, get the session token, add it to the first asset you request, and then add it to every following asset you request. In the example above, we will request the `/session` endpoint, then add the session token to the query string of the private video thumbnail → request an embedded video asset with the session token in the query string → request a private video asset in mp4 format with the session token, and so on, you get the idea.
 
@@ -250,9 +250,7 @@ Notice that the second object has a property `public` which is set to `false` , 
 2. If you remember, we need to get the session token by requesting the /session endpoint. The endpoint accepts the video id and private token; however, if you notice the private token is only in the URL. So let’s extract it! we can use this simple regex to extract it from the embedded URL `(?<=token=).*$` 
 3. We first extract the private token from the URL and map it to the asset objects (with the video URL, video id, etc.) 
 4. Then we request the /session endpoint passing in the video id and private token, and we get the session_token. Now we can also map to the same asset object.
-{% raw %}
 5. We’re almost done; hang in there! now let’s get generate `<img>` tags with the src as the asset thumbnails and add the session token in the query string as an `avh` parameter, i.e: `<img src=https://vod.api.video/vod/AABBCC/token/c77d7bf3-4e2f-4a85-9e15-5c35992c11fc/thumbnail.jpg?avh={{session token}}>` .  Then in the same line generate the `<a href>` tag that will lead us to the actual video, and as you understood already, it too has to include the session token, i.e: `<a href=https://embed.api.video/vod/AABBCC?token=c77d7bf3-4e2f-4a85-9e15-5c35992c11fc&avh={{session token}}>`
-{% endraw %}
 6. And lastly, generate the HTML `<head>` and `<body>` while encapsulating the `<a href><img></a>` we’ve already created, and…. DONE!
 
 Now you have clickable thumbnails of your private videos which you can secure behind user credentials for example.

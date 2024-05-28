@@ -43,7 +43,6 @@ https://embed.api.video/vod/<videoID>#adTagUrl:https%3A%2F%2Fpubads.g.doubleclic
 
 Using the React Native Player SDK, you will be able to pass the `ads` component, with the `adTagUrl` that will include the URL tags string. For example:
 
-{% raw %}
 ```javascript
 <ApiVideoPlayer
   ads={{
@@ -52,7 +51,6 @@ Using the React Native Player SDK, you will be able to pass the `ads` component,
   }}
   ...
 ```
-{% endraw %}
 
 #### React Player Installation
 
@@ -66,7 +64,6 @@ $ npm install --save @api.video/react-player
 
  Once you've imported the library into your project, you can then implement the library and pass in the the video or stream id with the ad component: 
 
-{% raw %}
 ```
 import ApiVideoPlayer from '@api.video/react-player'
 
@@ -80,7 +77,6 @@ import ApiVideoPlayer from '@api.video/react-player'
   	}} 
   />
 ```
-{% endraw %}
 
 ### Javascript Player SDK
 

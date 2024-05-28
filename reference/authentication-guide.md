@@ -13,10 +13,9 @@ With api.video, every call to the API requires authentication. In order to authe
 
 Each of these methods has its advantages. You can choose either of the authentication methods that suit your security needs. 
 
-{% capture content %}
+<Callout pad="2" type="info">
 When using the [api.video client libraries](/sdks/api-clients), the Disposable Bearer token will be applied by default.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 * Basic authentication is great for quick testing (with Postman for example) and will be quicker to implement if you decide to write your own wrapper for the API.
 
@@ -45,13 +44,9 @@ This method will allow you to use a simple way of authentication. By sending you
 
 Here's an example of how to make a request with Basic Authentication to api.video:
 
-{% capture samples %}
 ```curl
 $ curl -u apikey: https://sandbox.api.video/
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
 
 ## Bearer Token Authentication
 
@@ -59,7 +54,7 @@ Bearer authentication (also called token authentication) is an HTTP authenticati
 
 api.video provides an enhanced security authentication method, which uses a disposable bearer token that has a short time to live and has to be refreshed every 3600 seconds.
 
-{% include "_partials/dark-light-image.md" dark: "/_assets/reference/authentication/disposable-bearer-token-dark.svg", light: "/_assets/reference/authentication/disposable-bearer-token-light.svg", alt: "A diagram that shows how disposable bearer tokens can be created, used, and refreshed"%} 
+<Image src="/_assets/reference/authentication/disposable-bearer-token-light.svg" src_dark="/_assets/reference/authentication/disposable-bearer-token-dark.svg" alt="A diagram that shows how disposable bearer tokens can be created, used, and refreshed" />
 
 Bearer token authentication is simple to set up and use; however, we encourage you to use one of our client libraries if possible. [api.video client libraries](/sdks/api-clients) handle authentication for you, including renewing your token as needed.
 
@@ -68,6 +63,7 @@ Bearer token authentication is simple to set up and use; however, we encourage y
 With the Bearer Token method, there are [two endpoints](/reference/api/Advanced-authentication) at your disposable in order to generate the access token.
 
 1. You have to make a request to the `/auth/api-key` endpoint in order to get the bearer token
+
 ```curl
 curl -X POST \
 https://sandbox.api.video/auth/api-key \
@@ -105,7 +101,8 @@ curl --request POST \
 
 The simplest way, of course, is using the [api.video client libraries](/sdks/api-clients). You can find an example of how to authenticate below:
 
-{% capture samples %}
+
+<CodeSelect title="Authenticating through the API clients">
 ```go
 package main
 
@@ -204,6 +201,4 @@ namespace Example
     }
 }
 ```
-{% endcapture %}
-{% include "_partials/code-tabs.md" samples: samples %}
-
+</CodeSelect>

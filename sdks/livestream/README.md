@@ -1,24 +1,63 @@
 ---
 title: Live stream SDKs
-hide_side_table_of_contents: true
+toc: false
+breadcrumbs: false
 meta: 
     description: This page lists all api.video Live stream SDKs and client libraries for React Native, Flutter, Swift, and Android.
 ---
 
-Live streaming SDK catalog
-==================
+<div class="section-header no-toc">
+
+# Live streaming SDK catalog
+
+</div>
 
 With api.video you can use live streaming mobile SDKs to create a streaming client for your users.
 
-### Mobile
-<div class="hagrid">
+## Mobile
 
-{% include "_partials/hagrid-item.md" title: "React Native", image: "/_assets/icons/sdk_icons/react_native.svg", subtitle: "Live streaming",  link: "././react-native-livestream-component.md" %}
+<Grid cols="2" gap="3">
+<Card href="././react-native-livestream-component.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![React Native](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Flutter", image: "/_assets/icons/sdk_icons/flutter.svg", subtitle: "Live streaming",  link: "././apivideo-flutter-livestream.md" %}
+        <Box>
+            React Native\
+            <small>Live streaming</small>
+        </Box>
+    </Flex>
+</Card>
 
-{% include "_partials/hagrid-item.md" title: "Swift", image: "/_assets/icons/sdk_icons/Swift.svg", subtitle: "Live streaming",  link: "././swift-livestream-library.md" %}
+<Card href="././apivideo-flutter-livestream.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
-{% include "_partials/hagrid-item.md" title: "Android", image: "/_assets/icons/sdk_icons/Android.svg", subtitle: "Live streaming",  link: "././apivideo-android-livestream-module.md" %}
+        <Box>
+            Flutter\
+            <small>Live streaming</small>
+        </Box>
+    </Flex>
+</Card>
 
-</div>
+<Card href="././swift-livestream-library.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
+
+        <Box>
+            Swift\
+            <small>Live streaming</small>
+        </Box>
+    </Flex>
+</Card>
+
+<Card href="././apivideo-android-livestream-module.md" pad="0">
+    <Flex gap="2" pad="2" align="center">
+        <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
+
+        <Box>
+            Android\
+            <small>Live streaming</small>
+        </Box>
+    </Flex>
+</Card>
+</Grid>

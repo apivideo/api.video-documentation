@@ -13,13 +13,9 @@ Using the api.video Import tool, it only takes a couple of clicks to migrate all
 
 Check out the [Import tool](https://dashboard.api.video/import) to get started.
 
-{% capture content %}
-
+<Callout pad="2" type="warning">
 Migrating from Vimeo requires that you have at least a Pro subscription or higher with Vimeo. This limitation is set by Vimeo, and is a requirement for video file access.
-
-{% endcapture %}
-
-{% include "_partials/callout.html" kind: "warning", content: content %}
+</Callout>
 
 ## What's the cost? 
 

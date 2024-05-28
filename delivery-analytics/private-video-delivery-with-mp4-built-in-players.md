@@ -4,13 +4,11 @@ meta:
   description: Manage and control the access to mp4 videos that you publish with api.video.
 ---
 
-Private Video Delivery With Mp4 Built In Players
-================================================
+# Private Video Delivery With Mp4 Built In Players
 
-{% capture content %}
+<Callout pad="2" type="info">
 api.video recommends that you read [Private Videos](/delivery-analytics/video-privacy-access-management) to ensure that you understand the concept of private videos before proceeding.
-{% endcapture %}
-{% include "_partials/callout.html" kind: "info", content: content %}
+</Callout>
 
 There are cases where you would want to use built-in players that are not api.video. We support private video delivery via other players other than our in-house. In this article you can find how to deliver private videos with MP4 built-in player
 
