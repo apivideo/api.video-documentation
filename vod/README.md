@@ -9,7 +9,7 @@ meta:
 
 <div class="section-header">
 
-# What is VOD?
+# What is <span style="color: var(--accent-10)">VOD</span>?
 
   api.video's hosting service enables you to upload and store video files, which can then be easily embedded and shared across various devices and platforms. The platform automatically transcodes videos into multiple formats, resolutions, and bitrates, ensuring that the video content can be played on any device with any internet connection. api.video's transcoding and delivery is one of the fastest on the market.
 

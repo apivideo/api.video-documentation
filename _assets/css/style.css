@@ -401,6 +401,10 @@ p {
   background: linear-gradient(76deg, #642180 -24.15%, #af2a72 93.03%);
 }
 
+.landing-page-card.Delivery .landing-page-card-header {
+  background: linear-gradient(76deg, #4eb2dd -24.15%, #642180 93.03%);
+}
+
 .landing-page-card-header {
   height: 12rem;
   background: linear-gradient(215deg, #fa5b30 -5.18%, #f7b500 179.35%);

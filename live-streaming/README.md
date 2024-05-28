@@ -9,7 +9,7 @@ meta:
 
 <div class="section-header">
 
-# What is live streaming?
+# What is <span style="color: var(--accent-10)">live streaming</span>?
 
   api.video's live streaming service enables you to stream live video content to any device in real time. You can create custom video players with api.video's player customization feature, which empowers you to change the appearance and functionality of the player to suit your needs.
 

@@ -9,7 +9,7 @@ meta:
 
 <div class="section-header">
 
-# How does video delivery work?
+# How does <span style="color: var(--accent-10)">video delivery</span> work?
 
   api.video lets you customize a large part of the delivery, from the branding of the player, to adding captions, chapters, and watermarks. You have full control over how you deliver the content to your users. The flexibility does not end with player customization, you can build your own player in order to deliver the content in the best form you see fit.
 

@@ -9,7 +9,7 @@ meta:
 
 <div class="section-header">
 
-# api.video Libaries & SDKs
+# api.video <span style="color: var(--accent-10)">Libraries & SDKs</span>
 
   api.video simplifies complex video infrastructure processes and provides the basis for creating fast, reliable, and scalable custom video experiences. api.video offers simple and transparent APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your applications.
 
