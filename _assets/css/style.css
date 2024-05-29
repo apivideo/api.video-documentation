@@ -396,10 +396,6 @@
   font-weight: 500 !important;
 }
 
-p {
-  font-size: 18px;
-}
-
 .dark p {
   color: rgba(255, 255, 255, 0.70);
 }
