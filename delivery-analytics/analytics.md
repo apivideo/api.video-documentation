@@ -16,7 +16,7 @@ For example, you can:
 
 Use this data to understand your audience, or integrate the data directly into your own application to display it to your viewers.
 
-Visit the **[Analytics](https://dashboard.api.video/data)** page on the Dashboard to get started and see your data visualized, or jump into the **[API reference](https://docs.api.video/reference/api/Analytics)** and see how you can work with the data through our API!
+Visit the **[Analytics](https://dashboard.api.video/data)** page on the Dashboard to get started and see your data visualized, or jump into the **[API reference](/reference/api/Analytics-v2.0-beta)** and see how you can work with the data through our API!
 
 <Callout pad="2" type="info">
 Analytics v2.0 is currently in `beta`, and some of the specifications may change over time.
@@ -49,11 +49,11 @@ Analytics v2.0 offers 3 dedicated API endpoints that you can use to programmatic
 
 | Endpoint                                                                                 | Usage                                         |
 | ---------------------------------------------------------------------------------------- | --------------------------------------------- |
-| [`/data/metrics/{metric}/{aggregation}`](https://docs.api.video/reference/api/Analytics) | Retrieve aggregated metrics                   |
-| [`/data/buckets/{metric}/{breakdown}`](https://docs.api.video/reference/api/Analytics)   | Retrieve metrics in a breakdown of dimensions |
-| [`/data/timeseries/{metric}`](https://docs.api.video/reference/api/Analytics)            | Retrieve metrics over time                    |
+| [`/data/metrics/{metric}/{aggregation}`](/reference/api/Analytics-v2.0-beta#retrieve-aggregated-metrics) | Retrieve aggregated metrics                   |
+| [`/data/buckets/{metric}/{breakdown}`](/reference/api/Analytics-v2.0-beta#retrieve-metrics-in-a-breakdown-of-dimensions)   | Retrieve metrics in a breakdown of dimensions |
+| [`/data/timeseries/{metric}`](/reference/api/Analytics-v2.0-beta#retrieve-metrics-over-time)            | Retrieve metrics over time                    |
 
-Visit the **[API reference](https://docs.api.video/reference/api/Analytics)** for details on how you can interact with the Analytics v2.0 API, including request parameters and sample responses.
+Visit the **[API reference](/reference/api/Analytics-v2.0-beta)** for details on how you can interact with the Analytics v2.0 API, including request parameters and sample responses.
 
 Here are some real-world questions where metrics and dimensions from Analytics v2.0 can help you find the answers:
 
@@ -72,7 +72,7 @@ Here are some real-world questions where metrics and dimensions from Analytics v
 <Callout pad="2" type="info">
 **Testing**
 
-You can test the Analytics v2.0 endpoints **in api.video's sandbox environment**. Check out [Environments](/reference/README.md#environments) for more details. The sandbox environment returns data from the last 24 hours.
+You can test the Analytics v2.0 endpoints **in api.video's sandbox environment**. Check out [Environments](/reference#environments) for more details. The sandbox environment returns data from the last 24 hours.
 </Callout>
 
 ## Migrating from the Analytics v1 API
@@ -106,6 +106,6 @@ Analytics v1's `/play` metric can be directly mapped to 3 new endpoints:
 
 ## What's next
 
-Check out the **[API reference](/reference/api/Analytics)** for sample responses and errors, and more details about using the Analytics endpoints.
+Check out the **[API reference](/reference/api/Analytics-v2.0-beta)** for sample responses and errors, and more details about using the Analytics endpoints.
 
 If you have any questions, reach out to the team using the chatbox!
