@@ -13,7 +13,7 @@ This documentation is a password-protected version of api.video's developer docs
 
 Make sure that you **only refer to this version of the documentation when reading about Analytics v2.0 beta**, and that you switch to the default documentation when you need information about any other products or features.
 
-To get started, check out the [Analytics v2.0 guide](/delivery-analytics/analytics), or jump into the [API reference](/reference/api/Analytics-v2.0-beta) to learn about the new Analytics endpoints!
+To get started, check out the [Analytics v2.0 guide](/delivery-analytics/analytics), or jump into the [API reference](/reference/api/Analytics-v2-beta) to learn about the new Analytics endpoints!
 </Callout>
 
 <div class="section-header no-toc">
