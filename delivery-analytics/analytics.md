@@ -51,7 +51,7 @@ Analytics v2.0 offers 3 dedicated API endpoints that you can use to programmatic
 | ---------------------------------------------------------------------------------------- | --------------------------------------------- |
 | [`/data/metrics/{metric}/{aggregation}`](https://docs.api.video/reference/api/Analytics) | Retrieve aggregated metrics                   |
 | [`/data/buckets/{metric}/{breakdown}`](https://docs.api.video/reference/api/Analytics)   | Retrieve metrics in a breakdown of dimensions |
-| [`/data/timeseries/{metric}`](https://docs.api.video/reference/api/Analytics)            | Get play event count for live streams         |
+| [`/data/timeseries/{metric}`](https://docs.api.video/reference/api/Analytics)            | Retrieve metrics over time                    |
 
 Visit the **[API reference](https://docs.api.video/reference/api/Analytics)** for details on how you can interact with the Analytics v2.0 API, including request parameters and sample responses.
 
