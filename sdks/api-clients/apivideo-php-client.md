@@ -94,29 +94,38 @@ $client->videos()->upload(
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**getLiveStreamsPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getLiveStreamsPlays) | Get play events for live stream | **GET** `/analytics/live-streams/plays`
-[**getVideosPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getVideosPlays) | Get play events for video | **GET** `/analytics/videos/plays`
+**(deprecated)** [**getLiveStreamsPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getLiveStreamsPlays) | Get play events for live stream | **GET** `/analytics/live-streams/plays`
+**(deprecated)** [**getVideosPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getVideosPlays) | Get play events for video | **GET** `/analytics/videos/plays`
+
+
+#### AnalyticsV20BetaApi
+
+Method | Description | HTTP request
+------------- | ------------- | -------------
+[**getAggregatedMetrics()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsV20BetaApi.md#getAggregatedMetrics) | Retrieve aggregated metrics | **GET** `/data/metrics/\{metric}/{aggregation}`
+[**getMetricsBreakdown()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsV20BetaApi.md#getMetricsBreakdown) | Retrieve metrics in a breakdown of dimensions | **GET** `/data/buckets/\{metric}/{breakdown}`
+[**getMetricsOverTime()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsV20BetaApi.md#getMetricsOverTime) | Retrieve metrics over time | **GET** `/data/timeseries/{metric}`
 
 
 #### CaptionsApi
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**upload()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#upload) | Upload a caption | **POST** `/videos/{videoId}/captions/{language}`
-[**get()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#get) | Retrieve a caption | **GET** `/videos/{videoId}/captions/{language}`
-[**update()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#update) | Update a caption | **PATCH** `/videos/{videoId}/captions/{language}`
-[**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#delete) | Delete a caption | **DELETE** `/videos/{videoId}/captions/{language}`
-[**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#list) | List video captions | **GET** `/videos/{videoId}/captions`
+[**upload()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#upload) | Upload a caption | **POST** `/videos/\{videoId}/captions/{language}`
+[**get()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#get) | Retrieve a caption | **GET** `/videos/\{videoId}/captions/{language}`
+[**update()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#update) | Update a caption | **PATCH** `/videos/\{videoId}/captions/{language}`
+[**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#delete) | Delete a caption | **DELETE** `/videos/\{videoId}/captions/{language}`
+[**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/CaptionsApi.md#list) | List video captions | **GET** `/videos/\{videoId}/captions`
 
 
 #### ChaptersApi
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**upload()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#upload) | Upload a chapter | **POST** `/videos/{videoId}/chapters/{language}`
-[**get()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#get) | Retrieve a chapter | **GET** `/videos/{videoId}/chapters/{language}`
-[**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#delete) | Delete a chapter | **DELETE** `/videos/{videoId}/chapters/{language}`
-[**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#list) | List video chapters | **GET** `/videos/{videoId}/chapters`
+[**upload()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#upload) | Upload a chapter | **POST** `/videos/\{videoId}/chapters/{language}`
+[**get()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#get) | Retrieve a chapter | **GET** `/videos/\{videoId}/chapters/{language}`
+[**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#delete) | Delete a chapter | **DELETE** `/videos/\{videoId}/chapters/{language}`
+[**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/ChaptersApi.md#list) | List video chapters | **GET** `/videos/\{videoId}/chapters`
 
 
 #### LiveStreamsApi
@@ -128,8 +137,8 @@ Method | Description | HTTP request
 [**update()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#update) | Update a live stream | **PATCH** `/live-streams/{liveStreamId}`
 [**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#delete) | Delete a live stream | **DELETE** `/live-streams/{liveStreamId}`
 [**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#list) | List all live streams | **GET** `/live-streams`
-[**uploadThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#uploadThumbnail) | Upload a thumbnail | **POST** `/live-streams/{liveStreamId}/thumbnail`
-[**deleteThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#deleteThumbnail) | Delete a thumbnail | **DELETE** `/live-streams/{liveStreamId}/thumbnail`
+[**uploadThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#uploadThumbnail) | Upload a thumbnail | **POST** `/live-streams/\{liveStreamId}/thumbnail`
+[**deleteThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/LiveStreamsApi.md#deleteThumbnail) | Delete a thumbnail | **DELETE** `/live-streams/\{liveStreamId}/thumbnail`
 
 
 #### PlayerThemesApi
@@ -141,8 +150,8 @@ Method | Description | HTTP request
 [**update()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#update) | Update a player | **PATCH** `/players/{playerId}`
 [**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#delete) | Delete a player | **DELETE** `/players/{playerId}`
 [**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#list) | List all player themes | **GET** `/players`
-[**uploadLogo()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#uploadLogo) | Upload a logo | **POST** `/players/{playerId}/logo`
-[**deleteLogo()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#deleteLogo) | Delete logo | **DELETE** `/players/{playerId}/logo`
+[**uploadLogo()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#uploadLogo) | Upload a logo | **POST** `/players/\{playerId}/logo`
+[**deleteLogo()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#deleteLogo) | Delete logo | **DELETE** `/players/\{playerId}/logo`
 
 
 #### UploadTokensApi
@@ -160,15 +169,15 @@ Method | Description | HTTP request
 Method | Description | HTTP request
 ------------- | ------------- | -------------
 [**create()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#create) | Create a video object | **POST** `/videos`
-[**upload()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#upload) | Upload a video | **POST** `/videos/{videoId}/source`
+[**upload()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#upload) | Upload a video | **POST** `/videos/\{videoId}/source`
 [**uploadWithUploadToken()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#uploadWithUploadToken) | Upload with an delegated upload token | **POST** `/upload`
 [**get()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#get) | Retrieve a video object | **GET** `/videos/{videoId}`
 [**update()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#update) | Update a video object | **PATCH** `/videos/{videoId}`
 [**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#delete) | Delete a video object | **DELETE** `/videos/{videoId}`
 [**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#list) | List all video objects | **GET** `/videos`
-[**uploadThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#uploadThumbnail) | Upload a thumbnail | **POST** `/videos/{videoId}/thumbnail`
-[**pickThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#pickThumbnail) | Set a thumbnail | **PATCH** `/videos/{videoId}/thumbnail`
-[**getStatus()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#getStatus) | Retrieve video status and details | **GET** `/videos/{videoId}/status`
+[**uploadThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#uploadThumbnail) | Upload a thumbnail | **POST** `/videos/\{videoId}/thumbnail`
+[**pickThumbnail()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#pickThumbnail) | Set a thumbnail | **PATCH** `/videos/\{videoId}/thumbnail`
+[**getStatus()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/VideosApi.md#getStatus) | Retrieve video status and details | **GET** `/videos/\{videoId}/status`
 
 
 #### WatermarksApi
@@ -195,7 +204,16 @@ Method | Description | HTTP request
 
  - [AccessToken](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AccessToken.md)
  - [AdditionalBadRequestErrors](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AdditionalBadRequestErrors.md)
+ - [AnalyticsAggregatedMetricsResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsAggregatedMetricsResponse.md)
+ - [AnalyticsAggregatedMetricsResponseContext](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsAggregatedMetricsResponseContext.md)
+ - [AnalyticsAggregatedMetricsResponseContextTimeframe](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsAggregatedMetricsResponseContextTimeframe.md)
  - [AnalyticsData](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsData.md)
+ - [AnalyticsMetricsBreakdownResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsMetricsBreakdownResponse.md)
+ - [AnalyticsMetricsBreakdownResponseContext](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsMetricsBreakdownResponseContext.md)
+ - [AnalyticsMetricsBreakdownResponseData](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsMetricsBreakdownResponseData.md)
+ - [AnalyticsMetricsOverTimeResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsMetricsOverTimeResponse.md)
+ - [AnalyticsMetricsOverTimeResponseContext](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsMetricsOverTimeResponseContext.md)
+ - [AnalyticsMetricsOverTimeResponseData](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsMetricsOverTimeResponseData.md)
  - [AnalyticsPlays400Error](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsPlays400Error.md)
  - [AnalyticsPlaysResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AnalyticsPlaysResponse.md)
  - [AuthenticatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/AuthenticatePayload.md)
@@ -211,12 +229,6 @@ Method | Description | HTTP request
  - [LiveStreamAssets](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamAssets.md)
  - [LiveStreamCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamCreationPayload.md)
  - [LiveStreamListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamListResponse.md)
- - [LiveStreamSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSession.md)
- - [LiveStreamSessionClient](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionClient.md)
- - [LiveStreamSessionDevice](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionDevice.md)
- - [LiveStreamSessionLocation](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionLocation.md)
- - [LiveStreamSessionReferrer](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionReferrer.md)
- - [LiveStreamSessionSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionSession.md)
  - [LiveStreamUpdatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamUpdatePayload.md)
  - [Metadata](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Metadata.md)
  - [Model403ErrorSchema](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Model403ErrorSchema.md)
@@ -235,18 +247,13 @@ Method | Description | HTTP request
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RestreamsResponseObject.md)
  - [TokenCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TokenCreationPayload.md)
  - [TokenListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TokenListResponse.md)
+ - [TooManyRequests](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TooManyRequests.md)
+ - [UnrecognizedRequestUrl](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/UnrecognizedRequestUrl.md)
  - [UploadToken](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/UploadToken.md)
  - [Video](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoAssets.md)
  - [VideoClip](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoClip.md)
  - [VideoCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoCreationPayload.md)
- - [VideoSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSession.md)
- - [VideoSessionClient](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionClient.md)
- - [VideoSessionDevice](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionDevice.md)
- - [VideoSessionLocation](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionLocation.md)
- - [VideoSessionOs](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionOs.md)
- - [VideoSessionReferrer](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionReferrer.md)
- - [VideoSessionSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionSession.md)
  - [VideoSource](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSource.md)
  - [VideoSourceLiveStream](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSourceLiveStream.md)
  - [VideoSourceLiveStreamLink](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSourceLiveStreamLink.md)
