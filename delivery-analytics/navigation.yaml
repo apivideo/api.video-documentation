@@ -43,7 +43,7 @@
 
 - heading: Analytics
   items:
-  - label: Analytics v2.0 `beta`
+  - label: Analytics
     href: /delivery-analytics/analytics.md
   - label: Analytics SDKs
     href: /sdks/player/README.md#player-analytics-sdks
