@@ -72,18 +72,27 @@ const ApiVideoClient = require('@api.video/nodejs-client');
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**getLiveStreamsPlays()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsApi.md#getLiveStreamsPlays) | Get play events for live stream | **GET** /analytics/live-streams/plays
-[**getVideosPlays()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsApi.md#getVideosPlays) | Get play events for video | **GET** /analytics/videos/plays
+**(deprecated)** [**getLiveStreamsPlays()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsApi.md#getLiveStreamsPlays) | Get play events for live stream | **GET** /analytics/live-streams/plays
+**(deprecated)** [**getVideosPlays()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsApi.md#getVideosPlays) | Get play events for video | **GET** /analytics/videos/plays
+
+
+#### AnalyticsV20BetaApi
+
+Method | Description | HTTP request
+------------- | ------------- | -------------
+[**getAggregatedMetrics()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsV20BetaApi.md#getAggregatedMetrics) | Retrieve aggregated metrics | **GET** /data/metrics/\{metric}/{aggregation}
+[**getMetricsBreakdown()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsV20BetaApi.md#getMetricsBreakdown) | Retrieve metrics in a breakdown of dimensions | **GET** /data/buckets/\{metric}/{breakdown}
+[**getMetricsOverTime()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/AnalyticsV20BetaApi.md#getMetricsOverTime) | Retrieve metrics over time | **GET** /data/timeseries/{metric}
 
 
 #### CaptionsApi
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**upload()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#upload) | Upload a caption | **POST** /videos/\{videoId}/captions/\{language}
-[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#get) | Retrieve a caption | **GET** /videos/\{videoId}/captions/\{language}
-[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#update) | Update a caption | **PATCH** /videos/\{videoId}/captions/\{language}
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#delete) | Delete a caption | **DELETE** /videos/\{videoId}/captions/\{language}
+[**upload()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#upload) | Upload a caption | **POST** /videos/\{videoId}/captions/{language}
+[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#get) | Retrieve a caption | **GET** /videos/\{videoId}/captions/{language}
+[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#update) | Update a caption | **PATCH** /videos/\{videoId}/captions/{language}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#delete) | Delete a caption | **DELETE** /videos/\{videoId}/captions/{language}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/CaptionsApi.md#list) | List video captions | **GET** /videos/\{videoId}/captions
 
 
@@ -91,9 +100,9 @@ Method | Description | HTTP request
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**upload()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#upload) | Upload a chapter | **POST** /videos/\{videoId}/chapters/\{language}
-[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#get) | Retrieve a chapter | **GET** /videos/\{videoId}/chapters/\{language}
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#delete) | Delete a chapter | **DELETE** /videos/\{videoId}/chapters/\{language}
+[**upload()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#upload) | Upload a chapter | **POST** /videos/\{videoId}/chapters/{language}
+[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#get) | Retrieve a chapter | **GET** /videos/\{videoId}/chapters/{language}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#delete) | Delete a chapter | **DELETE** /videos/\{videoId}/chapters/{language}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/ChaptersApi.md#list) | List video chapters | **GET** /videos/\{videoId}/chapters
 
 
@@ -102,9 +111,9 @@ Method | Description | HTTP request
 Method | Description | HTTP request
 ------------- | ------------- | -------------
 [**create()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#create) | Create live stream | **POST** /live-streams
-[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#get) | Retrieve live stream | **GET** /live-streams/\{liveStreamId}
-[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#update) | Update a live stream | **PATCH** /live-streams/\{liveStreamId}
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#delete) | Delete a live stream | **DELETE** /live-streams/\{liveStreamId}
+[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#get) | Retrieve live stream | **GET** /live-streams/{liveStreamId}
+[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#update) | Update a live stream | **PATCH** /live-streams/{liveStreamId}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#delete) | Delete a live stream | **DELETE** /live-streams/{liveStreamId}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#list) | List all live streams | **GET** /live-streams
 [**uploadThumbnail()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#uploadThumbnail) | Upload a thumbnail | **POST** /live-streams/\{liveStreamId}/thumbnail
 [**deleteThumbnail()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/LiveStreamsApi.md#deleteThumbnail) | Delete a thumbnail | **DELETE** /live-streams/\{liveStreamId}/thumbnail
@@ -115,9 +124,9 @@ Method | Description | HTTP request
 Method | Description | HTTP request
 ------------- | ------------- | -------------
 [**create()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#create) | Create a player | **POST** /players
-[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#get) | Retrieve a player | **GET** /players/\{playerId}
-[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#update) | Update a player | **PATCH** /players/\{playerId}
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#delete) | Delete a player | **DELETE** /players/\{playerId}
+[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#get) | Retrieve a player | **GET** /players/{playerId}
+[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#update) | Update a player | **PATCH** /players/{playerId}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#delete) | Delete a player | **DELETE** /players/{playerId}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#list) | List all player themes | **GET** /players
 [**uploadLogo()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#uploadLogo) | Upload a logo | **POST** /players/\{playerId}/logo
 [**deleteLogo()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/PlayerThemesApi.md#deleteLogo) | Delete logo | **DELETE** /players/\{playerId}/logo
@@ -128,8 +137,8 @@ Method | Description | HTTP request
 Method | Description | HTTP request
 ------------- | ------------- | -------------
 [**createToken()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/UploadTokensApi.md#createToken) | Generate an upload token | **POST** /upload-tokens
-[**getToken()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/UploadTokensApi.md#getToken) | Retrieve upload token | **GET** /upload-tokens/\{uploadToken}
-[**deleteToken()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/UploadTokensApi.md#deleteToken) | Delete an upload token | **DELETE** /upload-tokens/\{uploadToken}
+[**getToken()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/UploadTokensApi.md#getToken) | Retrieve upload token | **GET** /upload-tokens/{uploadToken}
+[**deleteToken()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/UploadTokensApi.md#deleteToken) | Delete an upload token | **DELETE** /upload-tokens/{uploadToken}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/UploadTokensApi.md#list) | List all active upload tokens | **GET** /upload-tokens
 
 
@@ -140,9 +149,9 @@ Method | Description | HTTP request
 [**create()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#create) | Create a video object | **POST** /videos
 [**upload()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#upload) | Upload a video | **POST** /videos/\{videoId}/source
 [**uploadWithUploadToken()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#uploadWithUploadToken) | Upload with an delegated upload token | **POST** /upload
-[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#get) | Retrieve a video object | **GET** /videos/\{videoId}
-[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#update) | Update a video object | **PATCH** /videos/\{videoId}
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#delete) | Delete a video object | **DELETE** /videos/\{videoId}
+[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#get) | Retrieve a video object | **GET** /videos/{videoId}
+[**update()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#update) | Update a video object | **PATCH** /videos/{videoId}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#delete) | Delete a video object | **DELETE** /videos/{videoId}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#list) | List all video objects | **GET** /videos
 [**uploadThumbnail()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#uploadThumbnail) | Upload a thumbnail | **POST** /videos/\{videoId}/thumbnail
 [**pickThumbnail()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/VideosApi.md#pickThumbnail) | Set a thumbnail | **PATCH** /videos/\{videoId}/thumbnail
@@ -154,7 +163,7 @@ Method | Description | HTTP request
 Method | Description | HTTP request
 ------------- | ------------- | -------------
 [**upload()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WatermarksApi.md#upload) | Upload a watermark | **POST** /watermarks
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WatermarksApi.md#delete) | Delete a watermark | **DELETE** /watermarks/\{watermarkId}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WatermarksApi.md#delete) | Delete a watermark | **DELETE** /watermarks/{watermarkId}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WatermarksApi.md#list) | List all watermarks | **GET** /watermarks
 
 
@@ -163,8 +172,8 @@ Method | Description | HTTP request
 Method | Description | HTTP request
 ------------- | ------------- | -------------
 [**create()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WebhooksApi.md#create) | Create Webhook | **POST** /webhooks
-[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WebhooksApi.md#get) | Retrieve Webhook details | **GET** /webhooks/\{webhookId}
-[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WebhooksApi.md#delete) | Delete a Webhook | **DELETE** /webhooks/\{webhookId}
+[**get()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WebhooksApi.md#get) | Retrieve Webhook details | **GET** /webhooks/{webhookId}
+[**delete()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WebhooksApi.md#delete) | Delete a Webhook | **DELETE** /webhooks/{webhookId}
 [**list()**](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/api/WebhooksApi.md#list) | List all webhooks | **GET** /webhooks
 
 
@@ -173,7 +182,16 @@ Method | Description | HTTP request
 
  - [AccessToken](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AccessToken.md)
  - [AdditionalBadRequestErrors](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AdditionalBadRequestErrors.md)
+ - [AnalyticsAggregatedMetricsResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsAggregatedMetricsResponse.md)
+ - [AnalyticsAggregatedMetricsResponseContext](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsAggregatedMetricsResponseContext.md)
+ - [AnalyticsAggregatedMetricsResponseContextTimeframe](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsAggregatedMetricsResponseContextTimeframe.md)
  - [AnalyticsData](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsData.md)
+ - [AnalyticsMetricsBreakdownResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsMetricsBreakdownResponse.md)
+ - [AnalyticsMetricsBreakdownResponseContext](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsMetricsBreakdownResponseContext.md)
+ - [AnalyticsMetricsBreakdownResponseData](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsMetricsBreakdownResponseData.md)
+ - [AnalyticsMetricsOverTimeResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsMetricsOverTimeResponse.md)
+ - [AnalyticsMetricsOverTimeResponseContext](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsMetricsOverTimeResponseContext.md)
+ - [AnalyticsMetricsOverTimeResponseData](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsMetricsOverTimeResponseData.md)
  - [AnalyticsPlays400Error](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsPlays400Error.md)
  - [AnalyticsPlaysResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AnalyticsPlaysResponse.md)
  - [AuthenticatePayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/AuthenticatePayload.md)
@@ -189,12 +207,6 @@ Method | Description | HTTP request
  - [LiveStreamAssets](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamAssets.md)
  - [LiveStreamCreationPayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamCreationPayload.md)
  - [LiveStreamListResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamListResponse.md)
- - [LiveStreamSession](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamSession.md)
- - [LiveStreamSessionClient](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamSessionClient.md)
- - [LiveStreamSessionDevice](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamSessionDevice.md)
- - [LiveStreamSessionLocation](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamSessionLocation.md)
- - [LiveStreamSessionReferrer](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamSessionReferrer.md)
- - [LiveStreamSessionSession](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamSessionSession.md)
  - [LiveStreamUpdatePayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/LiveStreamUpdatePayload.md)
  - [Metadata](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/Metadata.md)
  - [Model403ErrorSchema](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/Model403ErrorSchema.md)
@@ -214,18 +226,12 @@ Method | Description | HTTP request
  - [TokenCreationPayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/TokenCreationPayload.md)
  - [TokenListResponse](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/TokenListResponse.md)
  - [TooManyRequests](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/TooManyRequests.md)
+ - [UnrecognizedRequestUrl](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/UnrecognizedRequestUrl.md)
  - [UploadToken](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/UploadToken.md)
  - [Video](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoAssets.md)
  - [VideoClip](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoClip.md)
  - [VideoCreationPayload](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoCreationPayload.md)
- - [VideoSession](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSession.md)
- - [VideoSessionClient](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSessionClient.md)
- - [VideoSessionDevice](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSessionDevice.md)
- - [VideoSessionLocation](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSessionLocation.md)
- - [VideoSessionOs](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSessionOs.md)
- - [VideoSessionReferrer](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSessionReferrer.md)
- - [VideoSessionSession](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSessionSession.md)
  - [VideoSource](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSource.md)
  - [VideoSourceLiveStream](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSourceLiveStream.md)
  - [VideoSourceLiveStreamLink](https://github.com/apivideo/api.video-nodejs-client/blob/main/docs/model/VideoSourceLiveStreamLink.md)
