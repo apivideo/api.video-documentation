@@ -21,9 +21,11 @@ A more visual representation can be found below:
 
 <Callout pad="2" type="info">
 **Important things to know**
-* **All qualities encoding:** The video object will include up to 6 responsive video streams from 240p to 4K
+* **All qualities encoding:** The encoded video object will include:
+   * up to 6 responsive video streams from 240p to 4K,
+   * an HLS container with the videos in H264,
+   * an mp4 version that contain a H264 video, **in the highest quality** received from the source.
 * **Video size:** The video file size is limited to 30 GiB. The files will be compressed to fit delivery needs (4k max def with H.264 at 60fps max + AAC)
-* **Highest quality encoding by default:** Mp4 encoded versions are created at the highest quality (max 4K) by default.
 * **360° videos support:** Panoramic videos are videos recorded in 360°. You can toggle this after your 360° video upload.
 * **Video Access Management:** When creating a video object, it can be either private or public. The feature allows you to change it later by updating the video object.
 * **Progressive Upload:** Ability to upload videos in a progressive manner while they are being recorded.
