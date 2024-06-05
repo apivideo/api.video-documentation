@@ -371,4 +371,4 @@ The onPlayable() method let you defined a listener that will be called when the 
 
 ## Static wrapper
 
-For situations where managing object instances is impractical, consider using the [UploaderStaticWrapper](https://github.com/apivideo/api.video-typescript-uploader/blob/main/doc/UploaderStaticWrapper.md) class, which offers static method equivalents for all functionalities.
+For situations where managing object instances is impractical, consider using the [UploaderStaticWrapper](https://github.com/apivideo/api.video-typescript-uploader/blob/main/doc/UploaderStaticWrapper.md) class, which offers static method equivalents for all functionalities. 
