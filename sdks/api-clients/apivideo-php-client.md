@@ -94,8 +94,8 @@ $client->videos()->upload(
 
 Method | Description | HTTP request
 ------------- | ------------- | -------------
-[**getLiveStreamsPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getLiveStreamsPlays) | Get play events for live stream | **GET** `/analytics/live-streams/plays`
-[**getVideosPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getVideosPlays) | Get play events for video | **GET** `/analytics/videos/plays`
+**(deprecated)** [**getLiveStreamsPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getLiveStreamsPlays) | Get play events for live stream | **GET** `/analytics/live-streams/plays`
+**(deprecated)** [**getVideosPlays()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/AnalyticsApi.md#getVideosPlays) | Get play events for video | **GET** `/analytics/videos/plays`
 
 
 #### CaptionsApi
@@ -211,12 +211,6 @@ Method | Description | HTTP request
  - [LiveStreamAssets](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamAssets.md)
  - [LiveStreamCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamCreationPayload.md)
  - [LiveStreamListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamListResponse.md)
- - [LiveStreamSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSession.md)
- - [LiveStreamSessionClient](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionClient.md)
- - [LiveStreamSessionDevice](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionDevice.md)
- - [LiveStreamSessionLocation](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionLocation.md)
- - [LiveStreamSessionReferrer](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionReferrer.md)
- - [LiveStreamSessionSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamSessionSession.md)
  - [LiveStreamUpdatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/LiveStreamUpdatePayload.md)
  - [Metadata](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Metadata.md)
  - [Model403ErrorSchema](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Model403ErrorSchema.md)
@@ -236,18 +230,12 @@ Method | Description | HTTP request
  - [TokenCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TokenCreationPayload.md)
  - [TokenListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TokenListResponse.md)
  - [TooManyRequests](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TooManyRequests.md)
+ - [UnrecognizedRequestUrl](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/UnrecognizedRequestUrl.md)
  - [UploadToken](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/UploadToken.md)
  - [Video](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Video.md)
  - [VideoAssets](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoAssets.md)
  - [VideoClip](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoClip.md)
  - [VideoCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoCreationPayload.md)
- - [VideoSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSession.md)
- - [VideoSessionClient](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionClient.md)
- - [VideoSessionDevice](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionDevice.md)
- - [VideoSessionLocation](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionLocation.md)
- - [VideoSessionOs](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionOs.md)
- - [VideoSessionReferrer](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionReferrer.md)
- - [VideoSessionSession](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSessionSession.md)
  - [VideoSource](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSource.md)
  - [VideoSourceLiveStream](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSourceLiveStream.md)
  - [VideoSourceLiveStreamLink](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/VideoSourceLiveStreamLink.md)
