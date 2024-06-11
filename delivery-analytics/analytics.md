@@ -91,17 +91,11 @@ Analytics v1's `/play` metric can be directly mapped to 3 new endpoints:
 - For the number of play events, use `/data/metrics/{metric}/{aggregation}` with the `play` metric and `count` aggregation.
     - Example: `/data/metrics/play/count`
 
-- For the number of play events in a breakdown by dimensions, use `/data/buckets/{metric}/{breakdown}` with the `play` metric and any of these dimensions:
-        - media-id
-        - media-type
-        - continent
-        - country
-        - device-type
-        - operating-system
-        - browser
+- For the number of play events in a breakdown by dimensions, use `/data/buckets/{metric}/{breakdown}` with the `play` metric and one of these dimensions:
+        - `media-id`, `media-type`, `continent`, `country`, `device-type`, `operating-system`, `browser`,
     - Example: `/data/buckets/play/country`
 
-- For the he number of play events over time, use `/data/timeseries/{metric}` with the `play` metric.
+- For the number of play events over time, use `/data/timeseries/{metric}` with the `play` metric.
     - Example: `/data/timeseries/play`
 
 ## What's next
