@@ -413,7 +413,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -656,7 +655,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -1076,7 +1074,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -1378,7 +1375,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -1695,7 +1691,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -1841,7 +1836,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -2051,7 +2045,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -2354,7 +2347,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -2655,7 +2647,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -2899,7 +2890,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -3206,7 +3196,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -3551,7 +3540,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -3813,7 +3801,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -4091,7 +4078,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -4347,7 +4333,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -4583,7 +4568,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -4865,7 +4849,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -5088,7 +5071,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -5425,7 +5407,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -5663,7 +5644,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -5913,7 +5893,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -6197,7 +6176,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -6551,7 +6529,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -6809,7 +6786,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -7115,7 +7091,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -7423,7 +7398,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -7720,7 +7694,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -8031,7 +8004,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -8321,7 +8293,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -8583,7 +8554,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -8868,7 +8838,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -9124,7 +9093,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -9385,7 +9353,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -9723,7 +9690,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -9985,7 +9951,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -10335,7 +10300,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -10572,7 +10536,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -10835,7 +10798,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -11185,7 +11147,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -11448,7 +11409,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -12307,14 +12267,9 @@ paths:
   '/analytics/videos/plays':
     get:
       deprecated: true
-      deprecated: true
       tags:
       - Analytics
       summary: Get play events for video
-      description: |
-        Retrieve filtered analytics about the number of plays for your videos in a project.
-
-        This endpoint will be deprecated with the release of Analytics v2.0.
       description: |
         Retrieve filtered analytics about the number of plays for your videos in a project.
 
@@ -12617,7 +12572,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -12838,14 +12792,9 @@ paths:
   '/analytics/live-streams/plays':
     get:
       deprecated: true
-      deprecated: true
       tags:
       - Analytics
       summary: Get play events for live stream
-      description: |
-        Retrieve filtered analytics about the number of plays for your live streams in a project.
-
-        This endpoint will be deprecated with the release of Analytics v2.0.
       description: |
         Retrieve filtered analytics about the number of plays for your live streams in a project.
 
@@ -13145,7 +13094,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
@@ -13455,7 +13403,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -13737,7 +13684,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -13983,7 +13929,6 @@ paths:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
                 Too many requests:
-                Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
                     title: Too many requests.
@@ -14221,7 +14166,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/too-many-requests'
               examples:
-                Too many requests:
                 Too many requests:
                   value:
                     type: 'https://docs.api.video/reference/too-many-requests'
