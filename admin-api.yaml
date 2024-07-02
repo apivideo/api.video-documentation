@@ -1,0 +1,444 @@
+openapi: 3.0.0
+info:
+  title: api.video Admin API
+  description: The Admin API is tool that enables you to directly manage your api.video projects and API keys through a secure API.
+  version: 1.0.0
+servers:
+  - url: https://admin.api.video
+paths:
+  /projects/count:
+    get:
+      tags:
+        - Projects
+      summary: Get project count
+      description: This endpoint enables you to retrieve the overall number of projects you have.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    description: The number of projects.
+                    type: integer
+                    example: 37
+      security:
+        - basicAuth: []
+  /projects:
+    get:
+      tags:
+        - Projects
+      summary: List projects
+      description: Retrieve a paginated list of projects.
+      parameters:
+        - in: query
+          name: page_size
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+          description: Number of records per page.
+        - in: query
+          name: page
+          schema:
+            type: integer
+            default: 1
+          description: Page number to retrieve.
+        - in: query
+          name: name
+          schema:
+            type: string
+          description: Filter for projects names that contain this value.
+        - in: query
+          name: sort_by
+          schema:
+            type: string
+            enum:
+              - created_at
+              - name
+          description: 'Select a property to sort by. Allowed values: `created_at`, `name`.'
+        - in: query
+          name: sort_order
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+          description: 'Select the order to sort by. Allowed values: `asc`, `desc`.'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Project'
+                  pagination:
+                      $ref: '#/components/schemas/Pagination'
+                  links:
+                      $ref: '#/components/schemas/Links'
+      security:
+        - basicAuth: []
+    post:
+      tags:
+        - Projects
+      summary: Create project
+      description: Create a new project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the Admin API key. Also visible in the dashboard. You may set any value that fits your organization purposes.
+                region:
+                  type: string
+                  description: The region where your data is hosted.
+                  enum:
+                    - us-east-1
+                    - eu-central-1
+              required:
+                - name
+                - region
+      responses:
+        '201':
+          description: Project created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+      security:
+        - basicAuth: []
+  /projects/{project_id}/api-keys/count:
+    get:
+      tags:
+        - API keys
+      summary: Count API keys
+      description: This endpoint enables you to retrieve the overall number of API keys for a specific project.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project you want to retrieve API keys for.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    description: The number of API keys.
+                    type: integer
+                    example: 16
+      security:
+        - basicAuth: []
+  /projects/{project_id}:
+    get:
+      tags:
+        - Projects
+      summary: Get project
+      description: Retrieve a specific project by its ID.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project you want to retrieve.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+      security:
+        - basicAuth: []
+    patch:
+      tags:
+        - Projects
+      summary: Update project
+      description: Update a specific project by ID.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project to update.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the project you want to update.
+                deletes_at:
+                  type: string
+                  enum:
+                    - next_cycle
+                  description: Schedule the project for deletion. The accepted value is `next_cycle`. The project will be deleted on the first day of the next billing cycle. The API sends the exact date-time of deletion in the response.
+              required:
+                - name
+      responses:
+        '200':
+          description: Project updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+      security:
+        - basicAuth: []
+  /projects/{project_id}/api-keys:
+    get:
+      tags:
+        - API keys
+      summary: List API keys
+      description: Retrieve a paginated list of API keys.
+      parameters:
+        - in: query
+          name: page_size
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+          description: Number of records per page.
+        - in: query
+          name: page
+          schema:
+            type: integer
+            default: 1
+          description: Page number to retrieve.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ApiKey'
+                  pagination:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                      page_size:
+                        type: integer
+                      total_pages:
+                        type: integer
+                  links:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        rel:
+                          type: string
+                        href:
+                          type: string
+      security:
+        - basicAuth: []
+    post:
+      tags:
+        - API keys
+      summary: Create API key
+      description: Create a new API key.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the Admin API key. Also visible in the dashboard. You may set any value that fits your organization purposes.
+              required:
+                - name
+      responses:
+        '201':
+          description: API key created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiKey'
+      security:
+        - basicAuth: []
+  /projects/{project_id}/api-keys/{api_key_id}:
+    get:
+      tags:
+        - API keys
+      summary: Get API key
+      description: Retrieve a specific API key by ID.
+      parameters:
+        - in: path
+          name: api_key_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the API key to retrieve.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiKey'
+      security:
+        - basicAuth: []
+    patch:
+      tags:
+        - API keys
+      summary: Update API key
+      description: This endpoint enables you to update the `name`` of a project that is tied to an API key.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project that the API key belongs to.
+        - in: path
+          name: api_key_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the API key to update.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the project you want to update.
+                  example: My project 2
+      responses:
+        '200':
+          description: API key updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiKey'
+      security:
+        - basicAuth: []
+    delete:
+      tags:
+        - API keys
+      summary: Delete API key
+      description: Delete a specific API key by ID.
+      parameters:
+        - in: path
+          name: api_key_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the API key to delete.
+      responses:
+        '204':
+          description: API key deleted successfully
+      security:
+        - basicAuth: []
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    Project:
+      type: object
+      properties:
+        project_id:
+          type: string
+          description: The unique ID of a project.
+        created_at:
+          type: string
+          format: date-time
+          description: 'The date when the project was created. This field uses the ATOM date-time format: `2024-02-05T00:00:00+01:00`'
+        name:
+          type: string
+          description: The name of the project. Also visible in the dashboard. You may set any value that fits your organization purposes.
+        deletes_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: 'The scheduled date for deletion. The value is generally the first day of the next month. This field uses the ATOM date-time format: `2024-02-05T00:00:00+01:00`'
+        region:
+          type: string
+          description: The region where your data is hosted.
+          enum:
+            - us-east-1
+            - eu-central-1
+        deleted:
+          type: boolean
+          description: When true, the project is currently being deleted. The project will disappear from your projects' list after deletion finishes. You should not use projects that return `true` for `deleted`.
+    ApiKey:
+      type: object
+      properties:
+        api_key_id:
+          type: string
+          description: The unique ID of an API key.
+        created_at:
+          type: string
+          format: date-time
+          description: 'The date when the API key was created. This field uses the ATOM date-time format: `2024-02-05T00:00:00+01:00`'
+        name:
+          type: string
+          description: The name of the API key. Also visible in the dashboard. You may set any value that fits your organization purposes.
+        key:
+          type: string
+          description: The actual value of the API key. Use this value to authenticate your requests to the API.
+    Pagination:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: Returns the number of the currently active page.
+        page_size:
+          type: integer
+          description: Returns the number of items per page.
+        item_count:
+          type: integer
+          description: Returns the total number of items.
+    Links:
+      type: array
+      items:
+        type: object
+        properties:
+          rel:
+            type: string
+            description: |
+              The relationship between the current page and the linked pages. Allowed values:
+              - `previous`: The link in `href` points to the previous page when the current page is more than 1.
+              - `self`: The link in `href` points to the current page.
+              - `next`: The link in `href` points to the next page when there are more pages available. You can use this link to retrieve the next page of items or create an infinite scroll.
+            enum:
+              - previous
+              - self
+              - next
+          href:
+            type: string
+            format: uri
+            description: The URL path of the linked page.
+            example: /projects?page_size=20&name=aaa&sort_by=name&sort_order=desc&page=2

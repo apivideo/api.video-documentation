@@ -39,6 +39,8 @@ styles:
 open_api:
   - spec_file: openapi.yaml
     uri_prefix: /reference/api
+  - spec_file: admin-api.yaml
+    uri_prefix: /reference/admin-api
 
 tabs:
   - label: Get started
