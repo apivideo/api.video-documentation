@@ -347,7 +347,7 @@ paths:
       tags:
         - API keys
       summary: Delete API key
-      description: Delete a specific API key by ID.
+      description: Delete a specific API key by ID. Note that deleting an API key is permanent - there is no way to retrieve an API key after you delete it.
       parameters:
         - in: path
           name: api_key_id
