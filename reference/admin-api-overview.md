@@ -19,7 +19,7 @@ Some examples where the Admin API can be especially useful:
 
 ## Endpoints
 
-The Admin API offers 2 sets of endpoints: [`/projects`](/reference/admin-api/Projects) and `/api-keys`. In general, the Projects endpoints enable you to programmatically list all your projects, get a specific project, and to create or update a project, while the API keys endpoints enable you to programmatically list all your API keys, get a specific API key, and to create, update, or delete an API key.  
+The Admin API offers 2 sets of endpoints: [`/projects`](/reference/admin-api/Projects) and [`/api-keys`](/reference/admin-api/API-keys). In general, the Projects endpoints enable you to programmatically list all your projects, get a specific project, and to create or update a project, while the API keys endpoints enable you to programmatically list all your API keys, get a specific API key, and to create, update, or delete an API key.  
 
 ## Server URL
 
