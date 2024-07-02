@@ -7,7 +7,7 @@ breadcrumbs: false
 
 # Admin API
 
-The Admin API is tool that enables you to directly manage your api.video projects and API keys through a secure API. 
+The Admin API is a tool that enables you to directly manage your api.video projects and API keys through a secure API. 
 
 The Admin API is a robust solution with a simple goal: to make it easy for you to manage your projects and thus your users, and their access to your platform on a programmatic level.
 
