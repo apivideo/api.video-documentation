@@ -126,14 +126,14 @@ paths:
       tags:
         - API keys
       summary: Count API keys
-      description: This endpoint enables you to retrieve the overall number of API keys for a specific project.
+      description: This endpoint enables you to count the overall number of API keys for a specific project.
       parameters:
         - in: path
           name: project_id
           required: true
           schema:
             type: string
-          description: The ID of the project you want to retrieve API keys for.
+          description: The ID of the project you want to count API keys for.
       responses:
         '200':
           description: Successful response
@@ -184,7 +184,7 @@ paths:
           required: true
           schema:
             type: string
-          description: The ID of the project to update.
+          description: The ID of the project you want to update.
       requestBody:
         required: true
         content:
@@ -194,7 +194,7 @@ paths:
               properties:
                 name:
                   type: string
-                  description: The name of the project you want to update.
+                  description: The project name that you want to update.
                 deletes_at:
                   type: string
                   enum:
@@ -247,23 +247,9 @@ paths:
                     items:
                       $ref: '#/components/schemas/ApiKey'
                   pagination:
-                    type: object
-                    properties:
-                      page:
-                        type: integer
-                      page_size:
-                        type: integer
-                      total_pages:
-                        type: integer
+                      $ref: '#/components/schemas/Pagination'
                   links:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        rel:
-                          type: string
-                        href:
-                          type: string
+                      $ref: '#/components/schemas/Links'
       security:
         - basicAuth: []
     post:
@@ -366,7 +352,7 @@ paths:
           required: true
           schema:
             type: string
-          description: The ID of the API key to delete.
+          description: The ID of the API key you want to delete.
       responses:
         '204':
           description: API key deleted successfully
