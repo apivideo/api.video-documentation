@@ -31,7 +31,10 @@ paths:
       tags:
         - Projects
       summary: List projects
-      description: Retrieve a paginated list of projects.
+      description: |
+        This endpoint enables you to retrieve a paginated list of every project you have. You can filter the list by project name, and sort by name, creation date, and ascending or descending order.
+
+        Note that the API response only contains one page of results. To navigate to another page, use the `previous` or `next` path queries provided in the respone's `links` object.
       parameters:
         - in: query
           name: page_size
@@ -89,7 +92,7 @@ paths:
       tags:
         - Projects
       summary: Create project
-      description: Create a new project.
+      description: This endpoint enables you to create a new project and select the hosting region for it.
       requestBody:
         required: true
         content:
@@ -150,7 +153,7 @@ paths:
       tags:
         - Projects
       summary: Get project
-      description: Retrieve a specific project by its ID.
+      description: This endpoint enables you to retrieve a specific project based on its `project_id`.
       parameters:
         - in: path
           name: project_id
@@ -171,7 +174,10 @@ paths:
       tags:
         - Projects
       summary: Update project
-      description: Update a specific project by ID.
+      description: |
+        This endpoint enables you to update a specific project based on its `project_id`.
+
+        You can update the project name and schedule the project for deletion. When you schedule a project for deletion, the project will be deleted on the first day of the next billing cycle. The API sends the exact date-time of deletion in the response.
       parameters:
         - in: path
           name: project_id
@@ -210,7 +216,10 @@ paths:
       tags:
         - API keys
       summary: List API keys
-      description: Retrieve a paginated list of API keys.
+      description: |
+        This endpoint enables you to list all API keys in a project.
+
+        Note that the API response only contains one page of results. To navigate to another page, use the `previous` or `next` path queries provided in the respone's `links` object.
       parameters:
         - in: query
           name: page_size
@@ -261,7 +270,7 @@ paths:
       tags:
         - API keys
       summary: Create API key
-      description: Create a new API key.
+      description: This endpoint enables you to create a new API key in a specific project.
       requestBody:
         required: true
         content:
@@ -288,7 +297,7 @@ paths:
       tags:
         - API keys
       summary: Get API key
-      description: Retrieve a specific API key by ID.
+      description: This endpoint enables you to retrieve a specific API key from a project.
       parameters:
         - in: path
           name: api_key_id
@@ -309,7 +318,7 @@ paths:
       tags:
         - API keys
       summary: Update API key
-      description: This endpoint enables you to update the `name`` of a project that is tied to an API key.
+      description: This endpoint enables you to update the `name` of a project that is tied to an API key.
       parameters:
         - in: path
           name: project_id
@@ -347,7 +356,10 @@ paths:
       tags:
         - API keys
       summary: Delete API key
-      description: Delete a specific API key by ID. Note that deleting an API key is permanent - there is no way to retrieve an API key after you delete it.
+      description: |
+        This endpoint enables you to delete an API key from a specific project.
+        
+        Note that deleting an API key is permanent - there is no way to retrieve an API key after you delete it.
       parameters:
         - in: path
           name: api_key_id
@@ -372,6 +384,7 @@ components:
         project_id:
           type: string
           description: The unique ID of a project.
+          example: project_1CCq9NurjJBRehCVCe8XQY
         created_at:
           type: string
           format: date-time
@@ -379,6 +392,7 @@ components:
         name:
           type: string
           description: The name of the project. Also visible in the dashboard. You may set any value that fits your organization purposes.
+          example: My project
         deletes_at:
           type: string
           format: date-time
@@ -399,6 +413,7 @@ components:
         api_key_id:
           type: string
           description: The unique ID of an API key.
+          example: api_key_1CCq9NwWhBxwjAgHzpuZx4
         created_at:
           type: string
           format: date-time
@@ -406,9 +421,11 @@ components:
         name:
           type: string
           description: The name of the API key. Also visible in the dashboard. You may set any value that fits your organization purposes.
+          example: Development key
         key:
           type: string
           description: The actual value of the API key. Use this value to authenticate your requests to the API.
+          example: 19Kc5nhC7...ADWwAbTuUer
     Pagination:
       type: object
       properties:
