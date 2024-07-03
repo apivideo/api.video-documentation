@@ -407,3 +407,11 @@ redirects:
     to: /delivery-analytics/analytics
   - from: /reference/get_analytics-live-streams-livestreamid
     to: /delivery-analytics/analytics
+  - from: /reference/an-attribute-is-invalid
+    to: /reference/invalid-attribute
+  - from: /reference/bad-request
+    to: /reference/invalid-payload
+  - from: /reference/unauthorized
+    to: /reference/errors
+  - from: /reference/internal-server-error
+    to: /reference/general-errors
