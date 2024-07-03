@@ -8,6 +8,15 @@
     - label: Webhooks
       href: ./create-and-manage-webhooks.md
 
+- heading: Admin API
+  items:
+    - label: Overview
+      href: ././admin-api-overview.md
+    - open_api_spec: admin-api.yaml
+      only:
+        - Projects
+        - API keys
+
 - heading: Authentication
   items:
     - label: Overview
