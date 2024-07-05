@@ -23,8 +23,8 @@ Visit the **[Analytics](https://dashboard.api.video/data)** page on the Dashboar
 Analytics v2.0 uses player events to analyze and segment your viewers' interactions with your content. Here are some key acpects that can help you ensure that your Analytics v2.0 implementation runs smoothly:
 
 - Player events are generated when your viewers engage with a video or live stream session.
-- Data is refreshed every 15 minutes.
-- api.video retains analytics data for 365 days, with the caveat that event data collection starts only after `2024-04-01`.
+- Data is refreshed in real time, with a frequency of `<5s`.
+- api.video retains analytics data for 30 days.
 - Data does not carry over from the previous version of Analytics.
 - Video re-plays using the dedicated re-play button in the player do not generate player events.
 - If a user is viewing your content via a browser, refreshes the tab, and plays the content again, a new event is generated.
@@ -71,7 +71,7 @@ You can test the Analytics v2.0 endpoints **in api.video's sandbox environment**
 
 ## Migrating from the Analytics v1 API
 
-Migrating to the Analytics v2.0 API is simple. Analytics v1 only provides 2 endpoints, which return play event count for videos and live streams. In Analytics v2.0, endpoints are no longer separated for VOD and live streams.
+Migrating to the Analytics v2.0 API is simple. Analytics v1 only provided 2 endpoints, which returned play event count for videos and live streams. In Analytics v2.0, endpoints are no longer separated for videos and live streams.
 
 ### Endpoint mapping
 

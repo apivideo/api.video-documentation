@@ -11618,7 +11618,7 @@ paths:
           Use this query parameter to define the starting date-time of the period you want analytics for.
 
           - If you do not set a value for `from`, the default assigned value is 1 day ago, based on the `to` parameter.
-          - The maximum value is 365 days ago, and April 1st 2024.
+          - The maximum value is 30 days ago.
           - The value you provide should follow the ATOM date-time format: `2024-02-05T00:00:00+01:00`
           - The API ignores this parameter when you call `/data/metrics/play/total`.
         style: form
@@ -11849,7 +11849,7 @@ paths:
           Use this query parameter to define the starting date-time of the period you want analytics for.
 
           - If you do not set a value for `from`, the default assigned value is 1 day ago, based on the `to` parameter.
-          - The maximum value is 365 days ago, and April 1st 2024.
+          - The maximum value is 30 days ago.
           - The value you provide should follow the ATOM date-time format: `2024-02-05T00:00:00+01:00`
         style: form
         explode: false
@@ -12065,7 +12065,7 @@ paths:
           Use this query parameter to define the starting date-time of the period you want analytics for.
 
           - If you do not set a value for `from`, the default assigned value is 1 day ago, based on the `to` parameter.
-          - The maximum value is 365 days ago, and April 1st 2024.
+          - The maximum value is 30 days ago.
           - The value you provide should follow the ATOM date-time format: `2024-02-05T00:00:00+01:00`
         style: form
         explode: false
