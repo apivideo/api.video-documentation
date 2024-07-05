@@ -6,16 +6,6 @@ meta:
     description: Cloud-based video hosting and live streaming platform with analytics. Mobile and web SDKs for VOD, live streaming, and player for NodeJS, Javascript, Typescript, Python, Go, PHP, C#, iOS Swift, Android Kotlin.
 ---
 
-<Callout pad="2" type="success">
-**Welcome to the Analytics v2.0 beta!**
-
-This documentation is a password-protected version of api.video's developer docs. It is an exact copy of our default documentation, with additional information about the Analytics v2.0 beta. 
-
-Make sure that you **only refer to this version of the documentation when reading about Analytics v2.0 beta**, and that you switch to the default documentation when you need information about any other products or features.
-
-To get started, check out the [Analytics v2.0 guide](/delivery-analytics/analytics), or jump into the [API reference](/reference/api/Analytics-v2-beta) to learn about the new Analytics endpoints!
-</Callout>
-
 <div class="section-header no-toc">
 
 ### New to api.video?
