@@ -182,7 +182,7 @@ redirects:
   - from: /docs/zapier
     to: /sdks/nocode/zapier
   - from: /reference/analytics
-    to: /reference/api/Analytics
+    to: /reference/api/Analytics-v2
   - from: /reference/apivideo-api-reference
     to: /reference
   - from: /reference/authentication
@@ -198,9 +198,9 @@ redirects:
   - from: /reference/delete-webhook
     to: /reference/api/Webhooks#delete-a-webhook
   - from: /reference/get_analytics-live-streams-plays
-    to: /reference/api/Analytics#get-play-events-for-live-stream
+    to: /reference/api/Analytics-v2
   - from: /reference/get_analytics-videos-plays
-    to: /reference/api/Analytics#get-play-events-for-video
+    to: /reference/api/Analytics-v2
   - from: /reference/get_live-streams
     to: /reference/api/Live-Streams#list-all-live-streams
   - from: /reference/get_live-streams-livestreamid
@@ -358,7 +358,7 @@ redirects:
   - from: /recipes/consume-private-videos-with-videojs
     to: /
   - from: /reference/analytics-1
-    to: /reference/api/Analytics
+    to: /reference/api/Analytics-v2
   - from: /reference/delete_live-streams-livestreamid
     to: /reference/api/Live-Streams#delete-a-live-stream
   - from: /reference/delete_live-streams-livestreamid-thumbnail

@@ -14,7 +14,7 @@ meta:
 
 </div>
 
-Welcome to the developer documentation of api.video! Our platform empowers developers and businesses to seamlessly integrate video functionality into their applications and services. Whether you're looking to offer video on demand, live streaming, or leverage our player and analytics features, the api.video API is designed to simplify the process. 
+Welcome to the developer documentation of api.video! Our platform empowers developers and businesses to seamlessly integrate video functionality into their applications and services. Whether you're looking to offer video on demand, live streaming, or leverage our player and analytics features, the api.video API is designed to simplify the process.
 
 Check out the products!
 
