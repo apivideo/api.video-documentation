@@ -11563,7 +11563,7 @@ paths:
   '/data/metrics/{metric}/{aggregation}':
     get:
       tags:
-      - Analytics v2
+      - Analytics
       summary: Retrieve aggregated metrics
       description: Retrieve time-based and countable metrics like average watch time or the number of impressions over a certain period of time.
       operationId: GET_aggregated-metrics
@@ -11790,7 +11790,7 @@ paths:
   '/data/buckets/{metric}/{breakdown}':
     get:
       tags:
-      - Analytics v2
+      - Analytics
       summary: Retrieve metrics in a breakdown of dimensions
       description: Retrieve detailed analytics play-rate and number of impressions segmented by dimensions like country or device type.
       operationId: GET_metrics-breakdown
@@ -12033,7 +12033,7 @@ paths:
   '/data/timeseries/{metric}':
     get:
       tags:
-      - Analytics v2
+      - Analytics
       summary: Retrieve metrics over time
       description: Retrieve countable metrics like the number of plays or impressions, grouped by the time at which they occurred
       operationId: GET_metrics-over-time
@@ -14545,7 +14545,7 @@ components:
           description: The name of the parameter that caused the error.
           type: string
     analytics-aggregated-metrics-response:
-      title: Analytics v2.0 response for aggregated metrics
+      title: Analytics response for aggregated metrics
       type: object
       properties:
         context:
@@ -14594,7 +14594,7 @@ components:
       - context
       - data
     analytics-metrics-breakdown-response:
-      title: Analytics v2.0 response for metrics breakdown by dimension
+      title: Analytics response for metrics breakdown by dimension
       type: object
       properties:
         context:
@@ -14656,7 +14656,7 @@ components:
       - data
       - pagination
     analytics-metrics-over-time-response:
-      title: Analytics v2.0 response for metrics over time
+      title: Analytics response for metrics over time
       type: object
       properties:
         context:

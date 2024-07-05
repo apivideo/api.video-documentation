@@ -55,7 +55,7 @@
   items:
     - open_api_spec: openapi.yaml
       only:
-        - Analytics v2
+        - Analytics
 
 - heading: Webhooks
   items:
