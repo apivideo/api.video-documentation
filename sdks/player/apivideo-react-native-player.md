@@ -107,8 +107,6 @@ setVolume(volume: number): void;
 ```
 
 ### Using methods
-
-
 ```jsx
 import React, { Component } from 'react';
 import ApiVideoPlayer from '@api.video/react-native-player';
@@ -132,8 +130,6 @@ export default class App extends Component {
   }
 }
 ```
-
-
 
 
 ## FAQ
