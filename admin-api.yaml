@@ -12,6 +12,12 @@ paths:
         - Projects
       summary: Get project count
       description: This endpoint enables you to retrieve the overall number of projects you have.
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+          description: Filter for projects names that contain this value. The API can return partial matches.
       responses:
         '200':
           description: Successful response
@@ -134,6 +140,16 @@ paths:
           schema:
             type: string
           description: The ID of the project you want to count API keys for.
+        - in: query
+          name: name
+          schema:
+            type: string
+          description: Filter for API key names that contain this value. The API can return partial matches.
+        - in: query
+          name: value
+          schema:
+            type: string
+          description: Filter for the value of a specific API key.
       responses:
         '200':
           description: Successful response
@@ -225,6 +241,7 @@ paths:
           name: page_size
           schema:
             type: integer
+            minimum: 1
             default: 20
             maximum: 100
           description: Number of records per page.
@@ -234,6 +251,33 @@ paths:
             type: integer
             default: 1
           description: Page number to retrieve.
+        - in: query
+          name: name
+          schema:
+            type: string
+          description: Filter for API key names that contain this value. The API can return partial matches.
+        - in: query
+          name: value
+          schema:
+            type: string
+          description: Filter for the value of a specific API key.
+        - in: query
+          name: sort_by
+          schema:
+            type: string
+            enum:
+              - created_at
+              - name
+              - value
+          description: 'Select a property to sort by. Allowed values: `created_at`, `name`, `value`.'
+        - in: query
+          name: sort_order
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+          description: 'Select the order to sort by. Allowed values: `asc`, `desc`.'
       responses:
         '200':
           description: Successful response
@@ -285,6 +329,12 @@ paths:
       summary: Get API key
       description: This endpoint enables you to retrieve a specific API key from a project.
       parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project that the API key belongs to.
         - in: path
           name: api_key_id
           required: true
@@ -348,6 +398,12 @@ paths:
         Note that deleting an API key is permanent - there is no way to retrieve an API key after you delete it.
       parameters:
         - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project that the API key belongs to.
+        - in: path
           name: api_key_id
           required: true
           schema:
@@ -396,6 +452,10 @@ components:
     ApiKey:
       type: object
       properties:
+        project_id:
+          type: string
+          description: The unique ID of the project that the API key belongs to.
+          example: project_1CCq9NurjJBRehCVCe8XQY
         api_key_id:
           type: string
           description: The unique ID of an API key.
@@ -408,7 +468,7 @@ components:
           type: string
           description: The name of the API key. Also visible in the dashboard. You may set any value that fits your organization purposes.
           example: Development key
-        key:
+        value:
           type: string
           description: The actual value of the API key. Use this value to authenticate your requests to the API.
           example: 19Kc5nhC7...ADWwAbTuUer
