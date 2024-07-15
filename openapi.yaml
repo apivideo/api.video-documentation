@@ -11802,6 +11802,7 @@ paths:
 
           - `play` is the number of times your content has been played.
           - `play-rate` is the ratio that calculates the number of plays your content receives divided by its impressions.
+          - `play-total` is the total number of times a specific content has been played. You can only use the `media-id` breakdown with this metric.
           - `start` is the number of times playback was started.
           - `end` is the number of times playback has ended with the content watch until the end.
           - `impression` is the number of times your content has been loaded and was ready for playback.
@@ -11813,6 +11814,7 @@ paths:
           enum: 
             - play
             - play-rate
+            - play-total
             - start
             - end
             - impression
