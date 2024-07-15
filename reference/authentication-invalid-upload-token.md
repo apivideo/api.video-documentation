@@ -10,8 +10,6 @@ The upload token you use does not exist at all or has expired.
 
 ## Solution
 
-tauri://localhost#generate-an-upload-token
-
 You create upload tokens with the [delegated upload](/reference/api/Upload-Tokens#generate-an-upload-token) endpoint. If you don't specify how long they last, they last until you delete them. If you are having a problem with your token, you may have the token represented incorrectly or you may have created a token that expired. To fetch a new one, you'll need an authentication token, or a refresh token which you can use to retrieve a new authentication token.
 
 ## Learning resources
