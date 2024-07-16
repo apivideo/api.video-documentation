@@ -13,7 +13,7 @@ Creating a live stream is simple with api.video. After you create it, you have a
 This guide helps you follow along with the video and learn how to set up your live stream with api.video, and then use OBS to broadcast.
 
 <Callout pad="2" type="info">
-api.video supports both `RTMP` and `SRT` protocols for live streaming.
+api.video supports `RTMPS`, `RTMP`, and `SRT` protocols for live streaming.
 </Callout>
 
 ## API reference
@@ -191,9 +191,11 @@ In this example, we will use [OBS Studio](https://obsproject.com), which is an o
 
 1. Open OBS and go to File and then Settings. In the Settings menu, go to **Stream**.
 
-2. Next, you have to set up the streaming service provider. With api.video, you have the option to choose between `RTMP` and `SRT` protocols for live streaming.
+2. Next, you have to set up the streaming service provider. With api.video, you have the option to choose between `RTMP`, `RTMPS`, and `SRT` protocols for live streaming.
 
    - For `RTMP`, open the dropdown menu for Service, and select **Show all**. In the resulting list, find api.video. This will set up streaming through api.video's default `RTMP` server: `rtmp://broadcast.api.video/s`. You can find the **Stream key** in the API response you received when you created the live stream container.
+
+   - For `RTMPS`, open the dropdown menu for Service, and select **Custom**. Use this server URL: `rtmps://broadcast.api.video:1936/s`. You can find the **Stream key** in the API response you received when you created the live stream container.
    
    - For `SRT`, open the dropdown menu for Service, and select **Custom**. Use this server URL: `srt://broadcast.api.video:6200?streamid={stream_key}` and replace `{stream_key}` with the **Stream key** in the API response that you received when you created the live stream container.
    

@@ -14,7 +14,7 @@ Please note that Restreaming is currently a beta feature. The api.video engineer
 If you are experiencing an issue, please do not hesitate to contact our support team.
 </Callout>
 
-api.video gives you the ability to broadcast a live stream to multiple platforms simultaneously. You'll be able to stream to Youtube, Twitch, and any other platform that supports [RTMP](https://api.video/blog/video-trends/what-is-rtmp-and-why-do-we-use-it-for-live-streaming/) from one source.
+api.video enables you to broadcast a live stream to multiple platforms simultaneously. You can stream to Youtube, Twitch, and any other platform that supports streaming through `RTMPS` or `RTMP` protocols from one source.
 
 ## How it works
 
@@ -43,14 +43,14 @@ The Live stream endpoint has an optional field called `restreams` which is an ar
 | Field       | Type     | Details                                                                                           |
 | :---------- | :------- | :------------------------------------------------------------------------------------------------ |
 | `name`      | `string` | Arbitrary value for the name of the provider streaming provider. For example: `Youtube`, `Twitch` |
-| `serverUrl` | `string` | The RTMP url of the streaming server.                                                             |
+| `serverUrl` | `string` | The URL of the streaming server. The API accepts server URLs using `RTMPS` and `RTMP` protocols. |
 | `streamKey` | `string` | Stream key provided by the streaming provider.                                                    |
 
 <Callout pad="2" type="warning">
 Please note that:
 
 - Currently api.video supports up to 5 restreams
-- At this time, it's only possible to restream to RTMP
+- You can stream to `RTMPS` and `RTMP` destinations
 - The names of the providers are arbitrary, you can provide any name you like
 - When updating the restreams object, it's important to make sure that you are passing the previous values if you would like to keep them
 - Modifying the restreams array while the live stream is already broadcasting will only take only effect after the stream has been restarted
@@ -58,14 +58,16 @@ Please note that:
 
 ## Supported Platforms
 
-api.video currently supports RTMP restreaming destinations. Providers that you can restream to include, and are not limited to:
+api.video currently supports `RTMPS` and `RTMP` restreaming destinations. Providers that you can restream to include, and are not limited to:
 
-- YouTube
+- Youtube
+- Facebook
+- Instagram
 - Twitch
 - LinkedIn
 - Instagram (through [YellowDuck](https://yellowduck.tv/))
 
-Providers that use RTMPS, SRT or any other protocol (like Kick or Telegram) are currently not supported.
+Providers that use SRT or any other protocol (like Kick or Telegram) are currently not supported.
 
 ## Getting Started
 
