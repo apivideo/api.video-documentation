@@ -14,8 +14,6 @@ This guide helps you follow along with the video and learn how to set up your li
 
 <Callout pad="2" type="info">
 api.video supports both `RTMP` and `SRT` protocols for live streaming.
-
-Accepting live streams through `SRT` **is currently in beta** - reach out if you have any questions or encounter any issues!
 </Callout>
 
 ## API reference
