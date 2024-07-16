@@ -1,5 +1,5 @@
 ---
-title: "Delivery & analytics overview"
+title: "Delivery overview"
 toc: false
 breadcrumbs: false
 meta:
@@ -20,20 +20,12 @@ meta:
 
 <Grid cols="2" gap="3">
 <Card pad="3">
-    ![Delivery & analytics quickstart](/_assets/icons/player-customization.svg)
+    ![Delivery quickstart](/_assets/icons/player-customization.svg)
 
-    **Delivery & analytics quickstart**\
+    **Delivery quickstart**\
     Learn how to make the most of your content delivery through branding, customization, and gathering analytics.
 
     [Learn more ›](/delivery-analytics/delivery-analytics-quickstart)
-</Card>
-<Card pad="3">
-    ![Analytics & data](/_assets/icons/analytics.svg)
-
-    **Analytics & data**\
-    Start collecting delivery event data about your videos and live streams.
-
-    [Learn more ›](/delivery-analytics/analytics)
 </Card>
 <Card pad="3">
     ![Using custom domains](/_assets/icons/custom-domains.svg)
@@ -74,13 +66,5 @@ meta:
     Check out api.video's dedicated video player libraries and SDKs.
 
     [Learn more ›](/sdks/player#player-sdks)
-</Card>
-<Card pad="3">
-    ![Analytics SDKs](/_assets/icons/analytics.svg)
-
-    **Analytics SDKs**\
-    Check out api.video's dedicated libraries and SDKs for delivery analytics.
-
-    [Learn more ›](/sdks/player#player-analytics-sdks)
 </Card>
 </Grid>

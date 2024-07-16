@@ -18,7 +18,7 @@ Welcome to the developer documentation of api.video! Our platform empowers devel
 
 Check out the products!
 
-<Grid cols="3" gap="3">
+<Grid cols="2" gap="3">
     <Component.LandingPageCard heading="Video" subheading="on demand">
         <Flex dir="column" pad="0" justify="between" gap="2">
             api.video's hosting service enables you to upload and store videos, and then deliver and share them easily across various devices and platforms.
@@ -33,12 +33,18 @@ Check out the products!
            <Button href="/live-streaming">Learn More</Button>
         </Flex>
     </Component.LandingPageCard>
-    <Component.LandingPageCard heading="Delivery" subheading="& analytics">
+    <Component.LandingPageCard heading="Delivery" subheading="& players">
         <Flex dir="column" pad="0" justify="between" gap="2">
             api.video lets you customize a large part of the delivery, whether it's the player's branding or adding captions, chapters, and watermarks.
-
            
-           <Button href="/delivery-analytics">Learn More</Button>
+           <Button href="/delivery">Learn More</Button>
+        </Flex>
+    </Component.LandingPageCard>
+    <Component.LandingPageCard heading="Analytics" subheading="& data">
+        <Flex dir="column" pad="0" justify="between" gap="2">
+            api.video provides video and live stream analytics to track viewer engagement, offering real time data on views, watch time, demographics, and drop-off points.
+           
+           <Button href="/analytics">Learn More</Button>
         </Flex>
     </Component.LandingPageCard>
 </Grid>

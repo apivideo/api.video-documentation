@@ -1,0 +1,42 @@
+---
+- heading: Get started
+  items:
+  - label: How does video delivery work? 
+    href: /delivery/README.md
+  - label: Delivery quickstart
+    href: /delivery/delivery-quickstart.md
+- heading: Features
+  items:
+  - label: Using custom domains for delivery
+    href: /delivery/using-custom-domains.md
+  - label: Domain referrer restrictions
+    href: /delivery/domain-referrer.md
+  - label: In-stream ads
+    href: /delivery/ads.md
+  - label: Private videos
+    href: /delivery/video-privacy-access-management.md
+    collapsed: true
+    items:
+    - label: Get started with private videos
+      href: /delivery/private-video-get-started.md
+    - label: Delivery with api.video players
+      href: /delivery/private-video-delivery-web-browser.md
+    - label: Delivery with hls or external players
+      href: /delivery/private-video-on-hls-or-external-players.md
+    - label: Delivery with mp4 built in players
+      href: /delivery/private-video-delivery-with-mp4-built-in-players.md
+    - label: Custom players session retention
+      href: /delivery/private-videos-with-custom-players-session-retention.md
+    - label: Private video session tokens
+      href: /delivery/private-video-session-tokens.md
+
+- heading: Players
+  items:
+  - label: Player SDKs
+    href: /sdks/player/README.md#player-sdks
+  - label: api.video Player features
+    href: /delivery/video-playback-features.md
+  - label: Player customization
+    href: /delivery/player-customization.md
+  - label: No-code solutions
+    href: /sdks/nocode/README.md
