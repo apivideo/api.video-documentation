@@ -77,6 +77,8 @@
           href: ./authentication-invalid-upload-token.md
         - label: Invalid Refresh Token
           href: ./authentication-invalid-refresh-token.md
+        - label: Invalid User Credentials
+          href: ./authentication-invalid-user-credentials.md
         - label: Invalid Authorization Header Value
           href: ./authentication-invalid-authorization-header-value.md
         - label: Missing Authorization Header
@@ -91,10 +93,14 @@
       items:
         - label: Invalid Attribute
           href: ./invalid-attribute.md
+        - label: Attribute Required
+          href: ./attribute-required.md
         - label: Invalid Query Parameter
           href: ./invalid-query-parameter.md
         - label: Invalid Payload
           href: ./invalid-payload.md
+        - label: Invalid File Extension
+          href: ./uploaded-file-extension-invalid.md
         - label: Method Not Allowed
           href: ./method-not-allowed.md
         - label: Resource Not Found
