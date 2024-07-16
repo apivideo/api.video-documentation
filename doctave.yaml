@@ -443,3 +443,15 @@ redirects:
     to: /delivery/video-playback-features
   - from: /delivery-analytics/video-privacy-access-management
     to: /delivery/video-privacy-access-management
+  - from: /docs/authenticationinvalid_credentials
+    to: /reference/authentication-invalid-user-credentials
+  - from: /docs/attributerequired
+    to: /reference/attribute-required
+  - from: /docs/filealreadyuploaded
+    to: /reference/video-source-already-uploaded
+  - from: /docs/filemissing
+    to: /reference/uploaded-file-no-file
+  - from: /docs/multiplefilesuploaded
+    to: /reference/uploaded-file-multiple-files
+  - from: /docs/fileextension
+    to: /reference/uploaded-file-extension-invalid

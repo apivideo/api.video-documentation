@@ -50,7 +50,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/authenticationinvalid_credentials'
+                    type: 'https://docs.api.video/reference/authentication-invalid-user-credentials'
                     title: The user credentials were incorrect.
                     name: ''
                     status: 400
@@ -126,7 +126,7 @@ paths:
                 response:
                   value:
                     status: 400
-                    type: 'https://docs.api.video/docs/authenticationinvalid_credentials'
+                    type: 'https://docs.api.video/reference/authentication-invalid-user-credentials'
                     title: The user credentials were incorrect.
                     name: ''
       x-client-action: refresh
@@ -618,21 +618,21 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/attributerequired'
+                    type: 'https://docs.api.video/reference/attribute-required'
                     title: This attribute is required.
                     name: title
                     status: 400
                     problems:
-                      - type: 'https://docs.api.video/docs/attributerequired'
+                      - type: 'https://docs.api.video/reference/attribute-required'
                         title: This attribute is required.
                         name: title
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be a ISO8601 date.
                         name: scheduledAt
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: tags
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: metadata
         '429':
@@ -1010,21 +1010,21 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/filealreadyuploaded'
+                    type: 'https://docs.api.video/reference/video-source-already-uploaded'
                     title: The source of the video is already uploaded.
                     name: file
                     status: 400
                     problems:
-                      - type: 'https://docs.api.video/docs/filealreadyuploaded'
+                      - type: 'https://docs.api.video/reference/video-source-already-uploaded'
                         title: The source of the video is already uploaded.
                         name: file
-                      - type: 'https://docs.api.video/docs/filealreadyuploaded'
+                      - type: 'https://docs.api.video/reference/video-source-already-uploaded'
                         title: The video xxxx has already been uploaded.
                         name: video
-                      - type: 'https://docs.api.video/docs/filemissing'
+                      - type: 'https://docs.api.video/reference/uploaded-file-no-file'
                         title: There is no uploaded file in the request.
                         name: file
-                      - type: 'https://docs.api.video/docs/multiplefilesuploaded'
+                      - type: 'https://docs.api.video/reference/uploaded-file-multiple-files'
                         title: There is more than one uploaded file in the request.
                         name: file
         '404':
@@ -1049,7 +1049,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -1352,7 +1352,7 @@ paths:
                 response:
                   value:
                     status: 400
-                    type: 'https://docs.api.video/docs/fileextension'
+                    type: 'https://docs.api.video/reference/uploaded-file-extension-invalid'
                     title: 'Only [jpeg, jpg, JPG, JPEG, png, PNG] extensions are supported.'
                     name: file
         '429':
@@ -1812,7 +1812,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: watermarkId
                     status: 404
@@ -1996,7 +1996,7 @@ paths:
                 response:
                   value:
                     status: 400
-                    type: 'https://docs.api.video/docs/fileextension'
+                    type: 'https://docs.api.video/reference/uploaded-file-extension-invalid'
                     title: 'Only [jpeg, jpg, JPG, JPEG] extensions are supported.'
                     name: file
         '404':
@@ -2021,7 +2021,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -2322,7 +2322,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -2622,7 +2622,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -2866,7 +2866,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -3136,18 +3136,18 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/attributeinvalid'
+                    type: 'https://docs.api.video/reference/invalid-attribute'
                     title: This attribute must be a ISO-8601 date.
                     name: scheduledAt
                     status: 400
                     problems:
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be a ISO-8601 date.
                         name: scheduledAt
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: tags
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: metadata
         '404':
@@ -3172,7 +3172,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -3515,7 +3515,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: videoId
                     status: 404
@@ -6479,7 +6479,7 @@ paths:
                 response:
                   value:
                     status: 400
-                    type: 'https://docs.api.video/docs/fileextension'
+                    type: 'https://docs.api.video/reference/uploaded-file-extension-invalid'
                     title: 'Only [jpeg, jpg, JPG, JPEG] extensions are supported.'
                     name: file
         '404':
@@ -6504,7 +6504,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: liveStreamId
                     status: 404
@@ -6762,7 +6762,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: liveStreamId
                     status: 404
@@ -10275,7 +10275,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: playerId
                     status: 404
@@ -10512,7 +10512,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: playerId
                     status: 404
@@ -10774,7 +10774,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: playerId
                     status: 404
@@ -11097,7 +11097,7 @@ paths:
                 response:
                   value:
                     status: 400
-                    type: 'https://docs.api.video/docs/fileextension'
+                    type: 'https://docs.api.video/reference/uploaded-file-extension-invalid'
                     title: 'Only [''jpg'', ''JPG'', ''jpeg'', ''JPEG'', ''png'', ''PNG''] extensions are supported.'
                     name: file
         '404':
@@ -11122,7 +11122,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: playerId
                     status: 404
@@ -11385,7 +11385,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: playerId
                     status: 404
@@ -11802,6 +11802,7 @@ paths:
 
           - `play` is the number of times your content has been played.
           - `play-rate` is the ratio that calculates the number of plays your content receives divided by its impressions.
+          - `play-total` is the total number of times a specific content has been played. You can only use the `media-id` breakdown with this metric.
           - `start` is the number of times playback was started.
           - `end` is the number of times playback has ended with the content watch until the end.
           - `impression` is the number of times your content has been loaded and was ready for playback.
@@ -11813,6 +11814,7 @@ paths:
           enum: 
             - play
             - play-rate
+            - play-total
             - start
             - end
             - impression
@@ -12601,18 +12603,18 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/attributerequired'
+                    type: 'https://docs.api.video/reference/attribute-required'
                     events: This attribute is required.
                     name: events
                     status: 400
                     problems:
-                      - type: 'https://docs.api.video/docs/attributerequired'
+                      - type: 'https://docs.api.video/reference/attribute-required'
                         title: This attribute is required.
                         name: events
-                      - type: 'https://docs.api.video/docs/attributerequired'
+                      - type: 'https://docs.api.video/reference/attribute-required'
                         title: This attribute is required.
                         name: url
-                      - type: 'https://docs.api.video/docs/attributeinvalid'
+                      - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: events
         '429':
@@ -13094,7 +13096,7 @@ paths:
               examples:
                 response:
                   value:
-                    type: 'https://docs.api.video/docs/resourcenot_found'
+                    type: 'https://docs.api.video/reference/resource-not-found'
                     title: The requested resource was not found.
                     name: webhookId
                     status: 404
