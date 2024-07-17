@@ -5355,20 +5355,20 @@ paths:
                     detail: This value should not be blank.
                     name: restreams[0][name]
                 Missing app name in serverUrl:
-                  description: This error occurs when the rtmp app name is missing from `serverURL` in the `restreams` array.
+                  description: This error occurs when the app name is missing from `serverURL` in the `restreams` array.
                   value:
                     type: https://docs.api.video/reference/invalid-attribute
                     title: An attribute is invalid.
                     status: 400
-                    detail: 'Missing app name: rtmp://[host]/[app name].'
+                    detail: 'Missing app name: [rtmp|rtmps]://[host]/[app name].'
                     name: restreams[0][serverUrl]
                 Incorrect URL in serverUrl:
-                  description: This error occurs when the URL you set in `serverURL` is not `rtmp`.
+                  description: This error occurs when the URL you set in `serverURL` is not `rtmps` or `rtmp`.
                   value:
                     type: https://docs.api.video/reference/invalid-attribute
                     title: An attribute is invalid.
                     status: 400
-                    detail: 'RTMP URL should have the following format: rtmp://[host]/[app name].'
+                    detail: 'RTMP URL should have the following format: [rtmp|rtmps]://[host]/[app name].'
                     name: restreams[0][serverUrl]
                 Too many restream destinations:
                   description: This error occurs when you set more than 5 restream destinations.
@@ -6125,20 +6125,20 @@ paths:
                     detail: This value should not be blank.
                     name: restreams[0][name]
                 Missing app name in serverUrl:
-                  description: This error occurs when the rtmp app name is missing from `serverURL` in the `restreams` array.
+                  description: This error occurs when the app name is missing from `serverURL` in the `restreams` array.
                   value:
                     type: https://docs.api.video/reference/invalid-attribute
                     title: An attribute is invalid.
                     status: 400
-                    detail: 'Missing app name: rtmp://[host]/[app name].'
+                    detail: 'Missing app name: [rtmp|rtmps]://[host]/[app name].'
                     name: restreams[0][serverUrl]
                 Incorrect URL in serverUrl:
-                  description: This error occurs when the URL you set in `serverURL` is not `rtmp`.
+                  description: This error occurs when the URL you set in `serverURL` is not `rtmps` or `rtmp`.
                   value:
                     type: https://docs.api.video/reference/invalid-attribute
                     title: An attribute is invalid.
                     status: 400
-                    detail: 'RTMP URL should have the following format: rtmp://[host]/[app name].'
+                    detail: 'RTMP URL should have the following format: [rtmp|rtmps]://[host]/[app name].'
                     name: restreams[0][serverUrl]
                 Too many restream destinations:
                   description: This error occurs when you set more than 5 restream destinations.
@@ -13855,7 +13855,7 @@ components:
           description: 'Whether or not you are broadcasting the live video you recorded for others to see. True means you are broadcasting to viewers, false means you are not.'
           example: true
         restreams:
-          description: Returns the list of RTMP restream destinations.
+          description: Returns the list of restream destinations.
           type: array
           items:
             $ref: '#/components/schemas/restreams-response-object'
