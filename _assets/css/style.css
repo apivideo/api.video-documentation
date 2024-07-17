@@ -409,19 +409,19 @@
 }
 
 .landing-page-card.Video .landing-page-card-header {
-  background: linear-gradient(215deg, #FA5B30 -5.18%, #F7B500 179.35%);
+  background: linear-gradient(76deg, #FA5B30 -24.15%, #F7B500 93.03%);
 }
 
 .landing-page-card.Live .landing-page-card-header {
-  background: linear-gradient(76deg, #642180 -24.15%, #AF2A72 93.03%);
+  background: linear-gradient(76deg, #D71D76 -24.15%, #FA9130 93.03%);
 }
 
 .landing-page-card.Delivery .landing-page-card-header {
-  background: linear-gradient(76deg, #186EB0 -24.15%, #3BC8F4 93.03%);
+  background: linear-gradient(76deg, #642180 -24.15%, #AF2A72 93.03%);
 }
 
 .landing-page-card.Analytics .landing-page-card-header {
-  background: linear-gradient(76deg, #22863E -24.15%, #9DD442 93.03%);
+  background: linear-gradient(76deg, #186EB0 -24.15%, #3BC8F4 93.03%);
 }
 
 .landing-page-card-header {
