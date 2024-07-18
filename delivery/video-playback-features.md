@@ -98,4 +98,4 @@ For example:
 https://embed.api.video/vod/<videoID>#adTagUrl:https%3A%2F%2Fpubads.g.doubleclick.ne[…]tart%3D1%26env%3Dvp%26impl%3Ds%26correlator%3D`
 ```
 
-For more details, navigate to the dedicated documentation page for [in-stream ads](/delivery-analytics/ads).
+For more details, navigate to the dedicated documentation page for [in-stream ads](/delivery/ads).

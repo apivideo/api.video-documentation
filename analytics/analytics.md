@@ -20,14 +20,23 @@ Visit the **[Analytics](https://dashboard.api.video/data)** page on the Dashboar
 
 ## How it works
 
-Analytics uses player events to analyze and segment your viewers' interactions with your content. Here are some key aspects that can help you ensure that your Analytics implementation runs smoothly:
+Analytics uses player events to analyze and segment your viewers' interactions with your content. Here are some key aspects:
 
+- api.video retains analytics data for 30 days.
 - Player events are generated when your viewers engage with a video or live stream session.
 - Data is refreshed in real time, with a frequency of `<5s`.
-- api.video retains analytics data for 30 days.
-- Data does not carry over from the previous version of Analytics.
+- Data does not carry over from the previous versions of Analytics.
 - Video re-plays using the dedicated re-play button in the player do not generate player events.
 - If a user is viewing your content via a browser, refreshes the tab, and plays the content again, a new event is generated.
+
+<Callout pad="2" type="success">
+api.video provides calculates the total number of plays through 2 dedicated endpoints:
+
+- `/data/metrics/play/total`
+- `/data/buckets/play-total/media-id`
+
+These 2 endpoints return data that is not limited to 30 days of retention, and can return data from earlier versions of Analytics.
+</Callout>
 
 ### Requirements
 

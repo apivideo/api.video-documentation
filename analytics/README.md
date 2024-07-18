@@ -3,35 +3,29 @@ title: Analytics overview
 toc: false
 breadcrumbs: false
 meta:
-  description: This page serves as a foundational guide to integrating api.video's solutions for video delivery, player customization, and analytics.
+  description: This page serves as a foundational guide to integrating api.video's solutions for video and live streaming analytics.
 ---
 
 <div class="section-header no-toc">
 
-# How does <span style="color: var(--accent-10)">video delivery</span> work?
+# How does <span style="color: var(--accent-10)">analytics</span> work?
 
-  api.video lets you customize a large part of the delivery, from the branding of the player, to adding captions, chapters, and watermarks. You have full control over how you deliver the content to your users. The flexibility does not end with player customization, you can build your own player in order to deliver the content in the best form you see fit.
+  api.video enables you to collect and segment viewer interactions with your content, giving you detailed insights on view events in real time. Analytics helps you  collect metrics like total number of plays, impressions, average watch time, and so on. You can also filter the data using custom date ranges, and a large selection of dimensions like countries, browsers, and even device types. 
+  
+  Check out the most relevant metrics on all your videos and live streams in the api.video [dashboard](https://dashboard.api.video/data)!
 
 </div>
 
 ---
 
-## Start delivering with api.video
+## Start analyzing with api.video
 
 <Grid cols="2" gap="3">
-<Card pad="3">
-    ![Analytics quickstart](/_assets/icons/player-customization.svg)
-
-    **Analytics quickstart**\
-    Learn how to make the most of your content delivery through branding, customization, and gathering analytics.
-
-    [Learn more ›](/analytics/analytics-quickstart)
-</Card>
 <Card pad="3">
     ![Analytics & data](/_assets/icons/analytics.svg)
 
     **Analytics & data**\
-    Start collecting delivery event data about your videos and live streams.
+    Understand how you can collect delivery event data about your videos and live streams.
 
     [Learn more ›](/analytics/analytics)
 </Card>
@@ -39,7 +33,7 @@ meta:
     ![Analytics SDKs](/_assets/icons/analytics.svg)
 
     **Analytics SDKs**\
-    Check out api.video's dedicated libraries and SDKs for delivery analytics.
+    Check out api.video's dedicated libraries and SDKs for video and live stream analytics.
 
     [Learn more ›](/sdks/player#player-analytics-sdks)
 </Card>

@@ -42,11 +42,11 @@ api.video is a cloud-based video hosting and live streaming platform that provid
 </Card>
 
 <Card pad="3">
-    ![Delivery & analytics quickstart](/_assets/icons/player-customization.svg)
+    ![Delivery quickstart](/_assets/icons/player-customization.svg)
 
-    **Delivery & analytics quickstart**\
-    Learn how to make the most of your content delivery through branding, customization, and gathering analytics.
+    **Delivery quickstart**\
+    Learn how to make the most of your content delivery through player branding, customization, private videos and live streams, and even in-stream ads.
 
-    [Learn more ›](/delivery-analytics/delivery-analytics-quickstart)
+    [Learn more ›](/delivery/delivery-quickstart)
 </Card>
 </Grid>

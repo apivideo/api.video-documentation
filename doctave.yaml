@@ -49,7 +49,7 @@ tabs:
     path: /vod/
   - label: Live streaming
     path: /live-streaming/
-  - label: Delivery
+  - label: Delivery & players
     path: /delivery/
   - label: Analytics
     path: /analytics/

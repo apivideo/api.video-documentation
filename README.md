@@ -14,7 +14,7 @@ meta:
 
 </div>
 
-Welcome to the developer documentation of api.video! Our platform empowers developers and businesses to seamlessly integrate video functionality into their applications and services. Whether you're looking to offer video on demand, live streaming, or leverage our player and analytics features, the api.video API is designed to simplify the process.
+Welcome to the developer documentation of api.video! Our platform empowers developers and businesses to seamlessly integrate video functionality into their applications and services. Whether you're looking to offer video on demand, live streaming, or leverage our delivery and analytics features, the api.video API is designed to simplify the process.
 
 Check out the products!
 
@@ -67,7 +67,7 @@ Check out the products!
 
             [Live streaming quickstart](/live-streaming/create-a-live-stream)
 
-            [Delivery & analytics quickstart](/delivery-analytics/delivery-analytics-quickstart)
+            [Delivery & player quickstart](/delivery/delivery-quickstart)
         </Flex>
     </Component.LandingPageList>
 
@@ -79,7 +79,7 @@ Check out the products!
 
             [Live streaming libraries & SDKs](/sdks/livestream)
 
-            [Delivery & analytics SDKs](/sdks/player)
+            [Player SDKs](/sdks/player)
 
             [No-code solutions](/sdks/nocode)
         </Flex>

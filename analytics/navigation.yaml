@@ -3,12 +3,7 @@
   items:
   - label: How does analytics work? 
     href: /analytics/README.md
-  - label: Analytics quickstart
-    href: /analytics/analytics-quickstart.md
-
-- heading: Analytics
-  items:
-  - label: Analytics
+  - label: Analytics overview
     href: /analytics/analytics.md
   - label: Analytics SDKs
     href: /sdks/player/README.md#player-analytics-sdks

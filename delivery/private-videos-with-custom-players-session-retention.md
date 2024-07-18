@@ -16,7 +16,7 @@ In these cases, you will have to make multiple requests to api.video assets. As 
 
 ### What is a Session Token?
 
-In short a Session Token is api.video's way of retaining the session for every request you make to each asset. You can find the detailed article about session tokens [here](/delivery-analytics/private-video-session-tokens).
+In short a Session Token is api.video's way of retaining the session for every request you make to each asset. You can find the detailed article about session tokens [here](/delivery/private-video-session-tokens).
 
 <Callout pad="2" type="error">
 **Example for incorrect usage of private videos**
@@ -37,7 +37,7 @@ Let's take an example where you want to create a clickable thumbnail which will 
 
 ### How to play private video in a custom built player?
 
-In order to play your private video with a clickable thumbnail or in a custom made player, you will first have to call the session token. Assuming that you are passing an `.mp4` video to the player, the flow will be as follows described in the [Session Flow](/delivery-analytics/private-video-session-tokens#session-flow) document.
+In order to play your private video with a clickable thumbnail or in a custom made player, you will first have to call the session token. Assuming that you are passing an `.mp4` video to the player, the flow will be as follows described in the [Session Flow](/delivery/private-video-session-tokens#session-flow) document.
 
 ### Continuous requests while playing private videos on custom player
 

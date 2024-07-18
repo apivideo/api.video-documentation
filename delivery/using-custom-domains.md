@@ -23,6 +23,6 @@ You can maintain your company branding by utilizing custom domains in any of the
 - use api.video’s hosting service and [embed or share video content](/vod/get-started-in-5-minutes) using your own custom domain
 - [start a live stream](/live-streaming/create-a-live-stream) using your own custom URL
 - use your own custom player to provide video on demand
-- embed or share [private videos](/delivery-analytics/video-privacy-access-management.md) through your own custom domain
+- embed or share [private videos](/delivery/video-privacy-access-management.md) through your own custom domain
 
 Visit the [Dashboard](https://dashboard.api.video/project-settings/domains) to get started with setting up your custom domain!
