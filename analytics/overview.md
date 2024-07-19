@@ -1,10 +1,11 @@
 ---
 title: Analytics
+breadcrums: false
 meta: 
   description: Learn how you can get data insights for your videos and live streams using api.video's Analytics solution.
 ---
 
-# Analytics
+# Analytics overview
 
 api.video's Analytics enables you to retrieve complex event data about your videos and live streams.
 
