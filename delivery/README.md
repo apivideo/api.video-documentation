@@ -25,7 +25,7 @@ meta:
     **Delivery quickstart**\
     Learn how to make the most of your content delivery through branding and customization.
 
-    [Learn more ›](/delivery/delivery-quickstart)
+    [Learn more ›](/delivery/quickstart)
 </Card>
 <Card pad="3">
     ![Using custom domains](/_assets/icons/custom-domains.svg)

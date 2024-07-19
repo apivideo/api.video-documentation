@@ -1,14 +1,12 @@
 ---
-title: Delivery and Analytics with api.video
+title: Delivery with api.video
 meta: 
-  description: Set up the api.video player and start working with video analytics in 5 minutes
+  description: Set up the api.video player and start delivering in 5 minutes
 ---
 
-# Getting started with delivery and analytics
+# Getting started with delivery
 
-api.video provides you with powerful tools that enable you to deliver content to your users with great customization and branding while making sure that you get all of the data you need to analyze the viewer's behavior.
-
-There are two parts to this tutorial, where we will jump into the player capabilities and then look at how to analyze the data we've received from the viewers.
+api.video provides you with powerful tools that enable you to deliver content to your users with great customization and branding.
 
 ## Get started with api.video player
 

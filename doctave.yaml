@@ -418,9 +418,9 @@ redirects:
   - from: /delivery-analytics/ads
     to: /delivery/ads
   - from: /delivery-analytics/analytics
-    to: /analytics/analytics
+    to: /analytics/overview
   - from: /delivery-analytics/delivery-analytics-quickstart
-    to: /delivery/delivery-quickstart
+    to: /delivery/quickstart
   - from: /delivery-analytics/domain-referrer
     to: /delivery/domain-referrer
   - from: /delivery-analytics/player-customization

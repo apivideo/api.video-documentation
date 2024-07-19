@@ -67,7 +67,7 @@ Check out the products!
 
             [Live streaming quickstart](/live-streaming/create-a-live-stream)
 
-            [Delivery & player quickstart](/delivery/delivery-quickstart)
+            [Delivery & player quickstart](/delivery/quickstart)
         </Flex>
     </Component.LandingPageList>
 

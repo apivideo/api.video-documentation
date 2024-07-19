@@ -4,6 +4,6 @@
   - label: How does analytics work? 
     href: /analytics/README.md
   - label: Analytics overview
-    href: /analytics/analytics.md
+    href: /analytics/overview.md
   - label: Analytics SDKs
     href: /sdks/player/README.md#player-analytics-sdks

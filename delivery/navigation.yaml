@@ -4,7 +4,7 @@
   - label: How does video delivery work? 
     href: /delivery/README.md
   - label: Delivery quickstart
-    href: /delivery/delivery-quickstart.md
+    href: /delivery/quickstart.md
 - heading: Features
   items:
   - label: Using custom domains for delivery

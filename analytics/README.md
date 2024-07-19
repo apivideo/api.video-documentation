@@ -27,7 +27,7 @@ meta:
     **Analytics & data**\
     Understand how you can collect delivery event data about your videos and live streams.
 
-    [Learn more ›](/analytics/analytics)
+    [Learn more ›](/analytics/overview)
 </Card>
 <Card pad="3">
     ![Analytics SDKs](/_assets/icons/analytics.svg)

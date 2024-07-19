@@ -47,6 +47,6 @@ api.video is a cloud-based video hosting and live streaming platform that provid
     **Delivery quickstart**\
     Learn how to make the most of your content delivery through player branding, customization, private videos and live streams, and even in-stream ads.
 
-    [Learn more ›](/delivery/delivery-quickstart)
+    [Learn more ›](/delivery/quickstart)
 </Card>
 </Grid>
