@@ -69,7 +69,7 @@ Some videos you might upload could be very large in size. We made sure that this
 
 ## Video Access Management
 
-The video object will be created as public by default. If you want to make the video private, you just need to create a private video object or update it later. You can read all about Private Videos [here](/delivery-analytics/video-privacy-access-management.md)
+The video object will be created as public by default. If you want to make the video private, you just need to create a private video object or update it later. You can read all about Private Videos [here](/delivery/video-privacy-access-management.md)
 
 * Searchable parameters: title, description, tags and metadata
 

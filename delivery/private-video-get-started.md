@@ -30,7 +30,7 @@ We tried to make it as simple as possible to secure your videos:
 - Private videos will generate a new private token each time a request is made for that video id.
 - Each private token is usable only once.
 
-If you like to get into nitty gritty details, feel free to check out all the other pages about [Private Videos](/delivery-analytics/video-privacy-access-management.md).
+If you like to get into nitty gritty details, feel free to check out all the other pages about [Private Videos](/delivery/video-privacy-access-management.md).
 
 ## How to deliver private videos to your audience
 

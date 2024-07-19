@@ -18,7 +18,7 @@ An edge case to consider:
 
 - The feature is only supported for browser users.
 
-If you are looking to secure your videos and live streams in a more advanced way, for example by using a native mobile player or through securing and limiting access granularly, please visit our guide to [Private Videos](/delivery-analytics/video-privacy-access-management.md).
+If you are looking to secure your videos and live streams in a more advanced way, for example by using a native mobile player or through securing and limiting access granularly, please visit our guide to [Private Videos](/delivery/video-privacy-access-management.md).
 
 ## How it works?
 

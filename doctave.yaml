@@ -49,8 +49,10 @@ tabs:
     path: /vod/
   - label: Live streaming
     path: /live-streaming/
-  - label: Delivery & analytics
-    path: /delivery-analytics/
+  - label: Delivery & players
+    path: /delivery/
+  - label: Analytics
+    path: /analytics/
   - label: API Reference
     path: /reference/
   - label: Libraries & SDKs
@@ -89,10 +91,6 @@ tabs:
 redirects:
   - from: /docs
     to: /
-  - from: /docs/ads
-    to: /delivery-analytics/ads
-  - from: /docs/analytics
-    to: /delivery-analytics/analytics
   - from: /docs/android-api-client
     to: /sdks/api-clients/apivideo-android-client
   - from: /docs/android-sdk
@@ -122,7 +120,7 @@ redirects:
   - from: /docs/csharp-api-client
     to: /sdks/api-clients/apivideo-csharp-client
   - from: /docs/domain-referrer
-    to: /delivery-analytics/domain-referrer
+    to: /delivery/domain-referrer
   - from: /docs/flutter-uploader
     to: /sdks/vod/apivideo-flutter-uploader
   - from: /docs/get-started-in-5-minutes
@@ -150,7 +148,7 @@ redirects:
   - from: /docs/php-api-client
     to: /sdks/api-clients/apivideo-php-client
   - from: /docs/private-videos
-    to: /delivery-analytics/video-privacy-access-management
+    to: /delivery/video-privacy-access-management
   - from: /docs/python-api-client
     to: /sdks/api-clients/apivideo-python-client
   - from: /docs/react-native-livestream-component
@@ -168,11 +166,11 @@ redirects:
   - from: /docs/upload-your-first-video
     to: /vod/upload-a-video-regular-upload
   - from: /docs/using-custom-domains
-    to: /delivery-analytics/using-custom-domains
+    to: /delivery/using-custom-domains
   - from: /docs/video-access-management-getting-started-with-private-videos
-    to: /delivery-analytics/video-privacy-access-management
+    to: /delivery/video-privacy-access-management
   - from: /docs/video-playback-features
-    to: /delivery-analytics/video-playback-features
+    to: /delivery/video-playback-features
   - from: /docs/video-player-sdk
     to: /sdks/player/apivideo-player-sdk
   - from: /docs/video-uploader
@@ -232,7 +230,7 @@ redirects:
   - from: /reference/patch-video
     to: /reference/api/Videos#update-a-video-object
   - from: /reference/player-themes
-    to: /delivery-analytics/player-customization
+    to: /delivery/player-customization
   - from: /reference/post_auth-api-key
     to: /reference/api/Advanced-authentication#get-bearer-token
   - from: /reference/post_live-streams
@@ -284,7 +282,7 @@ redirects:
   - from: /changelog/october-12-2021-new-contentful-integration
     to: /
   - from: /docs/access-private-videos-with-external-player
-    to: /delivery-analytics/private-video-on-hls-or-external-players
+    to: /delivery/private-video-on-hls-or-external-players
   - from: /docs/add-a-permanent-watermark
     to: /vod/add-a-permanent-watermark
   - from: /docs/add-a-thumbnail-to-your-video
@@ -326,15 +324,15 @@ redirects:
   - from: /docs/media-recorder
     to: /sdks/vod/apivideo-typescript-media-recorder
   - from: /docs/private-video-delivery-web-browser
-    to: /delivery-analytics/private-video-delivery-web-browser
+    to: /delivery/private-video-delivery-web-browser
   - from: /docs/private-video-delivery-with-mp4-built-in-players
-    to: /delivery-analytics/private-video-delivery-with-mp4-built-in-players
+    to: /delivery/private-video-delivery-with-mp4-built-in-players
   - from: /docs/private-video-on-hls-or-external-players
-    to: /delivery-analytics/private-video-on-hls-or-external-players
+    to: /delivery/private-video-on-hls-or-external-players
   - from: /docs/private-video-session-tokens
-    to: /delivery-analytics/private-video-session-tokens
+    to: /delivery/private-video-session-tokens
   - from: /docs/private-videos-with-custom-players-session-retention
-    to: /delivery-analytics/private-videos-with-custom-players-session-retention
+    to: /delivery/private-videos-with-custom-players-session-retention
   - from: /docs/show-video-details
     to: /vod/show-video-details
   - from: /docs/show-video-upload-status
@@ -402,11 +400,11 @@ redirects:
   - from: /reference/useful-tools
     to: /
   - from: /reference/get_analytics-videos-videoid
-    to: /delivery-analytics/analytics
+    to: /analytics
   - from: /reference/get_analytics-sessions-sessionid-events
-    to: /delivery-analytics/analytics
+    to: /analytics
   - from: /reference/get_analytics-live-streams-livestreamid
-    to: /delivery-analytics/analytics
+    to: /analytics
   - from: /reference/an-attribute-is-invalid
     to: /reference/invalid-attribute
   - from: /reference/bad-request
@@ -415,6 +413,36 @@ redirects:
     to: /reference/errors
   - from: /reference/internal-server-error
     to: /reference/general-errors
+  - from: /delivery-analytics
+    to: /delivery
+  - from: /delivery-analytics/ads
+    to: /delivery/ads
+  - from: /delivery-analytics/analytics
+    to: /analytics/overview
+  - from: /delivery-analytics/delivery-analytics-quickstart
+    to: /delivery/quickstart
+  - from: /delivery-analytics/domain-referrer
+    to: /delivery/domain-referrer
+  - from: /delivery-analytics/player-customization
+    to: /delivery/player-customization
+  - from: /delivery-analytics/private-video-delivery-web-browser
+    to: /delivery/private-video-delivery-web-browser
+  - from: /delivery-analytics/private-video-delivery-with-mp4-built-in-players
+    to: /delivery/private-video-delivery-with-mp4-built-in-players
+  - from: /delivery-analytics/private-video-get-started
+    to: /delivery/private-video-get-started
+  - from: /delivery-analytics/private-video-on-hls-or-external-players
+    to: /delivery/private-video-on-hls-or-external-players
+  - from: /delivery-analytics/private-video-session-tokens
+    to: /delivery/private-video-session-tokens
+  - from: /delivery-analytics/private-videos-with-custom-players-session-retention
+    to: /delivery/private-videos-with-custom-players-session-retention
+  - from: /delivery-analytics/using-custom-domains
+    to: /delivery/using-custom-domains
+  - from: /delivery-analytics/video-playback-features
+    to: /delivery/video-playback-features
+  - from: /delivery-analytics/video-privacy-access-management
+    to: /delivery/video-privacy-access-management
   - from: /docs/authenticationinvalid_credentials
     to: /reference/authentication-invalid-user-credentials
   - from: /docs/attributerequired

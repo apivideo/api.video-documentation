@@ -1,14 +1,14 @@
 ---
-title: "Delivery & analytics overview"
+title: "Delivery overview"
 toc: false
 breadcrumbs: false
 meta:
-  description: This page serves as a foundational guide to integrating api.video's solutions for video delivery, player customization, and analytics.
+  description: This page serves as a foundational guide to integrating api.video's solutions for video delivery and player customization.
 ---
 
 <div class="section-header no-toc">
 
-# How does <span style="color: var(--accent-10)">video delivery</span> work?
+# How does <span style="color: var(--accent-10)">video and live stream delivery</span> work?
 
   api.video lets you customize a large part of the delivery, from the branding of the player, to adding captions, chapters, and watermarks. You have full control over how you deliver the content to your users. The flexibility does not end with player customization, you can build your own player in order to deliver the content in the best form you see fit.
 
@@ -20,20 +20,12 @@ meta:
 
 <Grid cols="2" gap="3">
 <Card pad="3">
-    ![Delivery & analytics quickstart](/_assets/icons/player-customization.svg)
+    ![Delivery quickstart](/_assets/icons/player-customization.svg)
 
-    **Delivery & analytics quickstart**\
-    Learn how to make the most of your content delivery through branding, customization, and gathering analytics.
+    **Delivery quickstart**\
+    Learn how to make the most of your content delivery through branding and customization.
 
-    [Learn more ›](/delivery-analytics/delivery-analytics-quickstart)
-</Card>
-<Card pad="3">
-    ![Analytics & data](/_assets/icons/analytics.svg)
-
-    **Analytics & data**\
-    Start collecting delivery event data about your videos and live streams.
-
-    [Learn more ›](/delivery-analytics/analytics)
+    [Learn more ›](/delivery/quickstart)
 </Card>
 <Card pad="3">
     ![Using custom domains](/_assets/icons/custom-domains.svg)
@@ -41,7 +33,7 @@ meta:
     **Using custom domains**\
     Maintain your company branding by delivering through custom domains
 
-    [Learn more ›](/delivery-analytics/using-custom-domains)
+    [Learn more ›](/delivery/using-custom-domains)
 </Card>
 <Card pad="3">
     ![Domain referrer restrictions](/_assets/icons/domain_referrer.png)
@@ -49,7 +41,7 @@ meta:
     **Domain referrer restrictions**\
     Make sure that your videos and live streams are delivered securely, and only through your domains.
 
-    [Learn more ›](/delivery-analytics/domain-referrer)
+    [Learn more ›](/delivery/domain-referrer)
 </Card>
 <Card pad="3">
     ![In-stream ads](/_assets/icons/ads.png)
@@ -57,7 +49,7 @@ meta:
     **In-stream ads**\
     Implement in-stream ads to monetize your videos and live streams conveniently.
 
-    [Learn more ›](/delivery-analytics/ads)
+    [Learn more ›](/delivery/ads)
 </Card>
 <Card pad="3">
     ![Private videos](/_assets/icons/private_videos.png)
@@ -65,7 +57,7 @@ meta:
     **Private videos**\
     Learn how you can secure and manage access to your videos.
 
-    [Learn more ›](/delivery-analytics/private-video-get-started)
+    [Learn more ›](/delivery/private-video-get-started)
 </Card>
 <Card pad="3">
     ![Player SDKs](/_assets/icons/player-sdks.svg)
@@ -74,13 +66,5 @@ meta:
     Check out api.video's dedicated video player libraries and SDKs.
 
     [Learn more ›](/sdks/player#player-sdks)
-</Card>
-<Card pad="3">
-    ![Analytics SDKs](/_assets/icons/analytics.svg)
-
-    **Analytics SDKs**\
-    Check out api.video's dedicated libraries and SDKs for delivery analytics.
-
-    [Learn more ›](/sdks/player#player-analytics-sdks)
 </Card>
 </Grid>

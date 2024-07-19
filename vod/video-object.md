@@ -44,7 +44,7 @@ You can either add a video already on the web, by entering the URL of the video,
 
 ### Public: Video Access Management
 
-On creation, the video can either be public or private. If the video is set to public `true`, the url of the video can be accessed by anyone that has the url, however, you can secure the video and make it private. Set the public parameter to `false` to convert the video to private and limit access to the video url. You can get started with Video Access Management [here](/delivery-analytics/video-privacy-access-management).
+On creation, the video can either be public or private. If the video is set to public `true`, the url of the video can be accessed by anyone that has the url, however, you can secure the video and make it private. Set the public parameter to `false` to convert the video to private and limit access to the video url. You can get started with Video Access Management [here](/delivery/video-privacy-access-management).
 
 ### Panoramic: Upload 360-degree Videos
 

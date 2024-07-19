@@ -63,7 +63,7 @@ You can manage a specific video object and update some of it's properties. The v
 
 - Update the video title.
 - Update the video description.
-- Change video privacy status (Private/public). More information on private videos can be found [here](../../delivery-analytics/video-privacy-access-management.md).
+- Change video privacy status (Private/public). More information on private videos can be found [here](../../delivery/video-privacy-access-management.md).
 - Enable / disable panoramic video mode.
 - Enable / disable the ability of a viewer to download the video.
 - Add / remove video tags.

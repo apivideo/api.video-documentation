@@ -13842,7 +13842,7 @@ components:
           example: dw-dew8-q6w9-k67w-1ws8
         public:
           type: boolean
-          description: 'Whether your video can be viewed by everyone, or requires authentication to see it. A setting of false will require a unique token for each view. Learn more about the Private Video feature [here](https://docs.api.video/delivery-analytics/video-privacy-access-management).'
+          description: 'Whether your video can be viewed by everyone, or requires authentication to see it. A setting of false will require a unique token for each view. Learn more about the Private Video feature [here](https://docs.api.video/delivery/video-privacy-access-management).'
           example: true
         assets:
           $ref: '#/components/schemas/live-stream-assets'
@@ -14132,7 +14132,7 @@ components:
           example: 'https://www.myvideo.url.com/video.mp4 OR vi4k0jvEUuaTdRAEjQ4JfOyl'
         public:
           type: boolean
-          description: 'Default: True. If set to `false` the video will become private. More information on private videos can be found [here](https://docs.api.video/delivery-analytics/video-privacy-access-management)'
+          description: 'Default: True. If set to `false` the video will become private. More information on private videos can be found [here](https://docs.api.video/delivery/video-privacy-access-management)'
           example: true
           default: true
         panoramic:
@@ -14330,7 +14330,7 @@ components:
           example: My Live Stream Video
         public:
           type: boolean
-          description: 'Whether your video can be viewed by everyone, or requires authentication to see it. A setting of false will require a unique token for each view. Learn more about the Private Video feature [here](https://docs.api.video/delivery-analytics/video-privacy-access-management).'
+          description: 'Whether your video can be viewed by everyone, or requires authentication to see it. A setting of false will require a unique token for each view. Learn more about the Private Video feature [here](https://docs.api.video/delivery/video-privacy-access-management).'
         playerId:
           type: string
           description: The unique identifier for the player.
@@ -14361,7 +14361,7 @@ components:
           example: My Live Stream Video
         public:
           type: boolean
-          description: 'Whether your video can be viewed by everyone, or requires authentication to see it. A setting of false will require a unique token for each view. Learn more about the Private Video feature [here](https://docs.api.video/delivery-analytics/video-privacy-access-management).'
+          description: 'Whether your video can be viewed by everyone, or requires authentication to see it. A setting of false will require a unique token for each view. Learn more about the Private Video feature [here](https://docs.api.video/delivery/video-privacy-access-management).'
         playerId:
           type: string
           description: The unique ID for the player associated with a live stream that you want to update.
