@@ -6956,7 +6956,7 @@ paths:
     put:
       tags:
         - Live Streams
-      summary: Complete live stream
+      summary: Complete a live stream
       description: |
         Request the completion of a live stream that is currently running. 
         
