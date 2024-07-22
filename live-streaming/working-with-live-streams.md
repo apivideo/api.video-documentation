@@ -304,7 +304,7 @@ You can update live stream details from your dashboard if you don't want to retr
 
 ## Complete a live stream
 
-You can request the API to complete a live stream that is currently running.
+You can request the API to complete a live stream that is currently running. This operation is asynchronous and the live stream will stop after a few seconds. 
 
 The API adds the `EXT-X-ENDLIST` tag to the live stream's HLS manifest. This stops the live stream on the player and also stops the recording of the live stream. The API keeps the incoming connection from the streamer open for at most 1 minute, which can be used to terminate the stream.
 
