@@ -12,6 +12,7 @@ When working with live streams, you will want to retrieve details about them, up
 
 - [Retrieve a live stream](/reference/api/Live-Streams#retrieve-live-stream)
 - [Update a live stream](/reference/api/Live-Streams#update-a-live-stream)
+- [Complete a live stream](/reference/api/Live-Streams#complete-a-live-stream)
 - [Delete a live stream](/reference/api/Live-Streams#delete-a-list-stream)
 
 ## Choose an api.video client
@@ -300,6 +301,22 @@ You can update live stream details from your dashboard if you don't want to retr
    ![Showing the live stream details](/_assets/live-streaming/live-stream-details.png)
 
 5. You can change the title of your live stream, upload a thumbnail, and associate a player ID on this screen. When you're done, click **Save**.
+
+## Complete a live stream
+
+You can request the API to complete a live stream that is currently running. This operation is asynchronous and the live stream will stop after a few seconds. 
+
+The API adds the `EXT-X-ENDLIST` tag to the live stream's HLS manifest. This stops the live stream on the player and also stops the recording of the live stream. The API keeps the incoming connection from the streamer open for at most 1 minute, which can be used to terminate the stream.
+
+```curl
+curl --request PUT \
+     --url https://ws.api.video/live-streams/li400mYKSgQ6xs7taUeSaEKr/complete \
+     --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDI4MTQxNDUuMjE2Mzc2LCJuYmYiOjE2NDI4MTQxNDUuMjE2Mzc2LCJleHAiOjE2NDI4MTc3NDUuMjE2Mzc2LCJwcm9qZWN0SWQiOiJwclJ6SUpKQTdCTHNxSGpTNDVLVnBCMSJ9.GSDqqMzBxo-wOwl9IVbOnzevm8A6LSyaR5kxCWUdkEneSU0kIdoNfhwmXZBq5QWpVa-0GIT8JR59W6npNO-ayhaXmV3LA6EQpvv0mHd_dAhg3N8T96eC0ps0YIrkmw0_Oe6iRgEDI-wJ9nc6tQWi9ybbMHi1LDBjxW4rbFlq7G59C1QZGabd14QO7uqAUUSNqHC1l42z_m7BTK1AhFiBEXmMcfW7X0VmGcaEUy7NiNda8rmq_nrdvkxgN8KHguXzxMsw_4GE_d0eQwHcZvS1q-FebI6b8AoqpoltFOZvUACCrfXH_D_UPshHuJM3apXbD2dg_zQicc8oWBHVGiobLQ'
+```
+
+<Callout pad="2" type="info">
+api.video recommends that you use this endpoint to properly complete a live stream.
+</Callout>
 
 ## Delete a live stream
 
