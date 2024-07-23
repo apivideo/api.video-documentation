@@ -7041,7 +7041,7 @@ paths:
                     status: 429
       security:
         - apiKey: []
-      x-client-action: update
+      x-client-action: complete
       x-doctave:
         code-samples:
   '/videos/{videoId}/captions/{language}':
@@ -11876,7 +11876,6 @@ paths:
       - apiKey: []
       x-client-action: getAggregatedMetrics
       x-group-parameters: true
-      x-client-paginated: true
       x-doctave:
         code-samples:
   '/data/buckets/{metric}/{breakdown}':
@@ -11985,6 +11984,8 @@ paths:
         schema:
           type: string
         example: filterBy[continent]=EU&filterBy[country]=FR&filterBy[browser]=Safari&filterBy[browser]=Firefox
+      - $ref: '#/components/parameters/current-page'
+      - $ref: '#/components/parameters/page-size'
       responses:
         '200':
           headers:
@@ -12215,6 +12216,26 @@ paths:
         schema:
           type: string
         example: filterBy[continent]=EU&filterBy[country]=FR&filterBy[browser]=Safari&filterBy[browser]=Firefox
+      - name: currentPage
+        in: query
+        description: 'Choose the number of search results to return per page. Minimum value: 1'
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 1
+        example: 2
+      - name: pageSize
+        in: query
+        description: 'Results per page. Allowed values 1-100, default is 25.'
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 25
+        example: 30
       responses:
         '200':
           headers:
@@ -14685,8 +14706,9 @@ components:
           format: float
           example: '356.2'
       required:
-      - context
-      - data
+        - context
+        - data
+        - pagination
     analytics-metrics-breakdown-response:
       title: Analytics response for metrics breakdown by dimension
       type: object
@@ -14790,7 +14812,7 @@ components:
         data:
           description: Returns an array of metrics and the timestamps .
           type: array
-          items:            
+          items:
             type: object
             properties:
               emittedAt:
