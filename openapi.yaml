@@ -15063,7 +15063,7 @@ components:
           - `tag`: Returns analytics for videos using this tag. This filter only accepts a single value and is case sensitive. Read more about tagging your videos [here](https://docs.api.video/vod/tags-metadata).
       in: query
       required: false
-      example: {"mediaType": "video",  "continent": "EU","country": "FR"}
+      example: {"mediaType":"video","continent":"EU","country":"FR"}
       style: deepObject
       explode: true
       schema:
