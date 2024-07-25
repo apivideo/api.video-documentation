@@ -12151,8 +12151,8 @@ paths:
         explode: false
         schema:
           type: string
-          format: date-time
-        example: 2024-02-06T00:00:00+01:00
+          enum: [hour, day]
+        example: hour
       - $ref: '#/components/parameters/filterBy'
       responses:
         '200':
