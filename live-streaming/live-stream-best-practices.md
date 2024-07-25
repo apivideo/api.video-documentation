@@ -81,7 +81,7 @@ A live stream container only accepts a single live stream. It is not possible to
 * Live stream recording length is fixed at 30 seconds, after which the recording is cut. 
 * Restreaming is only allowed for 2 minutes, after which the restreams are stopped.
 
-## Recommended setting for ingestion
+## Recommended settings for ingestion
 
 <Callout pad="2" type="info">
 When [restreaming](/live-streaming/restreams), you should adapt the original live stream to fit the constraints of the restream destination's server requirements. api.video forwards the originating stream directly to the restream destination as received, without any modification.
