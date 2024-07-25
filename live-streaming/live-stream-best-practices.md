@@ -44,33 +44,60 @@ Make sure to use an outro like a static image or music at the end of the stream 
 
 ## Limitations
 
-<Callout pad="2" type="warning">
+This section lists the limitations of api.video's live streaming platform.
 
-* When using the sandbox environment, live streaming is limited to 30 minutes, live stream recording length is fixed at 30 seconds, and restreaming is only allowed for 2 minutes.
-* The length of live stream recordings is fixed at 12 hours. When a recording reaches this length, a new recording is started.
+### Codecs
+
 * The **video codec must be H.264**.
 * The **audio codec must be AAC or MP3**.
-* The duration of DVR is exactly 1 hour.
-* During a disconnection on ingest side, re-connection must occur within 10 seconds.
-* When creating a new live event using the same `streamID` without keeping the DVR of a previous live, you must wait at least 1 minute 30 seconds before re-using it.
-* A live stream container only accepts a single live stream. It is not possible to create concurrent live streams on the same container.
-</Callout>
+
+### Live stream recording
+
+Live streams are recorded automatically. The length of each recording is fixed at 12 hours. When a recording reaches this length, a new recording is started.
+
+### DVR
+
+When a live stream is ongoing, viewers can replay earlier content with the DVR feature.
+
+* The available duration for DVR is 1 hour.
+* DVR is only available for live streams that are actively broadcasting.
+* When a live stream is completed, api.video stores the stream for another 4 to 5 minutes. The cached DVR is subsequently deleted after the live stream has ended.
+
+### Re-connecting to a live stream
+
+During a disconnection on ingest side, re-connection must occur within 10 seconds.
+
+### Starting a new live stream
+
+You can create a new live event using the **same `streamID`**, without keeping the DVR of a previous live. However, you must wait at least 1 minute 30 seconds before re-using the same `streamID`.
+
+### Concurrent streaming
+
+A live stream container only accepts a single live stream. It is not possible to create concurrent live streams on the same container.
+
+### Sandbox limitations
+
+* Live streaming is limited to 30 minutes.
+* Live stream recording length is fixed at 30 seconds, after which the recording is cut. 
+* Restreaming is only allowed for 2 minutes, after which the restreams are stopped.
 
 ## Recommended setting for ingestion
 
-- Video codec: H.264  
-- Audio codec: AAC/MP3  
+<Callout pad="2" type="info">
+When [restreaming](/live-streaming/restreams), you should adapt the original live stream to fit the constraints of the restream destination's server requirements. api.video forwards the originating stream directly to the restream destination as received, without any modification.
+</Callout>
+
 - Bitrate encoding: CBR  
 - Keyframe Interval: 2 seconds
 
-| Quality  | Framerate | Video bitrate     | Audio sample rate | Audio Bitrate |
-| -------- | --------- | ----------------- | ----------------- | ------------- |
-| 240p     | 25-30 fps | 300-700 Kbps      | 48 kHz            | 64 Kbps       |
-| 360p     | 25-30 fps | 400-1000 Kbps     | 48 kHz            | 128 Kbps      |
-| 480p     | 25-30 fps | 500-2000 Kbps     | 48 kHz            | 128 Kbps      |
-| 720p     | (30 fps)  | 1500-4000 Kbps    | 48 kHz            | 128 Kbps      |
-| 720p     | (60 fps)  | 2250-6000 Kbps    | 48 kHz            | 128 Kbps      |
-| 1080p    | (30 fps)  | 3000-6000 Kbps    | 48 kHz            | 128 Kbps      |
-| 1080p    | (60 fps)  | 4500-9000 Kbps    | 48 kHz            | 128 Kbps      |
-| 2160(4K) | (30 fps)  | 13000-34000 Kbps  | 48 kHz            | 192 Kbps      |
-| 2160(4K) | (60 fps)  | 20000-51000 Kbps  | 48 kHz            | 192 Kbps      |
+| Quality          | Framerate | Video bitrate     | Audio sample rate | Audio Bitrate |
+| ---------------- | --------- | ----------------- | ----------------- | ------------- |
+| 240p             | 25-30 fps | 300-700 Kbps      | 48 kHz            | 64 Kbps       |
+| 360p             | 25-30 fps | 400-1000 Kbps     | 48 kHz            | 128 Kbps      |
+| 480p             | 25-30 fps | 500-2000 Kbps     | 48 kHz            | 128 Kbps      |
+| 720p (30 fps)    | 25-30 fps | 1500-4000 Kbps    | 48 kHz            | 128 Kbps      |
+| 720p (60 fps)    | 50-60 fps | 2250-6000 Kbps    | 48 kHz            | 128 Kbps      |
+| 1080p (30 fps)   | 25-30 fps | 3000-6000 Kbps    | 48 kHz            | 128 Kbps      |
+| 1080p (60 fps)   | 50-60 fps | 4500-9000 Kbps    | 48 kHz            | 128 Kbps      |
+| 2160 (30 fps)    | 25-30 fps | 13000-34000 Kbps  | 48 kHz            | 192 Kbps      |
+| 2160 (60 fps)    | 50-60 fps | 20000-51000 Kbps  | 48 kHz            | 192 Kbps      |
