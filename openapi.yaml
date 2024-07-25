@@ -12125,7 +12125,7 @@ paths:
         schema:
           type: string
           format: date-time
-        example: from=2024-02-05T00:00:00+01:00
+        example: 2024-02-05T00:00:00+01:00
       - name: to
         in: query
         description: |
@@ -12138,7 +12138,7 @@ paths:
         schema:
           type: string
           format: date-time
-        example: to=2024-02-06T00:00:00+01:00
+        example: 2024-02-06T00:00:00+01:00
       - name: interval
         in: query
         description: |
@@ -12152,7 +12152,7 @@ paths:
         schema:
           type: string
           format: date-time
-        example: to=2024-02-06T00:00:00+01:00
+        example: 2024-02-06T00:00:00+01:00
       - $ref: '#/components/parameters/filterBy'
       responses:
         '200':
