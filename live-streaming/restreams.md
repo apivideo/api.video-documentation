@@ -18,7 +18,7 @@ api.video enables you to broadcast a live stream to multiple platforms simultane
 
 ## How it works
 
-<Image src="/_assets/live-streaming/restreams/restreams-light.svg" src_dark="/_assets/live-streaming/restreams/restreams-dark.svg" alt="A diagram that shows RTMP restreaming on different platforms" />
+<Image src="/_assets/live-streaming/restreams/restreaming-light.svg" src_dark="/_assets/live-streaming/restreams/restreaming-dark.svg" alt="A diagram that shows RTMP restreaming on different platforms" />
 
 You can add restreams to an existing live stream or you can create a live stream that already includes the restream list.   
 
