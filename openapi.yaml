@@ -15069,41 +15069,53 @@ components:
           - `tag`: Returns analytics for videos using this tag. This filter only accepts a single value and is case sensitive. Read more about tagging your videos [here](https://docs.api.video/vod/tags-metadata).
       in: query
       required: false
-      example: {"mediaType":"video","continent":"EU","country":"FR"}
+      example: {"country":["FR"],"operatingSystem":["windows"],"browser":["firefox","chrome"],"tag":"Cool videos"}
       style: deepObject
       explode: true
       schema:
         type: object
         properties:
           mediaId:
-            type: string
+            type: array
+            items:
+              type: string
             description: Returns analytics based on the unique identifiers of a video or a live stream.
-            example: vi4blUQJFrYWbaG44NChkH27
+            example: ['vi4blUQJFrYWbaG44NChkH27']
           mediaType:
             type: string
             enum: [video, live-stream]
             example: video
           continent:
-            type: string
+            type: array
+            items:
+              type: string
             description: Returns analytics based on the viewers' continent. The list of supported continents names are based on the [GeoNames public database](https://www.geonames.org/countries/). You must use the ISO-3166 alpha2 format, for example `EU`.
             enum: [AS, AF, NA, SA, AN, EU, AZ]
-            example: EU
+            example: ['EU']
           country:
             description: Returns analytics based on the viewers' country. The list of supported country names are based on the [GeoNames public database](https://www.geonames.org/countries/). You must use the ISO-3166 alpha2 format, for example `FR`.
-            type: string
-            example: FR
+            type: array
+            items:
+              type: string
+            example: ['FR']
           deviceType:
-            type: string
+            type: array
+            items:
+              type: string
             description: 'Returns analytics based on the type of device used by the viewers. Response values can include: `computer`, `phone`, `tablet`, `tv`, `console`, `wearable`, `unknown`.'
-            example: computer
+            example: ['computer']
           operatingSystem:
-            type: string
+            type: array
+            items:
+              type: string
             description: Returns analytics based on the operating system used by the viewers. Response values can include `windows`, `mac osx`, `android`, `ios`, `linux`.
-            example: windows
+            example: ['windows']
           browser:
             description: Returns analytics based on the browser used by the viewers. Response values can include `chrome`, `firefox`, `edge`, `opera`.
-            type: string
-            example: firefox
+            type: array
+            items:
+              type: string
+            example: ['firefox']
           tag:
             type: string
             description: Returns analytics for videos using this tag. This filter only accepts a single value and is case sensitive. Read more about tagging your videos [here](https://docs.api.video/vod/tags-metadata).
