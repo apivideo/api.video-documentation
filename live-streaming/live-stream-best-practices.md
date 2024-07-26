@@ -92,7 +92,7 @@ When a live stream is ongoing, viewers can replay earlier content with the DVR f
 
 * The available duration for DVR is 1 hour.
 * DVR is only available for live streams that are actively broadcasting.
-* When a live stream is completed, api.video stores the recording for as long as the duration the stream, but **at most for 1 hour**. For example, if the duration of the live stream is 15 minutes, then the recording is available for 15 minutes after the stream is completed. Even if the stream is longer than 1 hour, the recording is only kept for 1 hour. The cached DVR recording is subsequently deleted.
+* When a live stream is completed, api.video stores the DVR for as long as the duration the stream, but **at most for 1 hour**. For example, if the duration of the live stream is 15 minutes, then the DVR is available for 15 minutes after the stream is completed. Even if the stream is longer than 1 hour, the DVR is only kept for 1 hour. The cached DVR is subsequently deleted.
 
 ### Reusing a `streamKey`
 
