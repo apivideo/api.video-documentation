@@ -7041,7 +7041,7 @@ paths:
                     status: 429
       security:
         - apiKey: []
-      x-client-action: update
+      x-client-action: complete
       x-doctave:
         code-samples:
   '/videos/{videoId}/captions/{language}':
@@ -11855,7 +11855,6 @@ paths:
       - apiKey: []
       x-client-action: getAggregatedMetrics
       x-group-parameters: true
-      x-client-paginated: true
       x-doctave:
         code-samples:
   '/data/buckets/{metric}/{breakdown}':
@@ -12301,6 +12300,25 @@ paths:
       x-client-paginated: true
       x-doctave:
         code-samples:
+              - language: node
+                code: |
+                  const metrics = await client.analytics.getMetricsOverTime({
+                    metric: 'play',
+                    filterBy: {
+                      browser: ['chrome', 'firefox'],
+                      continent: ['EU', 'AF'],
+                    },
+                  });
+              - language: csharp
+                code: |
+                  FilterBy2 filterBy = new FilterBy2
+                  {
+                      continent = new List<string> { "EU", "US" },
+                      devicetype = new List<string> { "phone" },
+                      tag = "test"
+                  };
+                  Page<AnalyticsMetricsBreakdownResponseData> page = apiClient.Analytics()
+                      .getMetricsBreakdown("play", "continent").From(new DateTime(2024, 7, 1)).FilterBy(filterBy).execute();
   /webhooks:
     get:
       tags:
@@ -14628,8 +14646,8 @@ components:
           format: float
           example: '356.2'
       required:
-      - context
-      - data
+        - context
+        - data
     analytics-metrics-breakdown-response:
       title: Analytics response for metrics breakdown by dimension
       type: object
@@ -15069,6 +15087,7 @@ components:
       required: false
       example: filterBy[country]=FR&filterBy[operatingSystem]=windows&filterBy[browser][]=firefox&filterBy[browser][]=chrome&filterBy[tag]=Cool videos
       style: deepObject
+      x-is-deep-object: true
       explode: true
       schema:
         type: object
