@@ -15087,8 +15087,8 @@ components:
             type: array
             items:
               type: string
+              enum: [AS, AF, NA, SA, AN, EU, AZ]
             description: Returns analytics based on the viewers' continent. The list of supported continents names are based on the [GeoNames public database](https://www.geonames.org/countries/). You must use the ISO-3166 alpha2 format, for example `EU`.
-            enum: [AS, AF, NA, SA, AN, EU, AZ]
             example: ['EU']
           country:
             description: Returns analytics based on the viewers' country. The list of supported country names are based on the [GeoNames public database](https://www.geonames.org/countries/). You must use the ISO-3166 alpha2 format, for example `FR`.
