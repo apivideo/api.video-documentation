@@ -11734,8 +11734,6 @@ paths:
           format: date-time
         example: 2024-02-06T00:00:00+01:00
       - $ref: '#/components/parameters/filterBy'
-      - $ref: '#/components/parameters/current-page'
-      - $ref: '#/components/parameters/page-size'
       responses:
         '200':
           headers:
@@ -15069,7 +15067,7 @@ components:
           - `tag`: Returns analytics for videos using this tag. This filter only accepts a single value and is case sensitive. Read more about tagging your videos [here](https://docs.api.video/vod/tags-metadata).
       in: query
       required: false
-      example: {"country":["FR"],"operatingSystem":["windows"],"browser":["firefox","chrome"],"tag":"Cool videos"}
+      example: filterBy[country]=FR&filterBy[operatingSystem]=windows&filterBy[browser][]=firefox&filterBy[browser][]=chrome&filterBy[tag]=Cool videos
       style: deepObject
       explode: true
       schema:
