@@ -6,14 +6,6 @@ meta:
 
 # Restreaming
 
-<Callout pad="2" type="warning">
-**Beta Feature**
-
-Please note that Restreaming is currently a beta feature. The api.video engineering team is continuously working on improving the feature, thus issues may occur.
-
-If you are experiencing an issue, please do not hesitate to contact our support team.
-</Callout>
-
 api.video enables you to broadcast a live stream to multiple platforms simultaneously. You can stream to Youtube, Twitch, and any other platform that supports streaming through `RTMPS` or `RTMP` protocols from one source.
 
 ## How it works
