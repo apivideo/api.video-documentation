@@ -18,8 +18,8 @@ This section gives you guidance on the necessary updates that you need to take i
 
 | The player you use                                                         | Actions to take                                                      |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| api.video web player ([Player SDK](/sdks/player/apivideo-player-sdk), or [Flutter player](/sdks/player/apivideo-flutter-player), or [React player](https://docs.api.video/sdks/player/apivideo-react-player))      | No action needed, data collection will continue as expected. |
-| A 3rd-party player with an Analytics library  | You need to update the analytics library you use: [api.video-videojs-analytics](/sdks/player/apivideo-videojs-analytics), or [api.video-hlsjs-analytics](/sdks/player/apivideo-hlsjs-analytics), or [api.video-player-analytics](/sdks/player/apivideo-player-analytics)). |
+| api.video's web players:<br />- [Player SDK](/sdks/player/apivideo-player-sdk)<br />- [Flutter player](/sdks/player/apivideo-flutter-player)<br />- [React player](https://docs.api.video/sdks/player/apivideo-react-player) | No action needed, data collection will continue as expected. |
+| A 3rd-party player with an Analytics library  | You need to update the analytics library you use:<br />- [api.video-videojs-analytics](/sdks/player/apivideo-videojs-analytics)<br />- [api.video-hlsjs-analytics](/sdks/player/apivideo-hlsjs-analytics)<br />- [api.video-player-analytics](/sdks/player/apivideo-player-analytics). |
 | A 3rd-party player without analytics | To start collecting data, you need to implement one of the [Analytics libraries](/sdks/player#web) for Web.  |
 
 ### Mobile players
@@ -27,9 +27,9 @@ This section gives you guidance on the necessary updates that you need to take i
 | The player you use                                                         | Actions to take                                                      |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | api.video [React Native player](/sdks/player/apivideo-react-native-player) | No action needed, data collection will continue as expected.         |
-| api.video [Flutter player](/sdks/player/apivideo-flutter-player), or [Android player](/sdks/player/apivideo-android-player), or [Swift player](/sdks/player/apivideo-swift-player)  | You need to update the player library that you use. |
-| A 3rd-party player on Android, based on exoplayer | You need to update the [api.video-android-player-analytics](/sdks/player/apivideo-android-player-analytics) library. You will also need minor code modifications - see the [documentation](https://github.com/apivideo/api.video-android-player-analytics?tab=readme-ov-file#installation) for details.  |
-| A 3rd-party player on iOS, based on avplayer | You need to update the [api.video-swift-player-analytics](/sdks/player/apivideo-swift-player-analytics) library. You will also need minor code modifications - see the [documentation](https://github.com/apivideo/api.video-swift-player-analytics?tab=readme-ov-file#installation) for details.  |
+| api.video's mobile players:<br />- [Flutter player](/sdks/player/apivideo-flutter-player)<br />- [Android player](/sdks/player/apivideo-android-player)<br />- [Swift player](/sdks/player/apivideo-swift-player)  | You need to update the player library that you use. |
+| A 3rd-party player on Android, based on exoplayer | You need to update the [api.video-android-player-analytics](/sdks/player/apivideo-android-player-analytics) library.<br /><br />You will also need minor code modifications - see the [documentation](https://github.com/apivideo/api.video-android-player-analytics?tab=readme-ov-file#installation) for details.  |
+| A 3rd-party player on iOS, based on avplayer | You need to update the [api.video-swift-player-analytics](/sdks/player/apivideo-swift-player-analytics) library.<br /><br />You will also need minor code modifications - see the [documentation](https://github.com/apivideo/api.video-swift-player-analytics?tab=readme-ov-file#installation) for details.  |
 | A 3rd-party player without analytics | To start collecting data, you need to implement one of the [Analytics libraries](/sdks/player#mobile) for Mobile.  |
 
 ## Mapping API endpoints
@@ -46,11 +46,11 @@ Migrating to the latest version of Analytics API is simple. The previous version
 The previous Analytics version's `/play` metric can be directly mapped to 3 new endpoints:
 
 - For the number of play events, use `/data/metrics/{metric}/{aggregation}` with the `play` metric and `count` aggregation.
-    - Example: `/data/metrics/play/count`
+    - **Example**: `/data/metrics/play/count`
 
 - For the number of play events in a breakdown by dimensions, use `/data/buckets/{metric}/{breakdown}` with the `play` metric and one of these dimensions:
         - `media-id`, `media-type`, `continent`, `country`, `device-type`, `operating-system`, `browser`,
-    - Example: `/data/buckets/play/country`
+    - **Example**: `/data/buckets/play/country`
 
 - For the number of play events over time, use `/data/timeseries/{metric}` with the `play` metric.
-    - Example: `/data/timeseries/play`
+    - **Example**: `/data/timeseries/play`
