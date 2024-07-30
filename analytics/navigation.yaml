@@ -5,5 +5,7 @@
     href: /analytics/README.md
   - label: Analytics overview
     href: /analytics/overview.md
+  - label: Migration guide
+    href: /analytics/migration.md
   - label: Analytics SDKs
     href: /sdks/player/README.md#player-analytics-sdks
