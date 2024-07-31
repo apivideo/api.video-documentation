@@ -12,7 +12,7 @@ meta:
 
   api.video enables you to collect and segment viewer interactions with your content, giving you detailed insights on view events in real time. Analytics helps you  collect metrics like total number of plays, impressions, average watch time, and so on. You can also filter the data using custom date ranges, and a large selection of dimensions like countries, browsers, and even device types. 
   
-  Check out the most relevant metrics on all your videos and live streams in the api.video [dashboard](https://dashboard.api.video/data)!
+  Check out the most relevant metrics on all your videos and live streams in the api.video [dashboard](https://dashboard.api.video/analytics)!
 
 </div>
 

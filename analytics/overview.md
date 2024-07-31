@@ -17,7 +17,7 @@ For example, you can:
 
 Use this data to understand your audience, or integrate the data directly into your own application to display it to your viewers.
 
-Visit the **[Analytics](https://dashboard.api.video/data)** page on the Dashboard to get started and see your data visualized, or jump into the **[API reference](/reference/api/Analytics)** and see how you can work with the data through our API!
+Visit the **[Analytics](https://dashboard.api.video/analytics)** page on the Dashboard to get started and see your data visualized, or jump into the **[API reference](/reference/api/Analytics)** and see how you can work with the data through our API!
 
 ## How it works
 
