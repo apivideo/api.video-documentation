@@ -26,7 +26,7 @@ In your module `build.gradle`, add the following code in `dependencies`:
 
 ```groovy
 dependencies {
-    implementation 'video.api:android-player:1.5.0'
+    implementation 'video.api:android-player:1.5.1'
 }
 ```
 
@@ -34,7 +34,7 @@ For Jetpack Compose, also add the following code in `dependencies`:
 
 ```groovy
 dependencies {
-    implementation 'video.api:android-compose-player:1.5.0'
+    implementation 'video.api:android-compose-player:1.5.1'
 }
 ```
 

@@ -14751,7 +14751,7 @@ components:
         data:
           description: Returns an array of metrics and the timestamps .
           type: array
-          items:            
+          items:
             type: object
             properties:
               emittedAt:
