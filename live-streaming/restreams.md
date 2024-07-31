@@ -57,9 +57,9 @@ api.video currently supports `RTMPS` and `RTMP` restreaming destinations. Provid
 - Instagram
 - Twitch
 - LinkedIn
-- Instagram (through [YellowDuck](https://yellowduck.tv/))
+- Instagram
 
-Providers that use SRT or any other protocol (like Kick or Telegram) are currently not supported.
+Providers that use SRT or any other protocol are currently not supported for restreaming.
 
 ## Getting Started
 
