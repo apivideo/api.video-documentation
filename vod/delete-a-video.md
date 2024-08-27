@@ -1,24 +1,22 @@
 ---
 title: Delete a video
 meta:
-    description: This guide walks you through how to permanently remove a video programmatically, and through the dashboard.
+    description: This guide walks you through the different ways of manually and programmatically removing videos and introduces the Video Restore feature.
 ---
 
 # Delete A Video
 
-This guide walks you through how to permanently remove a video programmatically, and through the dashboard. Please be aware that you cannot retrieve a video you delete, so be sure it's what you want to do.
+This guide walks you through the different ways of manually and programmatically removing videos and introduces the Video Restore feature.
 
 ## API documentation
 
 - [Delete a video](/reference/api/Videos#delete-a-video-object)
 
-## Delete a video
+## Delete a video via API
 
-To delete a video, you need to do the following: 
+1. Retrieve the video ID for the video you want to delete. You can do this by [listing your videos](/reference/api/Videos#list-all-video-objects), or you can look in your dashboard to find the ID of the video you want to delete.
 
-1. Retrieve the video ID for the video you want to delete. You can do this by listing your videos and searching for the one you want, or you can look in your dashboard to find the video you want to delete. 
-
-2. Send a delete request to api.video containing the ID for the video you want to delete. Be sure you want to delete the video - there is no way to retrieve the content you delete. 
+2. Send a delete request to api.video containing the ID for the video you want to delete.
 
 <CodeSelect title="Deleting a video">
 ```curl
@@ -135,8 +133,45 @@ You can delete a video using your dashboard by doing the following:
 
    ![Showing the list of videos in the Dashboard](/_assets/vod/delete-video.png)
 
-4. Deleting videos is a permanent action and there is no way to recover them. Keep this in mind when you confirm deleting the videos.
+4. Keep in mind that deleted videos can only be restored when you have the Video Restore feature enabled. Otherwise videos are deleted permanently.
 
 5. You can also select the breadcrumbs icon next to each video to open an actions panel where you can select **Delete**.
 
    ![Showing the action panel on the videos list in the Dashboard](/_assets/vod/delete-video-2.png)
+
+
+## Restoring deleted videos
+
+By default, deleting a video is a permanent action. To avoid accidents and enable you to restore deleted videos, api.video offers the [Video Restore](https://dashboard.api.video/account-settings/access) feature.
+
+If you have the Video Restore feature enabled, the `DELETE` operation will temporarily remove the video instead of permanently deleting it. 
+
+<Callout pad="2" type="info">
+Videos that are removed cannot be played. Restore the video first if you want to play it again.
+</Callout>
+
+You can restore removed videos both via the API and the dashboard.
+
+### Restore video via API
+
+You can use the `PATCH` operation to restore a video, with the `removed` body parameter set to `false`:
+
+```curl title="Restoring a video"
+curl --request PATCH \
+ --url https://ws.api.video/videos/viZxSTFgXZVjFnFCU \
+ --header 'Accept: application/json' \
+ --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDI1NDk1NjAuMDE5ODA0LCJuYmYiOjE2NDI1NDk1NjAuMDE5ODA0LCJleHAiOjE2NDI1NTMxNjAuMDE5ODA0LCJwcm9qZWN0SWQiOiJwclJ6SUpKQTdCTHNxSGpTNDVLVnBCMSJ9.jjr4YADGbe62RmBBxJXLy1D61Mtfry_dq9nbriBXgkPrdlBJ8ZRP50CyW3AsGD7wSuKp2mXxEYSzj64zelT1IGOwg6KG4Gz9BZ9YWs0GAHKUIdgqn1gzITX5aQljIXx1fquXbawd-axBTi4icmaUjgXjfnyIcWOgHd2D8A3kpKiqiMmluh58JdnwPnH0OyVk0Rk824P0PI6SxfiTHfkCglPL6ixf9OgokMLPoVrsxH5C0xt3Z7lf5TJ0F78-JY-yTKvyaTTIfI6CFOMNaZUlMtgQwq8X93_2FA65Ntw3hdDML8gFKkLUxnBAtZMo9WAjUd30G4OcYasmlkc4Q_JSNw'
+ -d '{
+    "removed": false
+    }'  
+```
+
+### Restore video in the dashboard
+
+Visit the [Archived Videos](https://dashboard.api.video/videos) tab in the dashboard to restore videos one by one or in bulk. Simply select the videos you want to restore and then choose **Restore**.
+
+### Retention period for Video Restore
+
+The Video Restore feature retains videos for 90 days, after which the videos are permanently deleted. This period gives you time to restore accidentally deleted videos.
+
+Visit the [dashboard](https://dashboard.api.video/account-settings/access) to enable this feature!
