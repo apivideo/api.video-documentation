@@ -13602,8 +13602,8 @@ components:
         createdAt:
           type: string
           format: date-time
-          description: 'When a video was created, presented in ISO-8601 format.'
-          example: '2019-06-24T11:45:01.109+00'
+          description: 'When a video was created, presented in ATOM UTC format.'
+          example: '2024-05-28T11:15:07+00:00'
         title:
           type: string
           description: |
@@ -13616,19 +13616,26 @@ components:
           example: An amazing video explaining string theory.
         publishedAt:
           type: string
-          description: The date and time the API created the video. Date and time are provided using ISO-8601 UTC format.
+          description: The date and time the API created the video. Date and time are provided using ATOM UTC format.
           format: date-time
-          example: '2019-12-16T08:25:51.000Z'
+          example: '2024-05-28T11:15:07+00:00'
         updatedAt:
           type: string
-          description: The date and time the video was updated. Date and time are provided using ISO-8601 UTC format.
+          description: The date and time the video was updated. Date and time are provided using ATOM UTC format.
           format: date-time
-          example: '2019-12-16T08:15:51.000Z'
+          example: '2024-05-28T11:15:07+00:00'
         removedAt:
           type: string
-          description: The date and time the video was removed. The API populates this field only if you have the Video Restore feature enabled. Date and time are provided using ISO-8601 UTC format.
+          description: The date and time the video was removed. The API populates this field only if you have the Video Restore feature enabled and remove a video. Date and time are provided using ATOM UTC format.
           format: date-time
-          example: '2019-12-16T08:15:51.000Z'
+          example: '2024-05-28T11:15:07+00:00'
+          nullable: true
+        deletesAt:
+          type: string
+          description: The date and time the video will be permanently deleted. The API populates this field only if you have the Video Restore feature enabled and remove a video. Removed videos are pemanently deleted after 90 days. Date and time are provided using ATOM UTC format.
+          format: date-time
+          example: '2024-05-28T11:15:07+00:00'
+          nullable: true
         tags:
           type: array
           description: |
@@ -13639,7 +13646,7 @@ components:
         metadata:
           type: array
           description: |
-            Metadata you can use to categorise and filter videos. Metadata is a list of dictionaries, where each dictionary represents a key value pair for categorising a video. [Dynamic Metadata](https://api.video/blog/endpoints/dynamic-metadata/) allows you to define a key that allows any value pair.
+            Metadata you can use to categorise and filter videos. Metadata is a list of dictionaries, where each dictionary represents a key value pair for categorising a video.
           example: '[{"key":"Author", "value":"John Doe"}, {"key":"Format", "value":"Tutorial"}]'
           items:
             $ref: '#/components/schemas/metadata'
