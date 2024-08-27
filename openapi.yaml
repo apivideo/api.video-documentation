@@ -243,7 +243,7 @@ paths:
           example: asc
         - name: removed
           in: query
-          description: Use this parameter to return a list of removed videos when you have this feature enabled.
+          description: Use this parameter to return a list of removed videos when you have this feature enabled. This parameter only accepts `true` as a value!
           required: false
           style: form
           explode: false
@@ -14395,9 +14395,8 @@ components:
           items:
             $ref: '#/components/schemas/metadata'
         removed:
+          description: Use this parameter to restore a removed video when you have the Video Restore feature enabled. This parameter only accepts `false` as a value!
           type: boolean
-          description: Use this parameter to restore a removed video. This parameter only accepts `false` as a value.
-          enum: [false]
       example:
         playerId: pl45KFKdlddgk654dspkze
         title: String theory
