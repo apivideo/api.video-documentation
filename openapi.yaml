@@ -241,6 +241,14 @@ paths:
             type: string
             enum: [asc, desc]
           example: asc
+        - name: removed
+          in: query
+          description: Use this parameter to return a list of removed videos when you have this feature enabled.
+          required: false
+          style: form
+          explode: false
+          schema:
+            type: boolean
         - $ref: '#/components/parameters/current-page'
         - $ref: '#/components/parameters/page-size'
       responses:
@@ -2814,9 +2822,14 @@ paths:
       tags:
         - Videos
       summary: Delete a video object
-      description: Delete a video object by video ID.
+      description: |
+        Delete a video object by video ID. 
+        
+        By default, deleted videos cannot be recovered. If you have the Video Restore feature enabled, this operation will remove the video instead of permanently deleting it. Make sure you subscribe to the Video Restore feature if you want to be able to restore deleted videos! 
+        
+        The Video Restore feature retains videos for 90 days, after which the videos are permanently deleted.       
       x-client-description:
-        default: 'If you do not need a video any longer, you can send a request to delete it. All you need is the videoId.'
+        default: 'If you do not need a video any longer, you can send a request to delete it. All you need is the videoId. By default, deleted videos cannot be recovered. If you have the Video Restore feature enabled, this operation will remove the video instead of permanently deleting it. Make sure you subscribe to the Video Restore feature if you want to be able to restore deleted videos! The Video Restore feature retains videos for 90 days, after which the videos are permanently deleted'
       operationId: DELETE-video
       parameters:
         - name: videoId
@@ -13611,6 +13624,11 @@ components:
           description: The date and time the video was updated. Date and time are provided using ISO-8601 UTC format.
           format: date-time
           example: '2019-12-16T08:15:51.000Z'
+        removedAt:
+          type: string
+          description: The date and time the video was removed. The API populates this field only if you have the Video Restore feature enabled. Date and time are provided using ISO-8601 UTC format.
+          format: date-time
+          example: '2019-12-16T08:15:51.000Z'
         tags:
           type: array
           description: |
@@ -14369,6 +14387,10 @@ components:
           description: 'A list (array) of dictionaries where each dictionary contains a key value pair that describes the video. As with tags, you must send the complete list of metadata you want as whatever you send here will overwrite the existing metadata for the video. [Dynamic Metadata](https://api.video/blog/endpoints/dynamic-metadata/) allows you to define a key that allows any value pair.'
           items:
             $ref: '#/components/schemas/metadata'
+        removed:
+          type: boolean
+          description: Use this parameter to restore a removed video. This parameter only accepts `false` as a value.
+          enum: [false]
       example:
         playerId: pl45KFKdlddgk654dspkze
         title: String theory
