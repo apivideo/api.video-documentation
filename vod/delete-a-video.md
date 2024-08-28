@@ -144,15 +144,17 @@ You can delete a video using your dashboard by doing the following:
 
 By default, deleting a video is a permanent action. To avoid accidents and enable you to restore deleted videos, api.video offers the [Video Restore](https://dashboard.api.video/account-settings/access) feature.
 
-If you have the Video Restore feature enabled, the `DELETE` operation will temporarily remove the video instead of permanently deleting it. 
-
-<Callout pad="2" type="info">
-Videos that are removed cannot be played. Restore the video first if you want to play it again.
-</Callout>
+If you have the Video Restore feature enabled, the `DELETE` operation will temporarily remove the video instead of permanently deleting it.
 
 You can restore removed videos both via the API and the dashboard.
 
-### Restore video via API
+### Listing removed videos
+
+You can list removed videos via the API using the `GET /videos` endpoint and the `?removed=true` query parameter. Visit the API reference for more details.
+
+You can also see all your removed videos on the [Archived Videos](https://dashboard.api.video/videos) tab in the dashboard.
+
+### Restoring video via API
 
 You can use the `PATCH` operation to restore a video, with the `removed` body parameter set to `false`:
 
@@ -166,7 +168,7 @@ curl --request PATCH \
     }'  
 ```
 
-### Restore video in the dashboard
+### Restoring video in the dashboard
 
 Visit the [Archived Videos](https://dashboard.api.video/videos) tab in the dashboard to restore videos one by one or in bulk. Simply select the videos you want to restore and then choose **Restore**.
 
@@ -175,3 +177,11 @@ Visit the [Archived Videos](https://dashboard.api.video/videos) tab in the dashb
 The Video Restore feature retains videos for 90 days, after which the videos are permanently deleted. This period gives you time to restore accidentally deleted videos.
 
 Visit the [dashboard](https://dashboard.api.video/account-settings/access) to enable this feature!
+
+### Limitations
+
+<Callout pad="2" type="warning">
+Videos that are removed are not listed by the `GET /videos` operation unless you use the `?removed=true` query parameter.
+
+Removed videos cannot be played. Restore the video first if you want to play it again.
+</Callout>
