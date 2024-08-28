@@ -293,6 +293,9 @@ paths:
                             value: Tutorial
                         publishedAt: '2019-12-16T08:25:51.000Z'
                         updatedAt: '2019-12-16T08:48:49.000Z'
+                        removed: false
+                        removedAt: null
+                        deletesAt: null
                         source:
                           uri: /videos/c188ed58-3403-46a2-b91b-44603d10b2c9/source
                         assets:
@@ -319,6 +322,9 @@ paths:
                             value: Computers
                         publishedAt: '2019-12-16T08:25:51.000Z'
                         updatedAt: '2019-12-16T08:48:49.000Z'
+                        removed: false
+                        removedAt: null
+                        deletesAt: null
                         source:
                           uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                         assets:
@@ -342,6 +348,9 @@ paths:
                             value: Short
                         publishedAt: '2019-12-16T08:25:51.000Z'
                         updatedAt: '2019-12-16T08:48:49.000Z'
+                        removed: false
+                        removedAt: null
+                        deletesAt: null
                         source:
                           uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                         assets:
@@ -577,6 +586,9 @@ paths:
                       - key: Format
                         value: Tutorial
                     publishedAt: '4665-07-14T23:36:18.598Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                     assets:
@@ -988,6 +1000,9 @@ paths:
                       - key: Format
                         value: Tutorial
                     publishedAt: '4665-07-14T23:36:18.598Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                     assets:
@@ -1973,6 +1988,9 @@ paths:
                         value: Tutorial
                     createdAt: '2020-03-03T12:52:03.085Z'
                     publishedAt: '2020-07-14T23:36:18.598Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                     assets:
@@ -2300,6 +2318,9 @@ paths:
                       - key: Format
                         value: Tutorial
                     publishedAt: '4665-07-14T23:36:18.598Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                     assets:
@@ -2600,6 +2621,9 @@ paths:
                         value: Tutorial
                     publishedAt: '2019-12-16T08:25:51.000Z'
                     updatedAt: '2019-12-16T08:48:49.000Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                     assets:
@@ -3119,6 +3143,9 @@ paths:
                         value: Tutorial
                     publishedAt: '2019-12-16T08:25:51.000Z'
                     updatedAt: '2019-12-16T08:48:49.000Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4blUQJFrYWbaG44NChkH27/source
                     assets:
@@ -4814,6 +4841,9 @@ paths:
                       - key: Format
                         value: Tutorial
                     publishedAt: '4665-07-14T23:36:18.598Z'
+                    removed: false
+                    removedAt: null
+                    deletesAt: null
                     source:
                       uri: /videos/vi4k0jvEUuaTdRAEjQ4Jfrgz/source
                     assets:
@@ -13694,6 +13724,9 @@ components:
             value: Tutorial
         createdAt: '4251-03-03T12:52:03.085Z'
         publishedAt: '4665-07-14T23:36:18.598Z'
+        removed: false
+        removedAt: null
+        deletesAt: null
         actions:
           - video_delete
           - video_download
