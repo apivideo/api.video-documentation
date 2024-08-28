@@ -13636,6 +13636,9 @@ components:
           format: date-time
           example: '2024-05-28T11:15:07+00:00'
           nullable: true
+        removed:
+          type: boolean
+          description: Returns `true` for videos you removed when you have the Video Restore feature enabled. Returns `false` for every other video.
         tags:
           type: array
           description: |
