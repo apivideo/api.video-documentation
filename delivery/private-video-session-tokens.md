@@ -14,7 +14,7 @@ The session starts with the /session endpoint where we get the session token fro
 
 Once the session token is acquired, it is reused in all other requests to the different assets.
 
-<Image src="/_assets/delivery-analytics/private-videos/session-token-light.svg" src_dark="/_assets/delivery-analytics/private-videos/session-token-dark.svg" alt="A diagram that shows the session token flow" />
+<Image src="/_assets/delivery-analytics/private-videos/session-token-new-light.svg" src_dark="/_assets/delivery-analytics/private-videos/session-token-new-dark.svg" alt="A diagram that shows the session token flow" />
 
 <Callout pad="2" type="info">
 **Time to Live**
