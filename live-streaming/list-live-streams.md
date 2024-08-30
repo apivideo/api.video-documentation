@@ -161,7 +161,7 @@ You can send in a request to filter based on the different parameters for a live
 
 - `streamKey` - A string representing the stream key that allows you to stream videos to a specific live stream container
 - `name` - A string representing the name of your live stream 
-- `sortBy` - A string indicating how you want the results sorted, options include createdAt, publishedAt, name. createdAt - the time a livestream was created using the specified streamKey. publishedAt - the time a livestream was published using the specified streamKey. name - the name of the livestream. If you choose one of the time-based options, the time is presented in ISO-8601 format.
+- `sortBy` - A string indicating how you want the results sorted, options include createdAt, publishedAt, name. createdAt - the time a livestream was created using the specified streamKey. publishedAt - the time a livestream was published using the specified streamKey. name - the name of the livestream. If you choose one of the time-based options, the time is presented in ATOM UTC format.
 - `sortOrder` - A string indicating the order in which to sort everything. Allowed: asc, desc. Ascending for date and time means that earlier values precede later ones. Descending means that latter values precede earlier ones. The title is 0-9 and A-Z ascending and Z-A, 9-0 descending.
 - `currentPage` - Choose the search results page to return—minimum value: 1.
 - `pageSize` - Choose the number of results per page. Allowed values: 1-100, default is 25.
@@ -192,7 +192,7 @@ func main() {
     
     req.StreamKey("30087931-229e-42cf-b5f9-e91bcc1f7332") // string | The unique stream key that allows you to stream videos.
     req.Name("My Video") // string | You can filter live streams by their name or a part of their name.
-    req.SortBy("createdAt") // string | Allowed: createdAt, publishedAt, name. createdAt - the time a livestream was created using the specified streamKey. publishedAt - the time a livestream was published using the specified streamKey. name - the name of the livestream. If you choose one of the time based options, the time is presented in ISO-8601 format.
+    req.SortBy("createdAt") // string | Allowed: createdAt, publishedAt, name. createdAt - the time a livestream was created using the specified streamKey. publishedAt - the time a livestream was published using the specified streamKey. name - the name of the livestream. If you choose one of the time based options, the time is presented in ATOM UTC format.
     req.SortOrder("desc") // string | Allowed: asc, desc. Ascending for date and time means that earlier values precede later ones. Descending means that later values preced earlier ones. For title, it is 0-9 and A-Z ascending and Z-A, 9-0 descending.
     req.CurrentPage(int32(2)) // int32 | Choose the number of search results to return per page. Minimum value: 1 (default to 1)
     req.PageSize(int32(30)) // int32 | Results per page. Allowed values 1-100, default is 25. (default to 25)
@@ -238,7 +238,7 @@ const ApiVideoClient = require('@api.video/nodejs-client');
 
         const streamKey = '30087931-229e-42cf-b5f9-e91bcc1f7332'; // The unique stream key that allows you to stream videos.
         const name = 'My Video'; // You can filter live streams by their name or a part of their name.
-        const sortBy = 'createdAt'; // Allowed: createdAt, publishedAt, name. createdAt - the time a livestream was created using the specified streamKey. publishedAt - the time a livestream was published using the specified streamKey. name - the name of the livestream. If you choose one of the time based options, the time is presented in ISO-8601 format.
+        const sortBy = 'createdAt'; // Allowed: createdAt, publishedAt, name. createdAt - the time a livestream was created using the specified streamKey. publishedAt - the time a livestream was published using the specified streamKey. name - the name of the livestream. If you choose one of the time based options, the time is presented in ATOM UTC format.
         const sortOrder = 'desc'; // Allowed: asc, desc. Ascending for date and time means that earlier values precede later ones. Descending means that later values preced earlier ones. For title, it is 0-9 and A-Z ascending and Z-A, 9-0 descending.
         const currentPage = '2'; // Choose the number of search results to return per page. Minimum value: 1
         const pageSize = '30'; // Results per page. Allowed values 1-100, default is 25.
