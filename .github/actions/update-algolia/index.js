@@ -29,6 +29,8 @@ try {
     const algoliaAppId = process.env.ALGOLIA_APPLICATION_ID;
     const algoliaApiKey = process.env.ALGOLIA_API_KEY;
 
+    console.log(process.env);
+
     if (!algoliaIndex || !algoliaAppId || !algoliaApiKey) {
         throw new Error("Missing Algolia configuration")
     }
