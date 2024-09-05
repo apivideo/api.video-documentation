@@ -97,10 +97,10 @@ In this case, the service will respond `202 Accepted` and ingest the video async
 
 By default, deleting a video is a permanent action. To avoid accidents and enable you to restore deleted videos, api.video offers the [Video Restore](https://dashboard.api.video/account-settings/access) feature.
 
-* If you have the Video Restore feature enabled, the `DELETE` operation will temporarily remove the video instead of permanently deleting it. 
-* Videos that are removed are not listed by the `GET /videos` operation unless you use the `?removed=true` query parameter.
-* Videos that are removed cannot be played. Restore the video first if you want to play it again.
-* You can list and restore removed videos both via the API and the dashboard. Check out [this guide](/vod/delete-a-video#restoring-deleted-videos) for the details.
+* If you have the Video Restore feature enabled, the `DELETE` operation will temporarily discard the video instead of permanently deleting it. 
+* Videos that are discarded are not listed by the `GET /videos` or `GET /videos/{videoId}`operations.
+* Videos that are discarded cannot be played. Restore the video first if you want to play it again.
+* You can list and restore discarded videos both via the API and the dashboard. Check out [this guide](/vod/delete-a-video#restoring-deleted-videos) for the details.
 * The Video Restore feature retains videos for 90 days, after which the videos are permanently deleted.
 
 Visit the [dashboard](https://dashboard.api.video/account-settings/access) to enable this feature!
