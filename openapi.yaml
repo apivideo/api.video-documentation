@@ -11857,6 +11857,68 @@ paths:
       x-group-parameters: true
       x-doctave:
         code-samples:
+          - language: java
+            code: |
+              FilterBy2 filterBy = new FilterBy2();
+        
+              filterBy.setBrowser(Collections.singletonList("Chrome"));
+              filterBy.setContinent(Arrays.asList(FilterBy2.ContinentEnum.NA, FilterBy2.ContinentEnum.EU));
+              filterBy.setMediaType(FilterBy2.MediaTypeEnum.VIDEO);
+              filterBy.setTag("test");
+
+
+              AnalyticsAggregatedMetricsResponse res = apiClient.analytics().getAggregatedMetrics("play", "total").filterBy(filterBy).execute();
+              System.out.println(res.getData());
+          - language: node
+            code: |
+              const res = await client.analytics.getAggregatedMetrics({
+                aggregation: 'total',
+                metric: 'play',
+                filterBy: {
+                  browser: ['chrome', 'firefox'],
+                  continent: ['EU', 'AF'],
+                  tag: 'test',
+                },
+              });
+              console.log(res.data);
+          - language: csharp
+            code: |
+              FilterBy2 filterBy = new FilterBy2
+              {
+                  continent = new List<string> { "EU", "US" },
+                  devicetype = new List<string> { "phone" },
+                  tag = "test"
+              };
+              AnalyticsAggregatedMetricsResponse res = apiClient.Analytics()
+                  .getAggregatedMetrics("play", "total").From(new DateTime(2024, 7, 1)).FilterBy(filterBy).execute();
+          - language: go
+            code: |
+              res, err := cl.Analytics.GetAggregatedMetrics("play", "day", AnalyticsApiGetAggregatedMetricsRequest{
+                filterBy: &FilterBy2{
+                  Continent: &[]string{"EU", "AA"},
+                  DeviceType: &[]string{"computer", "phone"},
+                  Tag: PtrString("tag"),
+                },
+              })
+          - language: python
+            code: |
+              res = self.api.get_aggregated_metrics(metric='play', aggregation='count', filter_by=FilterBy2(
+                      device_type=["computer", "phone"],
+                      tag="test",
+                  ),
+              )
+          - language: swift
+            code: |
+              AnalyticsAPI.getAggregatedMetrics(
+                      metric: .play,
+                      aggregation: .total,
+                      filterBy: FilterBy2(
+                          continent: [.an, .eu],
+                          tag: "test"
+                      )
+                  ) { analytics, error in
+                      // ...
+                  }
   '/data/buckets/{metric}/{breakdown}':
     get:
       tags:
@@ -12119,6 +12181,69 @@ paths:
       x-client-paginated: true
       x-doctave:
         code-samples:
+          - language: java
+            code: |
+              FilterBy2 filterBy = new FilterBy2();
+
+              filterBy.setBrowser(Collections.singletonList("Chrome"));
+              filterBy.setContinent(Arrays.asList(FilterBy2.ContinentEnum.NA, FilterBy2.ContinentEnum.EU));
+              filterBy.setMediaType(FilterBy2.MediaTypeEnum.VIDEO);
+              filterBy.setTag("test");
+
+              Page<AnalyticsMetricsBreakdownResponseData> res = apiClient.analytics().getMetricsBreakdown("play", "media-id").filterBy(filterBy).pageSize(30).execute();
+              for (AnalyticsMetricsBreakdownResponseData item : res.getItems()) {
+                  System.out.println(item.getDimensionValue() + ": " + item.getMetricValue());
+              }
+          - language: node
+            code: |
+              const res = await client.analytics.getMetricsBreakdown({
+                breakdown: 'continent',
+                metric: 'play',
+                filterBy: {
+                  browser: ['chrome', 'firefox'],
+                  continent: ['EU', 'AF'],
+                  tag: 'test',
+                },
+              });
+              console.log(res.data);
+          - language: csharp
+            code: |
+              FilterBy2 filterBy = new FilterBy2
+              {
+                  continent = new List<string> { "EU", "US" },
+                  devicetype = new List<string> { "phone" },
+                  tag = "test"
+              };
+              Page<AnalyticsMetricsBreakdownResponseData> page = apiClient.Analytics()
+                  .getMetricsBreakdown("play", "continent").From(new DateTime(2024, 7, 1)).FilterBy(filterBy).execute();
+          - language: go
+            code: |
+              res, err := cl.Analytics.GetMetricsBreakdown("play", "continent", AnalyticsApiGetMetricsBreakdownRequest{
+                filterBy: &FilterBy2{
+                  Continent: &[]string{"EU", "AA"},
+                  DeviceType: &[]string{"computer", "phone"},
+                  Tag: 	PtrString("tag"),
+                },
+              })
+          - language: python
+            code: |
+              res = self.api.get_metrics_breakdown(metric='play', breakdown='continent', filter_by=FilterBy2(
+                      device_type=["computer", "phone"],
+                      tag="test",
+                  ),
+              )
+          - language: swift
+            code: |
+              AnalyticsAPI.getMetricsBreakdown(
+                  metric: .play,
+                  breakdown: .browser,
+                  filterBy: FilterBy2(
+                      continent: [.an, .eu],
+                      tag: "test"
+                  )
+              ) { analytics, error in
+                  // ...
+              }
   '/data/timeseries/{metric}':
     get:
       tags:
@@ -12370,15 +12495,32 @@ paths:
       x-client-paginated: true
       x-doctave:
         code-samples:
+              - language: java
+                code: |
+                  FilterBy2 filterBy = new FilterBy2();
+
+                  filterBy.setBrowser(Collections.singletonList("Chrome"));
+                  filterBy.setContinent(Arrays.asList(FilterBy2.ContinentEnum.NA, FilterBy2.ContinentEnum.EU));
+                  filterBy.setMediaType(FilterBy2.MediaTypeEnum.VIDEO);
+                  filterBy.setTag("test");
+
+                  Page<AnalyticsMetricsOverTimeResponseData> res = apiClient.analytics().getMetricsOverTime("play").filterBy(filterBy).pageSize(30).execute();
+                  for (AnalyticsMetricsOverTimeResponseData item : res.getItems()) {
+                      System.out.println(item.getEmittedAt() + ": " + item.getMetricValue());
+                  }
               - language: node
                 code: |
-                  const metrics = await client.analytics.getMetricsOverTime({
+                  const res = await client.analytics.getMetricsOverTime({
                     metric: 'play',
                     filterBy: {
+                      mediaType: 'video',
                       browser: ['chrome', 'firefox'],
                       continent: ['EU', 'AF'],
+                      tag: "test",
                     },
                   });
+
+                  console.log(res);
               - language: csharp
                 code: |
                   FilterBy2 filterBy = new FilterBy2
@@ -12387,8 +12529,35 @@ paths:
                       devicetype = new List<string> { "phone" },
                       tag = "test"
                   };
-                  Page<AnalyticsMetricsBreakdownResponseData> page = apiClient.Analytics()
-                      .getMetricsBreakdown("play", "continent").From(new DateTime(2024, 7, 1)).FilterBy(filterBy).execute();
+                  Page<AnalyticsMetricsOverTimeResponseData> res = apiClient.Analytics()
+                      .getMetricsOverTime("play").From(new DateTime(2024, 7, 1)).FilterBy(filterBy).execute();
+              - language: go
+                code: |
+                  res, err := cl.Analytics.GetMetricsOverTime("play", AnalyticsApiGetMetricsOverTimeRequest{
+                    filterBy: &FilterBy2{
+                      Continent: &[]string{"EU", "AA"},
+                      DeviceType: &[]string{"computer", "phone"},
+                      Tag: 	PtrString("tag"),
+                    },
+                  })
+              - language: python
+                code: |
+                  res = self.api.get_metrics_over_time(metric='play', filter_by=FilterBy2(
+                          device_type=["computer", "phone"],
+                          tag="test",
+                      ),
+                  )
+              - language: swift
+                code: |
+                  AnalyticsAPI.getMetricsOverTime(
+                          metric: .play,
+                          filterBy: FilterBy2(
+                              continent: [.an, .eu],
+                              tag: "test"
+                          )
+                      ) { analytics, error in
+                          // ...
+                      }
   /webhooks:
     get:
       tags:
@@ -14821,7 +14990,7 @@ components:
         data:
           description: Returns an array of metrics and the timestamps .
           type: array
-          items:
+          items:            
             type: object
             properties:
               emittedAt:
@@ -15160,6 +15329,7 @@ components:
       x-is-deep-object: true
       explode: true
       schema:
+        x-is-deep-object: true
         type: object
         properties:
           mediaId:
