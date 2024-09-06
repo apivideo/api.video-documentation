@@ -4166,19 +4166,10 @@ paths:
                 response:
                   value:
                     type: 'https://docs.api.video/reference/invalid-attribute'
-                    title: This attribute must be a ISO-8601 date.
-                    name: scheduledAt
+                    title: An attribute is invalid.
+                    detail: Value must be false.
+                    name: discarded
                     status: 400
-                    problems:
-                      - type: 'https://docs.api.video/reference/invalid-attribute'
-                        title: This attribute must be a ISO-8601 date.
-                        name: scheduledAt
-                      - type: 'https://docs.api.video/reference/invalid-attribute'
-                        title: This attribute must be an array.
-                        name: tags
-                      - type: 'https://docs.api.video/reference/invalid-attribute'
-                        title: This attribute must be an array.
-                        name: metadata
         '404':
           headers:
             X-RateLimit-Limit:
