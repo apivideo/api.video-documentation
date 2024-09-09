@@ -256,9 +256,9 @@ paths:
             application/json:
               schema:
                 type: object
-                description: A date within the interval you selected in `YYYY-MM-DD` format.
                 properties:
                   '{date}':
+                    description: A date within the interval you selected in `YYYY-MM-DD` format.
                     type: object
                     pattern: '^\d{4}-\d{2}-\d{2}$'
                     properties:
@@ -345,9 +345,9 @@ paths:
             application/json:
               schema:
                 type: object
-                description: A date within the interval you selected in `YYYY-MM-DD` format.
                 properties:
                   '{date}':
+                    description: A date within the interval you selected in `YYYY-MM-DD` format.
                     type: object
                     pattern: '^\d{4}-\d{2}-\d{2}$'
                     properties:
