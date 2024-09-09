@@ -227,6 +227,160 @@ paths:
                 $ref: '#/components/schemas/Project'
       security:
         - basicAuth: []
+  /projects/{project_id}/delivery-usage:
+    get:
+      tags:
+        - Usage
+      summary: Get delivery usage
+      description: This endpoint enables you to retrieve the total amount of minutes delivered for a specific project based on its `project_id`.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project you want to retrieve usage data for.
+        - in: query
+          name: interval
+          required: true
+          schema:
+            type: string
+            enum:
+              - month
+              - week
+          description: Set the period of time that you want to retrieve delivery usage for. `month` returns data for the past 30 days, while `week` returns data for the past 7 days.
+      responses:
+        '200':
+          description: Successful response
+          content: 
+            application/json:
+              schema:
+                type: object
+                description: A date within the interval you selected in `YYYY-MM-DD` format.
+                properties:
+                  '{date}':
+                    type: object
+                    pattern: '^\d{4}-\d{2}-\d{2}$'
+                    properties:
+                      live_stream:
+                        type: object
+                        description: Returns the total value of live stream delivery usage in minutes for every day within the interval you selected.
+                        properties:
+                          duration_minutes:
+                            type: integer
+                            description: Shows the amount of usage in minutes.
+                            example: 51
+                      video_hls:
+                        type: object
+                        description: Returns the total value of HLS video delivery usage in minutes for every day within the    interval you selected.
+                        properties:
+                          duration_minutes:
+                            type: integer
+                            description: Shows the amount of usage in minutes.
+                            example: 100
+                      video_mp4:
+                        type: object
+                        description: Returns the total value of mp4 video delivery usage in minutes for every day within the    interval you selected.
+                        properties:
+                          duration_minutes:
+                            type: integer
+                            description: Shows the amount of usage in minutes.
+                            example: 33
+                example:
+                  '2024-08-01':
+                    live_stream:
+                      duration_minutes: 51
+                    video_hls:
+                      duration_minutes: 100
+                    video_mp4:
+                      duration_minutes: 33
+                  '2024-08-02':
+                    live_stream:
+                      duration_minutes: 22
+                    video_hls:
+                      duration_minutes: 41
+                    video_mp4:
+                      duration_minutes: 124
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+              example:
+                constraint: required
+                detail: An attribute is invalid.
+                name: interval
+                title: Bad request.
+                total_problems: 1
+                type: 'https://docs.api.video/reference/invalid-attribute'
+      security:
+        - basicAuth: []
+  /projects/{project_id}/hosting-usage:
+    get:
+      tags:
+        - Usage
+      summary: Get hosting usage
+      description: This endpoint enables you to retrieve the cumulative amount of video minutes hosted in a specific project based on its `project_id`.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project you want to retrieve usage data for.
+        - in: query
+          name: interval
+          required: true
+          schema:
+            type: string
+            enum:
+              - month
+              - week
+          description: Set the period of time that you want to retrieve hosting usage for. `month` returns data for the past 30 days, while `week` returns data for the past 7 days.
+      responses:
+        '200':
+          description: Successful response
+          content: 
+            application/json:
+              schema:
+                type: object
+                description: A date within the interval you selected in `YYYY-MM-DD` format.
+                properties:
+                  '{date}':
+                    type: object
+                    pattern: '^\d{4}-\d{2}-\d{2}$'
+                    properties:
+                      video:
+                        type: object
+                        description: Returns the cumulative length of hosted videos in minutes for every day within the   interval you selected.
+                        properties:
+                          duration_minutes:
+                            type: integer
+                            description: Shows the amount of usage in minutes.
+                            example: 51
+                example:
+                  '2024-08-01':
+                    video:
+                      duration_minutes: 51
+                  '2024-08-02':
+                    video:
+                      duration_minutes: 22
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+              example:
+                constraint: required
+                detail: An attribute is invalid.
+                name: interval
+                title: Bad request.
+                total_problems: 1
+                type: 'https://docs.api.video/reference/invalid-attribute'
+      security:
+        - basicAuth: []
   /projects/{project_id}/api-keys:
     get:
       tags:
@@ -505,3 +659,31 @@ components:
             format: uri
             description: The URL path of the linked page.
             example: /projects?page_size=20&name=aaa&sort_by=name&sort_order=desc&page=2
+    BadRequest:
+      type: object
+      properties:
+        type:
+          description: A link to the error documentation.
+          type: string
+        title:
+          description: A description of the error that occurred.
+          type: string
+        name:
+          description: The name of the parameter that caused the error.
+          type: string
+        detail:
+          description: Details about the error that happened.
+          type: string
+        total_problems:
+          description: The number of problems in your request.
+          type: integer
+        constraint:
+          description: The limitation that your request did not meet.
+          type: string
+      example:
+        constraint: required
+        detail: An attribute is invalid.
+        name: interval
+        title: Bad request.
+        total_problems: 1
+        type: 'https://docs.api.video/reference/invalid-attribute'

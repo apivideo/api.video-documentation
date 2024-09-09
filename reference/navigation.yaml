@@ -16,6 +16,7 @@
       only:
         - Projects
         - API keys
+        - Usage
 
 - heading: Authentication
   items:
