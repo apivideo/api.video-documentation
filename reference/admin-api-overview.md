@@ -25,6 +25,14 @@ You should direct each HTTP call to the Admin API through this server URL:
 
 The Admin API offers 2 sets of endpoints: [`/projects`](/reference/admin-api/Projects) and [`/api-keys`](/reference/admin-api/API-keys). In general, the Projects endpoints enable you to programmatically list all your projects, get a specific project, and to create or update a project, while the API keys endpoints enable you to programmatically list all your API keys, get a specific API key, and to create, update, or delete an API key.  
 
+### Knowing your hosting and delivery usage
+
+The Admin API enables you to programmatically retrieve accurate delievery and hosting usage data. This is the same data that api.video uses to calculate pricing based on your usage.
+
+You can retrieve delivery usage data for live streams, HLS videos, and mp4 videos within a specific project. You can also retrieve hosting usage data for all your videos across a specific project. Both sets of data can be filtered for the past 7 or 30 days in a daily breakdown.
+
+Check out the dedicated [Usage](/reference/admin-api/Usage) endpoints for more details!
+
 ## Authentication
 
 This API uses [Basic HTTP authentication scheme](https://datatracker.ietf.org/doc/html/rfc7617), which requires an **admin API key** to interact with the Admin API.  This API key is different from your individual projects’ API keys as it’s one level above them.
