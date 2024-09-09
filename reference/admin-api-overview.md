@@ -31,6 +31,10 @@ The Admin API enables you to programmatically retrieve accurate delievery and ho
 
 You can retrieve delivery usage data for live streams, HLS videos, and mp4 videos within a specific project. You can also retrieve hosting usage data for all your videos across a specific project. Both sets of data can be filtered for the past 7 or 30 days in a daily breakdown.
 
+<Callout pad="2" type="info">
+This level of granularity is especially useful if you manage multiple clients or projects and want to accurately measure and segment their individual usage.
+</Callout>
+
 Check out the dedicated [Usage](/reference/admin-api/Usage) endpoints for more details!
 
 ## Authentication
