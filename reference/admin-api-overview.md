@@ -27,13 +27,13 @@ The Admin API offers 2 sets of endpoints: [`/projects`](/reference/admin-api/Pro
 
 ### Knowing your hosting and delivery usage
 
-The Admin API enables you to programmatically retrieve accurate delievery and hosting usage data. This is the same data that api.video uses to calculate pricing based on your usage.
-
-You can retrieve delivery usage data for live streams, HLS videos, and mp4 videos within a specific project. You can also retrieve hosting usage data for all your videos across a specific project. Both sets of data can be filtered for the past 7 or 30 days in a daily breakdown.
+The Admin API enables you to programmatically retrieve accurate delievery and hosting usage data per project. This is the same data that api.video uses to calculate pricing based on your usage.
 
 <Callout pad="2" type="info">
 This level of granularity is especially useful if you manage multiple clients or projects and want to accurately measure and segment their individual usage.
 </Callout>
+
+You can retrieve delivery usage data for live streams, HLS videos, and mp4 videos within a specific project. You can also retrieve hosting usage data for all your videos across a specific project. Both sets of data can be filtered for the past 7 or 30 days in a daily breakdown.
 
 Check out the dedicated [Usage](/reference/admin-api/Usage) endpoints for more details!
 
