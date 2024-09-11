@@ -227,6 +227,120 @@ paths:
                 $ref: '#/components/schemas/Project'
       security:
         - basicAuth: []
+  /projects/{project_id}/delivery-usage:
+    get:
+      tags:
+        - Usage
+      summary: Get delivery usage
+      description: This endpoint enables you to retrieve the total amount of minutes delivered for a specific project based on its `project_id`.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project you want to retrieve usage data for.
+        - in: query
+          name: interval
+          required: true
+          schema:
+            type: string
+            enum:
+              - month
+              - week
+          description: Set the period of time that you want to retrieve delivery usage for. `month` returns data for the past 30 days, while `week` returns data for the past 7 days.
+      responses:
+        '200':
+          description: Successful response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DeliveryUsageResponse'
+                example:
+                  items:
+                  - collected_on: '2024-08-09'
+                    video_hls_duration_minutes: 10
+                    video_mp4_duration_minutes: 22
+                    live_stream_hls_duration_minutes: 422
+                  - collected_on: '2024-08-10'
+                    video_hls_duration_minutes: 33
+                    video_mp4_duration_minutes: 245
+                    live_stream_hls_duration_minutes: 32
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+              example:
+                constraint: required
+                detail: An attribute is invalid.
+                name: interval
+                title: Bad request.
+                total_problems: 1
+                type: 'https://docs.api.video/reference/invalid-attribute'
+      security:
+        - basicAuth: []
+  /projects/{project_id}/hosting-usage:
+    get:
+      tags:
+        - Usage
+      summary: Get hosting usage
+      description: This endpoint enables you to retrieve the cumulative amount of video minutes hosted in a specific project based on its `project_id`.
+      parameters:
+        - in: path
+          name: project_id
+          required: true
+          schema:
+            type: string
+          description: The ID of the project you want to retrieve usage data for.
+        - in: query
+          name: interval
+          required: true
+          schema:
+            type: string
+            enum:
+              - month
+              - week
+          description: Set the period of time that you want to retrieve hosting usage data for. `month` returns data for the past 30 days, while `week` returns data for the past 7 days.
+      responses:
+        '200':
+          description: Successful response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/HostingUsageResponse'
+                example:
+                  items:
+                  - collected_on: '2024-08-09'
+                    video_duration_minutes: 235
+                  - collected_on: '2024-08-10'
+                    video_duration_minutes: 454
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequest'
+              example:
+                constraint: required
+                detail: An attribute is invalid.
+                name: interval
+                title: Bad request.
+                total_problems: 1
+                type: 'https://docs.api.video/reference/invalid-attribute'
+      security:
+        - basicAuth: []
   /projects/{project_id}/api-keys:
     get:
       tags:
@@ -505,3 +619,61 @@ components:
             format: uri
             description: The URL path of the linked page.
             example: /projects?page_size=20&name=aaa&sort_by=name&sort_order=desc&page=2
+    DeliveryUsageResponse:
+      type: object
+      properties:
+        collected_on:
+          description: A date within the interval you selected, returned in `YYYY-MM-DD` format.
+          type: string
+          pattern: '^\d{4}-\d{2}-\d{2}$'
+        live_stream_hls_duration_minutes:
+          description: Returns the total value of HLS live stream delivery in minutes. This field only returns delivery data for the date in the `collected_on` field.
+          type: integer
+          example: 51
+        video_hls_duration_minutes:
+          description: Returns the total value of HLS video delivery in minutes. This field only returns delivery data for the date in the `collected_on` field.
+          type: integer
+          example: 100
+        video_mp4_duration_minutes:
+          description: Returns the total value of mp4 video delivery in minutes. This field only returns delivery data for the date in the `collected_on` field.
+          type: integer
+          example: 33
+    HostingUsageResponse:
+      type: object
+      properties:
+        collected_on:
+          description: A date within the interval you selected, returned in `YYYY-MM-DD` format.
+          type: string
+          pattern: '^\d{4}-\d{2}-\d{2}$'
+        video_duration_minutes:
+          description: Returns the cumulative length of hosted videos in minutes. This field only returns hosting data for the date in the `collected_on` field.
+          type: integer
+          example: 345
+    BadRequest:
+      type: object
+      properties:
+        type:
+          description: A link to the error documentation.
+          type: string
+        title:
+          description: A description of the error that occurred.
+          type: string
+        name:
+          description: The name of the parameter that caused the error.
+          type: string
+        detail:
+          description: Details about the error that happened.
+          type: string
+        total_problems:
+          description: The number of problems in your request.
+          type: integer
+        constraint:
+          description: The limitation that your request did not meet.
+          type: string
+      example:
+        constraint: required
+        detail: An attribute is invalid.
+        name: interval
+        title: Bad request.
+        total_problems: 1
+        type: 'https://docs.api.video/reference/invalid-attribute'

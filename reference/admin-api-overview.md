@@ -25,6 +25,18 @@ You should direct each HTTP call to the Admin API through this server URL:
 
 The Admin API offers 2 sets of endpoints: [`/projects`](/reference/admin-api/Projects) and [`/api-keys`](/reference/admin-api/API-keys). In general, the Projects endpoints enable you to programmatically list all your projects, get a specific project, and to create or update a project, while the API keys endpoints enable you to programmatically list all your API keys, get a specific API key, and to create, update, or delete an API key.  
 
+### Knowing your hosting and delivery usage
+
+The Admin API enables you to programmatically retrieve accurate delievery and hosting usage data per project. This is the same data that api.video uses to calculate pricing based on your usage.
+
+<Callout pad="2" type="info">
+This level of granularity is especially useful if you manage multiple clients or projects and want to accurately measure and segment their individual usage.
+</Callout>
+
+You can retrieve delivery usage data for live streams, HLS videos, and mp4 videos within a specific project. You can also retrieve hosting usage data for all your videos across a specific project. Both sets of data can be filtered for the past 7 or 30 days in a daily breakdown.
+
+Check out the dedicated [Usage](/reference/admin-api/Usage) endpoints for more details!
+
 ## Authentication
 
 This API uses [Basic HTTP authentication scheme](https://datatracker.ietf.org/doc/html/rfc7617), which requires an **admin API key** to interact with the Admin API.  This API key is different from your individual projects’ API keys as it’s one level above them.
@@ -47,8 +59,10 @@ The credentials for the Admin API are in the form `username:password`, where the
 
 ### Example authentication
 
-```json
-curl -u "$adminApiKey:" https://admin.api.video/projects/count
+```curl
+curl --request GET \
+     --url https://admin.api.video/projects/count \
+     --header 'Authorization: Basic {$adminApiKey}' \
 ```
 
 ## Interacting with the Admin API
@@ -60,18 +74,69 @@ curl -u "$adminApiKey:" https://admin.api.video/projects/count
 Your calls to the Admin API are rate limited at 10 requests / second.
 </Callout>
 
-### Example request for `/count`
+### Example: create a project with Admin API
+   
+When you create a project through the Admin API, you also have to create at least one related API key for it. You can use this simple workflow:
 
-```json
-GET https://admin.api.video/projects/count
-Authorization: Basic $base64Credentials
-
-200 OK
+<Steps>
+  <Step title="Create  the project">
+  Use the [Create project](/reference/admin-api/Projects#create-project) endpoint to create a project in the hosting region you prefer:
+  
+  <br/>
+  
+  ```curl
+curl --request POST \
+     --url https://admin.api.video/projects \
+     --header 'Accept: application/json' \
+     --header 'Authorization: Basic {$adminApiKey}' \
+     --header 'Content-Type: application/json' \
+     --data '
 {
-	"count": 142305
+  "name": "My Programmatically Created Project",
+  "region": "eu-central-1"
 }
 ```
-Where `$base64Credentials` is the concatenation of your API key and `:`, then base 64 encoded.
+  <br/>
+  
+  </Step>
+  <Step title="Check the response">
+  
+  The API returns a `201 - Project created successfully` response with the ID of the project you just created:
+  <br/>
+  
+  ```json
+  {
+  "project_id": "{Your new project's ID}",
+  "created_at": "2024-08-10T17:32:28Z",
+  "name": "My Programmatically Created Project",
+  "region": "eu-central-1"
+  }
+  ```
+  <br/>
+  
+  </Step>
+  <Step title="Create the API key"> 
+  Use the `project_id` as the path parameter for the [Create API key](/reference/admin-api/API-keys#create-api-key) endpoint to create an API key tied to your new project:
+  <br/>
+  
+  ```curl
+curl --request POST \
+     --url https://admin.api.video/projects/{Your new project's ID}/api-keys \
+     --header 'Accept: application/json' \
+     --header 'Authorization: Basic {$adminApiKey}' \
+     --header 'Content-Type: application/json' \
+     --data '
+{
+  "name": "My API key"
+}
+  ```
+  <br/>
+
+  You're done! You can now use the API key you created to interact with your new project.
+   
+  </Step>
+  
+</Steps>
 
 ## Pagination
 
