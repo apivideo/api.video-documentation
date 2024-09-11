@@ -59,8 +59,10 @@ The credentials for the Admin API are in the form `username:password`, where the
 
 ### Example authentication
 
-```json
-curl -u "$adminApiKey:" https://admin.api.video/projects/count
+```curl
+curl --request GET \
+     --url https://admin.api.video/projects/count \
+     --header 'Authorization: Basic {$adminApiKey}' \
 ```
 
 ## Interacting with the Admin API
@@ -72,18 +74,69 @@ curl -u "$adminApiKey:" https://admin.api.video/projects/count
 Your calls to the Admin API are rate limited at 10 requests / second.
 </Callout>
 
-### Example request for `/count`
+### Example: create a project with Admin API
+   
+When you create a project through the Admin API, you also have to create at least one related API key for it. You can use this simple workflow:
 
-```json
-GET https://admin.api.video/projects/count
-Authorization: Basic $base64Credentials
-
-200 OK
+<Steps>
+  <Step title="Create  the project">
+  Use the [Create project](/reference/admin-api/Projects#create-project) endpoint to create a project in the hosting region you prefer:
+  
+  <br/>
+  
+  ```curl
+curl --request POST \
+     --url https://admin.api.video/projects \
+     --header 'Accept: application/json' \
+     --header 'Authorization: Basic {$adminApiKey}' \
+     --header 'Content-Type: application/json' \
+     --data '
 {
-	"count": 142305
+  "name": "My Programmatically Created Project",
+  "region": "eu-central-1"
 }
 ```
-Where `$base64Credentials` is the concatenation of your API key and `:`, then base 64 encoded.
+  <br/>
+  
+  </Step>
+  <Step title="Check the response">
+  
+  The API returns a `201 - Project created successfully` response with the ID of the project you just created:
+  <br/>
+  
+  ```json
+  {
+  "project_id": "{Your new project's ID}",
+  "created_at": "2024-08-10T17:32:28Z",
+  "name": "My Programmatically Created Project",
+  "region": "eu-central-1"
+  }
+  ```
+  <br/>
+  
+  </Step>
+  <Step title="Create the API key"> 
+  Use the `project_id` as the path parameter for the [Create API key](/reference/admin-api/API-keys#create-api-key) endpoint to create an API key tied to your new project:
+  <br/>
+  
+  ```curl
+curl --request POST \
+     --url https://admin.api.video/projects/{Your new project's ID}/api-keys \
+     --header 'Accept: application/json' \
+     --header 'Authorization: Basic {$adminApiKey}' \
+     --header 'Content-Type: application/json' \
+     --data '
+{
+  "name": "My API key"
+}
+  ```
+  <br/>
+
+  You're done! You can now use the API key you created to interact with your new project.
+   
+  </Step>
+  
+</Steps>
 
 ## Pagination
 
