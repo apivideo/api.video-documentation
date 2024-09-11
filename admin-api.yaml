@@ -257,50 +257,20 @@ paths:
               schema:
                 type: object
                 properties:
-                  '{date}':
-                    description: A date within the interval you selected in `YYYY-MM-DD` format.
-                    type: object
-                    pattern: '^\d{4}-\d{2}-\d{2}$'
-                    properties:
-                      live_stream:
-                        type: object
-                        description: Returns the total value of live stream delivery usage in minutes for every day within the interval you selected.
-                        properties:
-                          duration_minutes:
-                            type: integer
-                            description: Shows the amount of usage in minutes.
-                            example: 51
-                      video_hls:
-                        type: object
-                        description: Returns the total value of HLS video delivery usage in minutes for every day within the    interval you selected.
-                        properties:
-                          duration_minutes:
-                            type: integer
-                            description: Shows the amount of usage in minutes.
-                            example: 100
-                      video_mp4:
-                        type: object
-                        description: Returns the total value of mp4 video delivery usage in minutes for every day within the    interval you selected.
-                        properties:
-                          duration_minutes:
-                            type: integer
-                            description: Shows the amount of usage in minutes.
-                            example: 33
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DeliveryUsageResponse'
                 example:
-                  '2024-08-01':
-                    live_stream:
-                      duration_minutes: 51
-                    video_hls:
-                      duration_minutes: 100
-                    video_mp4:
-                      duration_minutes: 33
-                  '2024-08-02':
-                    live_stream:
-                      duration_minutes: 22
-                    video_hls:
-                      duration_minutes: 41
-                    video_mp4:
-                      duration_minutes: 124
+                  items:
+                  - collected_on: '2024-08-09'
+                    video_hls_duration_minutes: 10
+                    video_mp4_duration_minutes: 22
+                    live_stream_hls_duration_minutes: 422
+                  - collected_on: '2024-08-10'
+                    video_hls_duration_minutes: 33
+                    video_mp4_duration_minutes: 245
+                    live_stream_hls_duration_minutes: 32
         '400':
           description: Bad request
           content:
@@ -337,7 +307,7 @@ paths:
             enum:
               - month
               - week
-          description: Set the period of time that you want to retrieve hosting usage for. `month` returns data for the past 30 days, while `week` returns data for the past 7 days.
+          description: Set the period of time that you want to retrieve hosting usage data for. `month` returns data for the past 30 days, while `week` returns data for the past 7 days.
       responses:
         '200':
           description: Successful response
@@ -346,26 +316,16 @@ paths:
               schema:
                 type: object
                 properties:
-                  '{date}':
-                    description: A date within the interval you selected in `YYYY-MM-DD` format.
-                    type: object
-                    pattern: '^\d{4}-\d{2}-\d{2}$'
-                    properties:
-                      video:
-                        type: object
-                        description: Returns the cumulative length of hosted videos in minutes for every day within the   interval you selected.
-                        properties:
-                          duration_minutes:
-                            type: integer
-                            description: Shows the amount of usage in minutes.
-                            example: 51
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/HostingUsageResponse'
                 example:
-                  '2024-08-01':
-                    video:
-                      duration_minutes: 51
-                  '2024-08-02':
-                    video:
-                      duration_minutes: 22
+                  items:
+                  - collected_on: '2024-08-09'
+                    video_duration_minutes: 235
+                  - collected_on: '2024-08-10'
+                    video_duration_minutes: 454
         '400':
           description: Bad request
           content:
@@ -659,6 +619,36 @@ components:
             format: uri
             description: The URL path of the linked page.
             example: /projects?page_size=20&name=aaa&sort_by=name&sort_order=desc&page=2
+    DeliveryUsageResponse:
+      type: object
+      properties:
+        collected_on:
+          description: A date within the interval you selected, returned in `YYYY-MM-DD` format.
+          type: string
+          pattern: '^\d{4}-\d{2}-\d{2}$'
+        live_stream_hls_duration_minutes:
+          description: Returns the total value of HLS live stream delivery in minutes. This field only returns delivery data for the date in the `collected_on` field.
+          type: integer
+          example: 51
+        video_hls_duration_minutes:
+          description: Returns the total value of HLS video delivery in minutes. This field only returns delivery data for the date in the `collected_on` field.
+          type: integer
+          example: 100
+        video_mp4_duration_minutes:
+          description: Returns the total value of mp4 video delivery in minutes. This field only returns delivery data for the date in the `collected_on` field.
+          type: integer
+          example: 33
+    HostingUsageResponse:
+      type: object
+      properties:
+        collected_on:
+          description: A date within the interval you selected, returned in `YYYY-MM-DD` format.
+          type: string
+          pattern: '^\d{4}-\d{2}-\d{2}$'
+        video_duration_minutes:
+          description: Returns the cumulative length of hosted videos in minutes. This field only returns hosting data for the date in the `collected_on` field.
+          type: integer
+          example: 345
     BadRequest:
       type: object
       properties:
