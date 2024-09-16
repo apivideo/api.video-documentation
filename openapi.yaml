@@ -13280,11 +13280,11 @@ paths:
                         from: '2024-05-28T11:08:39+00:00'
                         to: '2024-05-29T11:08:39+00:00'
                     data:
-                    - emittedAt: '2024-05-29T07+00:00:00:00'
+                    - emittedAt: '2024-05-29T07:00:00+00:00'
                       metricValue: 2
-                    - emittedAt: '2024-05-29T08+00:00:00:00'
+                    - emittedAt: '2024-05-29T08:00:00+00:00'
                       metricValue: 1
-                    - emittedAt: '2024-05-29T09+00:00:00:00'
+                    - emittedAt: '2024-05-29T09:00:00+00:00'
                       metricValue: 1
                     pagination:
                       currentPage: 1
