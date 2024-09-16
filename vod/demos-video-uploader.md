@@ -6,7 +6,7 @@ meta:
 
 # Video uploader
 
-Uploading a video is essential for many different use-cases. Whether it's an backoffice application like Strapi that requires the admin to upload videos, or a user-generated content platform like YouTube, that gives users the ability to upload their own videos.
+Uploading a video is essential for many different use-cases. Whether it's a backoffice application like Strapi that requires an admin to upload videos, or user-generated content platforms like YouTube that give users the ability to upload their own videos.
 
 ## Features
 
@@ -18,11 +18,9 @@ Before cloning the Github repo, you can try out the demo of the [Upload a video]
 
 ## Github repo
 
-Now that's you've got the look and feel, you can clone the repo and start hacking.
+You will find the repo [here](https://github.com/apivideo/upload.a.video).
 
-You will find the repo [here](https://github.com/apivideo/upload.a.video)
-
-To clone the repo, just go into your command line and run the following command:
+To clone the repo, run the following command in your command line:
 
 ```
 $ git clone https://github.com/apivideo/upload.a.video

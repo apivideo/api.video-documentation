@@ -96,7 +96,7 @@ export default function Home() {
 
 ### Understanding the endpoints
 
-On the frontend, we are making a request to 3 main endpoints from the server. If you edit `src/pages/index.tsx` again and  you can find these values
+On the frontend, we are making a request to 3 main endpoints from the server. If you edit `src/pages/index.tsx` again you can find these values:
 
 #### Uploading a video
 ```typescript
