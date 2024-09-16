@@ -20,11 +20,9 @@ Before cloning the Github repo, you can try out the demo of the [Youtube mockup]
 
 ## Github repo
 
-Now that's you've got the look and feel, you can clone the repo and start hacking.
-
 You will find the repo [here](https://github.com/apivideo/youtube-clone-next)
 
-To clone the repo, just go into your command line and run the following command:
+To clone the repo, run the following command in your command line:
 
 ```
 $ git clone https://github.com/apivideo/youtube-clone-next.git

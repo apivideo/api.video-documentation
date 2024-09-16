@@ -14,10 +14,10 @@ The api.video Mediastream Composer library will give you all of these abilities 
 
 - Screen casting to the stream
 - Automatic adjustment of the size of the composition
-- Webcam stream is added infront of the screencast stream
+- Webcam stream is added in front of the screencast stream
 - Drawing on screen
 - Resizing the webcam stream
-- And more...
+- And more ...
 
 ## Demo
 
@@ -25,11 +25,9 @@ Before cloning the Github repo, you can try out the demo of the [Loom clone](htt
 
 ## Github repo
 
-Now that's you've got the look and feel, you can clone the repo and start hacking.
+You can find the repo [here](https://github.com/apivideo/api.video-typescript-media-stream-composer)
 
-You will find the repo [here](https://github.com/apivideo/api.video-typescript-media-stream-composer)
-
-To clone the repo, just go into your command line and run the following command:
+To clone the repo, run the following command in your command line:
 
 ```
 $ git clone https://github.com/apivideo/api.video-typescript-media-stream-composer
