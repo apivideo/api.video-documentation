@@ -79,7 +79,7 @@ Your calls to the Admin API are rate limited at 10 requests / second.
 When you create a project through the Admin API, you also have to create at least one related API key for it. You can use this simple workflow:
 
 <Steps>
-  <Step title="Create  the project">
+  <Step title="Create the project">
   Use the [Create project](/reference/admin-api/Projects#create-project) endpoint to create a project in the hosting region you prefer:
   
   <br/>
@@ -91,10 +91,10 @@ curl --request POST \
      --header 'Authorization: Basic {$adminApiKey}' \
      --header 'Content-Type: application/json' \
      --data '
-{
-  "name": "My Programmatically Created Project",
-  "region": "eu-central-1"
-}
+        {
+          "name": "My Programmatically Created Project",
+          "region": "eu-central-1"
+        }
 ```
   <br/>
   
@@ -106,10 +106,10 @@ curl --request POST \
   
   ```json
   {
-  "project_id": "{Your new project's ID}",
-  "created_at": "2024-08-10T17:32:28Z",
-  "name": "My Programmatically Created Project",
-  "region": "eu-central-1"
+    "project_id": "{Your new project's ID}",
+    "created_at": "2024-08-10T17:32:28Z",
+    "name": "My Programmatically Created Project",
+    "region": "eu-central-1"
   }
   ```
   <br/>
@@ -126,9 +126,25 @@ curl --request POST \
      --header 'Authorization: Basic {$adminApiKey}' \
      --header 'Content-Type: application/json' \
      --data '
-{
-  "name": "My API key"
-}
+        {
+          "name": "My API key"
+        }
+  ```
+  <br/>
+   
+  </Step>
+  <Step title="Interact with the API"> 
+  The API returns a `201 - API key created successfully` response where the `value` field holds your API key:
+  <br/>
+  
+  ```json
+  {
+    "project_id": "{Your new project's ID}",
+    "api_key_id": "{Your new API key's ID}",
+    "created_at": "2024-08-10T18:32:28Z",
+    "name": "My API key",
+    "value": "{The value of your actual API key}"
+  }
   ```
   <br/>
 
