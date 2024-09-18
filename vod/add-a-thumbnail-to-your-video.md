@@ -137,7 +137,14 @@ print(response)
 
 ## Pick a thumbnail
 
-If you don't want to create a custom thumbnail image for your video, you can select one from the video itself. All you need to do is choose the timecode to the frame you want to be the thumbnail. The format is ISO 8601, and represents - HH:MM:SS:mm - hours, minutes, seconds, milliseconds.
+If you don't want to create a custom thumbnail image for your video, you can select one from the video itself. All you need to do is choose the timecode to the frame you want to be the thumbnail. The accepted formats are:
+
+- `HH:MM:SS.mm` - hours, minutes, seconds, milliseconds
+- `hh:mm:ss:frameNumber`
+- `int` - integer value is reported as seconds
+
+If your selection is out of range, `00:00:00.00` will be used.
+
 
 <CodeSelect title="Picking a thumbnail">
 ```curl
