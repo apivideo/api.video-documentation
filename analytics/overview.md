@@ -23,7 +23,7 @@ Visit the **[Analytics](https://dashboard.api.video/analytics)** page on the Das
 
 Analytics uses player events to analyze and segment your viewers' interactions with your content. Here are some key aspects:
 
-- api.video retains analytics data for 30 days.
+- By default, api.video retains analytics data for 30 days. You can extend data retention to 3 months or 12 months through the [Analytics page in the Dashboard](https://dashboard.api.video/analytics) - click on the `3M` or `12M` buttons to get started!
 - Player events are generated when your viewers engage with a video or live stream session.
 - Data is refreshed in real time, with a frequency of `<5s`.
 - Data does not carry over from the previous versions of Analytics.
