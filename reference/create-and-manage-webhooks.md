@@ -200,7 +200,7 @@ api.video provides secure signatures for each webhook you subscribe to. You can 
   </Step>
   <Step title="Check the response">
   
-  When this webhook subscription is created, sends a signature secret in a `201` response, with a similar body:
+  When this webhook subscription is created, api.video returns a signature secret in a `201` response, with a response body similar to this:
   
   <br/>
   
