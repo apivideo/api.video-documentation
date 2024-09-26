@@ -200,7 +200,7 @@ api.video provides secure signatures for each webhook you subscribe to. You can 
   </Step>
   <Step title="Check the response">
   
-  When this webhook subscription is created, sends a signature secret in a `201` response, with a similar body:
+  When this webhook subscription is created, api.video returns a signature secret in a `201` response, with a response body similar to this:
   
   <br/>
   
@@ -375,7 +375,7 @@ api.video handles failed webhook deliveries using these rules:
 
 * We accept responses that you send in return to a webhook notification.
 * We check for status codes in your responses above `HTTP 299`: `3xx` redirections, `4xx` client errors, and `5xx` server errors.
-* In case of an unsuccessful delivery, api.video logs the issue and retries sending the webhook notification 3 times, with 3 second intervals between each try.
+* In case of an unsuccessful delivery, api.video retries sending the webhook notification 3 times, with 3 second intervals between each try.
 * In case the status code in your response is `1xx` or `2xx`, api.video assumes that the delivery is successful and does not retry.
 
 ---
