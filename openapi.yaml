@@ -16257,13 +16257,16 @@ x-webhooks:
                 type:
                   type: string
                   description: The name of the webhook event that occured.
+                  example: live-stream.broadcast.started
                 emittedAt:
                   description: Returns the date-time when the webhook event occurred.
                   type: string
                   format: date-time
+                  example: '2024-08-151T10:18:47+00:00'
                 liveStreamId:
                   description: The ID of the live stream that started broadcasting.
                   type: string
+                  example: li400mYKSgQ6xs7taUeSaEap
       responses:
         '202':
           summary: Accepted
@@ -16297,13 +16300,16 @@ x-webhooks:
                 type:
                   type: string
                   description: The name of the webhook event that occured.
+                  example: live-stream.broadcast.ended
                 emittedAt:
                   description: Returns the date-time when the webhook event occurred.
                   type: string
                   format: date-time
+                  example: '2024-08-151T10:18:47+00:00'
                 liveStreamId:
                   description: The ID of the live stream that ended broadcasting.
                   type: string
+                  example: li400mYKSgQ6xs7taUeSaEap
       responses:
         '202':
           summary: Accepted
@@ -16337,16 +16343,20 @@ x-webhooks:
                 type:
                   type: string
                   description: The name of the webhook event that occured.
+                  example: video.source.recorded
                 emittedAt:
                   description: Returns the date-time when the webhook event occurred.
                   type: string
                   format: date-time
+                  example: '2024-08-151T10:18:47+00:00'
                 liveStreamId:
                   description: The ID of the live stream that ended broadcasting.
                   type: string
+                  example: li400mYKSgQ6xs7taUeSaEap
                 videoId:
                   description: The video ID of the live stream recording.
                   type: string
+                  example: vi4blUQJFrYWbaG44NChkH11
       responses:
         '202':
           summary: Accepted
@@ -16380,19 +16390,26 @@ x-webhooks:
                 type:
                   type: string
                   description: The name of the webhook event that occured.
+                  example: video.encoding.quality.completed
                 emittedAt:
                   description: Returns the date-time when the webhook event occurred.
                   type: string
                   format: date-time
+                  example: '2024-08-151T10:18:47+00:00'
                 videoId:
                   description: The ID of the video where a certain quality version's encoding is finished.
                   type: string
+                  example: vi4blUQJFrYWbaG44NChkH11
                 encoding:
                   description: The type of encoding that is finished.
                   type: string
+                  enum: [hls, mp4]
+                  example: hls
                 quality:
                   description: The quality version of encoding that is finished.
                   type: string
+                  enum: [240p, 360p, 480p, 720p, 1080p]
+                  example: 1080p
       responses:
         '202':
           summary: Accepted
