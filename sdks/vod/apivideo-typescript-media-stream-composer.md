@@ -129,7 +129,7 @@ When you load an image onto the composition, the origin of the image must be the
 |        mute | boolean                                                      | false         | Whether the stream should be muted or not                                                                                                                 |
 |      hidden | boolean                                                      | false         | Whether the stream should be hidden or not
 |     opacity | number                                                       | 100         | Opacity of the stream (from 0 to 100)                                                                                                       |
-|     onClick | (streamId: string, event: \{ x: number; y: number; }) => void | undefined     | A callback function that will be called when the stream is clicked                                                                                        |
+|     onClick | (streamId: string, event: ` { x: number; y: number; } `) => void | undefined     | A callback function that will be called when the stream is clicked                                                                                        |
 
 **Example (screen capture)**
 
@@ -361,11 +361,13 @@ Using delegated upload tokens for authentication is best options when uploading 
 
 ###### Common options
 
-| Option name | Mandatory | Type   | Description                                                         |
-| ----------: | --------- | ------ | ------------------------------------------------------------------- |
-|   videoName | no        | string | the name of your recorded video (overrides the default "file" name) |
-|     apiHost | no        | string | api.video host (default: ws.api.video)                              |
-|     retries | no        | number | number of retries when an API call fails (default: 5)               |
+| Option name | Mandatory          | Type   | Description                                                         |
+| ----------: | ------------------ | ------ | ------------------------------------------------------------------- |
+|   videoName | no                 | string | the name of your recorded video (overrides the default "file" name) |
+|     apiHost | no                 | string | api.video host (default: ws.api.video)                              |
+|     retries | no                 | number | number of retries when an API call fails (default: 5)               |
+|   timeslice | no (default: 5000) | number | The number of milliseconds to record into each Blob.                |
+
 
 
 **Example**
