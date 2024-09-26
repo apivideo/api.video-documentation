@@ -353,6 +353,7 @@ Here is a sample implementation to verify webhooks using PHP:
   ```curl
   $ curl --location 'http://localhost:8181' --header 'x-api-video-webhookid: webhook_XXXXXXXXXXXXXXX' --header 'x-api-video-signature: 27a77d3a7fc626854886b5dbfae4e32c8b0170c1ea1b714c91ba77f1e7774e8c' --header 'Content-Type: application/json' --data '{"type":"video.encoding.quality.completed","emittedAt":"2021-01-29T15:46:25.217Z","videoId":"vi0000000000000000000000","liveStreamId":"li0000000000000000000000","encoding":"hls","quality":"720p"}'
   ```
+  <br/>
 
   Note that this example call does not have any whitespaces. Copy and reuse it without modification, otherwise your call will not be successful.
 
