@@ -6,13 +6,13 @@ meta:
 
 # Postman Collection
 
-The official Postman collection for api.video (coming soon!)
+Use this Postman collection to interact with api.video's API:
 
-<a href="https://app.getpostman.com/run-collection/25448896-f974b6d5-45b0-4569-a58b-f1cb316f6fec?action=collection%2Ffork&collection-url=entityId%3D25448896-f974b6d5-45b0-4569-a58b-f1cb316f6fec%26entityType%3Dcollection%26workspaceId%3D74b4417e-4bc0-4f4f-b4e0-c67afa0fc760" class="custom-api-video-button">
-  ▶ Run in Postman
+<a href="https://www.postman.com/apivideo/api-video-s-public-workspace/collection/25448896-dc28e101-288e-421f-9f28-bf61b6fe2a96/api-video/fork?origin=tab" class="custom-api-video-button">
+  ▶ Fork our collection
 </a>
 
-## Forking the collection to your Postman workspace 🍴
+## Forking the collection to your Postman workspace
 
 1. Click the button above
 2. Add your [API key](https://dashboard.api.video/project-settings/api-keys) to the Variables
