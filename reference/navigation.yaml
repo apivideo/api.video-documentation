@@ -8,24 +8,16 @@
     - label: Webhooks
       href: ./create-and-manage-webhooks.md
 
-- heading: Admin API
-  items:
-    - label: Overview
-      href: ././admin-api-overview.md
-    - open_api_spec: admin-api.yaml
-      only:
-        - Projects
-        - API keys
-        - Usage
-
 - heading: Authentication
   items:
     - label: Overview
       href: ./authentication-guide.md
-    - label: Basic authentication
-      href: ./basic-authentication.md
-    - label: Bearer token authentication
-      href: ./disposable-bearer-token-authentication.md
+      collapsed: true
+      items:
+        - label: Basic authentication
+          href: ./basic-authentication.md
+        - label: Bearer token authentication
+          href: ./disposable-bearer-token-authentication.md
     - open_api_spec: openapi.yaml
       only:
         - Advanced authentication
@@ -64,6 +56,16 @@
     - open_api_spec: openapi.yaml
       only:
         - Webhooks
+
+- heading: Admin API
+  items:
+    - label: Overview
+      href: ././admin-api-overview.md
+    - open_api_spec: admin-api.yaml
+      only:
+        - Projects
+        - API keys
+        - Usage
 
 - heading: Errors
   items:
