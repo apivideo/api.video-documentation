@@ -6,27 +6,27 @@ meta:
 
 # Video Download
 
-After videos have been transcoded on [api.video](http://api.video), it’s natural that you want to give your users the ability to download their videos, or just download the video for your own use, possibly for backup.
+After videos have been transcoded on [api.video](https://api.video), it’s natural that you want to give your users the ability to download their videos, or just download the video for your own use, possibly for backup.
 
-[api.video](http://api.video) allows you and your users to download videos directly from the player or programmatically through the API.
+[api.video](https://api.video) allows you and your users to download videos directly from the player or programmatically through the API.
 
 <Image src="/_assets/vod/video-download/video-download-diagram-light.svg" src_dark="/_assets/vod/video-download/video-download-diagram-dark.svg" alt="A diagram that shows the process of video download" />
 
-## Download a video from [api.video](http://api.video) player
+## Download a video from [api.video](https://api.video) player
 
-The video object can be created or updated with the `mp4Support` tag. The tag will make the video downloadable and display a button on the [api.video](http://api.video) player.
+The video object can be created or updated with the `mp4Support` tag. The tag will make the video downloadable and display a button on the [api.video](https://api.video) player.
 
 ![](/_assets/vod/video-download/download-video-1.png)
 ![](/_assets/vod/video-download/download-video-2.png)
 
 <Callout pad="2" type="info">
-* By default, the `mp4Support` tag is set to `true`, hence the video is downloadable. If you want to disable the download ability from the [api.video](http://api.video) player, you have to set the `mp4Support` tag to `false`
+* By default, the `mp4Support` tag is set to `true`, hence the video is downloadable. If you want to disable the download ability from the [api.video](https://api.video) player, you have to set the `mp4Support` tag to `false`
 * If you don’t want the user to be able to download the video, do not serve the mp4 asset.
 </Callout>
 
 ## Disabling download
 
-You can use one of the API clients offered by [api.video](http://api.video). You can find the list of clients in the [api.video API Client catalog](https://docs.api.video/sdks/api-clients).
+You can use one of the API clients offered by [api.video](https://api.video). You can find the list of clients in the [api.video API Client catalog](https://docs.api.video/sdks/api-clients).
 
 You can also find more information on the `/videos` endpoints on the [API reference page](https://docs.api.video/reference/api/Videos#create-a-video-object).
 
@@ -347,7 +347,7 @@ func main() {
 
 Most players support download, however, if you would like to add a download button to a custom player that doesn’t have a download button, it’s also possible.
 
-By leveraging the API, you can create a request to [api.video](http://api.video), which will get the video id and then render a download button serving the mp4 asset.
+By leveraging the API, you can create a request to [api.video](https://api.video), which will get the video id and then render a download button serving the mp4 asset.
 
 In this example, you will learn how to create a custom download button with React and Node.js backend
 
@@ -384,7 +384,7 @@ const serverHostname = "localhost:5500"
 const handleClick = async (sourceVideoId) => {
   try {
 		// replace the server hostname with your 
-    const response = await fetch(`http://${serverHostname}/download?videoId=${sourceVideoId}`, {
+    const response = await fetch(`https://${serverHostname}/download?videoId=${sourceVideoId}`, {
       method: 'GET',
     });
     if (!response.ok) {
@@ -473,7 +473,7 @@ $ npm init
 Now edit the index.js file that you’ve created, and copy this code. 
 
 <Callout pad="2" type="info">
-Make sure that you copy your API key from the [api.video](http://api.video) dashboard and replace the port to the port you would like to run the server on.
+Make sure that you copy your API key from the [api.video](https://api.video) dashboard and replace the port to the port you would like to run the server on.
 </Callout>
 
 

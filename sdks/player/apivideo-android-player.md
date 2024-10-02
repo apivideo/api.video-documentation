@@ -47,7 +47,7 @@ a video Id to use this component and play a video from api.video. To get yours, 
 1. [Log into your account](https://dashboard.api.video/login) or create
    one [here](https://dashboard.api.video/register).
 2. Copy your API key (sandbox or production if you are subscribed to one of
-   our [plan](https://api.video/pricing)).
+   our [plan](https://api.video/pricing/)).
 3. Go to [the official api.video documentation](https://docs.api.video/).
 4. Go to API Reference -> Videos -> [List all videos](https://docs.api.video/reference/api/Videos#list-all-video-objects)
 5. Create a `get` request to the `/videos` endpoint based on the reference, using a tool like Postman.
