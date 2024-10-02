@@ -31,7 +31,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>video.api</groupId>
   <artifactId>java-api-client</artifactId>
-  <version>1.4.2</version>
+  <version>1.4.3</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-implementation "video.api:java-api-client:1.4.2"
+implementation "video.api:java-api-client:1.4.3"
 ```
 
 #### Others
@@ -54,7 +54,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-api-client-1.4.2.jar`
+* `target/java-api-client-1.4.3.jar`
 * `target/lib/*.jar`
 
 ### Code sample
@@ -211,6 +211,24 @@ Method | HTTP request | Description
 [**deleteLogo**](https://github.com/apivideo/api.video-java-client/blob/main/docs/PlayerThemesApi.md#deleteLogo) | **DELETE** `/players/\{playerId}/logo` | Delete logo
 
 
+### TagsApi
+
+
+#### Retrieve an instance of TagsApi:
+```java
+ApiVideoClient client = new ApiVideoClient("YOUR_API_KEY");
+TagsApi tags = client.tags()
+```
+
+
+
+#### Endpoints
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**list**](https://github.com/apivideo/api.video-java-client/blob/main/docs/TagsApi.md#list) | **GET** `/tags` | List all video tags
+
+
 ### UploadTokensApi
 
 
@@ -333,6 +351,8 @@ Method | HTTP request | Description
  - [FilterBy1](https://github.com/apivideo/api.video-java-client/blob/main/docs/FilterBy1.md)
  - [FilterBy2](https://github.com/apivideo/api.video-java-client/blob/main/docs/FilterBy2.md)
  - [Link](https://github.com/apivideo/api.video-java-client/blob/main/docs/Link.md)
+ - [ListTagsResponse](https://github.com/apivideo/api.video-java-client/blob/main/docs/ListTagsResponse.md)
+ - [ListTagsResponseData](https://github.com/apivideo/api.video-java-client/blob/main/docs/ListTagsResponseData.md)
  - [LiveStream](https://github.com/apivideo/api.video-java-client/blob/main/docs/LiveStream.md)
  - [LiveStreamAssets](https://github.com/apivideo/api.video-java-client/blob/main/docs/LiveStreamAssets.md)
  - [LiveStreamCreationPayload](https://github.com/apivideo/api.video-java-client/blob/main/docs/LiveStreamCreationPayload.md)
