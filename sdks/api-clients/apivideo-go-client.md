@@ -201,6 +201,22 @@ Method | HTTP request | Description
 [**DeleteLogo**](https://github.com/apivideo/api.video-go-client/blob/main/docs/PlayerThemes.md#DeleteLogo) | **Delete** `/players/\{playerId}/logo` | Delete logo
 
 
+#### Tags
+
+
+##### Retrieve an instance of the Tags API:
+```golang
+client := apivideosdk.ClientBuilder("API_VIDEO_KEY").Build()
+tagsApi := client.Tags
+```
+
+##### Endpoints
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**List**](https://github.com/apivideo/api.video-go-client/blob/main/docs/Tags.md#List) | **Get** `/tags` | List all video tags
+
+
 #### UploadTokens
 
 
@@ -316,6 +332,8 @@ Method | HTTP request | Description
  - [FilterBy1](https://github.com/apivideo/api.video-go-client/blob/main/docs/FilterBy1.md)
  - [FilterBy2](https://github.com/apivideo/api.video-go-client/blob/main/docs/FilterBy2.md)
  - [Link](https://github.com/apivideo/api.video-go-client/blob/main/docs/Link.md)
+ - [ListTagsResponse](https://github.com/apivideo/api.video-go-client/blob/main/docs/ListTagsResponse.md)
+ - [ListTagsResponseData](https://github.com/apivideo/api.video-go-client/blob/main/docs/ListTagsResponseData.md)
  - [LiveStream](https://github.com/apivideo/api.video-go-client/blob/main/docs/LiveStream.md)
  - [LiveStreamAssets](https://github.com/apivideo/api.video-go-client/blob/main/docs/LiveStreamAssets.md)
  - [LiveStreamCreationPayload](https://github.com/apivideo/api.video-go-client/blob/main/docs/LiveStreamCreationPayload.md)
