@@ -54,10 +54,19 @@ You can add, update, or remove tags, and use them to filter videos through both 
     
 3. When **listing videos**, you can filter results with the `tags` parameter. Simply add the tag you want to filter for to your request. You can add multiple tags to further narrow down search results. Check out the [List all video objects](/reference/api/Videos#list-all-video-objects) endpoint in the API reference for examples.
 
+4. You can **list tags** used in a project with the [List all tags](/reference/api/Tags#list-all-video-tags) endpoint. This endpoint enables you to see how many videos are tagged with each tag you have defined in your project.
+
+You can also search for individual tags using the `value` query parameter for this endpoint. When searching, the API filters results even on partial values, and ignores accents, uppercase, and lowercase. For example the `GET /tags?value=apple` query can return results like `apple`, `grapple`, `apples`, `APPLE`, and even `Apple`.
+
 ### Use case examples
 
-- When you’re building a platform for user generated content, surface the `tags` field for your users to enable them to categorize their videos. This gives your users more control over their content, and can even enable features like tag-based content recommendations, and trending tags.
 - When you have both private and public videos, use tags to easily filter for each type.
+- When you’re building a platform for user generated content, surface the `tags` field for your users to enable them to categorize their videos. This gives your users more control over their content, and can even enable features like tag-based content recommendations, and popular tags.
+- You can use the `/tags` endpoint to show a list of trending tags. This example query returns the top 10 most used tags within a project:
+
+  `GET /tags?sortBy=videoCount&sortOrder=desc&pageSize=10&page=1`
+
+  Once you have the results, you can enable users to pick a popular tag and [list all videos](/reference/api/Videos#list-all-video-objects) that use it.
 
 ## Metadata
 
