@@ -1,5 +1,5 @@
 ---
-title: Show video details
+title: Retrieve video details via the API
 meta:
   description: This guide explains how retrieve video details programmatically and through the api.video dashboard.
 ---

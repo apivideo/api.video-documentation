@@ -1,5 +1,5 @@
 ---
-title: Basic authentication
+title: Basic authentication for api.video REST API
 meta: 
     description: This guide explains the basic authentication method for api.video's API.
 ---

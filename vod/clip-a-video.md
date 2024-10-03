@@ -8,7 +8,7 @@ meta:
 
 In some cases, you just need to upload a smaller piece of a video, but you would like to do that programmatically, without resorting to editing programs.
 
-[api.video](http://api.video) allows you to clip a video to upload only specific parts of the video. You will be able to specify the start and end time of the clip before you upload the source video to api.video.
+[api.video](https://api.video) allows you to clip a video to upload only specific parts of the video. You will be able to specify the start and end time of the clip before you upload the source video to api.video.
 
 <Image src="/_assets/vod/video-clip/video-clipping-light.svg" src_dark="/_assets/vod/video-clip/video-clipping-dark.svg" alt="A diagram that shows the process of clipping a video" />
 
@@ -18,7 +18,7 @@ The videos are clipped by the definition of the object. When you create a video 
 
 ## Usage
 
-You can use one of the API clients offered by [api.video](http://api.video). You can find the list of clients in the [api.video API Client catalog](https://docs.api.video/sdks/api-clients).
+You can use one of the API clients offered by [api.video](https://api.video). You can find the list of clients in the [api.video API Client catalog](https://docs.api.video/sdks/api-clients).
 
 You can also find more information on the `/videos` endpoints on the [API reference page](https://docs.api.video/reference/api/Videos#create-a-video-object).
 

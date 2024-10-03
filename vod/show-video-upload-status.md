@@ -1,5 +1,5 @@
 ---
-title: Video status & details
+title: Get video status and details via the API
 meta:
   description: This guide explains how retrieve the video upload and encoding status programmatically via the API and through webhooks.
 ---

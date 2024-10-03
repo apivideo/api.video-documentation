@@ -1,5 +1,5 @@
 ---
-title: Adding captions
+title: Adding captions to videos via the API
 meta:
   description: This page gets users started on how to add captions to their videos using the api.video Captions endpoint.
 ---

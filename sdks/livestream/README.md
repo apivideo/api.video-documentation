@@ -1,5 +1,5 @@
 ---
-title: Live stream SDKs
+title: Live streaming SDKs for mobile
 toc: false
 breadcrumbs: false
 meta: 

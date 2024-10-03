@@ -1,5 +1,5 @@
 ---
-title: Create video
+title: Create video - Zapier integration
 meta:
     description: Zapier lets you connect APIs and applications together without coding. With the Create video action you can create a video on demand file at api.video.
 ---

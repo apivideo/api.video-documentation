@@ -1,5 +1,5 @@
 ---
-title: Live stream ended
+title: Live stream ended - Zapier integration
 meta:
     description: Zapier lets you connect APIs and applications together without coding. The live stream ended webhook will fire when the live-stream.broadcast.ended webhook alert is sent.
 ---

@@ -1,6 +1,6 @@
 ---
-title: Delivery with api.video
-breadcrums: false
+title: Video content delivery with api.video
+breadcrumbs: false
 meta: 
   description: Set up the api.video player and start delivering in 5 minutes
 ---

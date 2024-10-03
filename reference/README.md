@@ -1,5 +1,5 @@
 ---
-title: API reference
+title: Video and live stream API reference
 toc: true
 breadcrumbs: false
 meta:
@@ -56,7 +56,7 @@ Follow these best practices to secure your API keys:
 api.video limits the number of accepted API requests **per minute**. The limitation that the API applies to your calls depends on these factors:
 
 * the [API environment](https://docs.api.video/reference#environments) you send your calls in
-* your [pricing plan](https://api.video/pricing)
+* your [pricing plan](https://api.video/pricing/)
 * the request method that your calls use
 
 |         | Sandbox | Production |

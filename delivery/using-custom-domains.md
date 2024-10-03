@@ -1,5 +1,5 @@
 ---
-title: Using custom domains
+title: Host videos and live streams on custom domains
 meta: 
   description: api.video enables you to deliver video content and provide live streams using your own custom domains. This guide explains how you can utilize the feature.
 ---

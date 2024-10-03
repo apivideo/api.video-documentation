@@ -2,6 +2,7 @@
 hide_navigation: false
 toc: false
 breadcrumbs: false
+title: Video, live stream, and analytics libraries and SDKs
 meta: 
     description: Cloud-based video hosting and live streaming platform with analytics. Mobile and web SDKs for VOD, live streaming, and player for NodeJS, Javascript, Typescript, Python, Go, PHP, C#, Swift, and Kotlin.
 ---

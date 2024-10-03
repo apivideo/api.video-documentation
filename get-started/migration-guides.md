@@ -1,6 +1,5 @@
 ---
-title: "Migration guides"
-slug: "migration-guides"
+title: Video platform migration guides guides
 toc: false
 meta:
   description: This page gets users started on how to migrate to api.video from other platforms using the Import tool.

@@ -1,5 +1,5 @@
 ---
-title: VOD SDKs
+title: VOD SDKs for web and mobile upload
 toc: false
 breadcrumbs: false
 meta: 

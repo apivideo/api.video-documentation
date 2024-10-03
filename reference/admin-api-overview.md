@@ -1,5 +1,5 @@
 ---
-title: Admin API
+title: Admin API management tool overview
 meta: 
     description: This guide introduces and explains the usage of api.video's Admin API.
 breadcrumbs: false

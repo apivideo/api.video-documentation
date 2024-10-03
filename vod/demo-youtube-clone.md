@@ -1,5 +1,5 @@
 ---
-title: YouTube clone
+title: YouTube clone - Template and demo
 meta:
     description: This guide explains how to create a YouTube-like application with api.video.
 ---

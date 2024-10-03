@@ -1,5 +1,5 @@
 ---
-title: "Delivery overview"
+title: Video and live stream delivery overview
 toc: false
 breadcrumbs: false
 meta:

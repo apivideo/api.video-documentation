@@ -1,5 +1,5 @@
 ---
-title: Bubble.io player element
+title: Bubble.io no-code plugin player element
 meta: 
   description: Bubble is a no-code tool that lets you build SaaS platforms, marketplaces and CRMs without code. You use the player element to set up video players on your site.
 ---

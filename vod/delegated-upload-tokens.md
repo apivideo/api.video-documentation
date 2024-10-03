@@ -1,5 +1,5 @@
 ---
-title: Delegated upload tokens
+title: Delegated video upload tokens
 meta: 
   description: This guide explains how to create, list, retrieve, and delete delegated upload tokens, and how to upload videos with them.
 ---

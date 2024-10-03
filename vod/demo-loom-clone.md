@@ -1,5 +1,5 @@
 ---
-title: Loom mockup
+title: Loom clone demo, VOD app template
 meta:
     description: This guide explains how to create a Loom-like application with api.video.
 ---

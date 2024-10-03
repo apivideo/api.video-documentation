@@ -1,5 +1,5 @@
 ---
-title: Live stream overview
+title: Live streaming API overview
 toc: false
 breadcrumbs: false
 meta:

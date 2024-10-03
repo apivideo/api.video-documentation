@@ -1,5 +1,5 @@
 ---
-title: Delete a video
+title: Delete and restore videos
 meta:
     description: This guide walks you through the different ways of manually and programmatically removing videos and introduces the Video Restore feature.
 ---

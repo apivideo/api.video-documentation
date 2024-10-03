@@ -1,5 +1,5 @@
 ---
-title: Video uploader
+title: Video uploader - Template and demo
 meta:
     description: This guide explains how to create a backend application than can handle video uploads with api.video.
 ---

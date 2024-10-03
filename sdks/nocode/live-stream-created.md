@@ -1,5 +1,5 @@
 ---
-title: Live stream created
+title: Live stream created - Zapier integration
 meta:
     description: Zapier lets you connect APIs and applications together without coding. The Live stream created Zapier trigger will fire whenever a new live stream is created at api.video.
 ---

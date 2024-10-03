@@ -1,5 +1,5 @@
 ---
-title: Video best practices
+title: Video management best practices
 meta:
   description: This guide provides best practices, limitations, and recommendations on how to work with video on demand via api.video.
 ---

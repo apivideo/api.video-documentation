@@ -1,5 +1,5 @@
 ---
-title: Bubble.io plugin
+title: Bubble.io no-code solution plugin
 meta:
   description: The api.video plugin for Bubble.io facilitate the use of api.video services in your Bubble applications.
 ---
