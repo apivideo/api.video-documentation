@@ -189,7 +189,7 @@ Example
 
 #### Private videos
 
-To play a [private video](https://api.video/blog/product-updates/video-access-management-how-to-create-deliver-and-manage-private-videos-and-what/), add the video view token in the video attribute:
+To play a [private video](https://api.video/blog/tutorials/tutorial-private-videos/), add the video view token in the video attribute:
 
 ```tsx
 // ...
