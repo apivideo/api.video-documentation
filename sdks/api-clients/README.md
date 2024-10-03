@@ -1,5 +1,5 @@
 ---
-title: API client libraries
+title: API client libraries for server-side or mobile
 toc: false
 breadcrumbs: false
 meta: 

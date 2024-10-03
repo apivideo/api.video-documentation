@@ -1,5 +1,5 @@
 ---
-title: All live events
+title: All live events - Zapier integration
 meta:
     description: Zapier lets you connect APIs and applications together without coding. The all live events Zapier trigger is a combination of 3 alerts - live stream created, live stream ended, and video source recorded.
 ---

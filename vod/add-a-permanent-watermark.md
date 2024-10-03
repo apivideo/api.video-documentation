@@ -1,5 +1,5 @@
 ---
-title: Watermarks
+title: Add permanent watermarks
 meta:
     description: Learn how to apply permanent watermarks programmatically to videos uploaded to api.video.
 ---

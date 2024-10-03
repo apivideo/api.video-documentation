@@ -1,6 +1,5 @@
 ---
-title: "Wistia migration guide"
-slug: "wistia-migration"
+title: Wistia video content migration guide
 meta:
   description: This page gets users started on how to migrate from Wistia to api.video.
 ---

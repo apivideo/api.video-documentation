@@ -1,5 +1,5 @@
 ---
-title: Live stream started
+title: Live stream started - Zapier integration
 meta:
     description: Zapier lets you connect APIs and applications together without coding. The live stream started webhook will fire when the live-stream.broadcast.started webhook alert is sent.
 ---

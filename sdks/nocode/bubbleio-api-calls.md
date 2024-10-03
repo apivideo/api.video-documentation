@@ -1,5 +1,5 @@
 ---
-title: Bubble.io API calls
+title: Bubble.io plugin - API calls
 meta: 
     description: You can use the api.video Bubble plugin as a bridge between your Bubble application and the api.video API.
 ---

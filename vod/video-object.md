@@ -1,5 +1,5 @@
 ---
-title: What is a video object?
+title: Video object - creation and parameters
 meta:
   description: Short guide to explain what api.video video objects are.
 ---

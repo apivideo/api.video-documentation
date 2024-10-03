@@ -1,5 +1,5 @@
 ---
-title: API reference
+title: Video and live stream API reference
 toc: true
 breadcrumbs: false
 meta:

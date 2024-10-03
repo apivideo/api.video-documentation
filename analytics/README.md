@@ -1,5 +1,5 @@
 ---
-title: Analytics overview
+title: Video and live stream analytics
 toc: false
 breadcrumbs: false
 meta:

@@ -1,5 +1,5 @@
 ---
-title: Udemy clone
+title: Udemy clone demo, VOD app template
 meta:
     description: This guide explains how to create a Udemy-like application with api.video.
 ---

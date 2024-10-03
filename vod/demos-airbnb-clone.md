@@ -1,5 +1,5 @@
 ---
-title: Airbnb clone
+title: Airbnb clone - Template and demo
 meta:
     description: This guide explains how to create an Airbnb-like application with api.video.
 ---

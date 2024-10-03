@@ -1,5 +1,5 @@
 ---
-title: Security best practices
+title: Video API security best practices
 meta:
     description: Best practices on SDK and API security that will help secure your application and protect your users.
 ---

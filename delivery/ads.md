@@ -1,5 +1,5 @@
 ---
-title: api.video In-stream ads
+title: In-stream ads in videos and live streams
 meta: 
   description: Leverage the power of api.video to insert in-stream, VAST, VPAID and VMAP ads into your videos.
 ---

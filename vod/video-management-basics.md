@@ -1,5 +1,5 @@
 ---
-title: Video management basics
+title: Video management - basic operations
 meta:
   description: This page serves as a foundational guide to the different operations using api.video's solutions for video on demand (VOD). These are list videos, show and update video details, add thumbnail to videos, and delete videos.
 ---

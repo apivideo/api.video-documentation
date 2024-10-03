@@ -1,5 +1,5 @@
 ---
-title: Analytics migration guide
+title: Video and live stream analytics migration guide
 meta: 
   description: This guide helps you migrate the player and analytics library components in your product to the latest version. Migrating enables you to get detailed data insights for your videos and live streams using api.video's Analytics solution.
 ---

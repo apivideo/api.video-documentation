@@ -1,5 +1,5 @@
 ---
-title: TikTok clone
+title: TikTok clone - Template and demo
 meta:
     description: This guide explains how to create a TikTok-like application with api.video.
 ---

@@ -1,4 +1,5 @@
 ---
+title: Guides, references, libraries & SDKs
 hide_navigation: false
 toc: false
 breadcrumbs: false

@@ -1,5 +1,5 @@
 ---
-title: Restreaming
+title: Set up restreaming with the API
 meta: 
     description: This guide explains how you can set up Restreaming to broadcast to multiple destinations simultaneously with api.video.
 ---

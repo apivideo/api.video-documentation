@@ -1,5 +1,5 @@
 ---
-title: Bubble.io uploader element
+title: Bubble.io no-code plugin uploader element
 metadata:
   description: Bubble is a no-code tool that lets you build SaaS platforms, marketplaces and CRMs without code. You use the uploader element to upload videos from your web application to api.video.
 ---

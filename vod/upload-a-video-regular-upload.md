@@ -1,5 +1,5 @@
 ---
-title: Regular video upload
+title: Regular video upload via API
 meta:
   description: This guide walks through how to upload videos under 200MiB in size programmatically with api.video.
 ---

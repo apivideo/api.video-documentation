@@ -1,5 +1,5 @@
 ---
-title: Video created
+title: Video created - Zapier integration
 meta:
     description: Zapier lets you connect APIs and applications together without coding. The Video Created Zapier trigger will fire whenever a new video is created at api.video.
 ---

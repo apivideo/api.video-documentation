@@ -1,5 +1,5 @@
 ---
-title: Part Too High Total
+title: Part Too High Total error documentation
 meta: 
     description: This guide explains the cause for the Part Too High Total error.
 ---

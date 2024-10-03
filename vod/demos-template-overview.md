@@ -1,5 +1,5 @@
 ---
-title: Demos & templates
+title: Video app examples, demos, and templates
 meta:
     description: This page lists demo applications and templates that you can use to develop your own video solution using api.video.
 ---

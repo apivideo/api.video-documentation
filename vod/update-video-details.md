@@ -1,5 +1,5 @@
 ---
-title: Update video details
+title: Update video details through the API
 meta:
   description: This guide explains the two methods you can use to update videos - programmatically and through the dashboard.
 ---

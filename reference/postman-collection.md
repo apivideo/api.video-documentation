@@ -1,5 +1,5 @@
 ---
-title: Postman Collection
+title: api.video Postman collection
 meta: 
     description: This guide explains how you can fork the official api.video Postman collection.
 ---

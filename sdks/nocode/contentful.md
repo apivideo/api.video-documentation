@@ -1,5 +1,5 @@
 ---
-title: Contentful
+title: Contentful integration, no-code solution
 meta: 
   description: The official plugin to facilitate the upload, hosting, and sharing of your videos in your Contentful applications.
 ---

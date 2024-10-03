@@ -1,5 +1,5 @@
 ---
-title: List videos
+title: List or filter video object
 meta:
   description: This guide walks through the different options for retrieving videos and covers a method for searching for them using your dashboard.
 ---

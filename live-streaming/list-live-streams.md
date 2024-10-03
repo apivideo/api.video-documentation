@@ -1,5 +1,5 @@
 ---
-title: List Live Streams
+title: List or filter all live stream containers
 meta: 
     description: This guide explains how you can list live streams via API at at api.video.
 ---

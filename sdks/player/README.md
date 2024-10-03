@@ -1,5 +1,5 @@
 ---
-title: Player & analytics SDKs
+title: Video player and video analytics SDKs
 toc: false
 breadcrumbs: false
 meta: 

@@ -1,5 +1,5 @@
 ---
-title: Webhooks
+title: Create, manange, and verify webhooks
 meta:
   description: api.video provides webhook notifications in the form of `POST` requests, with a JSON payload that contains detailed event data. Webhooks can push notifications directly to your server, saving you the need to poll api.video for changes. This guide goes over how to create and manage your webhooks.
 ---

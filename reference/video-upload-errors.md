@@ -1,5 +1,5 @@
 ---
-title: Video Upload Errors
+title: Video Upload error documentation
 meta: 
     description: This guide lists all the possible Video Upload Errors that you may encounter when using api.vide.
 ---
