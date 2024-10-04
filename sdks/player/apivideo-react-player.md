@@ -2,7 +2,7 @@
 ---
 title: api.video React Player component
 meta:
-description: The official api.video React Player component for api.video. [api.video](https://api.video/) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
+description: The official api.video React Player component for api.video. api.video is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
 
 ---
 
