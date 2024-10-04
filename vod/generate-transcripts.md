@@ -58,33 +58,33 @@ Transcribe a video and force the source language to English, using `POST /videos
 	  "language": "en",
 	  "transcript": true
   }
-```
+  ```
 
 Generate transcript for a previously uploaded video, using `PATCH /videos/{videoId}`:
 
-```json
+  ```json
   {
 	  "language": "en",
 	  "transcript": true
   }
-```
+  ```
 
 Set a default language for a new video, using `POST /videos`:
 
-```json
+  ```json
   {
     "title": "Another awesome video",
     "language": "en"
   }
-```
+  ```
 
 Set a default language for an existing video, using `PATCH /videos/{videoId}`:
 
-```json
-{
-	"language": "fr"
-}
-```
+  ```json
+  {
+	  "language": "fr"
+  }
+  ```
 
 ## Supported languages
 
