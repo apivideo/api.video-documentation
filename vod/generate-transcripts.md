@@ -1,0 +1,133 @@
+---
+title: Generate transcripts for videos via the API
+meta:
+  description: This page gets you started on how to enable automatic transcription for videos in multiple languages using the Videos endpoint.
+---
+
+# Generating video transcripts
+
+api.video's AI-driven transcription feature can generate video transcripts using a single API call. You can now avoid manually uploading captions, as the generated transcripts are available as video captions in the standard WebVTT format. 
+
+Enable your audience to have seamless user experience regardless of their language or location, and also provide more inclusive and accessible content by inviting deaf or hard-of-hearing users!
+
+## How to generate transcripts
+
+To enable transcription, set these **optional** parameters when you create a video object using a `POST` request to the [Create video object endpoint](/reference/api/Videos#create-a-video-object):
+
+| Field        | Type      | Description                                                                                                                                                                                        |
+|--------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `transcript` | `boolean` | When `true`, the API generates a transcript for the video. The default value is `false`.                                                                                                           |
+| `language`   | `string`  | A valid language identifier using [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag). You can use primary subtags like `en` or `fr`.<br/><br/>When the value in your request does not match any covered language, the API returns an error. |
+
+The API generates transcripts using the `transcript` parameter. You can define the video `language`, and the API creates a transcript of the video using the language you specify. If you do not specify a language for the video, the API will detect it automatically. 
+
+To help you understand how a video's language was defined, the API returns the `languageOrigin` attribute in the response when you create a video object:
+
+| Field        | Type      | Description                                                                                                                                                                                        |
+|--------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `languageOrigin` | `string` | Returns the origin of the last update on the video's `language` attribute.<br/><br/>The possible values are: `api` and `auto`.<br/><br/>- `api` means that the last update was requested from the API.<br/>- `auto` means that the last update was done automatically by the API. |
+
+
+<Callout pad="2" type="info">
+
+When you set the `language` parameter, make sure that it matches the actual language used in the video. Your setting forces the API to transcribe in that language. Mismatching language settings can return low quality transcripts.
+</Callout>
+
+When the API generates a transcript, it will be available as a caption for your video. Your audience will be able to select during video playback. You can interact with captions generated through transcription using the [Captions endpoints](/reference/api/Captions).
+
+<Callout pad="2" type="info">
+`language` is a permanent attribute of a video object. You can update it to another language using the [`PATCH /videos/{videoId}`](/reference/api/Videos#update-a-video-object) operation. This triggers the API to generate a new transcript using a different language.
+</Callout>
+
+## Examples
+
+Transcribe a video regardless of the language, using `POST /videos`:
+
+  ```json
+  {
+    "title": "An awesome video",
+	  "transcript": true
+  }
+  ```
+
+Transcribe a video and force the source language to English, using `POST /videos`:
+
+  ```json
+  {
+    "title": "...",
+	  "language": "en",
+	  "transcript": true
+  }
+```
+
+Generate transcript for a previously uploaded video, using `PATCH /videos/{videoId}`:
+
+```json
+{
+	"language": "en",
+	"transcript": true
+}
+```
+
+Set a default language for a new video, using `POST /videos`:
+
+```json
+POST /videos
+{
+  "title": "Another awesome video",
+	"language": "en"
+}
+```
+
+Set a default language for an existing video, using `PATCH /videos/{videoId}`:
+
+```json
+{
+	"language": "fr"
+}
+```
+
+## Supported languages
+
+Transcription is currently available for these languages:
+
+| Language | IETF Language Tag |
+|----------|-------------------|
+| Arabic | `ar` |
+| Catalan | `ca` |
+| Czech | `cs` |
+| Danish | `da` |
+| German | `de` |
+| Greek | `el` |
+| English | `en` |
+| Spanish | `es` |
+| Persian | `fa` |
+| Finnish | `fi` |
+| French | `fr` |
+| Hebrew | `he` |
+| Hindi | `hi` |
+| Croatian | `hr` |
+| Hungarian | `hu` |
+| Italian | `it` |
+| Japanese | `ja` |
+| Korean | `ko` |
+| Malayalam | `ml` |
+| Dutch | `nl` |
+| Norwegian Nynorsk | `nn` |
+| Norwegian | `no` |
+| Polish | `pl` |
+| Portuguese | `pt` |
+| Russian | `ru` |
+| Slovak | `sk` |
+| Slovenian | `sl` |
+| Telugu | `te` |
+| Turkish | `tr` |
+| Ukrainian | `uk` |
+| Urdu | `ur` |
+| Vietnamese | `vi` |
+| Chinese | `zh` |
+
+## Next steps
+
+- Learn more about the WebVTT format and managing captions in the [Captions guide](/vod/add-captions)
+- Check out other AI-driven features like video translation and AI summary [in our blog](https://api.video/blog/product-updates/ai-video-features/)

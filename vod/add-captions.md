@@ -732,5 +732,6 @@ WEBVTT
 
 ## Tutorials & Resources
 
-- [How to programmatically add captions to your video](https://api.video/blog/tutorials/how-to-add-captions-to-your-videos/)
+- [How to create captions using api.video's AI-driven transcription feature](/vod/generate-transcripts)
+[How to programmatically add captions to your video](https://api.video/blog/tutorials/how-to-add-captions-to-your-videos/)
 - [Free online VTT creator](https://www.vtt-creator.com/)
