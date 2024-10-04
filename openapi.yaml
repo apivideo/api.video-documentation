@@ -636,7 +636,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/bad-request'
               examples:
-                response:
+                Arttribute required:
                   value:
                     type: 'https://docs.api.video/reference/attribute-required'
                     title: This attribute is required.
@@ -655,6 +655,22 @@ paths:
                       - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: metadata
+                Invalid language formatting:
+                  description: This error occurs when the language tag you provided contains characters other than letters and dashes.
+                  value:
+                    type: https://docs.api.video/reference/invalid-attribute
+                    title: An attribute is invalid.
+                    status: 400
+                    detail: The "language" attribute must contain only letters and dashes (for example "fr", "fr-BE").
+                    name: language
+                Invalid language:
+                  description: This error occurs when the language tag you provided does not match any supported language.
+                  value:
+                    type: https://docs.api.video/reference/invalid-attribute
+                    title: An attribute is invalid.
+                    status: 400
+                    detail: The "language" attribute is not valid.
+                    name: language
         '429':
           headers:
             X-RateLimit-Limit:
@@ -3292,7 +3308,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/bad-request'
               examples:
-                response:
+                Invalid attribute:
                   value:
                     type: 'https://docs.api.video/reference/invalid-attribute'
                     title: This attribute must be a ISO-8601 date.
@@ -3308,6 +3324,22 @@ paths:
                       - type: 'https://docs.api.video/reference/invalid-attribute'
                         title: This attribute must be an array.
                         name: metadata
+                Invalid language formatting:
+                  description: This error occurs when the language tag you provided contains characters other than letters and dashes.
+                  value:
+                    type: https://docs.api.video/reference/invalid-attribute
+                    title: An attribute is invalid.
+                    status: 400
+                    detail: The "language" attribute must contain only letters and dashes (for example "fr", "fr-BE").
+                    name: language
+                Invalid language:
+                  description: This error occurs when the language tag you provided does not match any supported language.
+                  value:
+                    type: https://docs.api.video/reference/invalid-attribute
+                    title: An attribute is invalid.
+                    status: 400
+                    detail: The "language" attribute is not valid.
+                    name: language
         '404':
           headers:
             X-RateLimit-Limit:
