@@ -21,23 +21,24 @@ To enable transcription, set these **optional** parameters when you create a vid
 
 The API generates transcripts using the `transcript` parameter. You can define the video `language`, and the API creates a transcript of the video using the language you specify. If you do not specify a language for the video, the API will detect it automatically. 
 
+<Callout pad="2" type="info">
+
+If you do not set the `language` parameter, the API analyzes the first `30 seconds` of the video and determines the language. When this analysis does not have confident results, for example in case of low quality audio, the API does not generate a transcript.
+</Callout>
+
 To help you understand how a video's language was defined, the API returns the `languageOrigin` attribute in the response when you create a video object:
 
 | Field        | Type      | Description                                                                                                                                                                                        |
 |--------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `languageOrigin` | `string` | Returns the origin of the last update on the video's `language` attribute.<br/><br/>The possible values are: `api` and `auto`.<br/><br/>- `api` means that the last update was requested from the API.<br/>- `auto` means that the last update was done automatically by the API. |
 
+## About the `language` parameter
 
-<Callout pad="2" type="info">
+When you set the `language` parameter, make sure that it matches the actual language used in the video. Your setting forces the API to transcribe in that language. Mismatching language settings or videos with dialogue in multiple languages can return low quality transcripts.
 
-When you set the `language` parameter, make sure that it matches the actual language used in the video. Your setting forces the API to transcribe in that language. Mismatching language settings can return low quality transcripts.
-</Callout>
+`language` is a permanent attribute of a video object. You can update it to another language using the [`PATCH /videos/{videoId}`](/reference/api/Videos#update-a-video-object) operation. This triggers the API to generate a new transcript using a different language.
 
 When the API generates a transcript, it will be available as a caption for your video. Your audience will be able to select during video playback. You can interact with captions generated through transcription using the [Captions endpoints](/reference/api/Captions).
-
-<Callout pad="2" type="info">
-`language` is a permanent attribute of a video object. You can update it to another language using the [`PATCH /videos/{videoId}`](/reference/api/Videos#update-a-video-object) operation. This triggers the API to generate a new transcript using a different language.
-</Callout>
 
 ## Examples
 
