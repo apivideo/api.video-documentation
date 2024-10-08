@@ -31,7 +31,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>video.api</groupId>
   <artifactId>android-video-uploader</artifactId>
-  <version>1.3.6</version>
+  <version>1.3.7</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-implementation "video.api:android-video-uploader:1.3.6"
+implementation "video.api:android-video-uploader:1.3.7"
 ```
 
 #### Others
@@ -54,7 +54,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/android-video-uploader-1.3.6.jar`
+* `target/android-video-uploader-1.3.7.jar`
 * `target/lib/*.jar`
 
 ### Code sample
@@ -86,7 +86,7 @@ To upload a video, you have 3 differents methods:
 
 ## Permissions
 
-You have to add the following permissions in your `AndroidManifest.xml`:
+If your video files are located in the media store, you have to add the following permissions in your `AndroidManifest.xml`:
 
 ```xml
     <uses-permission android:name="android.permission.INTERNET" />
@@ -99,6 +99,8 @@ You have to add the following permissions in your `AndroidManifest.xml`:
 ``` 
 
 Your application also has to dynamically request the `android.permission.READ_EXTERNAL_STORAGE` permission to upload videos.
+
+If your video files are located in the app-specific storage, you don't need to request any permissions nor add any permissions to your `AndroidManifest.xml`.
 
 ### WorkManager
 
