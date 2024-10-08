@@ -14737,6 +14737,7 @@ components:
         languageOrigin:
           type: string
           enum: [api, auto]
+          nullable: true
           description: |-
             Returns the origin of the last update on the video's `language` attribute.
 
@@ -15567,7 +15568,7 @@ components:
         description: An amazing video explaining the string theory
         public: false
         language: 'en'
-        reanscript: true
+        transcript: true
         panoramic: false
         mp4Support: true
         tags:
