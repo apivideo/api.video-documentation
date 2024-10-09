@@ -14735,9 +14735,9 @@ components:
           type: string
           description: Returns the language of a video in [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) format. You can set the language during video creation via the API, otherwise it is detected automatically.
         languageOrigin:
+          nullable: true
           type: string
           enum: [api, auto]
-          nullable: true
           description: |-
             Returns the origin of the last update on the video's `language` attribute.
 
@@ -15449,6 +15449,7 @@ components:
           $ref: '#/components/schemas/video-watermark'
         language:
           type: string
+          nullable: true
           enum: [ar, ca, cs, da, de, el, en, es, fa, fi, fr, he, hi, hr, hu, it, ja, ko, ml, nl, nn, no, pl, pt, ru, sk, sl, te, tr, uk, ur, vi, zh]
           example: fr
           description: |-
@@ -15547,6 +15548,7 @@ components:
             $ref: '#/components/schemas/metadata'
         language:
           type: string
+          nullable: true
           enum: [ar, ca, cs, da, de, el, en, es, fa, fi, fr, he, hi, hr, hu, it, ja, ko, ml, nl, nn, no, pl, pt, ru, sk, sl, te, tr, uk, ur, vi, zh]
           example: fr
           description: |-
