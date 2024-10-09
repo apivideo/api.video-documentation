@@ -87,9 +87,11 @@
 
 - heading: Annotations & branding
   items:
-  - label: Adding watermarks
-    href: /vod/add-a-permanent-watermark.md
-  - label: Creating and managing chapters
-    href: /vod/creating-and-managing-chapters.md
-  - label: Adding captions
+  - label: Transcripts
+    href: /vod/generate-transcripts.md
+  - label: Captions
     href: /vod/add-captions.md
+  - label: Watermarks
+    href: /vod/add-a-permanent-watermark.md
+  - label: Chapters
+    href: /vod/creating-and-managing-chapters.md
