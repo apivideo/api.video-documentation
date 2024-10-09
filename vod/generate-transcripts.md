@@ -10,6 +10,11 @@ api.video's AI-driven transcription feature can generate video transcripts using
 
 Enable your audience to have seamless user experience regardless of their language or location, and also provide more inclusive and accessible content by inviting deaf or hard-of-hearing users!
 
+<Callout pad="2" type="success">
+
+api.video uses [Whisper](https://openai.com/index/whisper/) for multilingual speech recognition in videos. With data security in mind, we run Whisper's ASR models on our own infrastructure and do not expose data outside our service. You control who gets access to your videos and transcripts.
+</Callout>
+
 ## How to generate transcripts
 
 To enable transcription, set these **optional** parameters when you create a video object using a `POST` request to the [Create video object endpoint](/reference/api/Videos#create-a-video-object):
