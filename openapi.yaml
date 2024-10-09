@@ -14735,9 +14735,9 @@ components:
           type: string
           description: Returns the language of a video in [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) format. You can set the language during video creation via the API, otherwise it is detected automatically.
         languageOrigin:
+          nullable: true
           type: string
           enum: [api, auto]
-          nullable: true
           description: |-
             Returns the origin of the last update on the video's `language` attribute.
 
@@ -15761,6 +15761,7 @@ components:
       type: object
       properties:
         default:
+          description: Set this parameter to `true` to define a caption as the default for a video.
           type: boolean
     captions-list-response:
       title: VideoCaptions
