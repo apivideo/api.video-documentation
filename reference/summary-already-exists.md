@@ -32,7 +32,7 @@ The API does not allow updating already generated summaries.
 
 ## Solution
 
-To regenerate or fix an incorrect summary for a video, you first need to delete the existing summary:
+To recreate or fix an incorrect summary for a video, you first need to delete the existing summary:
 
 ```curl
 curl -s --location --request DELETE 'https://ws.staging.api.video/summaries/summary_1CGHWuXjhxmeH4WiZ51234/source' \
