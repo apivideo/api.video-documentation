@@ -40,7 +40,7 @@ curl -s --location --request DELETE 'https://ws.staging.api.video/summaries/summ
 --header 'Authorization: Basic {Your API key}' \
 ```
 
-After the API responds with 204 - Deleted, you can repeat your original request to `POST` or `PATCH` the summary. 
+After the API responds with `204 - Deleted`, you can repeat your original request to `POST` or `PATCH` the summary. 
 
 ## Next steps
 
