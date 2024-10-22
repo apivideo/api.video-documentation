@@ -24,9 +24,9 @@ A summary already exists for the video that you tried adding a summary to.
 
 This error can occur in 3 scenarios:
 
-- When using [`POST /summaries`](reference/api/Summaries#generate-video-summary) on an already uploaded video that has a summary, or where summary generation is in progress
-- When using [`PATCH /summaries/{summaryId}/source`](reference/api/Summaries#update-summary-details) on a video where a summary source is already generated, or where summary generation is in progress
-- When using [`PATCH /videos/{videoId}`](reference/api/Videos#update-a-video-object) on a video where a summary source is already generated, or where summary generation is in progress
+- When using [`POST /summaries`](/reference/api/Summaries#generate-video-summary) on an already uploaded video that has a summary, or where summary generation is in progress
+- When using [`PATCH /summaries/{summaryId}/source`](/reference/api/Summaries#update-summary-details) on a video where a summary source is already generated, or where summary generation is in progress
+- When using [`PATCH /videos/{videoId}`](/reference/api/Videos#update-a-video-object) on a video where a summary source is already generated, or where summary generation is in progress
 
 The API does not allow updating already generated summaries.
 
