@@ -89,6 +89,8 @@
   items:
   - label: Transcripts
     href: /vod/generate-transcripts.md
+  - label: Summaries
+    href: /vod/create-summaries.md
   - label: Captions
     href: /vod/add-captions.md
   - label: Watermarks

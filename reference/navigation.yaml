@@ -30,6 +30,7 @@
         - Videos
         - Watermarks
         - Captions
+        - Summaries
         - Chapters
         - Tags
 
@@ -113,6 +114,8 @@
           href: ./unrecognized-request-url.md
         - label: Webhook Limit Reached
           href: ./webhook-limit-reached.md
+        - label: Summary Already Exists
+          href: ./summary-already-exists.md
     - label: Video Ingestion Errors
       href: ./video-upload-errors.md
       collapsed: true

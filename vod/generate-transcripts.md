@@ -4,7 +4,7 @@ meta:
   description: This page gets you started on how to enable automatic transcription for videos in multiple languages using the Videos endpoint.
 ---
 
-# Generating video transcripts
+# Generate video transcripts
 
 api.video's AI-driven transcription feature can generate video transcripts using a single API call. You can now avoid manually uploading captions, as the generated transcripts are available as video captions in the standard WebVTT format. 
 
