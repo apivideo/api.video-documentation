@@ -1,12 +1,12 @@
 ---
-title: Create video summaries
+title: Generate video summaries
 meta:
   description: This page explains how to generate video summaries manually or automatically using the Videos and Summaries endpoints and the api.video dashboard.
 ---
 
 # Create video summaries
 
-api.video's an AI-driven summarization feature can generate concise and accurate outlines of your videos. Each summary consist of a title, an abstract, and key takeaways based on the exact contents of a video. All of these are available directly in the player, on your dashboard, and through the API.
+api.video's AI-driven summarization feature can generate concise and accurate outlines of your videos. Each summary consist of a title, an abstract, and key takeaways based on the exact contents of a video. All of these are available directly in the player, on your dashboard, and through the API.
 
 Provide your audience with detailed descriptions and key points of your videos, and also enable more inclusive and accessible content by inviting deaf or hard-of-hearing users!
 
