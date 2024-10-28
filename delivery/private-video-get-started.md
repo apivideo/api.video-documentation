@@ -52,11 +52,11 @@ Suppose you already have a cool video uploaded. Go to the dashboard and get make
 
 2. Locate the video that you want to set to private, and click on **Video Details**.
 
-3. On the video details page, scroll down to the Video Settings section. You'll see the **Public** property here.
+3. On the video details page, select the **Details** tab and scroll down to the **Settings** section. You'll see **Viewing Options** and the **Public** property here.
 
-![Public property of a Video in the Video Details page](/_assets/vod/video-public-setting.png)
+    ![Public property of a Video in the Video Details page](/_assets/delivery-analytics/private-videos/set-video-private.png)
 
-4. Click on **Update video object**, and set the `public` property to `true`. Then click **Update Video**.
+4. Toggle the **Public** property off to set the video to private.
 
 Now that the video is private, we can deliver it to users. You can find the video URLs in the Assets section of the Video Details:
 
