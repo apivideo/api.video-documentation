@@ -35,15 +35,15 @@ This error can occur in 3 scenarios:
 
 1. If you received this error when you tried to **generate** a summary using the [Generate summaries](/reference/api/Summaries#generate-video-summary) or the [Update video object](/reference/api/Videos#update-a-video-object) endpoints, you first need to delete the existing summary:
 
-```curl
-curl -s --location --request DELETE 'https://ws.staging.api.video/summaries/summary_1CGHWuXjhxmeH4WiZ51234/source' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic {Your API key}' \
-```
+    ```curl
+    curl -s --location --request DELETE 'https://ws.staging.api.video/summaries/summary_1CGHWuXjhxmeH4WiZ51234/source' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Basic {Your API key}' \
+    ```
 
-After the API responds with `204 - Deleted`, you can repeat your original request to `POST` or `PATCH` the summary.
+    After the API responds with `204 - Deleted`, you can repeat your original request to `POST` or `PATCH` the summary.
 
-2. If you received this error when you tried to `PATCH` an existing summary, wait for the API to finish generating that summary. You can monitor `sourceStatus` to see the status of a summary.
+2. If you received this error when you tried to `PATCH` an existing summary, wait for the API to finish generating that summary. You can monitor `sourceStatus` to see the status of summary generation.
 
 ## Next steps
 
