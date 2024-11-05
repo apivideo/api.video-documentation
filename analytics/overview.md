@@ -52,6 +52,7 @@ Here are some real-world questions where metrics and dimensions from Analytics c
 ### Requirements
 
 <Callout pad="2" type="info">
+
 The Analytics features are available using api.video's video player. Check out the [Video Player SDK](/sdks/player/apivideo-player-sdk) for details about the implementation.
 </Callout>
 
@@ -65,6 +66,7 @@ Analytics uses player events to analyze and segment your viewers' interactions w
 - Data does not carry over from the previous versions of Analytics, and unique viewer data starts only from `2024-08-14`.
 - `unique` viewers are only unique for a day.
 - Video re-plays using the dedicated re-play button in the player do not generate events.
+- On web, if a user watches a video, refreshes the browser tab, then plays the video again, a new event is generated.
 
 <Callout pad="2" type="success">
 api.video provides calculates the total number of plays through 2 dedicated endpoints:
@@ -77,19 +79,17 @@ These 2 endpoints return data that is not limited to 30 days of retention, and c
 
 ### Sessions
 
-User sessions affect how your viewers' interactions generate data. For web users, a browser tab counts as one session. For mobile users, a player instance within an app counts as one session.
+User sessions affect how data like the number of viewers is counted. 
 
-For example:
-
-- If user watches the same video multiple times on the same tab, only one event is generated.
-- If user watches a video, refreshes the tab, then plays the video again, a new event is generated.
+* For web users, a browser tab counts as one user session. 
+* For mobile users, a session starts when an app is launched. Apps going in the background remain in session. A new session starts when an app stops or is destroyed, and then launches again.
 
 
-### Aggregation vs. timeseries
+### Aggregations vs. timeseries
 
 The `/data/metrics/{metric}/{aggregation}` and `/data/timeseries/{metric}` endpoints can return very similar data. Here's a concrete example on how to understand the fundamental difference.
 
-Let's get the number of plays for a video, from the last 2 days. Let's use both endpoints to get this data:
+Let's get the number of plays for a video from the last 2 days. We can use both endpoints to get this data:
 
 * `/data/metrics/play/sum` → the value of the `play` metric aggregated to `sum`
 * `/data/timeseries/play` → the value of the `play` metric over time
@@ -124,11 +124,11 @@ Let's compare the results:
   },
   "data": [
     {
-      "emittedAt": "2024-10-01T23:55:00+00:00",
+      "emittedAt": "2024-10-01T23:59:30+00:00",
       "metricValue": 1
     },
     {
-      "emittedAt": "2024-10-02T00:15:00+00:00",
+      "emittedAt": "2024-10-02T00:01:30+00:00",
       "metricValue": 1
     }
   ],
@@ -137,10 +137,10 @@ Let's compare the results:
 ```
 </CodeSelect>
 
-Notice that `/metrics/play/sum` returns only `1` play, and  returns `2` plays. Check the values of the `emittedAt` fields in the `/timeseries/play` example above: the difference is only 20 minutes, but on **two different calendar days**.
+Notice that `/metrics/play/sum` returns only `1` play, and  returns `2` plays. How so? Check the values of the `emittedAt` fields in the `/timeseries/play` example above: the difference is only 2 minutes, but on **two different calendar days**.
 
 * The `timeseries` endpoint counts the number of events based on a set interval, which is `day` by default. This means that a user watching the same video on two calendar days generates 2 play events: 1 for each day.
-* The `metrics` endpoint counts the sum of the number of play events. This means that a user watching your content within a single user session generates 1 play event, even if that session falls on the boundary of 2 calendar days, and even if they watch your content multiple times within a session.
+* The `metrics` endpoint sums up the number of play events. This means that if the user watches the video once, they generate only 1 play event - even if that event falls on the boundary of 2 calendar days.
 
 ### Testing
 
