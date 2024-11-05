@@ -82,7 +82,7 @@ These 2 endpoints return data that is not limited to 30 days of retention, and c
 User sessions affect how data like the number of viewers is counted. 
 
 * For web users, a browser tab counts as one user session. 
-* For mobile users, a session starts when an app is launched. Apps going in the background remain in session. A new session starts when an app stops or is destroyed, and then launches again.
+* For mobile users, a session starts when an app is launched. Apps going in the background remain in session. A new session starts when an app is destroyed, and then launches again.
 
 
 ### Aggregations vs. timeseries
