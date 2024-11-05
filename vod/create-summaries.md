@@ -82,7 +82,7 @@ When you define the video `language`, the API creates a summary of the video usi
 | Field                         | Type               | Description                                                                                                                                                                                                                                                    |
 |-------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `transcriptSummary`           | `boolean`          | When `true`, the API generates a summary for the video. The default value is `false`.                                                                                                                                                                          |
-| `transcriptSummaryAttributes` | `array of strings` | Accepts `abstract`, `takeaways`, or both. The API only generates the elements you add to this array.<br/><br/>If you do not use this parameter, the API generates a full summary.                                                                                       |
+| `transcriptSummaryAttributes` | `array of strings` | Accepts `abstract`, `takeaways`, or both. The API only generates the elements you add to this array.<br/><br/>If you do not use this parameter, the API generates a full summary.                                                                              |
 | `transcript`                  | `boolean`          | When `true`, the API generates a transcript for the video. The default value is `false`.                                                                                                                                                                       |
 | `language`                    | `string`           | A valid language identifier using [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag). You can use primary subtags like `en` or `fr`.<br/><br/>When the value in your request does not match any covered language, the API returns an error. |
 
@@ -92,12 +92,12 @@ You can also trigger automatic summarization for already uploaded videos. Use th
 
 This method enables you to control every step of the summary creation. We recommend that you use this method in scenarios where you want to manually create, update, or edit the generated summary.
 
-To summarize already uploaded videos manually, use a `POST` request to the [Summaries endpoint](/reference/api/Summaries). You have the option to define the origin of the summary generation with the `origin` request parameter.
+To summarize already uploaded videos manually, use a `POST` request to the [Summaries endpoint](/reference/api/Summaries). You have the option to define the origin of the summary generation with the `origin` request parameter. You can also generate individual parts of a summary: an abstract only, or just the takeaways. Use the `attributes` array to select which elements you want the API to generate. 
 
-| Field    | Type     | Description                                                                                                                                                                |
-|----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `origin` | `string` | Use this **optional** parameter to define how the API generates the summary. The only allowed value is `auto`, which means that the API generates a summary automatically. |
-
+| Field        | Type               | Description                                                                                                                                                                       |
+|--------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `origin`     | `string`           | Use this **optional** parameter to define how the API generates the summary. The only allowed value is `auto`, which means that the API generates a summary automatically.        |
+| `attributes` | `array of strings` | Accepts `abstract`, `takeaways`, or both. The API only generates the elements you add to this array.<br/><br/>If you do not use this parameter, the API generates a full summary. |
 
 <Callout pad="2" type="warning">
 
