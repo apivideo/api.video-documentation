@@ -6,7 +6,7 @@ meta:
 
 # Create video summaries
 
-api.video's AI-driven summarization feature can generate concise and accurate outlines of your videos. Each summary consist of a title, an abstract, and key takeaways based on the exact contents of a video. All of these are available directly in the player, on your dashboard, and through the API.
+api.video's AI-driven summarization feature can generate concise and accurate outlines of your videos. Each summary consist of an abstract and key takeaways based on the exact contents of a video. All of these are available directly in the player, on your dashboard, and through the API.
 
 Provide your audience with detailed descriptions and key points of your videos, and also enable more inclusive and accessible content by inviting deaf or hard-of-hearing users!
 
@@ -17,9 +17,8 @@ A summary is based on the transcription of a video. api.video uses [Whisper](htt
 
 ## Summary data structure
 
-Summaries consist of 3 elements:
+Summaries consist of 2 elements:
 
-- a **title** that clearly notes the topic of the video
 - an **abstract** that provides a short outline of the contents of the video
 - 3 **takeaways** in chronologial order, highlighting the key points of the video
 
@@ -36,11 +35,10 @@ Each summary is identified by a `summaryId`. The API separates summary data into
 }
 ```
 
-The `source` contains the actual title, abstract, and takeaways:
+The `source` contains the actual abstract and the takeaways:
 
 ```json
 {
-  "title": "A short lecture on quantum theory",
   "abstract": "In this lecture, we discuss how complicated quantum theory is, using the famous example of Schrödingers cat. We also discuss practical applications like quantum computing.",
   "takeaways": [
     "Quantum theory is complicated.",
@@ -71,23 +69,24 @@ When you use the dashboard to [upload videos](https://dashboard.api.video/videos
 A summary is based on the transcription of a video. When you create summaries, we recommend that you also enable transcription. This enables our API to create video summaries faster.
 </Callout>
 
-For already updated videos, open the **Video Details** page and then the Summarization tab. Click on **Summarize** to generate a summary, or **Summarize again** to recreate a summary.
+For already uploaded videos, open the **Video Details** page and then the Summarization tab. Click on **Summarize** to generate a summary, or **Summarize again** to recreate a summary.
 
 ### Automatic summarization
 
 When you use the API to upload videos, the easiest method to enable summary creation when you create a video object.
 
-To enable summarization, set the **optional** `transcriptSummary` parameter in your `POST` request to the [Create video object endpoint](/reference/api/Videos#create-a-video-object). We recommend that you also enable the **optional** `transcript` and `language` parameters. 
+To enable summarization, set the **optional** `transcriptSummary` parameter in your `POST` request to the [Create video object endpoint](/reference/api/Videos#create-a-video-object). You generate an abstract only, or just the takeaways: use the `transcriptSummaryAttributes` array to select which elements you want the API to generate. We recommend that you also enable the **optional** `transcript` and `language` parameters. 
 
 When you define the video `language`, the API creates a summary of the video using the language you specify. Check out the list of supported languages [here](/vod/generate-transcripts#supported-languages). If you do not specify a language for the video, the API will detect it automatically.
 
-| Field               | Type      | Description                                                                                                                                                                                                                                                    |
-|---------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `transcriptSummary` | `boolean` | When `true`, the API generates a summary for the video. The default value is `false`.                                                                                                                                                                          |
-| `transcript`        | `boolean` | When `true`, the API generates a transcript for the video. The default value is `false`.                                                                                                                                                                       |
-| `language`          | `string`  | A valid language identifier using [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag). You can use primary subtags like `en` or `fr`.<br/><br/>When the value in your request does not match any covered language, the API returns an error. |
+| Field                         | Type               | Description                                                                                                                                                                                                                                                    |
+|-------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `transcriptSummary`           | `boolean`          | When `true`, the API generates a summary for the video. The default value is `false`.                                                                                                                                                                          |
+| `transcriptSummaryAttributes` | `array of strings` | Accepts `abstract`, `takeaways`, or both. The API only generates the elements you add to this array.<br/><br/>If you do not use this parameter, the API generates a full summary.                                                                                       |
+| `transcript`                  | `boolean`          | When `true`, the API generates a transcript for the video. The default value is `false`.                                                                                                                                                                       |
+| `language`                    | `string`           | A valid language identifier using [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag). You can use primary subtags like `en` or `fr`.<br/><br/>When the value in your request does not match any covered language, the API returns an error. |
 
-You can also trigger automatic summarization for already uploaded videos. Use the same parameters in your `PATCH` request to the [Update video object endpoint](https://docs.api.video/reference/api/Videos#update-a-video-object).
+You can also trigger automatic summarization for already uploaded videos. Use the same parameters in your `PATCH` request to the [Update video object](/reference/api/Videos#update-a-video-object) endpoint.
 
 ### Manual summarization
 
@@ -125,13 +124,6 @@ The `summary` object returns the status of summary generation in the `sourceStat
 - `completed`: the summary is generated.
 - `unprocessable`: the source video is unsuitable for summary generation. An example for this is a source video that has no audio, or has less than 50 words.
 
-<Callout pad="2" type="info">
-
-Using the `PATCH /summaries/{summaryId}/source` endpoint operation is only allowed for summaries where `sourceStatus` is `missing`. The main purpose of this endpoint is to provide a direct way to edit or update summary sources.
-
-If you want to edit a summary where a source is already present, you first need to [delete the existing summary](/reference/api/Summaries#delete-video-summary).
-</Callout>
-
 ## Supported languages
 
 The API creates summaries using the same language as for transcripts. Check out the [Generate transcripts guide](/vod/generate-transcripts#supported-languages) for the list of languages
@@ -143,6 +135,8 @@ The API creates summaries using the same language as for transcripts. Check out 
 - The API requires at least 50 spoken words in the video you upload to create a transcript and a summary.
 - The length of a summary `abstract` is between 20 to 300 words. The exact length of the abstract depends on the contents of the video and will be roughly 1/8th of the transcript.
 - When you set the `language` parameter, make sure that it matches the actual language used in the video. Your setting forces the API to summarize in that language. Mismatching language settings or videos with dialogue in multiple languages can return low quality summaries.
+- Using the [Generate summaries](/reference/api/Summaries#generate-video-summary) or the [Update video object](/reference/api/Videos#update-a-video-object) endpoint to **generate** a summary is only allowed for videos where no summary is generated yet. Otherwise the API responds with the [Summary already exists](/reference/summary-already-exists) error.
+- Using the [Update summary details](/reference/api/Summaries#update-summary-details) endpoint operation to `PATCH` a summary is only allowed when the API has already finished generating that summary. Specifically, the API does not allow using this endpoint operations when the `sourceStatus` of a summary is `waiting`. Otherwise the API responds with the [Summary already exists](/reference/summary-already-exists) error.
 </Callout>
 
 ## Next steps
