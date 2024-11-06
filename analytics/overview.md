@@ -19,32 +19,6 @@ Use this data to understand your audience, or integrate the data directly into y
 
 Visit the **[Analytics](https://dashboard.api.video/analytics)** page on the Dashboard to get started and see your data visualized, or jump into the **[API reference](/reference/api/Analytics)** and see how you can work with the data through our API!
 
-## How it works
-
-Analytics uses player events to analyze and segment your viewers' interactions with your content. Here are some key aspects:
-
-- By default, api.video retains analytics data for 30 days. You can extend data retention to 3 months or 12 months through the [Analytics page in the Dashboard](https://dashboard.api.video/analytics) - click on the `3M` or `12M` buttons to get started!
-- Player events are generated when your viewers engage with a video or live stream session.
-- Data is refreshed in real time, with a frequency of `<5s`.
-- Data does not carry over from the previous versions of Analytics.
-- Video re-plays using the dedicated re-play button in the player do not generate player events.
-- If a user is viewing your content via a browser, refreshes the tab, and plays the content again, a new event is generated.
-
-<Callout pad="2" type="success">
-api.video provides calculates the total number of plays through 2 dedicated endpoints:
-
-- `/data/metrics/play/total`
-- `/data/buckets/play-total/media-id`
-
-These 2 endpoints return data that is not limited to 30 days of retention, and can return data from earlier versions of Analytics.
-</Callout>
-
-### Requirements
-
-<Callout pad="2" type="info">
-The Analytics features are available using api.video's video player. Check out the [Video Player SDK](/sdks/player/apivideo-player-sdk) for details about the implementation.
-</Callout>
-
 ## How to use
 
 api.video offers 3 dedicated API endpoints that you can use to programmatically retrieve data about your content:
@@ -67,16 +41,110 @@ Here are some real-world questions where metrics and dimensions from Analytics c
 - Short-form videos
     - *Have my viewers watched the first N videos on the feed until the end?* → `end`
     - *How many times have my viewers watched a specific video?* → `play-total` + `media-id`
+    - *What was the highest number of concurrent viewers last week?* → `from` + `ccv-peak` + `unique`
+    - *What videos have the longest view duration?* →  `view` + `media-id` + `sortBy[metricValue]` + `sortOrder=desc`
     
 - Advertising
     - *How many impressions have my ads generated?*  → `impression`
-    - *Is my ad displayed fast in Asia?*  → `impression-time` + `continent`
+    - *Is my ad displayed fast in Asia?* → `impression-time` + `continent`
+    - *From the websites where my video ad is embedded, which ones got the most views?* → `view` + `referrer` + `sortBy[metricValue]`
+
+### Requirements
 
 <Callout pad="2" type="info">
-**Testing**
+
+The Analytics features are available using api.video's video player. Check out the [Video Player SDK](/sdks/player/apivideo-player-sdk) for details about the implementation.
+</Callout>
+
+## How it works
+
+Analytics uses player events to analyze and segment your viewers' interactions with your content. Here are some key aspects:
+
+- By default, api.video retains analytics data for 30 days. You can extend data retention to 3 months or 12 months through the [Analytics page in the Dashboard](https://dashboard.api.video/analytics) - click on the `3M` or `12M` buttons to get started!
+- Player events are generated when your viewers engage with a video or live stream session.
+- Data is refreshed in real time, with a frequency of `<5s`.
+- Data does not carry over from the previous versions of Analytics, and unique viewer data starts only from `2024-08-14`.
+- `unique` viewers are only unique for a day.
+- Video re-plays using the dedicated re-play button in the player do not generate events.
+- On web, if a user watches a video, refreshes the browser tab, then plays the video again, a new event is generated.
+
+<Callout pad="2" type="success">
+api.video provides calculates the total number of plays through 2 dedicated endpoints:
+
+- `/data/metrics/play/total`
+- `/data/buckets/play-total/media-id`
+
+These 2 endpoints return data that is not limited to 30 days of retention, and can return data from earlier versions of Analytics.
+</Callout>
+
+### Sessions
+
+User sessions affect how data like the number of viewers is counted. 
+
+* For web users, a browser tab counts as one user session. 
+* For mobile users, a session starts when an app is launched. Apps going in the background remain in session. A new session starts when an app is destroyed, and then launches again.
+
+
+### Aggregations vs. timeseries
+
+The `/data/metrics/{metric}/{aggregation}` and `/data/timeseries/{metric}` endpoints can return very similar data. Here's a concrete example on how to understand the fundamental difference.
+
+Let's get the number of plays for a video from the last 2 days. We can use both endpoints to get this data:
+
+* `/data/metrics/play/sum` → the value of the `play` metric aggregated to `sum`
+* `/data/timeseries/play` → the value of the `play` metric over time
+
+We will filter for a specific video using `filterBy[mediaId]={videoId}`, and set a short, 2-day timeframe using `from` and `to`.
+
+Let's compare the results:
+
+<CodeSelect title="Number of plays from the last 2 days">
+```/metrics/play/sum
+{
+  "context": {
+    "metric": "play",
+    "aggregation": "sum",
+    "timeframe": {
+      "from": "2024-10-01T00:00:00+00",
+      "to": "2024-10-02T23:59:59+00:00"
+    }
+  },
+  "data": 1
+}
+```
+```/timeseries/play
+{
+  "context": {
+    "metric": "play",
+    "interval": "day",
+    "timeframe": {
+      "from": "2024-10-01T00:00:00+00:00",
+      "to": "2024-10-02T23:59:59+00:00"
+    }
+  },
+  "data": [
+    {
+      "emittedAt": "2024-10-01T23:59:30+00:00",
+      "metricValue": 1
+    },
+    {
+      "emittedAt": "2024-10-02T00:01:30+00:00",
+      "metricValue": 1
+    }
+  ],
+  "pagination": { ... }
+}
+```
+</CodeSelect>
+
+Notice that `/metrics/play/sum` returns only `1` play, and  returns `2` plays. How so? Check the values of the `emittedAt` fields in the `/timeseries/play` example above: the difference is only 2 minutes, but on **two different calendar days**.
+
+* The `timeseries` endpoint counts the number of events based on a set interval, which is `day` by default. This means that a user watching the same video on two calendar days generates 2 play events: 1 for each day.
+* The `metrics` endpoint sums up the number of play events. This means that if the user watches the video once, they generate only 1 play event - even if that event falls on the boundary of 2 calendar days.
+
+### Testing
 
 You can test the Analytics endpoints **in api.video's sandbox environment**. Check out [Environments](/reference#environments) for more details. The sandbox environment returns data from the last 24 hours.
-</Callout>
 
 ## What's next
 
