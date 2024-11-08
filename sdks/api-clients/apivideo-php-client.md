@@ -147,6 +147,17 @@ Method | Description | HTTP request
 [**deleteLogo()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/PlayerThemesApi.md#deleteLogo) | Delete logo | **DELETE** `/players/\{playerId}/logo`
 
 
+#### SummariesApi
+
+Method | Description | HTTP request
+------------- | ------------- | -------------
+[**create()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/SummariesApi.md#create) | Generate video summary | **POST** `/summaries`
+[**update()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/SummariesApi.md#update) | Update summary details | **PATCH** `/summaries/\{summaryId}/source`
+[**delete()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/SummariesApi.md#delete) | Delete video summary | **DELETE** `/summaries/{summaryId}`
+[**list()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/SummariesApi.md#list) | List summaries | **GET** `/summaries`
+[**getSummarySource()**](https://github.com/apivideo/api.video-php-client/blob/main/docs/Api/SummariesApi.md#getSummarySource) | Get summary details | **GET** `/summaries/\{summaryId}/source`
+
+
 #### TagsApi
 
 Method | Description | HTTP request
@@ -227,6 +238,7 @@ Method | Description | HTTP request
  - [CaptionsUpdatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/CaptionsUpdatePayload.md)
  - [Chapter](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Chapter.md)
  - [ChaptersListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/ChaptersListResponse.md)
+ - [ConflictError](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/ConflictError.md)
  - [DiscardedVideoUpdatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/DiscardedVideoUpdatePayload.md)
  - [FilterBy](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/FilterBy.md)
  - [FilterBy1](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/FilterBy1.md)
@@ -254,6 +266,11 @@ Method | Description | HTTP request
  - [RefreshTokenPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RefreshTokenPayload.md)
  - [RestreamsRequestObject](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RestreamsRequestObject.md)
  - [RestreamsResponseObject](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/RestreamsResponseObject.md)
+ - [SummariesListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/SummariesListResponse.md)
+ - [Summary](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/Summary.md)
+ - [SummaryCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/SummaryCreationPayload.md)
+ - [SummarySource](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/SummarySource.md)
+ - [SummaryUpdatePayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/SummaryUpdatePayload.md)
  - [TokenCreationPayload](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TokenCreationPayload.md)
  - [TokenListResponse](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TokenListResponse.md)
  - [TooManyRequests](https://github.com/apivideo/api.video-php-client/blob/main/docs/Model/TooManyRequests.md)
@@ -326,7 +343,7 @@ $ BASE_URI="" API_KEY="..." vendor/bin/phpunit
 ```
 
 
-## Have you gotten use from this API client?
+## Have you gotten use from this API client? 
 
 Please take a moment to leave a star on the client ⭐
 
