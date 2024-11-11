@@ -11,6 +11,8 @@
     href: /delivery/using-custom-domains.md
   - label: Domain referrer restrictions
     href: /delivery/domain-referrer.md
+  - label: Geo-restrictions
+    href: /delivery/geo-restrictions.md
   - label: In-stream ads
     href: /delivery/ads.md
   - label: Private videos
