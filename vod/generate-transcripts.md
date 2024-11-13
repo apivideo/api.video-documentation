@@ -24,7 +24,7 @@ To enable transcription, set these **optional** parameters when you create a vid
 | `transcript` | `boolean` | When `true`, the API generates a transcript for the video. The default value is `false`.                                                                                                           |
 | `language`   | `string`  | A valid language identifier using [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag). You can use primary subtags like `en` or `fr`.<br/><br/>When the value in your request does not match any covered language, the API returns an error. |
 
-The API generates transcripts using the `transcript` parameter. You can define the video `language`, and the API creates a transcript of the video using the language you specify. If you do not specify a language for the video, the API will detect it automatically. 
+The API generates transcripts using the `transcript` parameter. You can define the video `language`, and the API creates a transcript of the video using the language you specify. If you do not specify a language for the video, the API will detect it automatically.
 
 <Callout pad="2" type="info">
 
@@ -43,7 +43,9 @@ When you set the `language` parameter, make sure that it matches the actual lang
 
 `language` is a permanent attribute of a video object. You can update it to another language using the [`PATCH /videos/{videoId}`](/reference/api/Videos#update-a-video-object) operation. This triggers the API to generate a new transcript using a different language.
 
-When the API generates a transcript, it will be available as a caption for your video. Your audience will be able to select during video playback. You can interact with captions generated through transcription using the [Captions endpoints](/reference/api/Captions).
+When the API generates a transcript, it will be available as a caption for your video. Your audience will be able to select it during video playback. You can interact with captions generated through transcription using the [Captions endpoints](/reference/api/Captions). 
+
+Subscribe to the [`video.caption.generated`](/reference/api/Webhooks#video-caption-generated) webhook to get a notification when an automatically generated caption is complete.
 
 ## Examples
 

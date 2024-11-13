@@ -88,6 +88,11 @@ When you define the video `language`, the API creates a summary of the video usi
 
 You can also trigger automatic summarization for already uploaded videos. Use the same parameters in your `PATCH` request to the [Update video object](/reference/api/Videos#update-a-video-object) endpoint.
 
+<Callout pad="2" type="info">
+
+You can subscribe to the [`video.summary.generated`](/reference/api/Webhooks#video-summary-generated) webhook to get a notification when an automatically generated summary is complete.
+</Callout>
+
 ### Manual summarization
 
 This method enables you to control every step of the summary creation. We recommend that you use this method in scenarios where you want to manually create, update, or edit the generated summary.
@@ -121,7 +126,7 @@ The `summary` object returns the status of summary generation in the `sourceStat
 - `missing`: the source for a summary is not present.
 - `waiting` : the source video is being processed and a summary will be generated.
 - `failed`: a technical issue prevented summary generation.
-- `completed`: the summary is generated.
+- `completed`: the summary is generated. Subscribe to the [`video.summary.generated`](/reference/api/Webhooks#video-summary-generated) webhook to get a notification when this happens.
 - `unprocessable`: the source video is unsuitable for summary generation. An example for this is a source video that has no audio, or has less than 50 words.
 
 ## Supported languages
