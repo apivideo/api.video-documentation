@@ -18,6 +18,12 @@ The captions are uploaded per language. You can upload different captions for ea
 | language | String | A valid language identifier using IETF language tags. You can use primary subtags like `en` (English), extended subtags like `fr-CA` (French, Canada), or region subtags like `zh-Hans-CN` (Simplified Chinese used in the PRC). <br></br>- This parameter **only accepts dashes for separators**, for example `fr-CA`. If you use a different separator in your request, the API returns an error. <br></br>- When the value in your request does not match any covered language, the API returns an error. <br></br>- You can find the list of supported language tags [here](#supported-caption-language-tags). |
 | file     | File   | The video text track in VTT format only.                                                   |
 
+## Generate captions automatically
+
+api.video's AI-driven [transcript generation](/vod/generate-transcripts.md) enables you to automatically create captions for your videos. Your audience will be able to select the generated captions during video playback.
+
+Subscribe to the [`video.caption.generated`](/reference/api/Webhooks#video-caption-generated) webhook to get a notification when an automatically generated caption is complete.
+
 ## Supported caption file formats
 
 Currently only **VTT** file format is supported.
