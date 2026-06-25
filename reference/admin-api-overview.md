@@ -80,7 +80,7 @@ When you create a project through the Admin API, you also have to create at leas
 
 <Steps>
   <Step title="Create the project">
-  Use the [Create project](/reference/admin-api/Projects#create-project) endpoint to create a project in the hosting region you prefer:
+  Use the [Create project](/reference/admin-api/Projects#create-project) endpoint to create a project:
   
   <br/>
   

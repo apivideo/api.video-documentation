@@ -98,7 +98,7 @@ paths:
       tags:
         - Projects
       summary: Create project
-      description: This endpoint enables you to create a new project and select the hosting region for it.
+      description: Create a new project.
       requestBody:
         required: true
         content:
@@ -111,13 +111,11 @@ paths:
                   description: The name of the Admin API key. Also visible in the dashboard. You may set any value that fits your organization purposes.
                 region:
                   type: string
-                  description: The region where your data is hosted.
+                  description: Deprecated. The region where your data is hosted.
                   enum:
-                    - us-east-1
                     - eu-central-1
               required:
                 - name
-                - region
       responses:
         '201':
           description: Project created successfully
@@ -558,7 +556,6 @@ components:
           type: string
           description: The region where your data is hosted.
           enum:
-            - us-east-1
             - eu-central-1
         deleted:
           type: boolean
