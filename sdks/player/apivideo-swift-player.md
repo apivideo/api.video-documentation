@@ -250,5 +250,4 @@ We are using external library
 
 ## FAQ
 
-If you have any questions, ask us here: [https://community.api.video](https://community.api.video) or
-use [Issues](https://github.com/apivideo/api.video-swift-player/issues).
+If you have any questions, use [Issues](https://github.com/apivideo/api.video-swift-player/issues).

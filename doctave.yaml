@@ -3,8 +3,6 @@ title: api.video documentation
 version: 2
 header:
   links:
-    - external: https://community.api.video/
-      text: Community
     - external: https://help.api.video/en/
       text: Help Center
     - external: https://api.video/changelog/

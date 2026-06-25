@@ -94,8 +94,7 @@ api.video sdk is using external library
 | HaishinKit | [https://github.com/shogo4405/HaishinKit.swift][HaishinKit] |
 
 ## FAQ
-If you have any questions, ask us here:  https://community.api.video .
-Or use [Issues].
+If you have any questions, use [Issues].
 
 Also feel free to test our [Sample app].
 

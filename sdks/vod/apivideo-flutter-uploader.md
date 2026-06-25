@@ -75,5 +75,4 @@ This project is using external library
 
 ## FAQ
 
-If you have any questions, ask us in the [community](https://community.api.video) or
-use [Issues](https://github.com/apivideo/api.video-flutter-uploader/issues).
+If you have any questions, use [Issues](https://github.com/apivideo/api.video-flutter-uploader/issues).
