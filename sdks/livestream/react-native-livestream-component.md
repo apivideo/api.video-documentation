@@ -236,8 +236,7 @@ api.video live stream library is using external native library for broadcasting
 
 ## FAQ
 
-If you have any questions, ask us here: https://community.api.video .
-Or use [Issues].
+If you have any questions, use [Issues].
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
 [streampack]: https://github.com/ThibaultBee/StreamPack

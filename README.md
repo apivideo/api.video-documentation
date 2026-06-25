@@ -115,11 +115,4 @@ Check out the products!
             <Box>[Browse help center ›](https://help.api.video/en/)</Box>
         </Flex>
     </Card>
-    <Card href="https://community.api.video/" pad="0">
-        <Flex pad="1" align="center" gap="2">
-            <Box>![Community](/_assets/icons/community.png)</Box>
-
-            <Box>[Ask the community ›](https://community.api.video/)</Box>
-        </Flex>
-    </Card>
 </Grid>

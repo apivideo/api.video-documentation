@@ -156,8 +156,7 @@ api.video Flutter live stream library is using external native library:
 
 ## FAQ
 
-If you have any questions, ask us in the [community](https://community.api.video). Or
-use [issues](https://github.com/apivideo/api.video-flutter-live-stream/issues).
+If you have any questions, use [issues](https://github.com/apivideo/api.video-flutter-live-stream/issues).
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 

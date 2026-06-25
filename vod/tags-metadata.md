@@ -166,4 +166,4 @@ In the end, both `tags` and `metadata` are just strings tied to a specific video
 
 The power of metadata however lies in all the different ways you can use it, and enhance your product with an extra layer of information.
 
-[Sign-up](https://dashboard.api.video/register) for a free sandbox account and try using metadata with your videos. If you have any questions, or would like to share your use case, join the [api.video Community](https://community.api.video/)!
+[Sign-up](https://dashboard.api.video/register) for a free sandbox account and try using metadata with your videos.
