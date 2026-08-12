@@ -22,7 +22,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![NodeJS](/_assets/icons/sdk_icons/NodeJs.svg)</Box>
 
         <Box>
-            NodeJS\
+            NodeJS<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -33,7 +33,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Python](/_assets/icons/sdk_icons/Python.svg)</Box>
 
         <Box>
-            Python\
+            Python<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -44,7 +44,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![PHP](/_assets/icons/sdk_icons/Php.svg)</Box>
 
         <Box>
-            PHP\
+            PHP<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -55,7 +55,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Go](/_assets/icons/sdk_icons/Go.svg)</Box>
 
         <Box>
-            Go\
+            Go<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -66,7 +66,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![C#](/_assets/icons/sdk_icons/Csharp.svg)</Box>
 
         <Box>
-            C#\
+            C#<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -77,7 +77,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Java](/_assets/icons/sdk_icons/Java.svg)</Box>
 
         <Box>
-            Java\
+            Java<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -92,7 +92,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
         <Box>
-            Swift\
+            Swift<br/>
             <small>API Client</small>
         </Box>
     </Flex>
@@ -103,7 +103,7 @@ Seamlessly integrate video on demand or live streaming into your current tech st
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            Android\
+            Android<br/>
             <small>API Client</small>
         </Box>
     </Flex>

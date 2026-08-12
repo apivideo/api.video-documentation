@@ -22,7 +22,8 @@ meta:
 <Card pad="3">
     ![Delivery quickstart](/_assets/icons/player-customization.svg)
 
-    **Delivery quickstart**\
+    **Delivery quickstart**
+
     Learn how to make the most of your content delivery through branding and customization.
 
     [Learn more ›](/delivery/quickstart)
@@ -30,7 +31,8 @@ meta:
 <Card pad="3">
     ![Using custom domains](/_assets/icons/custom-domains.svg)
 
-    **Using custom domains**\
+    **Using custom domains**
+
     Maintain your company branding by delivering through custom domains
 
     [Learn more ›](/delivery/using-custom-domains)
@@ -38,7 +40,8 @@ meta:
 <Card pad="3">
     ![Domain referrer restrictions](/_assets/icons/domain_referrer.png)
 
-    **Domain referrer restrictions**\
+    **Domain referrer restrictions**
+
     Make sure that your videos and live streams are delivered securely, and only through your domains.
 
     [Learn more ›](/delivery/domain-referrer)
@@ -46,7 +49,8 @@ meta:
 <Card pad="3">
     ![In-stream ads](/_assets/icons/ads.png)
 
-    **In-stream ads**\
+    **In-stream ads**
+
     Implement in-stream ads to monetize your videos and live streams conveniently.
 
     [Learn more ›](/delivery/ads)
@@ -54,7 +58,8 @@ meta:
 <Card pad="3">
     ![Private videos](/_assets/icons/private_videos.png)
 
-    **Private videos**\
+    **Private videos**
+
     Learn how you can secure and manage access to your videos.
 
     [Learn more ›](/delivery/private-video-get-started)
@@ -62,7 +67,8 @@ meta:
 <Card pad="3">
     ![Player SDKs](/_assets/icons/player-sdks.svg)
 
-    **Player SDKs**\
+    **Player SDKs**
+
     Check out api.video's dedicated video player libraries and SDKs.
 
     [Learn more ›](/sdks/player#player-sdks)

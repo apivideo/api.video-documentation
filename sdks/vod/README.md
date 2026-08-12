@@ -24,7 +24,7 @@ Enable users to upload videos from your application.
         <Box>![TypeScript](/_assets/icons/sdk_icons/typescript.svg)</Box>
 
         <Box>
-            TypeScript\
+            TypeScript<br/>
             <small>Uploader</small>
         </Box>
     </Flex>
@@ -35,7 +35,7 @@ Enable users to upload videos from your application.
         <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
-            Flutter\
+            Flutter<br/>
             <small>Uploader</small>
         </Box>
     </Flex>
@@ -50,7 +50,7 @@ Enable users to upload videos from your application.
         <Box>![React Native](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
         <Box>
-            React Native\
+            React Native<br/>
             <small>Uploader</small>
         </Box>
     </Flex>
@@ -61,7 +61,7 @@ Enable users to upload videos from your application.
         <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
-            Flutter\
+            Flutter<br/>
             <small>Uploader</small>
         </Box>
     </Flex>
@@ -72,7 +72,7 @@ Enable users to upload videos from your application.
         <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
         <Box>
-            Swift\
+            Swift<br/>
             <small>Uploader</small>
         </Box>
     </Flex>
@@ -83,7 +83,7 @@ Enable users to upload videos from your application.
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            Android\
+            Android<br/>
             <small>Uploader</small>
         </Box>
     </Flex>
@@ -102,7 +102,7 @@ Enable your users to simultaneously create and upload video & audio using these 
         <Box>![TypeScript](/_assets/icons/sdk_icons/typescript.svg)</Box>
 
         <Box>
-            TypeScript\
+            TypeScript<br/>
             <small>Media recorder</small>
         </Box>
     </Flex>
@@ -113,7 +113,7 @@ Enable your users to simultaneously create and upload video & audio using these 
         <Box>![TypeScript](/_assets/icons/sdk_icons/typescript.svg)</Box>
 
         <Box>
-            TypeScript\
+            TypeScript<br/>
             <small>Media stream composer</small>
         </Box>
     </Flex>
@@ -128,7 +128,7 @@ Enable your users to simultaneously create and upload video & audio using these 
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            Android\
+            Android<br/>
             <small>Upstream</small>
         </Box>
     </Flex>

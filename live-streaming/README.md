@@ -22,7 +22,8 @@ meta:
 <Card pad="3">
     ![Live streaming quickstart](/_assets/icons/livestream-quickstart.svg)
 
-    **Live streaming quickstart**\
+    **Live streaming quickstart**
+
     api.video enables you to embed live streaming into your application or project seamlessly. Start building now!
 
     [Learn more ›](/live-streaming/create-a-live-stream)
@@ -30,7 +31,8 @@ meta:
 <Card pad="3">
     ![Working with live streams](/_assets/icons/livestream-management.svg)
 
-    **Working with live streams**\
+    **Working with live streams**
+
     Learn about the different operations you can use to manage your live streams.
 
     [Learn more ›](/live-streaming/working-with-live-streams)
@@ -38,7 +40,8 @@ meta:
 <Card pad="3">
     ![Live streaming SDKs](/_assets/icons/livestream-sdks.svg)
 
-    **Live streaming SDKs**\
+    **Live streaming SDKs**
+
     Check out api.video's dedicated libraries and SDKs for live streaming.
 
     [Learn more ›](/sdks/livestream)
@@ -46,7 +49,8 @@ meta:
 <Card pad="3">
     ![No-code solutions for live streaming](/_assets/icons/no-code.svg)
 
-    **No-code solutions for live streaming**\
+    **No-code solutions for live streaming**
+
     Build your solution without code using api.video's supported no-code plugins.
 
     [Learn more ›](/sdks/nocode)

@@ -26,7 +26,8 @@ api.video is a cloud-based video hosting and live streaming platform that provid
 <Card pad="3">
     ![VOD SDK quickstart](/_assets/icons/vod-quickstart.svg)
 
-    **VOD quickstart**\
+    **VOD quickstart**
+
     Get up to speed about the concept of VOD through building a video uploader and a video listing service in this quickstart guide.
 
     [Learn more ›](/vod/get-started-in-5-minutes)
@@ -35,7 +36,8 @@ api.video is a cloud-based video hosting and live streaming platform that provid
 <Card pad="3">
     ![Live streaming quickstart](/_assets/icons/livestream-quickstart.svg)
 
-    **Live streaming quickstart**\
+    **Live streaming quickstart**
+
     api.video enables you to embed low-latency live streaming into your application or project seamlessly. Start building now!
 
     [Learn more ›](/live-streaming/create-a-live-stream)
@@ -44,7 +46,8 @@ api.video is a cloud-based video hosting and live streaming platform that provid
 <Card pad="3">
     ![Delivery quickstart](/_assets/icons/player-customization.svg)
 
-    **Delivery quickstart**\
+    **Delivery quickstart**
+
     Learn how to make the most of your content delivery through player branding, customization, private videos and live streams, and even in-stream ads.
 
     [Learn more ›](/delivery/quickstart)

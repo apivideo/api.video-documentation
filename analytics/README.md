@@ -24,7 +24,8 @@ meta:
 <Card pad="3">
     ![Analytics & data](/_assets/icons/analytics.svg)
 
-    **Analytics & data**\
+    **Analytics & data**
+
     Understand how you can collect delivery event data about your videos and live streams.
 
     [Learn more ›](/analytics/overview)
@@ -32,7 +33,8 @@ meta:
 <Card pad="3">
     ![Analytics SDKs](/_assets/icons/analytics.svg)
 
-    **Analytics SDKs**\
+    **Analytics SDKs**
+
     Check out api.video's dedicated libraries and SDKs for video and live stream analytics.
 
     [Learn more ›](/sdks/player#player-analytics-sdks)

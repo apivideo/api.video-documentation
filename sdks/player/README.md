@@ -24,7 +24,7 @@ Enable video playback from your app.
         <Box>![api.video Player SDK](/_assets/icons/sdk_icons/js.svg)</Box>
 
         <Box>
-            api.video Player SDK\
+            api.video Player SDK<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -35,7 +35,7 @@ Enable video playback from your app.
         <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
-            Flutter\
+            Flutter<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -46,7 +46,7 @@ Enable video playback from your app.
         <Box>![React.js](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
         <Box>
-            React.js\
+            React.js<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -61,7 +61,7 @@ Enable video playback from your app.
         <Box>![React Native](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
         <Box>
-            React Native\
+            React Native<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -72,7 +72,7 @@ Enable video playback from your app.
         <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
-            Flutter\
+            Flutter<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -83,7 +83,7 @@ Enable video playback from your app.
         <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
         <Box>
-            Swift\
+            Swift<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -94,7 +94,7 @@ Enable video playback from your app.
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            Android\
+            Android<br/>
             <small>Player</small>
         </Box>
     </Flex>
@@ -113,7 +113,7 @@ Collect data and insights from custom players.
         <Box>![video.js](/_assets/icons/sdk_icons/js.svg)</Box>
 
         <Box>
-            video.js\
+            video.js<br/>
             <small>Analytics plugin</small>
         </Box>
     </Flex>
@@ -124,7 +124,7 @@ Collect data and insights from custom players.
         <Box>![hls.js](/_assets/icons/sdk_icons/js.svg)</Box>
 
         <Box>
-            hls.js\
+            hls.js<br/>
             <small>Analytics plugin</small>
         </Box>
     </Flex>
@@ -135,7 +135,7 @@ Collect data and insights from custom players.
         <Box>![api.video Player analytics](/_assets/icons/sdk_icons/js.svg)</Box>
 
         <Box>
-            api.video Player analytics\
+            api.video Player analytics<br/>
             <small>Analytics plugin</small>
         </Box>
     </Flex>
@@ -151,7 +151,7 @@ Collect data and insights from custom players.
         <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
         <Box>
-            Swift\
+            Swift<br/>
             <small>Analytics plugin</small>
         </Box>
     </Flex>
@@ -162,7 +162,7 @@ Collect data and insights from custom players.
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            Android\
+            Android<br/>
             <small>Analytics plugin</small>
         </Box>
     </Flex>

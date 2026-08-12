@@ -22,7 +22,7 @@ With api.video you can use live streaming mobile SDKs to create a streaming clie
         <Box>![React Native](/_assets/icons/sdk_icons/react_native.svg)</Box>
 
         <Box>
-            React Native\
+            React Native<br/>
             <small>Live streaming</small>
         </Box>
     </Flex>
@@ -33,7 +33,7 @@ With api.video you can use live streaming mobile SDKs to create a streaming clie
         <Box>![Flutter](/_assets/icons/sdk_icons/flutter.svg)</Box>
 
         <Box>
-            Flutter\
+            Flutter<br/>
             <small>Live streaming</small>
         </Box>
     </Flex>
@@ -44,7 +44,7 @@ With api.video you can use live streaming mobile SDKs to create a streaming clie
         <Box>![Swift](/_assets/icons/sdk_icons/Swift.svg)</Box>
 
         <Box>
-            Swift\
+            Swift<br/>
             <small>Live streaming</small>
         </Box>
     </Flex>
@@ -55,7 +55,7 @@ With api.video you can use live streaming mobile SDKs to create a streaming clie
         <Box>![Android](/_assets/icons/sdk_icons/Android.svg)</Box>
 
         <Box>
-            Android\
+            Android<br/>
             <small>Live streaming</small>
         </Box>
     </Flex>

@@ -20,7 +20,7 @@ Sometimes you need a quick solution without getting into coding. api.video provi
         <Box>![Bubble.io](/_assets/icons/bubbleio_new.png)</Box>
 
         <Box>
-            Bubble.io\
+            Bubble.io<br/>
             <small>No-code plugin</small>
         </Box>
     </Flex>
@@ -31,7 +31,7 @@ Sometimes you need a quick solution without getting into coding. api.video provi
         <Box>![Contentful](/_assets/icons/contentful_new.png)</Box>
 
         <Box>
-            Contentful\
+            Contentful<br/>
             <small>No-code plugin</small>
         </Box>
     </Flex>
@@ -42,7 +42,7 @@ Sometimes you need a quick solution without getting into coding. api.video provi
         <Box>![Zapier](/_assets/icons/zapier_new.png)</Box>
 
         <Box>
-            Zapier\
+            Zapier<br/>
             <small>No-code plugin</small>
         </Box>
     </Flex>
@@ -53,7 +53,7 @@ Sometimes you need a quick solution without getting into coding. api.video provi
         <Box>![Wordpress](/_assets/icons/wordpress_new.png)</Box>
 
         <Box>
-            Wordpress\
+            Wordpress<br/>
             <small>No-code plugin</small>
         </Box>
     </Flex>
@@ -64,7 +64,7 @@ Sometimes you need a quick solution without getting into coding. api.video provi
         <Box>![Strapi](/_assets/icons/strapi_new.png)</Box>
 
         <Box>
-            Strapi\
+            Strapi<br/>
             <small>No-code plugin</small>
         </Box>
     </Flex>

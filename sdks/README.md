@@ -23,7 +23,8 @@ meta:
 <Card pad="3">
     ![API client SDKs](/_assets/icons/github.svg)
 
-    **API client SDKs**\
+    **API client SDKs**
+
     Seamlessly integrate video on demand or live streaming into your current tech stack.
 
     [Learn more ›](/sdks/api-clients)
@@ -31,7 +32,8 @@ meta:
 <Card pad="3">
     ![VOD SDKs](/_assets/icons/videos-sdks.svg)
 
-    **VOD SDKs**\
+    **VOD SDKs**
+
     Enable your users to upload and store videos, which can be easily delivered and shared across various platforms.
 
     [Learn more ›](/sdks/vod)
@@ -39,7 +41,8 @@ meta:
 <Card pad="3">
     ![Live streaming SDKs](/_assets/icons/livestream-sdks.svg)
 
-    **Live streaming SDKs**\
+    **Live streaming SDKs**
+
     api.video provides you with the possibility to embed live streaming into your application or project seamlessly.
 
     [Learn more ›](/sdks/livestream)
@@ -47,7 +50,8 @@ meta:
 <Card pad="3">
     ![Delivery & analytics SDKs](/_assets/icons/player-sdks.svg)
 
-    **Delivery & analytics SDKs**\
+    **Delivery & analytics SDKs**
+
     api.video lets you customize a large part of the delivery, whether it's the player's branding or adding captions, chapters, and watermarks.
 
     [Learn more ›](/sdks/player)
@@ -55,7 +59,8 @@ meta:
 <Card pad="3">
     ![No-code solutions](/_assets/icons/no-code.svg)
 
-    **No-code solutions**\
+    **No-code solutions**
+
     Build your solution without code using api.video's supported no-code plugins.
 
     [Learn more ›](/sdks/nocode)

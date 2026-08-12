@@ -19,8 +19,7 @@ Moving to a different provider takes time, effort, and development resources. ap
         <Box><img src="/_assets/get-started/migration-guide/icons/Microsoft_Azure.png" alt="Azure"/></Box>
 
         <Box>
-            Azure\
-            <small>Media Services</small>
+            Azure <small>Media Services</small>
         </Box>
     </Flex>
 </Card>
@@ -30,8 +29,7 @@ Moving to a different provider takes time, effort, and development resources. ap
         <Box><img src="/_assets/get-started/migration-guide/icons/Amazon-S3-Logo.png" alt="Amazon"/></Box>
 
         <Box>
-            Amazon\
-            <small>S3</small>
+            Amazon <small>S3</small>
         </Box>
     </Flex>
 </Card>
@@ -41,8 +39,7 @@ Moving to a different provider takes time, effort, and development resources. ap
         <Box><img src="/_assets/get-started/migration-guide/icons/Google-Storage-Logo.png" alt="Google Cloud Storage"/></Box>
 
         <Box>
-            Google\
-            <small>Cloud Storage</small>
+            Google <small>Cloud Storage</small>
         </Box>
     </Flex>
 </Card>
