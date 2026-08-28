@@ -1,23 +1,29 @@
-name: "CI Docs"
+name: Publish Docs
+
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main
-  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  build-and-publish:
-    name: Build and publish docs
+  build-and-zip:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Publish docs
-        shell: bash
-        env:
-          DOCTAVE_UPLOAD_TOKEN: ${{ secrets.DOCTAVE_UPLOAD_TOKEN }}
-        run: |
-          curl -L http://dashboard.doctave.com/doctave-upload.sh | bash -s -- .
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+
+      - name: Install docapella
+        run: cargo install --git https://github.com/Doctave/docapella.git docapella
+
+      - name: Build docs
+        run: docapella build
+
+      - name: Create tar.gz archive
+        run: tar -czf docs.tar.gz _build
+
+      - name: Upload tar.gz artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: docs.tar.gz
