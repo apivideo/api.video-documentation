@@ -24,7 +24,7 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   build:
-    runs-on: node24
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
@@ -43,7 +43,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
-    runs-on: node24
+    runs-on: ubuntu-latest
     steps:
       - name: Setup Pages
         uses: actions/configure-pages@v5
