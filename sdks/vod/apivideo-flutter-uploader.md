@@ -23,7 +23,7 @@ It allows you to upload videos in two ways:
 
 ### Installation
 
-Run this command:
+Run the following command at the root of your project:
 
 ```bash
 flutter pub add video_uploader
@@ -33,7 +33,7 @@ This will add the following lines to your package's pubspec.yaml file:
 
 ``` yaml
 dependencies:
-  video_uploader: ^1.2.0
+  video_uploader: ^1.2.3
 ```
 
 ### Android
@@ -46,6 +46,17 @@ runtime.
 
 The uploader comes with a notification to show the progress. So if your application targets Android
 33+, you might request `android.permission.POST_NOTIFICATIONS` permission at runtime.
+
+When targeting Android API Level 34+, you must declare the service type in your application's manifest file.
+In your `AndroidManifest.xml` file, add the following lines in the `<application>` tag:
+
+```xml
+
+<service 
+    android:name="androidx.work.impl.foreground.SystemForegroundService"
+    android:exported="false" 
+    android:foregroundServiceType="dataSync" />
+```
 
 #### Notifications
 
@@ -61,7 +72,7 @@ overwriting the following resources in your own application resources:
 ```dart
 import 'package:video_uploader/video_uploader.dart';
 
-var video = await ApiVideoUploader.uploadWithUploadToken("UPLOAD_TOKEN", "path/to/my-video.mp4");
+var video = await ApiVideoUploader.uploadWithUploadToken("YOUR_UPLOAD_TOKEN", "path/to/my-video.mp4");
 ```
 
 ## Dependencies
